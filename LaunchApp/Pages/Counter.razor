@@ -1,0 +1,50 @@
+﻿@page "/counter"
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+
+<PageTitle>Login Pront</PageTitle>
+
+<h1>Please enter the required information</h1>
+
+<p role="status">Status: @statusstring</p>
+<p><label for="gamepath">Gamepath</label></p> 
+<p><input id="gamepath" name="Gamepath" @bind="gamepatherinp" autocomplete="off" type="text" required /></p>
+<p><label for="username">Username</label></p> 
+<p><input id="username" name="Username"  @bind="usernameinp" autocomplete="off" type="text" required /></p>  <!-- JS because of IE support; better: placeholder="Username" -->
+<p><label for="password">Password</label></p>
+<p><input id="password" @bind="passinp" name="password" autocomplete="off" type="password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+<p><label for="otp">OTP</label></p>
+<p><input id="otp" @bind="otpinp" name="otp" autocomplete="off" type="text" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+<!--<p><label for="expinputtext">Expansion level</label></p>
+<p><input id="expinputtext" @bind="expgamelevel" name="expinputtext" autocomplete="off" type="int" required></p> -->
+<!-- JS because of IE support; better: placeholder="Password" -->
+<p><label for="steamstatcheck">Do you own the game on steam</label></p>
+<p><input type="checkbox" id="steamstatcheck" name="steamstatcheck" @bind="checkedValue" unchecked></p>
+<button class="btn btn-primary" @onclick="processinputsx">Login</button>
+
+@code {
+    private string statusstring = "Awaiting input";
+    private string usernameinp = "";
+    private string passinp = "";
+    private string otpinp = "";
+    private string gamepatherinp = "";
+    private int expgamelevel = 0; 
+    private bool checkedValue;
+    private void processinputsx()
+    {
+        Console.WriteLine(usernameinp);
+        Console.WriteLine(passinp);
+        Console.WriteLine(otpinp);
+        Console.WriteLine(checkedValue);
+        if (checkedValue == true)
+        {
+            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunchFFXIV?login=" + usernameinp + ":?pass=" + passinp + ":?otp=" + otpinp + ":?gamepath=" + gamepatherinp + ":?issteam=yes");
+        }
+        else
+        {
+            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunchFFXIV?login=" + usernameinp + ":?pass=" + passinp + ":?otp=" + otpinp + ":?gamepath=" + gamepatherinp + ":?issteam=no");
+
+        }
+        statusstring = "Game launched";
+    }
+}

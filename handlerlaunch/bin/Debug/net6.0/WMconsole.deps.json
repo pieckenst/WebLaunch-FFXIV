@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WMconsole/1.0.0": {
+        "dependencies": {
+          "LibLaunchSupport": "1.0.0"
+        },
+        "runtime": {
+          "WMconsole.dll": {}
+        }
+      },
+      "LibLaunchSupport/1.0.0": {
+        "runtime": {
+          "LibLaunchSupport.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WMconsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibLaunchSupport/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

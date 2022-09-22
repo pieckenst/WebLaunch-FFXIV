@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QtNAztYth6h6KA/IFqZJZRdgyx6JxzdrAUKsc5nrifYT+mzZBC0rXXILnPywaJLs7HSa/w/a2Na8BQBzdzaOTg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\LibLaunchSupport\\LibLaunchSupport.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Андрей Савич\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Андрей Савич\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
