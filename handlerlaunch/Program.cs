@@ -75,17 +75,21 @@ namespace WMConsole
                 int langs = 1;
                 bool dx11 = true;
                 bool isSteam = false;
+                #if DEBUG
                 Console.WriteLine(args[0]);
+                #else
+                Console.WriteLine("");
+                #endif
                 if (args[0].Contains("?login="))
                 {
                     string usernameunsanitized = TextFollowing(args[0],"login=");
                     if (usernameunsanitized.Contains(':'))
                         username = usernameunsanitized.Split(':')[0];
-                    #if DEBUG
+#if DEBUG
                      Console.WriteLine(username);
-                    #else
+#else
                      Console.Write("");
-                    #endif
+#endif
                 }
                 if (args[0].Contains(":?pass="))
                 {
