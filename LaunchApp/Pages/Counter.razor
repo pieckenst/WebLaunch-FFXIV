@@ -29,7 +29,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Confirm action</h4>
+                    <h4 class="modal-title">Settings page</h4>
                     <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
                 </div>
 
@@ -37,7 +37,7 @@
                 <div class="modal-body">
                     <p><label for="gamepath">Gamepath</label></p> 
                     <p><input id="gamepath" name="Gamepath" @bind="gamepatherinp" autocomplete="off" type="text" required /></p>
-                    <p><label for="steamstatcheck">Do you own the game on steam</label></p>
+                    <p><label for="steamstatcheck">Do you own the game on steam?</label></p>
                     <p><input type="checkbox" id="steamstatcheck" name="steamstatcheck" @bind="checkedValue" unchecked></p>
                 </div>
 
