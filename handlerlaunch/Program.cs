@@ -162,7 +162,7 @@ namespace WMConsole
             if (args == null || args.Length == 0)
             {
                 {
-                    Console.WriteLine("Required information not passed  - closing down");
+                    Console.WriteLine("Protocol handler has been registered- you may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game");
                     
 
 
