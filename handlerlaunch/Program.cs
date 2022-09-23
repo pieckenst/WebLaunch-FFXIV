@@ -8,6 +8,8 @@ namespace WMConsole
 {
     class Program
     {
+        public static string GetExpansionFolder(byte expansionId) =>
+            expansionId == 0 ? "ffxiv" : $"ex{expansionId}";
         static string TextFollowing(string txt, string value)
         {
             if (!String.IsNullOrEmpty(txt) && !String.IsNullOrEmpty(value))
@@ -23,6 +25,11 @@ namespace WMConsole
                 }
             }
             return null;
+        }
+        static string ReturnXpacNum(ushort expansionId)
+        {
+            var processxpac= GetExpansionFolder((byte)expansionId);
+            return processxpac;
         }
         static void Main(string[] args)
         {
@@ -125,23 +132,40 @@ namespace WMConsole
                         isSteam = false;
                     }
                 }
-                if(Directory.Exists(gamepath + "game/sqpack/ex1"))
-                {
-                    expansionLevel= 1;
-                }
-                if (Directory.Exists(gamepath + "game/sqpack/ex2"))
-                {
-                    expansionLevel = 2;
-                }
-                if (Directory.Exists(gamepath + "game/sqpack/ex3"))
-                {
-                    expansionLevel = 3;
-                }
-                if (Directory.Exists(gamepath + "game/sqpack/ex4"))
-                {
-                    expansionLevel = 4;
-                }
+                var xpacPath = "";
+                if(ReturnXpacNum(1) == "ex1") { xpacPath="ex1";}
+                if (ReturnXpacNum(2) == "ex2") { xpacPath = "ex2"; }
+                if (ReturnXpacNum(3) == "ex3") { xpacPath = "ex3"; }
+                if (ReturnXpacNum(4) == "ex4") { xpacPath = "ex4"; }
+                var sqpack = $@"{gamepath}\sqpack\{xpacPath}";
+                
+                    if (xpacPath == "ex1")
+                    {
+                        expansionLevel = 1;
+                        Console.WriteLine(expansionLevel);
+                    }
+                    if (xpacPath == "ex2")
+                    {
+                        expansionLevel = 2;
+                        Console.WriteLine(expansionLevel);
+                    }
+                    if (xpacPath == "ex3")
+                    {
+                        expansionLevel = 3;
+                        Console.WriteLine(expansionLevel);
+                    }
+                    if (xpacPath == "ex4")
+                    {
+                        expansionLevel = 4;
+                        Console.WriteLine(expansionLevel);
+                    }
+                   
+                    
+                
 
+
+
+               
                 try
                 {
                     var sid = networklogic.GetRealSid(gamepath, username, password, otp, isSteam);
