@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xX2Prb9LeH+WvU9yvCN3Bh8PntnMoWF+9JJlDC1IlKPPFUZuoEKpPscWGeCYVYvP3sWSiGHWZmbTrTMaut42OA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\SpinningWheelLib\\SpinningWheelLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Андрей Савич\\.nuget\\packages\\xamlanimatedgif\\2.0.3\\xamlanimatedgif.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

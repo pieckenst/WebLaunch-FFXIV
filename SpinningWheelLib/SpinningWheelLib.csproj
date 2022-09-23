@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="output-onlinegiftools.gif" />
+    <None Remove="roundrect.png" />
+    <None Remove="roundrect100.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="XamlAnimatedGif" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="output-onlinegiftools.gif" />
+    <Resource Include="roundrect.png" />
+    <Resource Include="roundrect100.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\handlerlaunch",
+    "\\LaunchApp",
+    "\\LaunchApp\\Pages",
+    "\\LaunchApp\\Properties",
+    "\\LaunchApp\\Shared",
+    "\\LibLaunchSupport"
   ],
   "PreviewInSolutionExplorer": false
 }
