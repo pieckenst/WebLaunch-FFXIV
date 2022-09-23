@@ -8,3 +8,13 @@ C:\Users\Андрей Савич\source\repos\handlerlaunch\LibLaunchSupport\obj
 C:\Users\Андрей Савич\source\repos\handlerlaunch\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.csproj.CoreCompileInputs.cache
 C:\Users\Андрей Савич\source\repos\handlerlaunch\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.dll
 C:\Users\Андрей Савич\source\repos\handlerlaunch\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.pdb
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\bin\Release\netstandard2.0\LibLaunchSupport.deps.json
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\bin\Release\netstandard2.0\LibLaunchSupport.dll
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\bin\Release\netstandard2.0\LibLaunchSupport.pdb
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.csproj.AssemblyReference.cache
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.AssemblyInfoInputs.cache
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.AssemblyInfo.cs
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.csproj.CoreCompileInputs.cache
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.dll
+C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\LibLaunchSupport\obj\Release\netstandard2.0\LibLaunchSupport.pdb
