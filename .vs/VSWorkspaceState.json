@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\handlerlaunch",
+    "\\LaunchApp",
+    "\\LaunchApp\\Pages",
+    "\\LaunchApp\\Properties",
+    "\\LaunchApp\\Shared",
+    "\\LibLaunchSupport"
   ],
-  "SelectedNode": "\\C:\\Users\\Андрей Савич\\Source\\Repos\\WebLaunch-FFXIV",
   "PreviewInSolutionExplorer": false
 }

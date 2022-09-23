@@ -1,13 +1,17 @@
 ﻿using LibLaunchSupport;
 using Microsoft.Win32;
+using SpinningWheelLib;
 using System;
 using System.IO;
 using System.Linq;
+using System.Windows;
 
 namespace WMConsole
 {
     class Program
     {
+        public static string GetExpansionFolder(byte expansionId) =>
+            expansionId == 0 ? "ffxiv" : $"ex{expansionId}";
         static string TextFollowing(string txt, string value)
         {
             if (!String.IsNullOrEmpty(txt) && !String.IsNullOrEmpty(value))
@@ -24,6 +28,12 @@ namespace WMConsole
             }
             return null;
         }
+        static string ReturnXpacNum(ushort expansionId)
+        {
+            var processxpac= GetExpansionFolder((byte)expansionId);
+            return processxpac;
+        }
+        [STAThread]
         static void Main(string[] args)
         {
             Console.WriteLine("Listening.."); //Gets the current location where the file is downloaded   
@@ -31,6 +41,9 @@ namespace WMConsole
             string locruntconf = loc.Replace(".dll", ".runtimeconfig.json");
             string locedit = loc.Replace(".dll", ".exe");
             string reqasemb = loc.Replace("WMconsole.dll", "LibLaunchSupport.dll");
+            string lib1 = loc.Replace("WMconsole.dll", "SpinningWheelLib.dll");
+            string lib2 = loc.Replace("WMconsole.dll", "WpfAnimatedGif.dll");
+            string lib3 = loc.Replace("WMconsole.dll", "XamlAnimatedGif.dll");
             if (!Directory.Exists(@"D:\HandleGame\"))
             {
                 System.IO.Directory.CreateDirectory(@"D:\HandleGame\");
@@ -41,6 +54,9 @@ namespace WMConsole
                 File.Copy(locedit, @"D:\HandleGame\" + locedit.Split('\\').Last());
                 File.Copy(locruntconf, @"D:\HandleGame\" + locruntconf.Split('\\').Last());
                 File.Copy(reqasemb, @"D:\HandleGame\" + reqasemb.Split('\\').Last());
+                File.Copy(lib1, @"D:\HandleGame\" + lib1.Split('\\').Last());
+                File.Copy(lib2, @"D:\HandleGame\" + lib2.Split('\\').Last());
+                File.Copy(lib3, @"D:\HandleGame\" + lib3.Split('\\').Last());
             }
             var KeyTest = Registry.CurrentUser.OpenSubKey("Software", true).OpenSubKey("Classes", true);
             RegistryKey key = KeyTest.CreateSubKey("HandleWebRequest");
@@ -125,10 +141,42 @@ namespace WMConsole
                         isSteam = false;
                     }
                 }
-                Console.WriteLine("Please enter your expansion pack level - Currently valid ones are \n 0- ARR - 1 - Heavensward - 2 - Stormblood - 3 - Shadowbringers - 4 - Endwalker");
-                expansionLevel = int.Parse(Console.ReadLine());
+                var xpacPath = "";
+                if(ReturnXpacNum(1) == "ex1") { xpacPath="ex1";}
+                if (ReturnXpacNum(2) == "ex2") { xpacPath = "ex2"; }
+                if (ReturnXpacNum(3) == "ex3") { xpacPath = "ex3"; }
+                if (ReturnXpacNum(4) == "ex4") { xpacPath = "ex4"; }
+                var sqpack = $@"{gamepath}\sqpack\{xpacPath}";
+                
+                    if (xpacPath == "ex1")
+                    {
+                        expansionLevel = 1;
+                        Console.WriteLine(expansionLevel);
+                    }
+                    if (xpacPath == "ex2")
+                    {
+                        expansionLevel = 2;
+                        Console.WriteLine(expansionLevel);
+                    }
+                    if (xpacPath == "ex3")
+                    {
+                        expansionLevel = 3;
+                        Console.WriteLine(expansionLevel);
+                    }
+                    if (xpacPath == "ex4")
+                    {
+                        expansionLevel = 4;
+                        Console.WriteLine(expansionLevel);
+                    }
 
 
+
+
+
+               
+                Window1 windower = new Window1();
+                windower.Show();
+                
                 try
                 {
                     var sid = networklogic.GetRealSid(gamepath, username, password, otp, isSteam);
@@ -144,12 +192,14 @@ namespace WMConsole
                 {
                     Console.WriteLine(exc.Message);
                 }
-                Console.ReadLine();
+                Thread.Sleep(10000);
+                windower.Close();
+                
             }
             if (args == null || args.Length == 0)
             {
                 {
-                    Console.WriteLine("Required information not passed  - closing down");
+                    Console.WriteLine("Protocol handler has been registered- you may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game");
                     
 
 

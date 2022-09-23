@@ -1,7 +1,39 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net6.0-windows7.0": {
+      "WpfAnimatedGif/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/WpfAnimatedGif.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/WpfAnimatedGif.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "XamlAnimatedGif/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows7.0/XamlAnimatedGif.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/XamlAnimatedGif.dll": {
+            "related": ".pdb"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "LibLaunchSupport/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -11,19 +43,80 @@
         "runtime": {
           "bin/placeholder/LibLaunchSupport.dll": {}
         }
+      },
+      "SpinningWheelLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "XamlAnimatedGif": "2.0.3"
+        },
+        "compile": {
+          "bin/placeholder/SpinningWheelLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SpinningWheelLib.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
   "libraries": {
+    "WpfAnimatedGif/2.0.2": {
+      "sha512": "B0j9SqtThyHVTiOPvu6yR+39Te0g3o+7Jjb+qEm7+Iz1HRqbE5/4QV+ntHWOYYBPOUFr9x1mdzGl/EzWP+nKiA==",
+      "type": "package",
+      "path": "wpfanimatedgif/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/WpfAnimatedGif.dll",
+        "lib/net35/WpfAnimatedGif.pdb",
+        "lib/net35/WpfAnimatedGif.xml",
+        "lib/net40/WpfAnimatedGif.dll",
+        "lib/net40/WpfAnimatedGif.pdb",
+        "lib/net40/WpfAnimatedGif.xml",
+        "lib/netcoreapp3.0/WpfAnimatedGif.dll",
+        "lib/netcoreapp3.0/WpfAnimatedGif.pdb",
+        "lib/netcoreapp3.0/WpfAnimatedGif.xml",
+        "wpfanimatedgif.2.0.2.nupkg.sha512",
+        "wpfanimatedgif.nuspec"
+      ]
+    },
+    "XamlAnimatedGif/2.0.3": {
+      "sha512": "1qsjrI6Z48RSahLdb5P0Z/NEi+r5e3Si60ZhtmZbcsvxG7jdLT4AEG92lPPsEDV9HW7ZlaUjt+2OJlKwffZ4Lg==",
+      "type": "package",
+      "path": "xamlanimatedgif/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "assets/xamlanimatedgif.png",
+        "lib/net45/XamlAnimatedGif.dll",
+        "lib/net45/XamlAnimatedGif.pdb",
+        "lib/net5.0-windows7.0/XamlAnimatedGif.dll",
+        "lib/net5.0-windows7.0/XamlAnimatedGif.pdb",
+        "lib/netcoreapp3.1/XamlAnimatedGif.dll",
+        "lib/netcoreapp3.1/XamlAnimatedGif.pdb",
+        "xamlanimatedgif.2.0.3.nupkg.sha512",
+        "xamlanimatedgif.nuspec"
+      ]
+    },
     "LibLaunchSupport/1.0.0": {
       "type": "project",
       "path": "../LibLaunchSupport/LibLaunchSupport.csproj",
       "msbuildProject": "../LibLaunchSupport/LibLaunchSupport.csproj"
+    },
+    "SpinningWheelLib/1.0.0": {
+      "type": "project",
+      "path": "../SpinningWheelLib/SpinningWheelLib.csproj",
+      "msbuildProject": "../SpinningWheelLib/SpinningWheelLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "LibLaunchSupport >= 1.0.0"
+    "net6.0-windows7.0": [
+      "LibLaunchSupport >= 1.0.0",
+      "SpinningWheelLib >= 1.0.0",
+      "WpfAnimatedGif >= 2.0.2"
     ]
   },
   "packageFolders": {
@@ -48,7 +141,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -56,11 +149,14 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {
             "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\LibLaunchSupport\\LibLaunchSupport.csproj": {
               "projectPath": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\LibLaunchSupport\\LibLaunchSupport.csproj"
+            },
+            "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\SpinningWheelLib\\SpinningWheelLib.csproj": {
+              "projectPath": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\SpinningWheelLib\\SpinningWheelLib.csproj"
             }
           }
         }
@@ -72,8 +168,14 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "WpfAnimatedGif": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

@@ -2,16 +2,21 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>WMconsole</AssemblyName>
-    
+	<EnableWindowsTargeting>true</EnableWindowsTargeting>
         
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LibLaunchSupport\LibLaunchSupport.csproj" />
+    <ProjectReference Include="..\SpinningWheelLib\SpinningWheelLib.csproj" />
   </ItemGroup>
 
 </Project>
