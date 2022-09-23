@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>WMconsole</AssemblyName>
-    
+	<EnableWindowsTargeting>true</EnableWindowsTargeting>
         
   </PropertyGroup>
 
