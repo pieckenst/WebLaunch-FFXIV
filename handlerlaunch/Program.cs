@@ -125,9 +125,22 @@ namespace WMConsole
                         isSteam = false;
                     }
                 }
-                Console.WriteLine("Please enter your expansion pack level - Currently valid ones are \n 0- ARR - 1 - Heavensward - 2 - Stormblood - 3 - Shadowbringers - 4 - Endwalker");
-                expansionLevel = int.Parse(Console.ReadLine());
-
+                if(Directory.Exists(gamepath + "game/sqpack/ex1"))
+                {
+                    expansionLevel= 1;
+                }
+                if (Directory.Exists(gamepath + "game/sqpack/ex2"))
+                {
+                    expansionLevel = 2;
+                }
+                if (Directory.Exists(gamepath + "game/sqpack/ex3"))
+                {
+                    expansionLevel = 3;
+                }
+                if (Directory.Exists(gamepath + "game/sqpack/ex4"))
+                {
+                    expansionLevel = 4;
+                }
 
                 try
                 {
