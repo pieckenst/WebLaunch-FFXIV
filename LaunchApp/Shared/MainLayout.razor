@@ -3,7 +3,32 @@
 
 
 <MApp>
-  <NavMenu />
+  <MBottomNavigation
+    @bind-value="value"
+    BackgroundColor="@color"
+    
+    Shift>
+    <MButton href="">
+        <span>Home</span>
+
+        <MIcon>mdi-home</MIcon>
+    </MButton>
+
+    <MButton href="counter">
+        <span>FFXIV</span>
+
+        <MIcon>mdi-build</MIcon>
+    </MButton>
+
+    <MButton href="spellborn">
+        <span>Spellborn</span>
+
+        <MIcon>mdi-login</MIcon>
+    </MButton>
+
+    
+  </MBottomNavigation>
+
     <!-- Sizes your content based upon application components -->
   <MMain>
     <!-- Provides the application the proper gutter -->
@@ -12,3 +37,20 @@
     </MContainer>
   </MMain>
 </MApp>
+@code {
+
+    StringNumber value = 1;
+
+    string color
+    {
+        get
+        {
+            if (value == 0) return "blue-grey";
+            if (value == 1) return "red";
+            if (value == 2) return "brown";
+            if (value == 3) return "indigo";
+            return "blue-grey";
+        }
+    }
+
+}
