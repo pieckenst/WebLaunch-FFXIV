@@ -9,13 +9,13 @@
 <p role="status">Status: @statusstring</p>
 
 <p><label for="username">Username</label></p> 
-<p><input id="username" name="Username"  @bind="usernameinp" autocomplete="off" type="text" required /></p>  <!-- JS because of IE support; better: placeholder="Username" -->
+<p><input id="username" name="Username"  @bind-value="usernameinp" autocomplete="off" type="text" required /></p>  <!-- JS because of IE support; better: placeholder="Username" -->
 <p><label for="password">Password</label></p>
-<p><input id="password" @bind="passinp" name="password" autocomplete="off" type="password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+<p><input id="password" @bind-value="passinp" name="password" autocomplete="off" type="password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
 <p><label for="otp">OTP</label></p>
-<p><input id="otp" @bind="otpinp" name="otp" autocomplete="off" type="text" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+<p><input id="otp" @bind-value="otpinp" name="otp" autocomplete="off" type="text" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
 <!--<p><label for="expinputtext">Expansion level</label></p>
-<p><input id="expinputtext" @bind="expgamelevel" name="expinputtext" autocomplete="off" type="int" required></p> -->
+<p><input id="expinputtext" @bind-value="expgamelevel" name="expinputtext" autocomplete="off" type="int" required></p> -->
 <!-- JS because of IE support; better: placeholder="Password" -->
 <button class="btn btn-primary" @onclick="@ModalShow">🔧 </button>
 <button class="btn btn-primary" @onclick="processinputsx">Login</button>
@@ -36,9 +36,9 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <p><label for="gamepath">Gamepath</label></p> 
-                    <p><input id="gamepath" name="Gamepath" @bind="gamepatherinp" autocomplete="off" type="text" required /></p>
+                    <p><input id="gamepath" name="Gamepath" @bind-value="gamepatherinp" autocomplete="off" type="text" required /></p>
                     <p><label for="steamstatcheck">Do you own the game on steam?</label></p>
-                    <p><input type="checkbox" id="steamstatcheck" name="steamstatcheck" @bind="checkedValue" unchecked></p>
+                    <p><input type="checkbox" id="steamstatcheck" name="steamstatcheck" @bind-value="checkedValue" unchecked></p>
                 </div>
 
                 <!-- Modal footer -->
