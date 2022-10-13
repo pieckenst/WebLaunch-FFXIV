@@ -5,9 +5,57 @@
 <PageTitle>Chronicles of spellborn launch process</PageTitle>
 <h1>Welcome to very basic web-based login process for Chronicles of Spellborn </h1>
 <button class="btn btn-primary" @onclick="processlaunchusespl">Launch the game </button>
+<button class="btn btn-primary" @onclick="@ModalShow">🔧 </button>
+@if (showModal)
+{
+        <div class="modal fade show" id="myModal" style="display:block" aria-modal="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Settings page</h4>
+                        <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p><label for="gamepath">Gamepath</label></p>
+                    <p><input id="gamepath" name="Gamepath" @bind="gamepathersinp" autocomplete="off" type="text" required /></p>
+                        
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn " @onclick=@ModalOk>Apply settings</button>
+                        <button type="button" class="btn" @onclick="@ModalCancel">Cancel</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+}
 @code {
+    private string gamepathersinp = "";
+    bool showModal = false;
+    void ModalShow()
+    {
+        showModal = true;
+    }
+    void ModalCancel()
+    {
+        showModal = false;
+    }
+
+
+    void ModalOk()
+    {
+        Console.WriteLine("Modal ok");
+        showModal = false;
+    }
     void processlaunchusespl()
     {
-            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunch?spellbornhandle=yes");
+        navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunch?spellbornhandle=yes" + ":?gamepath = " + gamepathersinp);
     }
 }

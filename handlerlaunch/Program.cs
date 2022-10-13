@@ -84,7 +84,7 @@ namespace WMConsole
                 if (args[0].Contains("?spellbornhandle=yes"))
                 {
                     spellbornsupporter splbornobj = new spellbornsupporter();
-                    splbornobj.startupRoutine();
+                    splbornobj.startupRoutine(args);
                     Window1 windower = new Window1();
                     windower.Show();
                     Thread.Sleep(10000);
