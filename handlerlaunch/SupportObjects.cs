@@ -200,19 +200,7 @@ namespace handlerlaunch
         private bool enableLaunch;
         
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        public string dogamepathreturn (string[] args) {
-            string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
-            string gamepathcst = "";
-            string firstsanstep = "";
-            string secsanitationstep = "";
-            string thirdsanitationstep = "";
-            if (gamepathns.Contains(":?"))
-                gamepathcst = gamepathns.Split(":?")[0];
-            if (gamepathcst.Contains("%20")) { firstsanstep = gamepathcst.Replace("%20", ""); Console.WriteLine(firstsanstep);} else { firstsanstep = gamepathcst; }
-            if (gamepathcst.Contains("%22")) { secsanitationstep = firstsanstep.Replace("%22", ""); Console.WriteLine(secsanitationstep); } else { secsanitationstep = gamepathcst; }
-            if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); Console.WriteLine(thirdsanitationstep); }
-            return thirdsanitationstep;
-        }
+        
         public void startupRoutine(string[] args)
         {
 #if DEBUG
@@ -222,7 +210,23 @@ namespace handlerlaunch
 #endif
             try
             {
-                passoverfromweb = dogamepathreturn(args);
+                string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
+                string gamepathcst = "";
+                string firstsanstep = "";
+                string secsanitationstep = "";
+                string thirdsanitationstep = "";
+                if (gamepathns.Contains(":?"))
+                    gamepathcst = gamepathns.Split(":?")[0];
+                if (gamepathcst.Contains("%20")) { firstsanstep = gamepathcst.Replace("%20", ""); Console.WriteLine(firstsanstep); } else { firstsanstep = gamepathcst; }
+                if (gamepathcst.Contains("%22")) { secsanitationstep = firstsanstep.Replace("%22", ""); Console.WriteLine(secsanitationstep); } else { secsanitationstep = gamepathcst; }
+                if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "\\"); Console.WriteLine(thirdsanitationstep); }
+                passoverfromweb = thirdsanitationstep;
+#if DEBUG
+                Console.WriteLine(passoverfromweb);
+
+#else
+                Console.WriteLine("");
+#endif
             }
             catch (Exception e)
             {
@@ -324,11 +328,11 @@ namespace handlerlaunch
                     Console.WriteLine("We found an update applicable to us");
                     if (updates[i].Update.enabled == "false")
                     {
-                        #if DEBUG
+#if DEBUG
                         Console.WriteLine("Update is applicable to us, but not yet enabled. Take no action and enable play button");
-                        #else 
+#else
                         Console.Write("");
-                        #endif
+#endif
                         enablePlayButton();
                         return false;
                     }
