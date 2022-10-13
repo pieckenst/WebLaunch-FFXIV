@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v5r5NQh7Mj7epyOwbdpk2GitZenY9hymyJsXuUbF5G93up3ZeR01aEbM3lo/Wl4hO/XOv7zKXbdbiKpdxB7Vhw==",
+  "dgSpecHash": "glqfi4hvL2wiKxHNcJZPILQVvVsxS+FCDVALFkzLtO8r175OpEpHNk/E0BIRWetyRU3S8sH8+TgZNPzXIF0jdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\handlerlaunch\\handlerlaunch.csproj",
+  "projectFilePath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\handlerlaunch\\handlerlaunch.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Андрей Савич\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512",
-    "C:\\Users\\Андрей Савич\\.nuget\\packages\\xamlanimatedgif\\2.0.3\\xamlanimatedgif.2.0.3.nupkg.sha512"
+    "C:\\Users\\rsncra\\.nuget\\packages\\xamlanimatedgif\\2.0.3\\xamlanimatedgif.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

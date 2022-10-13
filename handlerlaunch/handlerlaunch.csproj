@@ -11,10 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\LibLaunchSupport\LibLaunchSupport.csproj" />
     <ProjectReference Include="..\SpinningWheelLib\SpinningWheelLib.csproj" />
   </ItemGroup>

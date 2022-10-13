@@ -180,23 +180,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Андрей Савич\\.nuget\\packages\\": {},
-    "E:\\sdk\\NuGetPackages": {}
+    "C:\\Users\\rsncra\\.nuget\\packages\\": {},
+    "F:\\sdks\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\LibLaunchSupport\\LibLaunchSupport.csproj",
+      "projectUniqueName": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LibLaunchSupport\\LibLaunchSupport.csproj",
       "projectName": "LibLaunchSupport",
-      "projectPath": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\LibLaunchSupport\\LibLaunchSupport.csproj",
-      "packagesPath": "C:\\Users\\Андрей Савич\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Андрей Савич\\source\\repos\\handlerlaunch\\LibLaunchSupport\\obj\\",
+      "projectPath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LibLaunchSupport\\LibLaunchSupport.csproj",
+      "packagesPath": "C:\\Users\\rsncra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LibLaunchSupport\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\sdk\\NuGetPackages"
+        "F:\\sdks\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Андрей Савич\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rsncra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -242,7 +242,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
       }
     }
   }
