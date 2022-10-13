@@ -23,35 +23,7 @@ using Konsole;
 
 namespace handlerlaunch
 {
-    class ConsoleUtility
-    {
-        const char _block = '■';
-        const string _back = "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
-        const string _twirl = "-\\|/";
-
-        public static void WriteProgressBar(int percent, bool update = false)
-        {
-            if (update)
-                Console.Write(_back);
-            Console.Write("[");
-            var p = (int)((percent / 10f) + .5f);
-            for (var i = 0; i < 10; ++i)
-            {
-                if (i >= p)
-                    Console.Write(' ');
-                else
-                    Console.Write(_block);
-            }
-            Console.Write("] {0,3:##0}%", percent);
-        }
-
-        public static void WriteProgress(int progress, bool update = false)
-        {
-            if (update)
-                Console.Write("\b");
-            Console.Write(_twirl[progress % _twirl.Length]);
-        }
-    }
+    
     public class Update
     {
         [JsonProperty("applies_to")]
@@ -216,12 +188,14 @@ namespace handlerlaunch
         private bool downloadFinished;
 
         private int totalFiles;
+        const char _block = '■';
 
         private int filesExtracted;
 
         private string currentVersion;
 
         private dynamic updateJson;
+        private string stringupdfile;
 
         private bool enableLaunch;
         bool folderExists = Directory.Exists("D:\\Games\\Spellborn");
@@ -242,7 +216,11 @@ namespace handlerlaunch
 
                 }
                 installedVersion = registryManipulation.getKeyValue("installedVersion");
-                _log.Info("Latest installed version is " + installedVersion.ToString());
+#if DEBUG
+                Console.WriteLine("Latest installed version is " + installedVersion.ToString());
+#else
+                    Console.Write("");
+#endif
                 _log.Info("Fetching latest version from the file server");
                 jsonLatest = updateHandler.getJsonItem("latest.json");
                 _log.Info("Managed to get the latest.json file");
@@ -257,13 +235,14 @@ namespace handlerlaunch
                         Console.WriteLine("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
                         downloadFile(jsonLatest.file, jsonLatest.checksum, jsonLatest.version);
                     }
-                    else
-                    {
-                        _log.Info("Version doesn't match, but registry tells that we are installed. Proceeding with fetching updates.");
-
-                        checkUpdates();
-                    }
+                    
                 }
+#if DEBUG
+                Console.WriteLine("Version doesn't match, but registry tells that we are installed. Proceeding with fetching updates.");
+#else
+                Console.Write("");
+#endif
+                checkUpdates();
                 if (enableLaunch)
                 {
                     Process.Start(installPath + "\\bin\\client\\Sb_client.exe");
@@ -272,6 +251,7 @@ namespace handlerlaunch
             }
             catch(Exception e) 
             {
+                Console.WriteLine("An error was encountered during execution- the debug info below is listed");
                 Console.WriteLine(e.Message);
                 Console.WriteLine(e.InnerException);
                 Console.WriteLine(e.StackTrace);
@@ -281,7 +261,7 @@ namespace handlerlaunch
         }
         public void unzipFile(string file, string version)
         {
-            _log.Info("Starting with unzipping ZIP file. Filename: " + file + " version: " + version);
+            Console.WriteLine("Starting with unzipping ZIP file. Filename: " + file + " version: " + version);
             using (Ionic.Zip.ZipFile zipFile = Ionic.Zip.ZipFile.Read(file))
             {
                 totalFiles = zipFile.Count;
@@ -289,40 +269,46 @@ namespace handlerlaunch
                 
                 zipFile.ExtractAll(installPath, ExtractExistingFileAction.OverwriteSilently);
             }
-            _log.Info("Unzipping completed, storing new version " + version + " in the registry");
+            Console.WriteLine("Unzipping completed, storing new version " + version + " in the registry");
             registryManipulation.updateKeyValue("installedVersion", version);
-            _log.Info("Stored new version in registry, new value is " + version);
+            Console.WriteLine("Stored new version in registry, new value is " + version);
+
             
-            _log.Info("Delete ZIP-file " + file);
-            File.Delete(file);
-            _log.Info("Deleted, now check for updates again.");
+            Console.WriteLine("Checking for updates again.");
             checkUpdates();
         }
 
         private bool checkUpdates()
         {
             currentVersion = registryManipulation.getKeyValue("installedVersion");
-            _log.Info("Getting installed version from registry. It is " + installedVersion);
-            _log.Info("Fetch the updates.json file from file server");
+            Console.WriteLine("Getting installed version from registry. It is " + installedVersion);
+            Console.WriteLine("Fetch the updates.json file from file server");
             dynamic updates = updateHandler.fetchUpdates();
             int i;
             for (i = 0; i < updates.Count; i++)
             {
                 if (updates[i].Update.appliesTo == currentVersion)
                 {
-                    _log.Info("We found an update applicable to us");
+                    Console.WriteLine("We found an update applicable to us");
                     if (updates[i].Update.enabled == "false")
                     {
-                        _log.Info("Update is applicable to us, but not yet enabled. Take no action and enable play button");
+                        #if DEBUG
+                        Console.WriteLine("Update is applicable to us, but not yet enabled. Take no action and enable play button");
+                        #else 
+                        Console.Write("");
+                        #endif
                         enablePlayButton();
                         return false;
                     }
-                    _log.Info("Update found that is applicable to us and it is enabled. Set progressbar to fixed value of 0 and stop it from looping. Update the label.");
-                    
-                    
-                    _log.Info("Fetch the patchnotes in the browser window");
-                    
-                    _log.Info("Calling download function to download update. Information passed through is: filename: " + updates[i].Update.file + " checksum: " + updates[i].Update.checksum + " version: " + updates[i].Update.version);
+#if DEBUG
+                    Console.WriteLine("Update found that is applicable to us and it is enabled. ");
+#else
+                    Console.Write("");
+#endif
+
+
+
+                    Console.WriteLine("Calling download function to download update. Information passed through is: filename: " + updates[i].Update.file + " checksum: " + updates[i].Update.checksum + " version: " + updates[i].Update.version);
                     downloadFile(updates[i].Update.file, updates[i].Update.checksum, updates[i].Update.version);
                     return true;
                 }
@@ -361,6 +347,7 @@ namespace handlerlaunch
                 _log.Info("Closing this window, installpath has been removed - restarting application");
             }
             string uriString = "https://files.spellborn.org/" + file;
+            stringupdfile= file;
             _log.Info("Check if the file already exists");
             if (File.Exists(installPath + "/" + file))
             {
@@ -409,9 +396,22 @@ namespace handlerlaunch
         }
         private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            Console.Write("\r --> Downloading " + jsonLatest.file + ": " + string.Format("{0:n0}", e.BytesReceived / 1000) + " kb");
-            
-            
+            var p = e.BytesReceived / 1000;
+            Console.Write("\r [ Downloading " + stringupdfile + ": " + string.Format("{0:n0}", e.BytesReceived / 1000) + " kb" + "]");
+            Console.WriteLine() ;
+            Console.Write("\n [");
+            for (int i =0; i < 100; i++)
+            {
+                if (i >= p)
+                    Console.Write(' ');
+                else
+                    Console.Write(_block);
+            }
+            Console.Write("] \n");
+
+
+
+
         }
         private void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
