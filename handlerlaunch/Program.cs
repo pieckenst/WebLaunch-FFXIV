@@ -45,9 +45,10 @@ namespace WMConsole
             string lib1 = loc.Replace("WMconsole.dll", "SpinningWheelLib.dll");
             string lib2 = loc.Replace("WMconsole.dll", "WpfAnimatedGif.dll");
             string lib3 = loc.Replace("WMconsole.dll", "XamlAnimatedGif.dll");
-            string lib4 = loc.Replace("WMconsole.dll", "Ionic.Zip.dll");
+            string lib4 = loc.Replace("WMconsole.dll", "DotNetZip.dll");
             string lib5 = loc.Replace("WMconsole.dll", "Newtonsoft.Json.dll");
             string lib6 = loc.Replace("WMconsole.dll", "log4net.dll");
+            string lib7 = loc.Replace("WMconsole.dll", "Goblinfactory.Konsole.dll");
             if (!Directory.Exists(@"D:\HandleGame\"))
             {
                 System.IO.Directory.CreateDirectory(@"D:\HandleGame\");
@@ -64,6 +65,7 @@ namespace WMConsole
                 File.Copy(lib4, @"D:\HandleGame\" + lib4.Split('\\').Last());
                 File.Copy(lib5, @"D:\HandleGame\" + lib5.Split('\\').Last());
                 File.Copy(lib6, @"D:\HandleGame\" + lib6.Split('\\').Last());
+                File.Copy(lib7, @"D:\HandleGame\" + lib7.Split('\\').Last());
             }
             var KeyTest = Registry.CurrentUser.OpenSubKey("Software", true).OpenSubKey("Classes", true);
             RegistryKey key = KeyTest.CreateSubKey("HandleWebRequest");
@@ -83,10 +85,7 @@ namespace WMConsole
                 {
                     spellbornsupporter splbornobj = new spellbornsupporter();
                     splbornobj.startupRoutine();
-                    Window1 windower = new Window1();
-                    windower.Show();
-                    Thread.Sleep(10000);
-                    windower.Close();
+                    
                 }
 
             }

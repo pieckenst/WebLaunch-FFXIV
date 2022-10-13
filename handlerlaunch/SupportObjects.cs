@@ -15,13 +15,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WMConsole;
-using Ionic.Zip;
-using ZipFile = Ionic.Zip.ZipFile;
+
 using System.ComponentModel;
 using System.Diagnostics;
+using Ionic.Zip;
+using Konsole;
 
 namespace handlerlaunch
 {
+    class ConsoleUtility
+    {
+        const char _block = '■';
+        const string _back = "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
+        const string _twirl = "-\\|/";
+
+        public static void WriteProgressBar(int percent, bool update = false)
+        {
+            if (update)
+                Console.Write(_back);
+            Console.Write("[");
+            var p = (int)((percent / 10f) + .5f);
+            for (var i = 0; i < 10; ++i)
+            {
+                if (i >= p)
+                    Console.Write(' ');
+                else
+                    Console.Write(_block);
+            }
+            Console.Write("] {0,3:##0}%", percent);
+        }
+
+        public static void WriteProgress(int progress, bool update = false)
+        {
+            if (update)
+                Console.Write("\b");
+            Console.Write(_twirl[progress % _twirl.Length]);
+        }
+    }
     public class Update
     {
         [JsonProperty("applies_to")]
@@ -194,13 +224,16 @@ namespace handlerlaunch
         private dynamic updateJson;
 
         private bool enableLaunch;
-
+        bool folderExists = Directory.Exists("D:\\Games\\Spellborn");
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public void startupRoutine()
         {
             
             try {
-                
+                if (!folderExists)
+                {
+                    Directory.CreateDirectory("D:\\Games\\Spellborn");
+                }
                 if (!registryManipulation.detectInstallation())
                 {
                     _log.Info("Clean install detected/no registry installpath key found");
@@ -221,6 +254,7 @@ namespace handlerlaunch
                         _log.Info("Found nothing in the registry, this is most likely a clean install. Go forwards with full install.");
                         _log.Info("Requested browser to load the launcher welcome/install page ");
                         _log.Info("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
+                        Console.WriteLine("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
                         downloadFile(jsonLatest.file, jsonLatest.checksum, jsonLatest.version);
                     }
                     else
@@ -248,7 +282,7 @@ namespace handlerlaunch
         public void unzipFile(string file, string version)
         {
             _log.Info("Starting with unzipping ZIP file. Filename: " + file + " version: " + version);
-            using (Ionic.Zip.ZipFile zipFile = ZipFile.Read(file))
+            using (Ionic.Zip.ZipFile zipFile = Ionic.Zip.ZipFile.Read(file))
             {
                 totalFiles = zipFile.Count;
                 filesExtracted = 0;
@@ -345,6 +379,10 @@ namespace handlerlaunch
                     webClient.QueryString.Add("checksum", checksum.ToString());
                     webClient.QueryString.Add("version", version.ToString());
                     webClient.DownloadFileAsync(new Uri(uriString), installPath + "/" + file);
+                    while (webClient.IsBusy)
+                        System.Threading.Thread.Sleep(1000);
+                    Console.Write("  COMPLETED!");
+                    Console.WriteLine();
                 }
                 else
                 {
@@ -355,7 +393,7 @@ namespace handlerlaunch
             }
             else
             {
-                _log.Info("File not found, downloading");
+                Console.WriteLine("File not found, downloading");
                 using WebClient webClient2 = new WebClient();
                 webClient2.DownloadProgressChanged += wc_DownloadProgressChanged;
                 webClient2.DownloadFileCompleted += wc_DownloadFileCompleted;
@@ -363,13 +401,18 @@ namespace handlerlaunch
                 webClient2.QueryString.Add("checksum", checksum.ToString());
                 webClient2.QueryString.Add("version", version.ToString());
                 webClient2.DownloadFileAsync(new Uri(uriString), installPath + "/" + file);
+                while (webClient2.IsBusy)
+                    System.Threading.Thread.Sleep(1000);
+                Console.Write("  COMPLETED!");
+                Console.WriteLine();
             }
         }
         private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
+            Console.Write("\r --> Downloading " + jsonLatest.file + ": " + string.Format("{0:n0}", e.BytesReceived / 1000) + " kb");
+            
             
         }
-
         private void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             
