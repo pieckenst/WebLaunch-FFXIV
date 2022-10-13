@@ -212,14 +212,12 @@ namespace handlerlaunch
             {
                 string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
                 string gamepathcst = "";
-                string firstsanstep = "";
                 string secsanitationstep = "";
                 string thirdsanitationstep = "";
                 if (gamepathns.Contains(":?"))
                     gamepathcst = gamepathns.Split(":?")[0];
-                if (gamepathcst.Contains("%20")) { firstsanstep = gamepathcst.Replace("%20", ""); Console.WriteLine(firstsanstep); } else { firstsanstep = gamepathcst; }
-                if (gamepathcst.Contains("%22")) { secsanitationstep = firstsanstep.Replace("%22", ""); Console.WriteLine(secsanitationstep); } else { secsanitationstep = gamepathcst; }
-                if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "\\"); Console.WriteLine(thirdsanitationstep); }
+                if (gamepathcst.Contains("%22")) { secsanitationstep = gamepathcst.Replace("%22", ""); } else { secsanitationstep = gamepathcst; }
+                if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); }
                 passoverfromweb = thirdsanitationstep;
 #if DEBUG
                 Console.WriteLine(passoverfromweb);
