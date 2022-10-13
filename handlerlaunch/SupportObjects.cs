@@ -78,13 +78,13 @@ namespace handlerlaunch
     internal class registryManipulation
     {
         private static object keyValue;
-        public static void createkeys() {
+        public static void createkeys(string passover) {
             var KeyTests = Registry.CurrentUser.OpenSubKey("Software", true);
             KeyTests.CreateSubKey("The Chronicles of Spellborn");
             var keyval = KeyTests.GetValue("installPath").ToString();
             if (keyval == null)
             {
-                KeyTests.SetValue("installPath", "D:\\Games\\Spellborn", RegistryValueKind.String);
+                KeyTests.SetValue("installPath", passover, RegistryValueKind.String);
             }
         }
         public static string getKeyValue(string keyName)
@@ -196,23 +196,34 @@ namespace handlerlaunch
 
         private dynamic updateJson;
         private string stringupdfile;
-
+        public string passoverfromweb;
         private bool enableLaunch;
-        bool folderExists = Directory.Exists("D:\\Games\\Spellborn");
+        bool folderExists = Directory.Exists(passoverfromweb);
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        public void startupRoutine()
+        public string dogamepathreturn (string[] args) {
+            string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
+            string gamepathcst = "";
+            string secsanitationstep = "";
+            string thirdsanitationstep = "";
+            if (gamepathns.Contains(":?"))
+                gamepathcst = gamepathns.Split(":?")[0];
+            if (gamepathcst.Contains("%22")) { secsanitationstep = gamepathcst.Replace("%22", ""); } else { secsanitationstep = gamepathcst; }
+            if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); }
+            return thirdsanitationstep;
+        }
+        public void startupRoutine(string[] args)
         {
-            
+            passoverfromweb = dogamepathreturn(args);
             try {
                 if (!folderExists)
                 {
-                    Directory.CreateDirectory("D:\\Games\\Spellborn");
+                    Directory.CreateDirectory(passoverfromweb);
                 }
                 if (!registryManipulation.detectInstallation())
                 {
                     _log.Info("Clean install detected/no registry installpath key found");
 
-                    installPath = "D:\\Games\\Spellborn";
+                    installPath = passoverfromweb;
 
                 }
                 installedVersion = registryManipulation.getKeyValue("installedVersion");
@@ -343,7 +354,7 @@ namespace handlerlaunch
                 
                 _log.Error("Removed installpath in registry to allow picking new path.");
                 //registryManipulation.deleteKeyValue("installpath");
-                installPath = "D:\\Games\\Spellborn";
+                installPath = passoverfromweb;
                 _log.Info("Closing this window, installpath has been removed - restarting application");
             }
             string uriString = "https://files.spellborn.org/" + file;
