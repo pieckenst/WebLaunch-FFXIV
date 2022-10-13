@@ -32,3 +32,20 @@ C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\o
 C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\refint\SpinningWheelLib.dll
 C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.pdb
 C:\Users\Андрей Савич\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\ref\SpinningWheelLib.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\bin\Release\net6.0-windows\SpinningWheelLib.deps.json
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\bin\Release\net6.0-windows\SpinningWheelLib.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\bin\Release\net6.0-windows\SpinningWheelLib.pdb
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.csproj.AssemblyReference.cache
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\Window1.g.cs
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib_MarkupCompile.cache
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib_MarkupCompile.lref
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\Window1.baml
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.g.resources
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.AssemblyInfoInputs.cache
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.AssemblyInfo.cs
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.csproj.CoreCompileInputs.cache
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\refint\SpinningWheelLib.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\SpinningWheelLib.pdb
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\ref\SpinningWheelLib.dll

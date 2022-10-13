@@ -70,7 +70,7 @@ namespace WMConsole
                     FFXIVhandler.HandleFFXivReq(args);
                     Window1 windower = new Window1();
                     windower.Show();
-                    Thread.Sleep(30000);
+                    Thread.Sleep(10000);
                     windower.Close();
                 }
                 
