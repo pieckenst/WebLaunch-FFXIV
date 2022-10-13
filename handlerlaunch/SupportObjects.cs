@@ -196,24 +196,44 @@ namespace handlerlaunch
 
         private dynamic updateJson;
         private string stringupdfile;
-        public string passoverfromweb;
+        public string passoverfromweb = "";
         private bool enableLaunch;
         
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public string dogamepathreturn (string[] args) {
             string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
             string gamepathcst = "";
+            string firstsanstep = "";
             string secsanitationstep = "";
             string thirdsanitationstep = "";
             if (gamepathns.Contains(":?"))
                 gamepathcst = gamepathns.Split(":?")[0];
-            if (gamepathcst.Contains("%22")) { secsanitationstep = gamepathcst.Replace("%22", ""); } else { secsanitationstep = gamepathcst; }
-            if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); }
+            if (gamepathcst.Contains("%20")) { firstsanstep = gamepathcst.Replace("%20", ""); Console.WriteLine(firstsanstep);} else { firstsanstep = gamepathcst; }
+            if (gamepathcst.Contains("%22")) { secsanitationstep = firstsanstep.Replace("%22", ""); Console.WriteLine(secsanitationstep); } else { secsanitationstep = gamepathcst; }
+            if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); Console.WriteLine(thirdsanitationstep); }
             return thirdsanitationstep;
         }
         public void startupRoutine(string[] args)
         {
-            passoverfromweb = dogamepathreturn(args);
+#if DEBUG
+            Console.WriteLine(args[0]);
+#else
+            Console.WriteLine("");
+#endif
+            try
+            {
+                passoverfromweb = dogamepathreturn(args);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("An error was encountered during execution- the debug info below is listed");
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.InnerException);
+                Console.WriteLine(e.StackTrace);
+                _log.Error(e.Message);
+                Console.ReadLine();
+                passoverfromweb= "D:\\Games\\Spellborn";
+            }
             bool folderExists = Directory.Exists(passoverfromweb);
             try {
                 if (!folderExists)
