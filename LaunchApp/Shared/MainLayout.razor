@@ -3,10 +3,19 @@
 
 
 <MApp>
+  
+
+    <!-- Sizes your content based upon application components -->
+  <MMain>
+    <!-- Provides the application the proper gutter -->
+    <MContainer Fluid>
+        @Body
+    </MContainer>
+  </MMain>
   <MBottomNavigation
     @bind-value="value"
     BackgroundColor="@color"
-    
+    Dark
     Shift>
     <MButton href="">
         <span>Home</span>
@@ -28,14 +37,6 @@
 
     
   </MBottomNavigation>
-
-    <!-- Sizes your content based upon application components -->
-  <MMain>
-    <!-- Provides the application the proper gutter -->
-    <MContainer Fluid>
-        @Body
-    </MContainer>
-  </MMain>
 </MApp>
 @code {
 
