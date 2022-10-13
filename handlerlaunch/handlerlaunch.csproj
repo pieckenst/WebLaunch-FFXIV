@@ -11,7 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ionic.Zip" Version="1.9.1.8" />
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="Goblinfactory.Konsole" Version="6.2.2" />
     <PackageReference Include="log4net" Version="2.0.15" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
