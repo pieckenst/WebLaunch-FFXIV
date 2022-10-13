@@ -194,13 +194,16 @@ namespace handlerlaunch
         private dynamic updateJson;
 
         private bool enableLaunch;
-
+        bool folderExists = Directory.Exists("D:\\Games\\Spellborn");
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public void startupRoutine()
         {
             
             try {
-                
+                if (!folderExists)
+                {
+                    Directory.CreateDirectory("D:\\Games\\Spellborn");
+                }
                 if (!registryManipulation.detectInstallation())
                 {
                     _log.Info("Clean install detected/no registry installpath key found");
@@ -221,6 +224,7 @@ namespace handlerlaunch
                         _log.Info("Found nothing in the registry, this is most likely a clean install. Go forwards with full install.");
                         _log.Info("Requested browser to load the launcher welcome/install page ");
                         _log.Info("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
+                        Console.WriteLine("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
                         downloadFile(jsonLatest.file, jsonLatest.checksum, jsonLatest.version);
                     }
                     else
