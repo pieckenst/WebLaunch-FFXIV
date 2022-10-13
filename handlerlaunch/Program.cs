@@ -85,7 +85,10 @@ namespace WMConsole
                 {
                     spellbornsupporter splbornobj = new spellbornsupporter();
                     splbornobj.startupRoutine();
-                    
+                    Window1 windower = new Window1();
+                    windower.Show();
+                    Thread.Sleep(10000);
+                    windower.Close();
                 }
 
             }
