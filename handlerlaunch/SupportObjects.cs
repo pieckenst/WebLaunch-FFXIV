@@ -200,31 +200,24 @@ namespace handlerlaunch
         private bool enableLaunch;
         
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        
-        public void startupRoutine(string[] args)
+        public string dogamepathreturn(string[] args)
         {
-#if DEBUG
-            Console.WriteLine(args[0]);
-#else
-            Console.WriteLine("");
-#endif
-            try
-            {
-                string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
+            string thirdsanitationstep = "";
+            try {
+                Console.WriteLine(args[0]);
+                string gamepathns = Program.TextFollowing(args[0].ToString(), "gamepath=");
+                Console.WriteLine(gamepathns);
                 string gamepathcst = "";
                 string secsanitationstep = "";
-                string thirdsanitationstep = "";
+                
                 if (gamepathns.Contains(":?"))
                     gamepathcst = gamepathns.Split(":?")[0];
+                else { gamepathcst= gamepathns ;}
                 if (gamepathcst.Contains("%22")) { secsanitationstep = gamepathcst.Replace("%22", ""); } else { secsanitationstep = gamepathcst; }
                 if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); }
-                passoverfromweb = thirdsanitationstep;
-#if DEBUG
-                Console.WriteLine(passoverfromweb);
-
-#else
-                Console.WriteLine("");
-#endif
+                if (thirdsanitationstep == null) {
+                    thirdsanitationstep = "D:\\Games\\Spellborn";
+                }
             }
             catch (Exception e)
             {
@@ -234,8 +227,29 @@ namespace handlerlaunch
                 Console.WriteLine(e.StackTrace);
                 _log.Error(e.Message);
                 Console.ReadLine();
-                passoverfromweb= "D:\\Games\\Spellborn";
+                thirdsanitationstep = "D:\\Games\\Spellborn";
             }
+            return thirdsanitationstep;
+        }
+        public void startupRoutine(string[] args)
+        {
+#if DEBUG
+            Console.WriteLine(args[0]);
+#else
+            Console.WriteLine("");
+#endif
+            string thirdsanitationstep = dogamepathreturn(args);
+            
+                
+                passoverfromweb = thirdsanitationstep;
+#if DEBUG
+                Console.WriteLine(passoverfromweb);
+
+#else
+                Console.WriteLine("");
+#endif
+            
+            
             bool folderExists = Directory.Exists(passoverfromweb);
             try {
                 if (!folderExists)
