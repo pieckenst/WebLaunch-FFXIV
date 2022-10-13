@@ -198,7 +198,7 @@ namespace handlerlaunch
         private string stringupdfile;
         public string passoverfromweb;
         private bool enableLaunch;
-        bool folderExists = Directory.Exists(passoverfromweb);
+        
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public string dogamepathreturn (string[] args) {
             string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
@@ -214,6 +214,7 @@ namespace handlerlaunch
         public void startupRoutine(string[] args)
         {
             passoverfromweb = dogamepathreturn(args);
+            bool folderExists = Directory.Exists(passoverfromweb);
             try {
                 if (!folderExists)
                 {
