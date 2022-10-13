@@ -1,39 +1,43 @@
-﻿<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">🕸️ WebLaunch</a>
-        <button class="navbar-toggler @NavButtonCssClass" type="button" aria-controls="navbarCollapse"
-            aria-label="Toggle navigation" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse @NavBarCssClass" id="navbarCollapse" @onclick="ToggleNavMenu">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                        <span class="oi oi-home" aria-hidden="true"></span> Home
-                    </NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="counter">
-                        <span class="oi oi-plus" aria-hidden="true"></span> Final Fantasy XIV launcher
-                    </NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="spellborn">
-                        <span class="oi oi-plus" aria-hidden="true"></span> Chronicles of Spellborn launcher
-                    </NavLink>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<MBottomNavigation
+    @bind-Value="value"
+    BackgroundColor="@color"
+    Dark
+    Shift>
+    <MButton>
+        <span>Home</span>
+
+        <MIcon>mdi-home</MIcon>
+    </MButton>
+
+    <MButton>
+        <span>FFXIV</span>
+
+        <MIcon>mdi-firework</MIcon>
+    </MButton>
+
+    <MButton>
+        <span>Spellborn</span>
+
+        <MIcon>mdi-book</MIcon>
+    </MButton>
+
+    
+</MBottomNavigation>
 
 @code {
-    private bool collapseNavMenu = true;
-    private string? NavBarCssClass => collapseNavMenu ? null : "show";
-    private string? NavButtonCssClass => collapseNavMenu ? "collapsed" : null;
 
-    private void ToggleNavMenu()
+    StringNumber value = 1;
+
+    string color
     {
-        collapseNavMenu = !collapseNavMenu;
+        get
+        {
+            if (value == 0) return "blue-grey";
+            if (value == 1) return "red";
+            if (value == 2) return "brown";
+            if (value == 3) return "indigo";
+            return "blue-grey";
+        }
     }
+
 }
