@@ -36,9 +36,9 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <p><label for="gamepath">Gamepath</label></p> 
-                    <p><input id="gamepath" name="Gamepath" @bind="gamepatherinp" autocomplete="off" type="text" required /></p>
+                    <p><input id="gamepath" name="Gamepath" @bind-Value="gamepatherinp" autocomplete="off" type="text" required /></p>
                     <p><label for="steamstatcheck">Do you own the game on steam?</label></p>
-                    <p><input type="checkbox" id="steamstatcheck" name="steamstatcheck" @bind="checkedValue" unchecked></p>
+                    <p><input type="checkbox" id="steamstatcheck" name="steamstatcheck" @bind-Value="checkedValue" unchecked></p>
                 </div>
 
                 <!-- Modal footer -->
