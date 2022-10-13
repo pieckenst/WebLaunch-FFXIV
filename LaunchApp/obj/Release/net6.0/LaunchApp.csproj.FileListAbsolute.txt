@@ -817,13 +817,17 @@ C:\Users\Андрей Савич\source\repos\handlerlaunch\LaunchApp\obj\Releas
 C:\Users\Андрей Савич\source\repos\handlerlaunch\LaunchApp\obj\Release\net6.0\refint\LaunchApp.dll
 C:\Users\Андрей Савич\source\repos\handlerlaunch\LaunchApp\obj\Release\net6.0\LaunchApp.pdb
 C:\Users\Андрей Савич\source\repos\handlerlaunch\LaunchApp\obj\Release\net6.0\ref\LaunchApp.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\blazor.webassembly.js
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\dotnet.6.0.9.rnz6vdon31.js
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\dotnet.timezones.blat
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\dotnet.wasm
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\icudt.dat
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\icudt_CJK.dat
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\icudt_EFIGS.dat
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\icudt_no_CJK.dat
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\LaunchApp.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\LaunchApp.pdb
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll
@@ -1013,10 +1017,6 @@ C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroo
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\System.Xml.XPath.dll
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\System.Xml.XPath.XDocument.dll
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\WindowsBase.dll
-C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\blazor.boot.json
-C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\dotnet.6.0.9.rnz6vdon31.js
-C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\LaunchApp.dll
-C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\LaunchApp.pdb
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\System.Diagnostics.Tools.dll.gz
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\System.Diagnostics.FileVersionInfo.dll.gz
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\LaunchApp\bin\Release\net6.0\wwwroot\_framework\System.Security.Claims.dll.gz
