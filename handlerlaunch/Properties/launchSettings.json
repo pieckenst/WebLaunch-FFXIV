@@ -1,8 +1,7 @@
 {
   "profiles": {
     "handlerlaunch": {
-      "commandName": "Project",
-      "commandLineArgs": "?spellbornhandle=yes\r\n"
+      "commandName": "Project"
     }
   }
 }
