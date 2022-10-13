@@ -50,7 +50,7 @@ namespace handlerlaunch
         [JsonProperty("update")]
         public Update Update { get; set; }
     }
-    internal class updateHandler
+    internal static class updateHandler
     {
         internal static dynamic getJsonItem(string file)
         {
@@ -76,7 +76,15 @@ namespace handlerlaunch
     internal class registryManipulation
     {
         private static object keyValue;
-
+        public static void createkeys() {
+            var KeyTests = Registry.CurrentUser.OpenSubKey("Software", true);
+            KeyTests.CreateSubKey("The Chronicles of Spellborn");
+            var keyval = KeyTests.GetValue("installPath").ToString();
+            if (keyval == null)
+            {
+                KeyTests.SetValue("installPath", "D:\\Games\\Spellborn", RegistryValueKind.String);
+            }
+        }
         public static string getKeyValue(string keyName)
         {
             try
@@ -190,39 +198,51 @@ namespace handlerlaunch
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public void startupRoutine()
         {
-            if (!registryManipulation.detectInstallation())
-            {
-                _log.Info("Clean install detected/no registry installpath key found");
+            
+            try {
                 
-                installPath = "C:\\Games\\Spellborn";
-                
-            }
-            installedVersion = registryManipulation.getKeyValue("installedVersion");
-            _log.Info("Latest installed version is " + installedVersion.ToString());
-            _log.Info("Fetching latest version from the file server");
-            jsonLatest = updateHandler.getJsonItem("latest.json");
-            _log.Info("Managed to get the latest.json file");
-            if (installedVersion != jsonLatest.version.ToString())
-            {
-                _log.Info("Currently installed version does not match with latest.json");
-                if (installedVersion == "false")
+                if (!registryManipulation.detectInstallation())
                 {
-                    _log.Info("Found nothing in the registry, this is most likely a clean install. Go forwards with full install.");
-                    _log.Info("Requested browser to load the launcher welcome/install page ");
-                    _log.Info("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
-                    downloadFile(jsonLatest.file, jsonLatest.checksum, jsonLatest.version);
+                    _log.Info("Clean install detected/no registry installpath key found");
+
+                    installPath = "D:\\Games\\Spellborn";
+
                 }
-                else
+                installedVersion = registryManipulation.getKeyValue("installedVersion");
+                _log.Info("Latest installed version is " + installedVersion.ToString());
+                _log.Info("Fetching latest version from the file server");
+                jsonLatest = updateHandler.getJsonItem("latest.json");
+                _log.Info("Managed to get the latest.json file");
+                if (installedVersion != jsonLatest.version.ToString())
                 {
-                    _log.Info("Version doesn't match, but registry tells that we are installed. Proceeding with fetching updates.");
-                    
-                    checkUpdates();
+                    _log.Info("Currently installed version does not match with latest.json");
+                    if (installedVersion == "false")
+                    {
+                        _log.Info("Found nothing in the registry, this is most likely a clean install. Go forwards with full install.");
+                        _log.Info("Requested browser to load the launcher welcome/install page ");
+                        _log.Info("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
+                        downloadFile(jsonLatest.file, jsonLatest.checksum, jsonLatest.version);
+                    }
+                    else
+                    {
+                        _log.Info("Version doesn't match, but registry tells that we are installed. Proceeding with fetching updates.");
+
+                        checkUpdates();
+                    }
+                }
+                if (enableLaunch)
+                {
+                    Process.Start(installPath + "\\bin\\client\\Sb_client.exe");
+
                 }
             }
-            if (enableLaunch)
+            catch(Exception e) 
             {
-                Process.Start(installPath + "\\bin\\client\\Sb_client.exe");
-               
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.InnerException);
+                Console.WriteLine(e.StackTrace);
+                _log.Error(e.Message);
+                Console.ReadLine();
             }
         }
         public void unzipFile(string file, string version)
@@ -302,8 +322,8 @@ namespace handlerlaunch
                     MessageBox.Show("You have tried to install The Chronicles of Spellborn in a location that requires administrator access. Since Spellborn is so old, this is not recommended. We will open up a file browser so you can reset your installation location. To keep your current install location, please restart this launcher as administrator.", "There is an issue with the install location", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 
                 _log.Error("Removed installpath in registry to allow picking new path.");
-                registryManipulation.deleteKeyValue("installpath");
-                
+                //registryManipulation.deleteKeyValue("installpath");
+                installPath = "D:\\Games\\Spellborn";
                 _log.Info("Closing this window, installpath has been removed - restarting application");
             }
             string uriString = "https://files.spellborn.org/" + file;
