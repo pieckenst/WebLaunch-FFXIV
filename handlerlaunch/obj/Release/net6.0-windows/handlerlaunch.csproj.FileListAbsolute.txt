@@ -64,3 +64,6 @@ C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\handlerlaunch\obj\Release\net6.0-wi
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\handlerlaunch\obj\Release\net6.0-windows\WMconsole.pdb
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\handlerlaunch\obj\Release\net6.0-windows\handlerlaunch.genruntimeconfig.cache
 C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\handlerlaunch\obj\Release\net6.0-windows\ref\WMconsole.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\handlerlaunch\bin\Release\net6.0-windows\Ionic.Zip.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\handlerlaunch\bin\Release\net6.0-windows\log4net.dll
+C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\handlerlaunch\bin\Release\net6.0-windows\Newtonsoft.Json.dll

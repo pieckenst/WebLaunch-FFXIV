@@ -45,6 +45,9 @@ namespace WMConsole
             string lib1 = loc.Replace("WMconsole.dll", "SpinningWheelLib.dll");
             string lib2 = loc.Replace("WMconsole.dll", "WpfAnimatedGif.dll");
             string lib3 = loc.Replace("WMconsole.dll", "XamlAnimatedGif.dll");
+            string lib4 = loc.Replace("WMconsole.dll", "Ionic.Zip.dll");
+            string lib5 = loc.Replace("WMconsole.dll", "Newtonsoft.Json.dll");
+            string lib6 = loc.Replace("WMconsole.dll", "log4net.dll");
             if (!Directory.Exists(@"D:\HandleGame\"))
             {
                 System.IO.Directory.CreateDirectory(@"D:\HandleGame\");
@@ -58,6 +61,9 @@ namespace WMConsole
                 File.Copy(lib1, @"D:\HandleGame\" + lib1.Split('\\').Last());
                 File.Copy(lib2, @"D:\HandleGame\" + lib2.Split('\\').Last());
                 File.Copy(lib3, @"D:\HandleGame\" + lib3.Split('\\').Last());
+                File.Copy(lib4, @"D:\HandleGame\" + lib4.Split('\\').Last());
+                File.Copy(lib5, @"D:\HandleGame\" + lib5.Split('\\').Last());
+                File.Copy(lib6, @"D:\HandleGame\" + lib6.Split('\\').Last());
             }
             var KeyTest = Registry.CurrentUser.OpenSubKey("Software", true).OpenSubKey("Classes", true);
             RegistryKey key = KeyTest.CreateSubKey("HandleWebRequest");
@@ -73,14 +79,22 @@ namespace WMConsole
                     Thread.Sleep(10000);
                     windower.Close();
                 }
-                
-                
+                if (args[0].Contains("?spellbornhandle=yes"))
+                {
+                    spellbornsupporter splbornobj = new spellbornsupporter();
+                    splbornobj.startupRoutine();
+                    Window1 windower = new Window1();
+                    windower.Show();
+                    Thread.Sleep(10000);
+                    windower.Close();
+                }
+
             }
             if (args == null || args.Length == 0)
             {
                 {
                     Console.WriteLine("Protocol handler has been registered- you may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game");
-                    
+                    Console.ReadLine();
 
 
 
