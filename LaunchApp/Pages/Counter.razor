@@ -2,7 +2,7 @@
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
 
-<PageTitle>Login Pront</PageTitle>
+<PageTitle>Login Prompt</PageTitle>
 
 <h1>Please enter the required information</h1>
 
@@ -85,11 +85,11 @@
         Console.WriteLine(checkedValue);
         if (checkedValue == true)
         {
-            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunchFFXIV?login=" + usernameinp + ":?pass=" + passinp + ":?otp=" + otpinp + ":?gamepath=" + gamepatherinp + ":?issteam=yes");
+            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunch?ffxivhandle=yes?login=" + usernameinp + ":?pass=" + passinp + ":?otp=" + otpinp + ":?gamepath=" + gamepatherinp + ":?issteam=yes");
         }
         else
         {
-            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunchFFXIV?login=" + usernameinp + ":?pass=" + passinp + ":?otp=" + otpinp + ":?gamepath=" + gamepatherinp + ":?issteam=no");
+            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunch?ffxivhandle=yes?login=" + usernameinp + ":?pass=" + passinp + ":?otp=" + otpinp + ":?gamepath=" + gamepatherinp + ":?issteam=no");
 
         }
         statusstring = "Game launched";

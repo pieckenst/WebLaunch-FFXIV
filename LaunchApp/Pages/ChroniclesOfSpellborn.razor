@@ -1,0 +1,13 @@
+﻿@page "/spellborn"
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+
+<PageTitle>Chronicles of spellborn launch process</PageTitle>
+<h1>Welcome to very basic web-based login process for Chronicles of Spellborn </h1>
+<button class="btn btn-primary" @onclick="processlaunchusespl">Launch the game </button>
+@code {
+    void processlaunchusespl()
+    {
+            navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunch?spellbornhandle=yes");
+    }
+}
