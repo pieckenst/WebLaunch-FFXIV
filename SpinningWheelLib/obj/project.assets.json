@@ -52,11 +52,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\SpinningWheelLib\\SpinningWheelLib.csproj",
+      "projectUniqueName": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\SpinningWheelLib\\SpinningWheelLib.csproj",
       "projectName": "SpinningWheelLib",
-      "projectPath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\SpinningWheelLib\\SpinningWheelLib.csproj",
+      "projectPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\SpinningWheelLib\\SpinningWheelLib.csproj",
       "packagesPath": "C:\\Users\\rsncra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\SpinningWheelLib\\obj\\",
+      "outputPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\SpinningWheelLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\sdks\\NuGetPackages"

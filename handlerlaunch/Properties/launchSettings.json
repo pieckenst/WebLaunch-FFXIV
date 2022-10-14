@@ -2,7 +2,7 @@
   "profiles": {
     "handlerlaunch": {
       "commandName": "Project",
-      "commandLineArgs": "?spellbornhandle=yes?:gamepath=\"D:%5CGames%5CSpellborn\""
+      "commandLineArgs": "HandleReqLaunch?ffxivhandle=yes?login=rsncra:?pass=cuTrxctrt55xx:?otp=532517:?gamepath=I:%5CGames%5Cffxiv:?issteam=no"
     }
   }
 }

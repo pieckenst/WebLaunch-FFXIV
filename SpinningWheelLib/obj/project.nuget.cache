@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nFQFJrR3zK0RSlpgWEydD6sJ04SR8jh8IbJYGCRjeytihOII8cdmLs/rBjaxygODzp4fP+K06jjEzeS9K9thpA==",
+  "dgSpecHash": "T4V2F5CtfJxm61/Lo7qk1eyaZsxizHxejCPRJM11pBwZlzrMj1kel+PQ+7hA0fQH2Vcemi/6jNI+bAPPOdEy9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\SpinningWheelLib\\SpinningWheelLib.csproj",
+  "projectFilePath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\SpinningWheelLib\\SpinningWheelLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rsncra\\.nuget\\packages\\xamlanimatedgif\\2.0.3\\xamlanimatedgif.2.0.3.nupkg.sha512"
   ],

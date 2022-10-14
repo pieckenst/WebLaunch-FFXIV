@@ -5,11 +5,13 @@ VisualStudioVersion = 17.4.32804.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "handlerlaunch", "handlerlaunch\handlerlaunch.csproj", "{6D7D239E-33BB-4509-AC21-1DC7C36D403F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibLaunchSupport", "LibLaunchSupport\LibLaunchSupport.csproj", "{D42E4F55-56E9-403E-98D8-56275EFF1EE9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaunchApp", "LaunchApp\LaunchApp.csproj", "{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpinningWheelLib", "SpinningWheelLib\SpinningWheelLib.csproj", "{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibDalamud", "LibDalamud\LibDalamud.csproj", "{AAF16FA6-780A-4087-9188-EB7331DCAA3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLibLaunchSupport", "CoreLibLaunchSupport\CoreLibLaunchSupport.csproj", "{6D1A56B6-AE08-4AB8-A3C6-71B2CFCA0928}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +23,6 @@ Global
 		{6D7D239E-33BB-4509-AC21-1DC7C36D403F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D7D239E-33BB-4509-AC21-1DC7C36D403F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D7D239E-33BB-4509-AC21-1DC7C36D403F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D42E4F55-56E9-403E-98D8-56275EFF1EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D42E4F55-56E9-403E-98D8-56275EFF1EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D42E4F55-56E9-403E-98D8-56275EFF1EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D42E4F55-56E9-403E-98D8-56275EFF1EE9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +31,14 @@ Global
 		{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF16FA6-780A-4087-9188-EB7331DCAA3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF16FA6-780A-4087-9188-EB7331DCAA3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF16FA6-780A-4087-9188-EB7331DCAA3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF16FA6-780A-4087-9188-EB7331DCAA3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1A56B6-AE08-4AB8-A3C6-71B2CFCA0928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1A56B6-AE08-4AB8-A3C6-71B2CFCA0928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1A56B6-AE08-4AB8-A3C6-71B2CFCA0928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1A56B6-AE08-4AB8-A3C6-71B2CFCA0928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

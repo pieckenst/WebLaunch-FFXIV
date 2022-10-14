@@ -1,5 +1,5 @@
 ﻿using handlerlaunch;
-using LibLaunchSupport;
+using CoreLibLaunchSupport;
 using Microsoft.Win32;
 using SpinningWheelLib;
 using System;

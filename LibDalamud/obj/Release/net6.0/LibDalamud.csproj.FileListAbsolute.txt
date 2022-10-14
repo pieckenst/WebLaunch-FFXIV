@@ -1,0 +1,5 @@
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\LibDalamud\obj\Release\net6.0\LibDalamud.csproj.AssemblyReference.cache
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\LibDalamud\obj\Release\net6.0\LibDalamud.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\LibDalamud\obj\Release\net6.0\LibDalamud.AssemblyInfoInputs.cache
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\LibDalamud\obj\Release\net6.0\LibDalamud.AssemblyInfo.cs
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\LibDalamud\obj\Release\net6.0\LibDalamud.csproj.CoreCompileInputs.cache

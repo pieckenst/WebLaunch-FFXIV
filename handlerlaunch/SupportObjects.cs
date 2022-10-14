@@ -1,4 +1,4 @@
-﻿using LibLaunchSupport;
+﻿using CoreLibLaunchSupport;
 using log4net;
 using Microsoft.VisualBasic;
 using Microsoft.Win32;
@@ -628,7 +628,7 @@ namespace handlerlaunch
                 if (sid.Equals("BAD"))
                     return;
 
-                var ffxivGame = networklogic.LaunchGame(gamepath, sid, langs, dx11, expansionLevel, isSteam, region);
+                var ffxivGame = networklogic.LaunchGameAsync(gamepath, sid, langs, dx11, expansionLevel, isSteam, region);
 
 
 

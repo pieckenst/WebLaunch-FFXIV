@@ -1,0 +1,5 @@
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\CoreLibLaunchSupport\obj\Release\net6.0\CoreLibLaunchSupport.csproj.AssemblyReference.cache
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\CoreLibLaunchSupport\obj\Release\net6.0\CoreLibLaunchSupport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\CoreLibLaunchSupport\obj\Release\net6.0\CoreLibLaunchSupport.AssemblyInfoInputs.cache
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\CoreLibLaunchSupport\obj\Release\net6.0\CoreLibLaunchSupport.AssemblyInfo.cs
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\CoreLibLaunchSupport\obj\Release\net6.0\CoreLibLaunchSupport.csproj.CoreCompileInputs.cache
