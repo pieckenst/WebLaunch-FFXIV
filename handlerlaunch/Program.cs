@@ -41,7 +41,7 @@ namespace WMConsole
             var loc = System.Reflection.Assembly.GetExecutingAssembly().Location;
             string locruntconf = loc.Replace(".dll", ".runtimeconfig.json");
             string locedit = loc.Replace(".dll", ".exe");
-            string reqasemb = loc.Replace("WMconsole.dll", "LibLaunchSupport.dll");
+            string reqasemb = loc.Replace("WMconsole.dll", "CoreLibLaunchSupport.dll");
             string lib1 = loc.Replace("WMconsole.dll", "SpinningWheelLib.dll");
             string lib2 = loc.Replace("WMconsole.dll", "WpfAnimatedGif.dll");
             string lib3 = loc.Replace("WMconsole.dll", "XamlAnimatedGif.dll");
@@ -49,6 +49,15 @@ namespace WMConsole
             string lib5 = loc.Replace("WMconsole.dll", "Newtonsoft.Json.dll");
             string lib6 = loc.Replace("WMconsole.dll", "log4net.dll");
             string lib7 = loc.Replace("WMconsole.dll", "Goblinfactory.Konsole.dll");
+            string lib8 = loc.Replace("WMconsole.dll", "CommandLine.dll");
+            string lib9 = loc.Replace("WMconsole.dll", "Downloader.dll");
+            string lib10 = loc.Replace("WMconsole.dll", "Facepunch.Steamworks.Win64.dll");
+            string lib11 = loc.Replace("WMconsole.dll", "LibDalamud.dll");
+            string lib12 = loc.Replace("WMconsole.dll", "Mono.Nat.dll");
+            string lib13 = loc.Replace("WMconsole.dll", "MonoTorrent.dll");
+            string lib14 = loc.Replace("WMconsole.dll", "ReusableTasks.dll");
+            string lib15 = loc.Replace("WMconsole.dll", "Serilog.dll");
+            string lib16 = loc.Replace("WMconsole.dll", "SharedMemory.dll");
             if (!Directory.Exists(@"D:\HandleGame\"))
             {
                 System.IO.Directory.CreateDirectory(@"D:\HandleGame\");
@@ -66,6 +75,15 @@ namespace WMConsole
                 File.Copy(lib5, @"D:\HandleGame\" + lib5.Split('\\').Last());
                 File.Copy(lib6, @"D:\HandleGame\" + lib6.Split('\\').Last());
                 File.Copy(lib7, @"D:\HandleGame\" + lib7.Split('\\').Last());
+                File.Copy(lib8, @"D:\HandleGame\" + lib8.Split('\\').Last());
+                File.Copy(lib9, @"D:\HandleGame\" + lib9.Split('\\').Last());
+                File.Copy(lib10, @"D:\HandleGame\" + lib10.Split('\\').Last());
+                File.Copy(lib11, @"D:\HandleGame\" + lib11.Split('\\').Last());
+                File.Copy(lib12, @"D:\HandleGame\" + lib12.Split('\\').Last());
+                File.Copy(lib13, @"D:\HandleGame\" + lib13.Split('\\').Last());
+                File.Copy(lib14, @"D:\HandleGame\" + lib14.Split('\\').Last());
+                File.Copy(lib15, @"D:\HandleGame\" + lib15.Split('\\').Last());
+                File.Copy(lib16, @"D:\HandleGame\" + lib16.Split('\\').Last());
             }
             var KeyTest = Registry.CurrentUser.OpenSubKey("Software", true).OpenSubKey("Classes", true);
             RegistryKey key = KeyTest.CreateSubKey("HandleWebRequest");

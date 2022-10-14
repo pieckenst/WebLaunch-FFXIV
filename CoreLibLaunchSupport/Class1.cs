@@ -706,6 +706,10 @@ namespace CoreLibLaunchSupport
             dalamudRunner = new WindowsDalamudRunner();
             dalamudCompatCheck = new WindowsDalamudCompatibilityCheck();
             string hardcodeddir = "D:\\HandleGame\\Dalamud";
+            if (!Directory.Exists(hardcodeddir))
+            {
+                System.IO.Directory.CreateDirectory(hardcodeddir);
+            }
             DirectoryInfo dalamudpath = new DirectoryInfo(hardcodeddir);
             Troubleshooting.LogTroubleshooting(gamePath);
             DirectoryInfo gamePather = new DirectoryInfo(gamePath);
@@ -781,7 +785,7 @@ namespace CoreLibLaunchSupport
                 }
                 IGameRunner runner;
                 runner = new WindowsGameRunner(dalamudLauncher, dalamudOk, DalamudUpdater.Runtime);
-                Process ffxivgame = launcher.LaunchGame(runner,"yes",
+                Process ffxivgame = launcher.LaunchGame(runner, realsid,
                 region, expansionlevel, isSteam,gameArgs, gamePather, dx11, ClientLanguage.English,true,
             DpiAwareness.Unaware);
 
