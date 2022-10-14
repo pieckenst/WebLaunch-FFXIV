@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\rsncra\Source\Repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\
+C:\Users\rsncra\source\repos\WebLaunch-FFXIV\SpinningWheelLib\obj\Release\net6.0-windows\
 SpinningWheelLib
 none
 false
@@ -16,5 +16,5 @@ TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 1951748900137
 Window1.xaml;
 
-True
+False
 

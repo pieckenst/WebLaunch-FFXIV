@@ -1,8 +1,7 @@
 {
   "profiles": {
     "handlerlaunch": {
-      "commandName": "Project",
-      "commandLineArgs": "?spellbornhandle=yes?:gamepath=\"D:%5CGames%5CSpellborn\""
+      "commandName": "Project"
     }
   }
 }

@@ -13,8 +13,22 @@
     <SourceRoot Include="C:\Users\rsncra\.nuget\packages\" />
     <SourceRoot Include="F:\sdks\NuGetPackages\" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)masa.blazor\0.6.0-rc.7\contentFiles\any\net6.0\package.json" Condition="Exists('$(NuGetPackageRoot)masa.blazor\0.6.0-rc.7\contentFiles\any\net6.0\package.json')">
+      <NuGetPackageId>Masa.Blazor</NuGetPackageId>
+      <NuGetPackageVersion>0.6.0-rc.7</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>package.json</Link>
+    </Content>
+  </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.0-preview.256\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.0-preview.256\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props')" />
+    <Import Project="$(NuGetPackageRoot)skiasharp.views.blazor\2.88.0-preview.256\buildTransitive\net6.0\SkiaSharp.Views.Blazor.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.views.blazor\2.88.0-preview.256\buildTransitive\net6.0\SkiaSharp.Views.Blazor.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\6.0.8\build\net6.0\Microsoft.AspNetCore.Components.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\6.0.8\build\net6.0\Microsoft.AspNetCore.Components.WebAssembly.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorcomponent\0.6.0-rc.7\buildTransitive\BlazorComponent.props" Condition="Exists('$(NuGetPackageRoot)blazorcomponent\0.6.0-rc.7\buildTransitive\BlazorComponent.props')" />
+    <Import Project="$(NuGetPackageRoot)masa.blazor\0.6.0-rc.7\buildTransitive\Masa.Blazor.props" Condition="Exists('$(NuGetPackageRoot)masa.blazor\0.6.0-rc.7\buildTransitive\Masa.Blazor.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer)' == '' ">C:\Users\rsncra\.nuget\packages\microsoft.aspnetcore.components.webassembly.devserver\6.0.8</PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer>

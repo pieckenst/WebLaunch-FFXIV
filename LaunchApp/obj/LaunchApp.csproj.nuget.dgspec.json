@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj": {}
+    "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj": {
+    "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj",
+        "projectUniqueName": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj",
         "projectName": "LaunchApp",
-        "projectPath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj",
+        "projectPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj",
         "packagesPath": "C:\\Users\\rsncra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rsncra\\Source\\Repos\\WebLaunch-FFXIV\\LaunchApp\\obj\\",
+        "outputPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\sdks\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Masa.Blazor": {
+              "target": "Package",
+              "version": "[0.6.0-rc.7, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[6.0.8, )"
