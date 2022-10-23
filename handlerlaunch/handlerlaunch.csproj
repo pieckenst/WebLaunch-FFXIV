@@ -7,8 +7,13 @@
     <Nullable>enable</Nullable>
     <AssemblyName>WMconsole</AssemblyName>
 	<EnableWindowsTargeting>true</EnableWindowsTargeting>
+	<ApplicationIcon>appicon.ico</ApplicationIcon>
         
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="appicon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DotNetZip" Version="1.16.0" />

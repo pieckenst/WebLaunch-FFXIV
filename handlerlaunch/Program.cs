@@ -38,6 +38,7 @@ namespace WMConsole
         [STAThread]
         static void Main(string[] args)
         {
+            Console.Title = "Protocol Handler Process";
             Console.WriteLine("Listening.."); //Gets the current location where the file is downloaded   
             var loc = System.Reflection.Assembly.GetExecutingAssembly().Location;
             string locruntconf = loc.Replace(".dll", ".runtimeconfig.json");
@@ -61,6 +62,7 @@ namespace WMConsole
             string lib16 = loc.Replace("WMconsole.dll", "SharedMemory.dll");
             string lib17 = loc.Replace("WMconsole.dll", "Microsoft.Toolkit.Uwp.Notifications.dll");
             string lib18 = loc.Replace("WMconsole.dll", "Microsoft.Windows.SDK.NET.dll");
+            string lib19 = loc.Replace("WMconsole.dll", "WinRT.Runtime.dll");
             if (!Directory.Exists(@"D:\HandleGame\"))
             {
                 System.IO.Directory.CreateDirectory(@"D:\HandleGame\");
@@ -89,6 +91,7 @@ namespace WMConsole
                 File.Copy(lib16, @"D:\HandleGame\" + lib16.Split('\\').Last());
                 File.Copy(lib17, @"D:\HandleGame\" + lib17.Split('\\').Last());
                 File.Copy(lib18, @"D:\HandleGame\" + lib18.Split('\\').Last());
+                File.Copy(lib19, @"D:\HandleGame\" + lib19.Split('\\').Last());
             }
             var KeyTest = Registry.CurrentUser.OpenSubKey("Software", true).OpenSubKey("Classes", true);
             RegistryKey key = KeyTest.CreateSubKey("HandleWebRequest");
