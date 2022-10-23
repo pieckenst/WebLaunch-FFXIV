@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Windows;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace WMConsole
 {
@@ -58,6 +59,8 @@ namespace WMConsole
             string lib14 = loc.Replace("WMconsole.dll", "ReusableTasks.dll");
             string lib15 = loc.Replace("WMconsole.dll", "Serilog.dll");
             string lib16 = loc.Replace("WMconsole.dll", "SharedMemory.dll");
+            string lib17 = loc.Replace("WMconsole.dll", "Microsoft.Toolkit.Uwp.Notifications.dll");
+            string lib18 = loc.Replace("WMconsole.dll", "Microsoft.Windows.SDK.NET.dll");
             if (!Directory.Exists(@"D:\HandleGame\"))
             {
                 System.IO.Directory.CreateDirectory(@"D:\HandleGame\");
@@ -84,6 +87,8 @@ namespace WMConsole
                 File.Copy(lib14, @"D:\HandleGame\" + lib14.Split('\\').Last());
                 File.Copy(lib15, @"D:\HandleGame\" + lib15.Split('\\').Last());
                 File.Copy(lib16, @"D:\HandleGame\" + lib16.Split('\\').Last());
+                File.Copy(lib17, @"D:\HandleGame\" + lib17.Split('\\').Last());
+                File.Copy(lib18, @"D:\HandleGame\" + lib18.Split('\\').Last());
             }
             var KeyTest = Registry.CurrentUser.OpenSubKey("Software", true).OpenSubKey("Classes", true);
             RegistryKey key = KeyTest.CreateSubKey("HandleWebRequest");
@@ -98,6 +103,10 @@ namespace WMConsole
                     windower.Show();
                     Thread.Sleep(10000);
                     windower.Close();
+                    var donots = new ToastContentBuilder().AddArgument("action", "viewConversation").AddArgument("conversationId", 9813).AddText("Game process has been launched")
+    .AddText("You may now play the game");
+                    donots.Show();
+
                 }
                 if (args[0].Contains("?spellbornhandle=yes"))
                 {
@@ -107,13 +116,19 @@ namespace WMConsole
                     windower.Show();
                     Thread.Sleep(10000);
                     windower.Close();
+                    var donots = new ToastContentBuilder().AddArgument("action", "viewConversation").AddArgument("conversationId", 9813).AddText("Game process has been launched")
+    .AddText("You may now play the game");
+                    donots.Show();
                 }
 
             }
             if (args == null || args.Length == 0)
             {
                 {
-                    Console.WriteLine("Protocol handler has been registered- you may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game");
+                    var donots = new ToastContentBuilder().AddArgument("action", "viewConversation").AddArgument("conversationId", 9813).AddText("Protocol handler registered")
+    .AddText("Protocol handler has been registered- you may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game");
+                    donots.Show();
+                    
                     Console.ReadLine();
 
 
