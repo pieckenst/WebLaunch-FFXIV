@@ -25,16 +25,48 @@
     </div>
 
     <div id="blazor-error-ui">
-        An error has occurred in the application.
+        <div class="error-details">
+            <div class="error-title">Application Error</div>
+            <div class="error-message"></div>
+            <div class="error-stack"></div>
+            <div class="error-component"></div>
+            <div class="error-params"></div>
+        </div>
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-
     
     <script src="_framework/blazor.webassembly.js"></script>
 <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
 <script>
+    // Clear site storage on load
+    window.addEventListener('load', () => {
+        localStorage.clear();
+        sessionStorage.clear();
+        
+        if ('caches' in window) {
+            caches.keys().then(keys => {
+                keys.forEach(key => caches.delete(key));
+            });
+        }
+    });
+
+    // Enhanced error handling
+    window.addEventListener('unhandledrejection', event => {
+        const errorUI = document.getElementById('blazor-error-ui');
+        const errorMessage = errorUI.querySelector('.error-message');
+        const errorStack = errorUI.querySelector('.error-stack');
+        const errorComponent = errorUI.querySelector('.error-component');
+        const errorParams = errorUI.querySelector('.error-params');
+
+        errorMessage.textContent = event.reason.message || 'Unknown error occurred';
+        errorStack.textContent = event.reason.stack || '';
+        errorComponent.textContent = event.reason.componentName || '';
+        errorParams.textContent = JSON.stringify(event.reason.parameters || {});
+        
+        errorUI.style.display = 'block';
+    });
     window.isDarkMode = () => {
         return window.matchMedia('(prefers-color-scheme: dark)').matches;
     };
