@@ -10,7 +10,7 @@
     <PublishTrimmed>false</PublishTrimmed>
     <BlazorCacheBootResources>false</BlazorCacheBootResources>
     <BlazorEnableCompression>false</BlazorEnableCompression>
-    
+    <BlazorWebAssemblyEnableLinking>false</BlazorWebAssemblyEnableLinking>
     <InvariantGlobalization>true</InvariantGlobalization>
     <UseBlazorWebAssembly>true</UseBlazorWebAssembly>
     <DisableIntegrityValidation>true</DisableIntegrityValidation>
