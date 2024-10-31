@@ -2,7 +2,7 @@ name: Build Blazor
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
