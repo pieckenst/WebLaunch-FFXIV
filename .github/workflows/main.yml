@@ -1,4 +1,4 @@
-name: Build and Deploy Blazor
+name: Build Blazor
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
       run: dotnet restore
       
     - name: Build and Publish
-      run: dotnet publish -c Release -o ${{ runner.temp }}/published_app
+      run: dotnet publish LaunchApp/LaunchApp.csproj -c Release -o ${{ runner.temp }}/published_app
       
     - name: Setup SPA routing
       run: |

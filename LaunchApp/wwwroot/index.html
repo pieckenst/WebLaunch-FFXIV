@@ -34,29 +34,36 @@
     </div>
 
     <script src="_framework/blazor.webassembly.js"></script>
-    
-    <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
+<script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
-    <script>
-        if ('serviceWorker' in navigator) {
+<script>
+    window.blazorReady = new Promise((resolve) => {
+        Blazor.start().then(() => {
+            resolve();
+        });
+    });
+
+    if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js');
     }
-        window.isDarkMode = () => {
-            return window.matchMedia('(prefers-color-scheme: dark)').matches;
-        };
+
+    window.isDarkMode = () => {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    };
+
+    window.switchTheme = (isDark) => {
+        document.getElementById('theme-dark').disabled = !isDark;
+        document.getElementById('theme-light').disabled = isDark;
+        document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        document.body.classList.toggle('m-application--dark', isDark);
+        document.body.classList.toggle('m-application--light', !isDark);
+    };
+
+    const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
+    switchTheme(darkModeMatch.matches);
+    darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
+</script>
+
     
-        window.switchTheme = (isDark) => {
-            document.getElementById('theme-dark').disabled = !isDark;
-            document.getElementById('theme-light').disabled = isDark;
-            document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            document.body.classList.toggle('m-application--dark', isDark);
-            document.body.classList.toggle('m-application--light', !isDark);
-        };
-    
-        // Initial theme based on system preference
-        const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
-        switchTheme(darkModeMatch.matches);
-        darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
-    </script>
 </body>
 </html>
