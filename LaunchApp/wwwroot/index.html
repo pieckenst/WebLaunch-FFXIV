@@ -56,15 +56,6 @@
             return true;
         };
     
-        // Remove service worker to fix fetch handler issues
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(registrations => {
-                registrations.forEach(registration => {
-                    registration.unregister();
-                });
-            });
-        }
-    
         // Clear site storage on load
         window.addEventListener('load', () => {
             localStorage.clear();
@@ -76,6 +67,31 @@
                 });
             }
         });
+    
+        // Remove service worker to fix fetch handler warning
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+                registrations.forEach(registration => {
+                    registration.unregister();
+                });
+            });
+        }
+    
+        window.isDarkMode = () => {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches;
+        };
+    
+        window.switchTheme = (isDark) => {
+            document.getElementById('theme-dark').disabled = !isDark;
+            document.getElementById('theme-light').disabled = isDark;
+            document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+            document.body.classList.toggle('m-application--dark', isDark);
+            document.body.classList.toggle('m-application--light', !isDark);
+        };
+    
+        const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
+        switchTheme(darkModeMatch.matches);
+        darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
     </script>
 
 </body>
