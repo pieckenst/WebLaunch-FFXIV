@@ -12,7 +12,9 @@
     <BlazorEnableCompression>false</BlazorEnableCompression>
     <BlazorWebAssemblyEnableLinking>false</BlazorWebAssemblyEnableLinking>
     <InvariantGlobalization>true</InvariantGlobalization>
+    <RunAOTCompilation>false</RunAOTCompilation>
     <UseBlazorWebAssembly>true</UseBlazorWebAssembly>
+    <WasmBuildNative>false</WasmBuildNative>
     <DisableIntegrityValidation>true</DisableIntegrityValidation>
   </PropertyGroup>
 
