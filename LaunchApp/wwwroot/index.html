@@ -31,22 +31,25 @@
     </div>
 
     
-    <script src="_framework/blazor.webassembly.js"  autostart="false"></script>
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
 <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
 <script>
-    window.blazorReady = new Promise((resolve) => {
-        Blazor.start({
+    const startBlazor = async () => {
+        if (window.blazorStarted) return;
+        window.blazorStarted = true;
+        
+        await Blazor.start({
             loadBootResource: function (type, name, defaultUri, integrity) {
                 return defaultUri;
             }
-        }).then(() => {
-            resolve();
         });
-    });
+    };
+
+    window.blazorReady = startBlazor();
 
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js');
+        navigator.serviceWorker.register('service-worker.js', { scope: './' });
     }
 
     window.isDarkMode = () => {
