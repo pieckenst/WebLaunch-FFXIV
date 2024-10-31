@@ -36,16 +36,23 @@
 
     <script>
         var Module = {
-            onRuntimeInitialized: function() {
-                Blazor.start({
-                    loadBootResource: function (type, name, defaultUri, integrity) {
-                        return defaultUri;
-                    }
-                }).then(function () {
-                    window.blazorReady = Promise.resolve();
-                });
-            }
-        };
+        onRuntimeInitialized: async function() {
+            const is_browser = typeof window != "undefined";
+            if (!is_browser) throw new Error(`Expected to be running in a browser`);
+
+            await Blazor.start({
+                loadBootResource: function (type, name, defaultUri, integrity) {
+                    return defaultUri;
+                }
+            });
+            
+            window.blazorReady = Promise.resolve();
+        }
+    };
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+    }
         
 
         if ('serviceWorker' in navigator) {

@@ -21,13 +21,19 @@ jobs:
       with:
         dotnet-version: '7.0.x'
         
+    - name: Install WASM workload
+      run: dotnet workload install wasm-tools
+        
+    - name: Restore workloads
+      run: dotnet workload restore
+        
     - name: Restore dependencies
       run: dotnet restore
       
     - name: Build and Publish
-      run: dotnet publish LaunchApp/LaunchApp.csproj -c Release -o ${{ runner.temp }}/published_app --no-self-contained
+      run: dotnet publish LaunchApp/LaunchApp.csproj -c Release -o ${{ runner.temp }}/published_app --no-self-contained /p:PublishTrimmed=false
       
-    - name: Setup SPA routing and fix base href
+    - name: Setup SPA routing
       run: |
         cp ${{ runner.temp }}/published_app/wwwroot/index.html ${{ runner.temp }}/published_app/wwwroot/404.html
         sed -i 's/base href="\/"/base href="\/${{ github.event.repository.name }}\/"/' ${{ runner.temp }}/published_app/wwwroot/index.html
