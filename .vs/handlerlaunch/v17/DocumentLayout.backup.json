@@ -3,16 +3,23 @@
   "WorkspaceRootPath": "G:\\code\\WebLaunch\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\launchapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\launchapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\launchapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\launchapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|g:\\code\\weblaunch\\handlerlaunch\\supportobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|solutionrelative:handlerlaunch\\supportobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -36,13 +43,37 @@
               "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
               "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeToolTip": "LaunchApp\\LaunchApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-31T17:59:54.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WasmApp.Common.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
+              "ViewState": "AgIAAOwBAAAAAAAAAAAIwAgCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-10-31T17:59:40.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LaunchApp",
+              "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
+              "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
+              "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
+              "RelativeToolTip": "LaunchApp\\LaunchApp.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-10-31T17:44:46.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SupportObjects.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\handlerlaunch\\SupportObjects.cs",
               "RelativeDocumentMoniker": "handlerlaunch\\SupportObjects.cs",
@@ -61,14 +92,14 @@
               "RelativeDocumentMoniker": "LaunchApp\\Pages\\Counter.razor",
               "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\Pages\\Counter.razor",
               "RelativeToolTip": "LaunchApp\\Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswDwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-31T17:28:49.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
               "RelativeDocumentMoniker": "LaunchApp\\Shared\\MainLayout.razor",
