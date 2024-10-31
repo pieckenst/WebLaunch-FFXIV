@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LaunchApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da0d6b67b7a0827fffb5c6eae9a71f17dd092d12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c50370086f524b2a8e4e2f4098be3c0d916474e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LaunchApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LaunchApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

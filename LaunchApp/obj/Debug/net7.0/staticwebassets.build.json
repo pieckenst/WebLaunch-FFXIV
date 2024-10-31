@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PLw9eHIQKokMo4Tc5l6kw4ReO/f7GyPKMMazU8aKx/A=",
+  "Hash": "BksnYCWIAdPHU4AaUIXkIkhOf/FC516aGo4IHPRWz6o=",
   "Source": "LaunchApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -619,8 +619,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "m55zj8rnia",
-      "Integrity": "2od9F01TwVoj840CJKC6Y85cW8nZwLarnCYA9InJC3k=",
+      "Fingerprint": "5uulf5u3nh",
+      "Integrity": "XdJuuWmaV59sZn2bz+Iz1EBkmvxwodC6cmbde3LZ5Ns=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\blazor.boot.json"
@@ -871,8 +871,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "h6dgoo8h8z",
-      "Integrity": "ud5wTmbCyVoMMV10rXjsOpLDBRa9LVDFgBycVGtq31M=",
+      "Fingerprint": "wg56hovlt1",
+      "Integrity": "0F0pWcGBPvzbzEIW7n9hqRXnG3rjauTmhRVMxjV+KGs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\LaunchApp.dll"
@@ -892,8 +892,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "0u216276sm",
-      "Integrity": "mMJCKYCdoBoPCv9ZLps2KuX8P5J+sYaqALvkfcPRa4U=",
+      "Fingerprint": "92paise6tv",
+      "Integrity": "YT8AttnXpUh+27iRHT/EP4Jct4P0Zhvn04/npWX7sDQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\LaunchApp.pdb"
@@ -7619,7 +7619,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Globalization.dll"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\lauxpm0ksv-0u216276sm.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\lauxpm0ksv-92paise6tv.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\",
@@ -7633,8 +7633,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\LaunchApp.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ftqsbrbgak",
-      "Integrity": "PaKOa6rcvv3lY8igeQ7AsUi4YYUQ4gTGvZYioiYS8UQ=",
+      "Fingerprint": "v99ve3qn2x",
+      "Integrity": "TaUN0+s+xRvw216efHufEMCjH+McERZGRceMuML9NF0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\LaunchApp.pdb"
@@ -8648,7 +8648,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\u19yvlzdbb-m55zj8rnia.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\u19yvlzdbb-5uulf5u3nh.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\",
@@ -8662,8 +8662,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "tbokss5xua",
-      "Integrity": "KdRt9Hx5pNpQ4M+T4HtbtOh/+21t7LBmmzm/7SS/j3g=",
+      "Fingerprint": "wawj9fobfy",
+      "Integrity": "uFCudRrt+PnBB8RkR5kFkTlKCMlmLp+z/vyZ5LxTTz8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -9026,7 +9026,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Overlapped.dll"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\wyx1g27vga-h6dgoo8h8z.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\wyx1g27vga-wg56hovlt1.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\",
@@ -9040,8 +9040,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\LaunchApp.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "io3ysrmv2n",
-      "Integrity": "3rC3bdOahduCmq2wkw1KD4rdXSEZpbLkUSzt4n+KJeM=",
+      "Fingerprint": "tsyntzh9vz",
+      "Integrity": "E/c3YB+yPPen4TgLPDg6dTWYBlzZ8hCiDAH8crpYjjs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\LaunchApp.dll"
@@ -9439,8 +9439,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "BlazorServiceWorker",
       "AssetTraitValue": "ServiceWorkerJs",
-      "Fingerprint": "ojnj5x7bkl",
-      "Integrity": "9HbrvqYEbWkm/lU8H5NVgzDI8HtnHJXs10JhwAMkjAs=",
+      "Fingerprint": "op9y9q0ude",
+      "Integrity": "rDZUjnLUmGpo2aIn7Thx7UbtJMfcIPDgq/gQzu+dJFw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "wwwroot\\service-worker.js"
@@ -9460,8 +9460,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "BlazorServiceWorker",
       "AssetTraitValue": "ServiceWorkerManifest",
-      "Fingerprint": "ymfgijz6jy",
-      "Integrity": "KuEid46/KSBaSY54AEIunaEedG9l0oWtRyy+Ww90oD0=",
+      "Fingerprint": "f598k7r3rs",
+      "Integrity": "rZ/iv+Xr+i/b52WZ9C1TTkYd8rPFuloYdBTFr3wx0Wk=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\service-worker\\service-worker-assets.js.build"
@@ -10552,8 +10552,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9bjp2dk98f",
-      "Integrity": "+7sOpJ4+xPTbaemtg0lhcIHqxh53iXnmoqx6UiPJjwg=",
+      "Fingerprint": "kfc8zszhd5",
+      "Integrity": "EKwMHXr2pwDhj5BUZ0broNE/7votlP6n3TVpN2RYVGs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -11749,7 +11749,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19989"
+          "Value": "20231"
         },
         {
           "Name": "Content-Type",
@@ -11757,11 +11757,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2od9F01TwVoj840CJKC6Y85cW8nZwLarnCYA9InJC3k=\""
+          "Value": "\"XdJuuWmaV59sZn2bz+Iz1EBkmvxwodC6cmbde3LZ5Ns=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Thu, 31 Oct 2024 17:49:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11771,18 +11771,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2od9F01TwVoj840CJKC6Y85cW8nZwLarnCYA9InJC3k="
+          "Value": "sha256-XdJuuWmaV59sZn2bz+Iz1EBkmvxwodC6cmbde3LZ5Ns="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\u19yvlzdbb-m55zj8rnia.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\u19yvlzdbb-5uulf5u3nh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0,000108026358"
+          "Quality": "0,000108084738"
         }
       ],
       "ResponseHeaders": [
@@ -11792,15 +11792,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9256"
+          "Value": "9251"
         },
         {
           "Name": "ETag",
-          "Value": "\"KdRt9Hx5pNpQ4M+T4HtbtOh/+21t7LBmmzm/7SS/j3g=\""
+          "Value": "\"uFCudRrt+PnBB8RkR5kFkTlKCMlmLp+z/vyZ5LxTTz8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:27:54 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11820,19 +11820,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"2od9F01TwVoj840CJKC6Y85cW8nZwLarnCYA9InJC3k=\""
+          "Value": "W/\"XdJuuWmaV59sZn2bz+Iz1EBkmvxwodC6cmbde3LZ5Ns=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2od9F01TwVoj840CJKC6Y85cW8nZwLarnCYA9InJC3k="
+          "Value": "sha256-XdJuuWmaV59sZn2bz+Iz1EBkmvxwodC6cmbde3LZ5Ns="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\u19yvlzdbb-m55zj8rnia.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\u19yvlzdbb-5uulf5u3nh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11841,7 +11841,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9256"
+          "Value": "9251"
         },
         {
           "Name": "Content-Type",
@@ -11849,11 +11849,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KdRt9Hx5pNpQ4M+T4HtbtOh/+21t7LBmmzm/7SS/j3g=\""
+          "Value": "\"uFCudRrt+PnBB8RkR5kFkTlKCMlmLp+z/vyZ5LxTTz8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:27:54 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11871,7 +11871,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KdRt9Hx5pNpQ4M+T4HtbtOh/+21t7LBmmzm/7SS/j3g="
+          "Value": "sha256-uFCudRrt+PnBB8RkR5kFkTlKCMlmLp+z/vyZ5LxTTz8="
         }
       ]
     },
@@ -13033,7 +13033,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Wed, 10 Apr 2024 15:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13086,7 +13086,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Wed, 10 Apr 2024 15:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13170,7 +13170,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Wed, 10 Apr 2024 15:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13223,7 +13223,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Wed, 10 Apr 2024 15:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13307,7 +13307,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Wed, 10 Apr 2024 15:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13360,7 +13360,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Wed, 10 Apr 2024 15:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13401,11 +13401,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ud5wTmbCyVoMMV10rXjsOpLDBRa9LVDFgBycVGtq31M=\""
+          "Value": "\"0F0pWcGBPvzbzEIW7n9hqRXnG3rjauTmhRVMxjV+KGs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:49 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13415,18 +13415,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ud5wTmbCyVoMMV10rXjsOpLDBRa9LVDFgBycVGtq31M="
+          "Value": "sha256-0F0pWcGBPvzbzEIW7n9hqRXnG3rjauTmhRVMxjV+KGs="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.dll",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\wyx1g27vga-h6dgoo8h8z.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\wyx1g27vga-wg56hovlt1.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0,000063059654"
+          "Quality": "0,000063047727"
         }
       ],
       "ResponseHeaders": [
@@ -13436,15 +13436,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15857"
+          "Value": "15860"
         },
         {
           "Name": "ETag",
-          "Value": "\"3rC3bdOahduCmq2wkw1KD4rdXSEZpbLkUSzt4n+KJeM=\""
+          "Value": "\"E/c3YB+yPPen4TgLPDg6dTWYBlzZ8hCiDAH8crpYjjs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:27:53 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13464,19 +13464,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ud5wTmbCyVoMMV10rXjsOpLDBRa9LVDFgBycVGtq31M=\""
+          "Value": "W/\"0F0pWcGBPvzbzEIW7n9hqRXnG3rjauTmhRVMxjV+KGs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ud5wTmbCyVoMMV10rXjsOpLDBRa9LVDFgBycVGtq31M="
+          "Value": "sha256-0F0pWcGBPvzbzEIW7n9hqRXnG3rjauTmhRVMxjV+KGs="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.dll.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\wyx1g27vga-h6dgoo8h8z.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\wyx1g27vga-wg56hovlt1.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13485,7 +13485,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15857"
+          "Value": "15860"
         },
         {
           "Name": "Content-Type",
@@ -13493,11 +13493,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3rC3bdOahduCmq2wkw1KD4rdXSEZpbLkUSzt4n+KJeM=\""
+          "Value": "\"E/c3YB+yPPen4TgLPDg6dTWYBlzZ8hCiDAH8crpYjjs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:27:53 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13515,7 +13515,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3rC3bdOahduCmq2wkw1KD4rdXSEZpbLkUSzt4n+KJeM="
+          "Value": "sha256-E/c3YB+yPPen4TgLPDg6dTWYBlzZ8hCiDAH8crpYjjs="
         }
       ]
     },
@@ -13538,11 +13538,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mMJCKYCdoBoPCv9ZLps2KuX8P5J+sYaqALvkfcPRa4U=\""
+          "Value": "\"YT8AttnXpUh+27iRHT/EP4Jct4P0Zhvn04/npWX7sDQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:49 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13552,18 +13552,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mMJCKYCdoBoPCv9ZLps2KuX8P5J+sYaqALvkfcPRa4U="
+          "Value": "sha256-YT8AttnXpUh+27iRHT/EP4Jct4P0Zhvn04/npWX7sDQ="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.pdb",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\lauxpm0ksv-0u216276sm.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\lauxpm0ksv-92paise6tv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0,000038529706"
+          "Quality": "0,000038531191"
         }
       ],
       "ResponseHeaders": [
@@ -13573,15 +13573,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "25953"
+          "Value": "25952"
         },
         {
           "Name": "ETag",
-          "Value": "\"PaKOa6rcvv3lY8igeQ7AsUi4YYUQ4gTGvZYioiYS8UQ=\""
+          "Value": "\"TaUN0+s+xRvw216efHufEMCjH+McERZGRceMuML9NF0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:27:53 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13601,19 +13601,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mMJCKYCdoBoPCv9ZLps2KuX8P5J+sYaqALvkfcPRa4U=\""
+          "Value": "W/\"YT8AttnXpUh+27iRHT/EP4Jct4P0Zhvn04/npWX7sDQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mMJCKYCdoBoPCv9ZLps2KuX8P5J+sYaqALvkfcPRa4U="
+          "Value": "sha256-YT8AttnXpUh+27iRHT/EP4Jct4P0Zhvn04/npWX7sDQ="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.pdb.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\lauxpm0ksv-0u216276sm.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net7.0\\compressed\\lauxpm0ksv-92paise6tv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13622,7 +13622,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "25953"
+          "Value": "25952"
         },
         {
           "Name": "Content-Type",
@@ -13630,11 +13630,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PaKOa6rcvv3lY8igeQ7AsUi4YYUQ4gTGvZYioiYS8UQ=\""
+          "Value": "\"TaUN0+s+xRvw216efHufEMCjH+McERZGRceMuML9NF0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:27:53 GMT"
+          "Value": "Thu, 31 Oct 2024 17:43:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13652,7 +13652,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PaKOa6rcvv3lY8igeQ7AsUi4YYUQ4gTGvZYioiYS8UQ="
+          "Value": "sha256-TaUN0+s+xRvw216efHufEMCjH+McERZGRceMuML9NF0="
         }
       ]
     },
@@ -44554,51 +44554,6 @@
       ]
     },
     {
-      "Route": "index.9bjp2dk98f.html",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2600"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+7sOpJ4+xPTbaemtg0lhcIHqxh53iXnmoqx6UiPJjwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:07 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9bjp2dk98f"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+7sOpJ4+xPTbaemtg0lhcIHqxh53iXnmoqx6UiPJjwg="
-        }
-      ]
-    },
-    {
       "Route": "index.html",
       "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\index.html",
       "Selectors": [],
@@ -44609,7 +44564,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2600"
+          "Value": "4046"
         },
         {
           "Name": "Content-Type",
@@ -44617,11 +44572,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+7sOpJ4+xPTbaemtg0lhcIHqxh53iXnmoqx6UiPJjwg=\""
+          "Value": "\"EKwMHXr2pwDhj5BUZ0broNE/7votlP6n3TVpN2RYVGs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:07 GMT"
+          "Value": "Thu, 31 Oct 2024 17:48:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44631,7 +44586,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+7sOpJ4+xPTbaemtg0lhcIHqxh53iXnmoqx6UiPJjwg="
+          "Value": "sha256-EKwMHXr2pwDhj5BUZ0broNE/7votlP6n3TVpN2RYVGs="
+        }
+      ]
+    },
+    {
+      "Route": "index.kfc8zszhd5.html",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EKwMHXr2pwDhj5BUZ0broNE/7votlP6n3TVpN2RYVGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 31 Oct 2024 17:48:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kfc8zszhd5"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EKwMHXr2pwDhj5BUZ0broNE/7votlP6n3TVpN2RYVGs="
         }
       ]
     },
@@ -44908,7 +44908,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9HbrvqYEbWkm/lU8H5NVgzDI8HtnHJXs10JhwAMkjAs=\""
+          "Value": "\"rDZUjnLUmGpo2aIn7Thx7UbtJMfcIPDgq/gQzu+dJFw=\""
         },
         {
           "Name": "Last-Modified",
@@ -44922,7 +44922,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9HbrvqYEbWkm/lU8H5NVgzDI8HtnHJXs10JhwAMkjAs="
+          "Value": "sha256-rDZUjnLUmGpo2aIn7Thx7UbtJMfcIPDgq/gQzu+dJFw="
         }
       ]
     },
@@ -44945,11 +44945,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KuEid46/KSBaSY54AEIunaEedG9l0oWtRyy+Ww90oD0=\""
+          "Value": "\"rZ/iv+Xr+i/b52WZ9C1TTkYd8rPFuloYdBTFr3wx0Wk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 31 Oct 2024 17:36:50 GMT"
+          "Value": "Thu, 31 Oct 2024 17:49:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44959,7 +44959,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KuEid46/KSBaSY54AEIunaEedG9l0oWtRyy+Ww90oD0="
+          "Value": "sha256-rZ/iv+Xr+i/b52WZ9C1TTkYd8rPFuloYdBTFr3wx0Wk="
         }
       ]
     }

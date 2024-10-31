@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Game Launcher</title>
     <base href="/" />
     
@@ -39,54 +42,41 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
-<script>
-    // Clear site storage on load
-    window.addEventListener('load', () => {
-        localStorage.clear();
-        sessionStorage.clear();
-        
-        if ('caches' in window) {
-            caches.keys().then(keys => {
-                keys.forEach(key => caches.delete(key));
+    <script>
+        // Add timestamp to prevent browser caching
+        document.querySelectorAll('script').forEach(script => {
+            if (script.src) {
+                script.src = script.src + '?v=' + Date.now();
+            }
+        });
+    
+        // Enable debugging support
+        window.Blazor = window.Blazor || {};
+        window.Blazor.isDebuggingSupported = function() {
+            return true;
+        };
+    
+        // Remove service worker to fix fetch handler issues
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+                registrations.forEach(registration => {
+                    registration.unregister();
+                });
             });
         }
-    });
-
-    // Enhanced error handling
-    window.addEventListener('unhandledrejection', event => {
-        const errorUI = document.getElementById('blazor-error-ui');
-        const errorMessage = errorUI.querySelector('.error-message');
-        const errorStack = errorUI.querySelector('.error-stack');
-        const errorComponent = errorUI.querySelector('.error-component');
-        const errorParams = errorUI.querySelector('.error-params');
-
-        errorMessage.textContent = event.reason.message || 'Unknown error occurred';
-        errorStack.textContent = event.reason.stack || '';
-        errorComponent.textContent = event.reason.componentName || '';
-        errorParams.textContent = JSON.stringify(event.reason.parameters || {});
-        
-        errorUI.style.display = 'block';
-    });
-    window.isDarkMode = () => {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    };
-
-    window.switchTheme = (isDark) => {
-        document.getElementById('theme-dark').disabled = !isDark;
-        document.getElementById('theme-light').disabled = isDark;
-        document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
-        document.body.classList.toggle('m-application--dark', isDark);
-        document.body.classList.toggle('m-application--light', !isDark);
-    };
-
-    const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
-    switchTheme(darkModeMatch.matches);
-    darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js', { scope: './' });
-    }
-</script>
+    
+        // Clear site storage on load
+        window.addEventListener('load', () => {
+            localStorage.clear();
+            sessionStorage.clear();
+            
+            if ('caches' in window) {
+                caches.keys().then(keys => {
+                    keys.forEach(key => caches.delete(key));
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>

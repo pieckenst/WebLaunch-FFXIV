@@ -1,7 +1,7 @@
 {
   "entryAssembly": "LaunchApp",
   "resources": {
-    "hash": "sha256-CejsHRH4AIsJvOUvpmVArNiOfNcNyInYbv2x5Amibpk=",
+    "hash": "sha256-MwzvzAZNRZXzg0wQXf8ZQhyEgvRW9aMMQAjLjTg4I0Q=",
     "runtime": {
       "dotnet.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -211,10 +211,10 @@
       "mscorlib.dll": "sha256-HYyp9hO+GKFyupcEiY1PxtBBXbHzefsO3Q8RiQTaNCA=",
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
-      "LaunchApp.dll": "sha256-ud5wTmbCyVoMMV10rXjsOpLDBRa9LVDFgBycVGtq31M="
+      "LaunchApp.dll": "sha256-0F0pWcGBPvzbzEIW7n9hqRXnG3rjauTmhRVMxjV+KGs="
     },
     "pdb": {
-      "LaunchApp.pdb": "sha256-mMJCKYCdoBoPCv9ZLps2KuX8P5J+sYaqALvkfcPRa4U="
+      "LaunchApp.pdb": "sha256-YT8AttnXpUh+27iRHT/EP4Jct4P0Zhvn04/npWX7sDQ="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
