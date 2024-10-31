@@ -31,27 +31,10 @@
     </div>
 
     
-    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
 <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
 <script>
-    const startBlazor = async () => {
-        if (window.blazorStarted) return;
-        window.blazorStarted = true;
-        
-        await Blazor.start({
-            loadBootResource: function (type, name, defaultUri, integrity) {
-                return defaultUri;
-            }
-        });
-    };
-
-    window.blazorReady = startBlazor();
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js', { scope: './' });
-    }
-
     window.isDarkMode = () => {
         return window.matchMedia('(prefers-color-scheme: dark)').matches;
     };
@@ -67,6 +50,11 @@
     const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
     switchTheme(darkModeMatch.matches);
     darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js', { scope: './' });
+    }
 </script>
+
 </body>
 </html>
