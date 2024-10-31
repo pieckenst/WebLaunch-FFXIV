@@ -25,6 +25,10 @@ jobs:
       run: |
         dotnet workload install wasm-tools
         dotnet workload install wasm-tools-net7
+        dotnet workload list
+        pwd && ls -la
+        echo "Workload paths:"
+        find /usr/share/dotnet/packs -name "Microsoft.NET.Runtime.WebAssembly.Sdk"
         
     - name: Restore workloads
       run: dotnet workload restore
@@ -33,15 +37,19 @@ jobs:
       run: dotnet restore
       
     - name: Build and Publish
-      run: dotnet publish LaunchApp/LaunchApp.csproj -c Release -o ${{ runner.temp }}/published_app --no-self-contained /p:PublishTrimmed=false
+      run: |
+        pwd && ls -la
+        dotnet publish LaunchApp/LaunchApp.csproj -c Release -o ${{ runner.temp }}/published_app --no-restore
       
     - name: Setup SPA routing
       run: |
         cp ${{ runner.temp }}/published_app/wwwroot/index.html ${{ runner.temp }}/published_app/wwwroot/404.html
         sed -i 's/base href="\/"/base href="\/${{ github.event.repository.name }}\/"/' ${{ runner.temp }}/published_app/wwwroot/index.html
+        sed -i 's/autostart="false"/autostart="true"/' ${{ runner.temp }}/published_app/wwwroot/index.html
 
     - name: Deploy to GitHub Pages
       run: |
+        pwd && ls -la
         git checkout --orphan gh-pages
         git clean -fdx
         git rm -rf .

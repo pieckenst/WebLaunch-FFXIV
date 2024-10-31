@@ -31,55 +31,39 @@
     </div>
 
     
-    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
-    <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+<script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
-    <script>
-       var Module = {
-        onRuntimeInitialized: async function() {
-            const is_browser = typeof window != "undefined";
-            if (!is_browser) throw new Error(`Expected to be running in a browser`);
-
-            await Blazor.start({
-                loadBootResource: function (type, name, defaultUri, integrity) {
-                    switch (type) {
-                        case 'dotnetjs':
-                        case 'dotnetwasm':
-                        case 'timezonedata':
-                            return `${defaultUri}`;
-                    }
-                    return defaultUri;
-                }
-            });
-            
-            window.blazorReady = Promise.resolve();
-        }
-    };
+<script>
+    window.blazorReady = new Promise((resolve) => {
+        Blazor.start({
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                return defaultUri;
+            }
+        }).then(() => {
+            resolve();
+        });
+    });
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js');
     }
-        
 
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js');
-        }
+    window.isDarkMode = () => {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    };
 
-        window.isDarkMode = () => {
-            return window.matchMedia('(prefers-color-scheme: dark)').matches;
-        };
+    window.switchTheme = (isDark) => {
+        document.getElementById('theme-dark').disabled = !isDark;
+        document.getElementById('theme-light').disabled = isDark;
+        document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        document.body.classList.toggle('m-application--dark', isDark);
+        document.body.classList.toggle('m-application--light', !isDark);
+    };
 
-        window.switchTheme = (isDark) => {
-            document.getElementById('theme-dark').disabled = !isDark;
-            document.getElementById('theme-light').disabled = isDark;
-            document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            document.body.classList.toggle('m-application--dark', isDark);
-            document.body.classList.toggle('m-application--light', !isDark);
-        };
-
-        const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
-        switchTheme(darkModeMatch.matches);
-        darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
-    </script>
+    const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
+    switchTheme(darkModeMatch.matches);
+    darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
+</script>
 </body>
 </html>
