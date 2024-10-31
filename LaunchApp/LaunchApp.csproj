@@ -8,6 +8,8 @@
 	<EnableWindowsTargeting>true</EnableWindowsTargeting>
   <WasmEnableSIMD>false</WasmEnableSIMD>
   <PublishTrimmed>false</PublishTrimmed>
+  <BlazorCacheBootResources>false</BlazorCacheBootResources>
+
 
 
   </PropertyGroup>
