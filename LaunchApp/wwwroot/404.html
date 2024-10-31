@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="css/material3-dark-base.css">
+    <script>
+        (function() {
+            const segments = 1;
+            let location = window.location;
+            let url = location.origin;
+            for (let i = 0, n = 0; i < location.pathname.length; ++i) {
+                if (location.pathname[i] === '/' && ++n === segments + 1) {
+                    url += location.pathname.slice(0, i + 1);
+                    url += '?page=' + encodeURIComponent(location.pathname.slice(i + 1));
+                }
+            }
+            if (location.search) {
+                url += '&query=' + encodeURIComponent(location.search.slice(1));
+            }
+            if (location.hash) {
+                url += location.hash;
+            }
+            location.replace(url);
+        }())
+    </script>
+    <script>
+        (function() {
+            let location = window.location;
+            if (location.search) {
+                const segments = 1;
+                for (let i = 0, n = 0, length = location.pathname.length; i < length; ++i) {
+                    if (location.pathname[i] === '/' && ++n === segments + 1) {
+                        if (i !== length - 1)
+                            return;
+                    }
+                }
+                let parameters = new URLSearchParams(location.search.slice(1));
+                let path = parameters.get('page');
+                if (path) {
+                    let url = location.pathname + decodeURIComponent(path);
+                    let query = parameters.get('query');
+                    if (query) {
+                        url += '?' + decodeURIComponent(query);
+                    }
+                    if (location.hash) {
+                        url += location.hash;
+                    }
+                    window.history.replaceState(null, null, url);
+                }
+            }
+        }())
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>404 - Page Not Found</h1>
+        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <a href="/" class="button">Go to Homepage</a>
+    </div>
+</body>
+</html>

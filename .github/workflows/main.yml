@@ -1,31 +1,56 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy
 
-# Run workflow on every push to the master branch
 on:
   push:
-    branches: [ pwa ]
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy-to-github-pages:
-    # use ubuntu-latest image to run steps on
+  build:
     runs-on: ubuntu-latest
     steps:
-    # uses GitHub's checkout action to checkout code form the master branch
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
-    # sets up .NET Core SDK 
-    - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v4
       with:
-       dotnet-version: '6.0.x'
-       include-prerelease: true
+        dotnet-version: '7.0.x'
+        
     - name: Restore dependencies
       run: dotnet restore
-    - name: Restore workload
+      
+    - name: Restore workload  
       run: dotnet workload restore
-    - name: Deploy app
-      uses: proulxsamuel/deploy-blazor-to-gh-pages@master
+      
+    - name: Build and Publish
+      run: dotnet publish 'LaunchApp/' -c Release -o publish
+
+    - name: Setup SPA routing
+      run: |
+        cp publish/wwwroot/index.html publish/wwwroot/404.html
+        sed -i 's/base href="\/"/base href="\/${{ github.event.repository.name }}\/"/' publish/wwwroot/index.html
+        
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-    # The path to the Blazor project in the repository.
-    # Default: '.'
-       project_path: 'LaunchApp/'
+        path: './publish/wwwroot'
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
