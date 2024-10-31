@@ -1,14 +1,11 @@
 {
   "entryAssembly": "LaunchApp",
   "resources": {
-    "hash": "sha256-T5SR0ov/D51fazbVWc4+uHym0xD0GvrkhD4BESkG5sM=",
+    "hash": "sha256-MTqib7/TbbrCE2Y0EVovM0E5cBkf6SMGHXqo5Mxo44I=",
     "runtime": {
       "dotnet.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
-      "dotnet.wasm": "sha256-2P6rVlE+GN7v/KBZsI/zwouhfpV38+1lEl5FMslgb4A=",
-      "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
-      "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
-      "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
+      "dotnet.wasm": "sha256-2P6rVlE+GN7v/KBZsI/zwouhfpV38+1lEl5FMslgb4A="
     },
     "coreAssembly": {},
     "assembly": {
@@ -211,10 +208,10 @@
       "mscorlib.dll": "sha256-HYyp9hO+GKFyupcEiY1PxtBBXbHzefsO3Q8RiQTaNCA=",
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
-      "LaunchApp.dll": "sha256-r7UQ0XHIBbiYUmt70qBQcQ/vB5Ml/qbg7a/DNlwQ2fM="
+      "LaunchApp.dll": "sha256-b3h1iQcfPR7ZHHdIeQBvnsIZzCHf4gfLh7di6CxNHtQ="
     },
     "pdb": {
-      "LaunchApp.pdb": "sha256-lxGZQ9+VObWy5rG0jFUwrADQM1XdYtkr+vNsCy20woY="
+      "LaunchApp.pdb": "sha256-Sr5dPJUrq2JIzgR98lbTuiFBz5cx9p9uJ7FIztGLp1E="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
@@ -223,12 +220,12 @@
       }
     }
   },
-  "cacheBootResources": true,
+  "cacheBootResources": false,
   "debugBuild": true,
   "debugLevel": 0,
   "linkerEnabled": false,
   "config": [],
-  "icuDataMode": 0,
+  "icuDataMode": 2,
   "extensions": {
     "blazor": {}
   }
