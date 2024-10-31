@@ -5,13 +5,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
-	<EnableWindowsTargeting>true</EnableWindowsTargeting>
-  <WasmEnableSIMD>false</WasmEnableSIMD>
-  <PublishTrimmed>false</PublishTrimmed>
-  <BlazorCacheBootResources>false</BlazorCacheBootResources>
-
-
-
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <WasmEnableSIMD>false</WasmEnableSIMD>
+    <PublishTrimmed>false</PublishTrimmed>
+    <BlazorCacheBootResources>false</BlazorCacheBootResources>
+    <BlazorEnableCompression>false</BlazorEnableCompression>
+    
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UseBlazorWebAssembly>true</UseBlazorWebAssembly>
+    <DisableIntegrityValidation>true</DisableIntegrityValidation>
   </PropertyGroup>
 
   <ItemGroup>
