@@ -7,7 +7,10 @@
 <MApp>
     <MErrorHandler DisablePopupIfErrorContentRender>
         <ChildContent>
-            <MAppBar Id="app-bar"
+            <!-- Top AppBar -->
+            @if (!MasaBlazor.Breakpoint.Mobile)
+            {
+                <MAppBar Id="app-bar"
                      App
                      Class="default-app-bar m-bar--underline"
                      Flat
@@ -54,6 +57,7 @@
                     </MToggle>
                 </div>
             </MAppBar>
+            }
 
             <MMain>
                 <MContainer Fluid>
@@ -61,18 +65,18 @@
                 </MContainer>
             </MMain>
 
-            @if (MasaBlazor.Breakpoint.XsOnly)
+             @if (MasaBlazor.Breakpoint.Mobile)
             {
-                <MBottomNavigation Dark>
-                    <MButton Href="">
+                <MBottomNavigation Dark Fixed>
+                    <MButton Href="" Text>
                         <MIcon>mdi-home</MIcon>
                         <span>Home</span>
                     </MButton>
-                    <MButton Href="counter">
-                        <MIcon>mdi-storm</MIcon>
+                    <MButton Href="counter" Text>
+                        <MIcon>mdi-widgets</MIcon>
                         <span>FFXIV</span>
                     </MButton>
-                    <MButton Href="spellborn">
+                    <MButton Href="spellborn" Text>
                         <MIcon>mdi-gamepad</MIcon>
                         <span>Spellborn</span>
                     </MButton>

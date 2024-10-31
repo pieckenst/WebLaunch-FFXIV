@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "G:\\code\\WebLaunch\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\launchapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\launchapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -38,19 +42,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Program.cs",
+              "RelativeDocumentMoniker": "LaunchApp\\Program.cs",
+              "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\Program.cs",
+              "RelativeToolTip": "LaunchApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T18:04:32.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LaunchApp",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
               "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeToolTip": "LaunchApp\\LaunchApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-10-31T17:59:54.608Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "WasmApp.Common.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
@@ -61,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LaunchApp",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
@@ -73,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SupportObjects.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\handlerlaunch\\SupportObjects.cs",
               "RelativeDocumentMoniker": "handlerlaunch\\SupportObjects.cs",
@@ -86,20 +103,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Counter.razor",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "LaunchApp\\Pages\\Counter.razor",
               "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\Pages\\Counter.razor",
               "RelativeToolTip": "LaunchApp\\Pages\\Counter.razor",
-              "ViewState": "AgIAACkAAAAAAAAAAAAswDwAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswD0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-31T17:28:49.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
               "RelativeDocumentMoniker": "LaunchApp\\Shared\\MainLayout.razor",
