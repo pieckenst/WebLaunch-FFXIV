@@ -44,7 +44,6 @@ jobs:
       
     - name: Setup SPA routing
       run: |
-        cp ${{ runner.temp }}/published_app/wwwroot/index.html ${{ runner.temp }}/published_app/wwwroot/404.html
         sed -i 's/base href="\/"/base href="\/${{ github.event.repository.name }}\/"/' ${{ runner.temp }}/published_app/wwwroot/index.html
         sed -i 's/autostart="false"/autostart="true"/' ${{ runner.temp }}/published_app/wwwroot/index.html
 
