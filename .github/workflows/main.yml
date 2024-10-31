@@ -22,7 +22,9 @@ jobs:
         dotnet-version: '7.0.x'
         
     - name: Install WASM workload
-      run: dotnet workload install wasm-tools
+      run: |
+        dotnet workload install wasm-tools
+        dotnet workload install wasm-tools-net7
         
     - name: Restore workloads
       run: dotnet workload restore
@@ -37,7 +39,6 @@ jobs:
       run: |
         cp ${{ runner.temp }}/published_app/wwwroot/index.html ${{ runner.temp }}/published_app/wwwroot/404.html
         sed -i 's/base href="\/"/base href="\/${{ github.event.repository.name }}\/"/' ${{ runner.temp }}/published_app/wwwroot/index.html
-        sed -i 's/<script src="_framework\/blazor.webassembly.js"><\/script>/<script src="_framework\/blazor.webassembly.js" autostart="false"><\/script>/' ${{ runner.temp }}/published_app/wwwroot/index.html
 
     - name: Deploy to GitHub Pages
       run: |

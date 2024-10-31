@@ -35,13 +35,19 @@
     <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
     <script>
-        var Module = {
+       var Module = {
         onRuntimeInitialized: async function() {
             const is_browser = typeof window != "undefined";
             if (!is_browser) throw new Error(`Expected to be running in a browser`);
 
             await Blazor.start({
                 loadBootResource: function (type, name, defaultUri, integrity) {
+                    switch (type) {
+                        case 'dotnetjs':
+                        case 'dotnetwasm':
+                        case 'timezonedata':
+                            return `${defaultUri}`;
+                    }
                     return defaultUri;
                 }
             });
