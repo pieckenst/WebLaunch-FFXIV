@@ -69,6 +69,18 @@
               "target": "Package",
               "version": "[9.0.0-rc.2.24473.5, )",
               "autoReferenced": true
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Private.Uri": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             }
           },
           "imports": [

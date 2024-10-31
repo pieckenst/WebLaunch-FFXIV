@@ -24,7 +24,7 @@ jobs:
     - name: Install WASM workload
       run: |
         dotnet workload install wasm-tools
-        dotnet workload install wasm-tools-net8
+        
         pwd && ls -la
         
     - name: Restore workloads
