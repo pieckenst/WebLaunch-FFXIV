@@ -25,7 +25,7 @@ jobs:
       run: dotnet restore
       
     - name: Build and Publish
-      run: dotnet publish LaunchApp/LaunchApp.csproj -c Release -o ${{ runner.temp }}/published_app
+      run: dotnet publish LaunchApp/LaunchApp.csproj -c Release -o ${{ runner.temp }}/published_app --no-self-contained
       
     - name: Setup SPA routing and fix base href
       run: |

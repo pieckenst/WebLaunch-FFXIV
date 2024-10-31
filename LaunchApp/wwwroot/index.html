@@ -30,17 +30,23 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
 
     <script>
-        Blazor.start({
-            loadBootResource: function (type, name, defaultUri, integrity) {
-                return defaultUri;
+        var Module = {
+            onRuntimeInitialized: function() {
+                Blazor.start({
+                    loadBootResource: function (type, name, defaultUri, integrity) {
+                        return defaultUri;
+                    }
+                }).then(function () {
+                    window.blazorReady = Promise.resolve();
+                });
             }
-        }).then(function () {
-            window.blazorReady = Promise.resolve();
-        });
+        };
+        
 
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js');
