@@ -1,92 +1,84 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\bin\\Release\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Release\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\obj\\Release\\net6.0\\build-gz\\8pzuAyvC.gz",
-      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
-    },
-    {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\obj\\Release\\net6.0\\service-worker-assets.js",
-      "PackagePath": "staticwebassets\\service-worker-assets.js"
-    },
-    {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\obj\\Release\\net6.0\\service-worker\\service-worker.published.js",
-      "PackagePath": "staticwebassets\\service-worker.js"
-    },
-    {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\app.css",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\favicon.ico",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\icon-192.png",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\icon-512.png",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\icon-512.png",
       "PackagePath": "staticwebassets\\icon-512.png"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\index.html",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\manifest.json",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\manifest.json",
       "PackagePath": "staticwebassets\\manifest.json"
     },
     {
-      "Id": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\wwwroot\\sample-data\\weather.json",
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.LaunchApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.LaunchApp.Microsoft.AspNetCore.StaticWebAssets.props",

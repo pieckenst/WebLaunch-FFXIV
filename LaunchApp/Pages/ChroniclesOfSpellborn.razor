@@ -2,60 +2,73 @@
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
 
-<PageTitle>Chronicles of spellborn launch process</PageTitle>
-<h2>Welcome to very basic web-based login process for Chronicles of Spellborn </h2>
-<button class="btn btn-primary" @onclick="processlaunchusespl">Launch the game </button>
-<button class="btn btn-primary" @onclick="@ModalShow">🔧 </button>
-@if (showModal)
-{
-        <div class="modal fade show" id="myModal" style="display:block" aria-modal="true" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
+<PageTitle>Chronicles of Spellborn</PageTitle>
 
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Settings page</h4>
-                        <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
+<MContainer>
+    <MRow Justify="JustifyTypes.Center">
+        <MCol Cols="12" Md="8">
+            <MCard Class="rounded-lg" Elevation="4">
+                <div class="pa-6">
+                    <div class="text-h4 mb-4">Chronicles of Spellborn</div>
+                    <div class="d-flex">
+                        <MButton Color="primary"
+                                OnClick="processlaunchusespl"
+                                Class="mr-4 rounded-lg">
+                            Launch Game
+                        </MButton>
+                        <MButton Icon
+                                Class="rounded-lg"
+                                OnClick="ModalShow">
+                            <MIcon>mdi-cog</MIcon>
+                        </MButton>
                     </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <p><label for="gamepath">Gamepath</label></p>
-                    <p><input id="gamepath" name="Gamepath" @bind-value="gamepathersinp" autocomplete="off" type="text" required /></p>
-                        
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn " @onclick=@ModalOk>Apply settings</button>
-                        <button type="button" class="btn" @onclick="@ModalCancel">Cancel</button>
-
-                    </div>
-
                 </div>
+            </MCard>
+        </MCol>
+    </MRow>
+</MContainer>
+
+<MDialog @bind-Value="showModal"
+         MaxWidth="500"
+         Fullscreen
+         Transition="dialog-bottom-transition">
+    <MCard Class="rounded-lg">
+        <div class="pa-4">
+            <div class="text-h5 mb-4">Settings</div>
+            <MTextField @bind-Value="gamepathersinp"
+                       Label="Game Path"
+                       Filled
+                       Clearable
+                       Class="mb-4" />
+            <div class="d-flex justify-end">
+                <MButton Color="primary"
+                         OnClick="ModalOk"
+                         Class="mr-2 rounded-lg">
+                    Apply
+                </MButton>
+                <MButton OnClick="ModalCancel"
+                         Class="rounded-lg">
+                    Cancel
+                </MButton>
             </div>
         </div>
-}
+    </MCard>
+</MDialog>
+
 @code {
     private string gamepathersinp = "";
     bool showModal = false;
-    void ModalShow()
-    {
-        showModal = true;
-    }
-    void ModalCancel()
-    {
-        showModal = false;
-    }
 
-
+    void ModalShow() => showModal = true;
+    void ModalCancel() => showModal = false;
     void ModalOk()
     {
         Console.WriteLine("Modal ok");
         showModal = false;
     }
+
     void processlaunchusespl()
     {
-        navigationManager.NavigateTo("HandleWebRequest:HandleReqLaunch?spellbornhandle=yes" + ":?gamepath=" + gamepathersinp);
+        navigationManager.NavigateTo($"HandleWebRequest:HandleReqLaunch?spellbornhandle=yes:?gamepath={gamepathersinp}");
     }
 }

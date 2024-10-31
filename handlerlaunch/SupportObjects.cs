@@ -175,336 +175,525 @@ namespace handlerlaunch
             }
         }
     }
-    public class spellbornsupporter
+    public class SpellbornSupporter
     {
+        private static readonly string LogFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "debug.log");
         private string installedVersion;
-
         private dynamic jsonLatest;
-
         private MessageBoxResult dialogResult;
-
-        private string installPath = registryManipulation.getKeyValue("installPath");
-
+        private string installPath;
         private bool downloadFinished;
-
         private int totalFiles;
-        const char _block = '■';
-
+        private const char _block = '■';
         private int filesExtracted;
-
         private string currentVersion;
-
         private dynamic updateJson;
-        private string stringupdfile;
-        public string passoverfromweb = "";
+        private string stringUpdateFile;
+        public string passOverFromWeb = "";
         private bool enableLaunch;
-        
-        private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        public string dogamepathreturn(string[] args)
+        private static void LogDebug(string message)
         {
-            string thirdsanitationstep = "";
-            try {
-                Console.WriteLine(args[0]);
-                string gamepathns = Program.TextFollowing(args[0].ToString(), "gamepath=");
-                Console.WriteLine(gamepathns);
-                string gamepathcst = "";
-                string secsanitationstep = "";
-                
-                if (gamepathns.Contains(":?"))
-                    gamepathcst = gamepathns.Split(":?")[0];
-                else { gamepathcst= gamepathns ;}
-                if (gamepathcst.Contains("%22")) { secsanitationstep = gamepathcst.Replace("%22", ""); } else { secsanitationstep = gamepathcst; }
-                if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); }
-                if (thirdsanitationstep == null) {
-                    thirdsanitationstep = "D:\\Games\\Spellborn";
+            string logMessage = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} - {message}";
+            Console.WriteLine(logMessage);
+            File.AppendAllText(LogFilePath, logMessage + Environment.NewLine);
+        }
+        private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+        public SpellbornSupporter()
+        {
+            installPath = registryManipulation.getKeyValue("installPath");
+        }
+
+        public string GetGamePathFromArgs(string[] args)
+        {
+            try 
+            {
+                LogDebug($"Processing args: {string.Join(", ", args)}");
+                string gamePath = args[0].Contains("gamepath=") ? Program.TextFollowing(args[0], "gamepath=") : null;
+                if (string.IsNullOrEmpty(gamePath))
+                {
+                    _log.Warn("Game path not found in args, using default path");
+                    return "D:\\Games\\Spellborn";
                 }
+
+                gamePath = gamePath.Contains(":?") ? gamePath.Split(":?")[0] : gamePath;
+                gamePath = gamePath.Replace("%22", "").Replace("%5C", "/");
+
+                LogDebug($"Extracted game path: {gamePath}");
+                return gamePath;
             }
             catch (Exception e)
             {
-                Console.WriteLine("An error was encountered during execution- the debug info below is listed");
-                Console.WriteLine(e.Message);
-                Console.WriteLine(e.InnerException);
-                Console.WriteLine(e.StackTrace);
-                _log.Error(e.Message);
-                Console.ReadLine();
-                thirdsanitationstep = "D:\\Games\\Spellborn";
+                _log.Error("Error in GetGamePathFromArgs", e);
+                return "D:\\Games\\Spellborn";
             }
-            return thirdsanitationstep;
         }
-        public void startupRoutine(string[] args)
+
+        public void StartupRoutine(string[] args)
         {
-#if DEBUG
-            Console.WriteLine(args[0]);
-#else
-            Console.WriteLine("");
-#endif
-            string thirdsanitationstep = dogamepathreturn(args);
-            
+            try
+            {
+                LogDebug("Starting Spellborn startup routine");
+                string gamePath;
+                try
+                {
+                    gamePath = GetGamePathFromArgs(args);
+                    passOverFromWeb = gamePath;
+                    LogDebug($"Game path set: {gamePath}");
+                }
+                catch (Exception e)
+                {
+                    LogDebug($"Error in GetGamePathFromArgs: {e.Message}");
+                    _log.Error("Error in GetGamePathFromArgs", e);
+                    throw new Exception("Failed to get game path from args", e);
+                }
                 
-                passoverfromweb = thirdsanitationstep;
-#if DEBUG
-                Console.WriteLine(passoverfromweb);
-
-#else
-                Console.WriteLine("");
-#endif
-            
-            
-            bool folderExists = Directory.Exists(passoverfromweb);
-            try {
-                if (!folderExists)
+                bool installDirectoryEnsured;
+                try
                 {
-                    Directory.CreateDirectory(passoverfromweb);
+                    installDirectoryEnsured = EnsureInstallDirectory();
+                    LogDebug($"Install directory ensured: {installDirectoryEnsured}");
                 }
-                if (!registryManipulation.detectInstallation())
+                catch (Exception e)
                 {
-                    _log.Info("Clean install detected/no registry installpath key found");
-
-                    installPath = passoverfromweb;
-
+                    LogDebug($"Error in EnsureInstallDirectory: {e.Message}");
+                    _log.Error("Error in EnsureInstallDirectory", e);
+                    throw new Exception("Failed to ensure install directory", e);
                 }
-                installedVersion = registryManipulation.getKeyValue("installedVersion");
-#if DEBUG
-                Console.WriteLine("Latest installed version is " + installedVersion.ToString());
-#else
-                    Console.Write("");
-#endif
-                _log.Info("Fetching latest version from the file server");
-                jsonLatest = updateHandler.getJsonItem("latest.json");
-                _log.Info("Managed to get the latest.json file");
-                if (installedVersion != jsonLatest.version.ToString())
+
+                bool versionUpdated;
+                try
                 {
-                    _log.Info("Currently installed version does not match with latest.json");
-                    if (installedVersion == "false")
-                    {
-                        _log.Info("Found nothing in the registry, this is most likely a clean install. Go forwards with full install.");
-                        _log.Info("Requested browser to load the launcher welcome/install page ");
-                        _log.Info("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
-                        Console.WriteLine("Calling download function to download newest versions. Information passed through is: filename: " + jsonLatest.file + " checksum: " + jsonLatest.checksum + " version: " + jsonLatest.version);
-                        downloadFile(jsonLatest.file, jsonLatest.checksum, jsonLatest.version);
-                    }
-                    
+                    CheckAndUpdateVersion();
+                    LogDebug($"Version checked and updated");
                 }
-#if DEBUG
-                Console.WriteLine("Version doesn't match, but registry tells that we are installed. Proceeding with fetching updates.");
-#else
-                Console.Write("");
-#endif
-                checkUpdates();
+                catch (Exception e)
+                {
+                    LogDebug($"Error in CheckAndUpdateVersion: {e.Message}");
+                    _log.Error("Error in CheckAndUpdateVersion", e);
+                    throw new Exception("Failed to check and update version", e);
+                }
+                
                 if (enableLaunch)
                 {
-                    Process.Start(installPath + "\\bin\\client\\Sb_client.exe");
-
+                    bool gameLaunched;
+                    try
+                    {
+                        LaunchGame();
+                        LogDebug($"Game launched");
+                    }
+                    catch (Exception e)
+                    {
+                        LogDebug($"Error in LaunchGame: {e.Message}");
+                        _log.Error("Error in LaunchGame", e);
+                        throw new Exception("Failed to launch game", e);
+                    }
                 }
             }
             catch(Exception e) 
             {
-                Console.WriteLine("An error was encountered during execution- the debug info below is listed");
-                Console.WriteLine(e.Message);
-                Console.WriteLine(e.InnerException);
-                Console.WriteLine(e.StackTrace);
-                _log.Error(e.Message);
+                LogDebug($"Error in StartupRoutine: {e.Message}");
+                _log.Error("Error in StartupRoutine", e);
+                Console.WriteLine($"An error occurred: {e.Message}");
                 Console.ReadLine();
+                throw; // Re-throw the exception to pass it to the calling function
             }
         }
-        public void unzipFile(string file, string version)
-        {
-            Console.WriteLine("Starting with unzipping ZIP file. Filename: " + file + " version: " + version);
-            using (Ionic.Zip.ZipFile zipFile = Ionic.Zip.ZipFile.Read(file))
-            {
-                totalFiles = zipFile.Count;
-                filesExtracted = 0;
-                
-                zipFile.ExtractAll(installPath, ExtractExistingFileAction.OverwriteSilently);
-            }
-            Console.WriteLine("Unzipping completed, storing new version " + version + " in the registry");
-            registryManipulation.updateKeyValue("installedVersion", version);
-            Console.WriteLine("Stored new version in registry, new value is " + version);
 
-            
-            Console.WriteLine("Checking for updates again.");
-            checkUpdates();
-        }
-
-        private bool checkUpdates()
+        private bool EnsureInstallDirectory()
         {
-            currentVersion = registryManipulation.getKeyValue("installedVersion");
-            Console.WriteLine("Getting installed version from registry. It is " + installedVersion);
-            Console.WriteLine("Fetch the updates.json file from file server");
-            dynamic updates = updateHandler.fetchUpdates();
-            int i;
-            for (i = 0; i < updates.Count; i++)
+            try
             {
-                if (updates[i].Update.appliesTo == currentVersion)
+                if (!Directory.Exists(passOverFromWeb))
                 {
-                    Console.WriteLine("We found an update applicable to us");
-                    if (updates[i].Update.enabled == "false")
+                    LogDebug($"Creating directory: {passOverFromWeb}");
+                    Directory.CreateDirectory(passOverFromWeb);
+                }
+
+                if (!registryManipulation.detectInstallation())
+                {
+                    LogDebug("Clean install detected/no registry installpath key found");
+                    installPath = passOverFromWeb;
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                LogDebug("Error in EnsureInstallDirectory {e}");
+                return false;
+            }
+        }
+
+        private void CheckAndUpdateVersion()
+        {
+            installedVersion = registryManipulation.getKeyValue("installedVersion");
+            LogDebug($"Installed version: {installedVersion}");
+
+            jsonLatest = updateHandler.getJsonItem("latest.json");
+            LogDebug("Fetched latest.json file");
+
+            if (installedVersion != jsonLatest.version.ToString())
+            {
+                LogDebug("Version mismatch detected");
+                if (installedVersion == "false")
+                {
+                    LogDebug("Clean install detected, proceeding with full install");
+                    if (!DownloadAndInstallLatestVersion())
                     {
-#if DEBUG
-                        Console.WriteLine("Update is applicable to us, but not yet enabled. Take no action and enable play button");
-#else
-                        Console.Write("");
-#endif
-                        enablePlayButton();
-                        return false;
+                        throw new Exception("Failed to download and install latest version");
                     }
-#if DEBUG
-                    Console.WriteLine("Update found that is applicable to us and it is enabled. ");
-#else
-                    Console.Write("");
-#endif
-
-
-
-                    Console.WriteLine("Calling download function to download update. Information passed through is: filename: " + updates[i].Update.file + " checksum: " + updates[i].Update.checksum + " version: " + updates[i].Update.version);
-                    downloadFile(updates[i].Update.file, updates[i].Update.checksum, updates[i].Update.version);
-                    return true;
+                }
+                else
+                {
+                    LogDebug("Updating existing installation");
+                    CheckUpdates();
                 }
             }
-            _log.Info("All seems OK, enable the play button.");
-            enablePlayButton();
-
-            return false;
+            else
+            {
+                LogDebug("Version is up to date");
+                enableLaunch = true;
+            }
         }
+
+        private bool DownloadAndInstallLatestVersion()
+        {
+            try
+            {
+                LogDebug($"Downloading latest version: {jsonLatest.version}");
+                bool downloadSuccess = DownloadFile(jsonLatest.file, jsonLatest.checksum, jsonLatest.version);
+                if (!downloadSuccess)
+                {
+                    LogDebug("Download failed");
+                    return false;
+                }
+                LogDebug("Download completed successfully");
+                return true;
+            }
+            catch (Exception e)
+            {
+                LogDebug($"Error in DownloadAndInstallLatestVersion: {e.Message}");
+                return false;
+            }
+        }
+
+        public void UnzipFile(string file, string version)
+        {
+            try
+            {
+                LogDebug($"Unzipping file: {file}, version: {version}");
+                using (Ionic.Zip.ZipFile zipFile = Ionic.Zip.ZipFile.Read(file))
+                {
+                    totalFiles = zipFile.Count;
+                    filesExtracted = 0;
+                    zipFile.ExtractProgress += ZipExtractProgress;
+                    zipFile.ExtractAll(installPath, ExtractExistingFileAction.OverwriteSilently);
+                }
+
+                LogDebug($"Updating registry with new version: {version}");
+                registryManipulation.updateKeyValue("installedVersion", version);
+
+                CheckUpdates();
+            }
+            catch (Exception e)
+            {
+                _log.Error("Error in UnzipFile", e);
+            }
+        }
+
+        private bool CheckUpdates()
+        {
+            try
+            {
+                currentVersion = registryManipulation.getKeyValue("installedVersion");
+                LogDebug($"Checking updates for version: {currentVersion}");
+
+                dynamic updates = updateHandler.fetchUpdates();
+                foreach (var update in updates)
+                {
+                    if (update.Update.appliesTo == currentVersion)
+                    {
+                        LogDebug("Found applicable update");
+                        if (update.Update.enabled == "false")
+                        {
+                            LogDebug("Update is not yet enabled");
+                            EnablePlayButton();
+                            return false;
+                        }
+
+                        LogDebug("Downloading update");
+                        DownloadFile(update.Update.file, update.Update.checksum, update.Update.version);
+                        return true;
+                    }
+                }
+
+                LogDebug("No updates found, enabling play button");
+                EnablePlayButton();
+                return false;
+            }
+            catch (Exception e)
+            {
+                _log.Error("Error in CheckUpdates", e);
+                return false;
+            }
+        }
+
         private void ZipExtractProgress(object sender, ExtractProgressEventArgs e)
         {
             if (e.EventType == ZipProgressEventType.Extracting_BeforeExtractEntry)
             {
                 filesExtracted++;
-                
+                _log.Debug($"Extracting file {filesExtracted} of {totalFiles}");
             }
         }
 
-        private void downloadFile(dynamic file, dynamic checksum, dynamic version)
+        private bool DownloadFile(dynamic file, dynamic checksum, dynamic version)
         {
             try
             {
-                _log.Info("Test if we have write access - if this fails, remove registry key and ask for different install location. Remove test file afterwards.");
-                File.WriteAllText(Path.Combine(installPath, "testfile.txt"), "This is a testfile");
-                File.Delete(installPath + "\\testfile.txt");
-            }
-            catch
-            {
-                _log.Error("That did not go according to plan, writing seems to have failed.");
-                
-                    MessageBox.Show("You have tried to install The Chronicles of Spellborn in a location that requires administrator access. Since Spellborn is so old, this is not recommended. We will open up a file browser so you can reset your installation location. To keep your current install location, please restart this launcher as administrator.", "There is an issue with the install location", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                
-                _log.Error("Removed installpath in registry to allow picking new path.");
-                //registryManipulation.deleteKeyValue("installpath");
-                installPath = passoverfromweb;
-                _log.Info("Closing this window, installpath has been removed - restarting application");
-            }
-            string uriString = "https://files.spellborn.org/" + file;
-            stringupdfile= file;
-            _log.Info("Check if the file already exists");
-            if (File.Exists(installPath + "/" + file))
-            {
-                _log.Info("File with same name already found (" + file + "). Checking if checksum matches.");
-                
-                _log.Info("Calculating MD5 checksum of the downloaded file " + file);
-                if (CalculateMD5(installPath + "/" + file) != checksum.ToString())
+                EnsureWriteAccess();
+
+                string uriString = $"https://files.spellborn.org/{file}";
+                stringUpdateFile = file.ToString();
+
+                if (File.Exists(Path.Combine(installPath, file.ToString())))
                 {
-                    _log.Info("Checksum calculated and compared - file does not match, download again.");
-                    
-                    _log.Info("Restarting download");
-                    using WebClient webClient = new WebClient();
-                    webClient.DownloadProgressChanged += wc_DownloadProgressChanged;
-                    webClient.DownloadFileCompleted += wc_DownloadFileCompleted;
+                    return HandleExistingFile(file, checksum, version);
+                }
+                else
+                {
+                    return DownloadNewFile(uriString, file, checksum, version);
+                }
+            }
+            catch (Exception e)
+            {
+                LogDebug($"Error in DownloadFile: {e.Message}");
+                return false;
+            }
+        }
+
+        private void EnsureWriteAccess()
+        {
+            try
+            {
+                string testFile = Path.Combine(installPath, "testfile.txt");
+                File.WriteAllText(testFile, "This is a testfile");
+                File.Delete(testFile);
+            }
+            catch (Exception e)
+            {
+                _log.Error("Write access test failed", e);
+                MessageBox.Show("Installation location requires administrator access. Please choose a different location or run as administrator.", "Installation Location Issue", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                installPath = passOverFromWeb;
+            }
+        }
+
+        private bool HandleExistingFile(dynamic file, dynamic checksum, dynamic version)
+        {
+            LogDebug($"File {file} already exists, checking checksum");
+            if (CalculateMD5(Path.Combine(installPath, file.ToString())) != checksum.ToString())
+            {
+                LogDebug("Checksum mismatch, re-downloading file");
+                return DownloadNewFile($"https://files.spellborn.org/{file}", file, checksum, version);
+            }
+            else
+            {
+                LogDebug("File checksum matches, starting extraction");
+                UnzipFile(Path.Combine(installPath, file.ToString()), version.ToString());
+                return true;
+            }
+        }
+
+        private bool DownloadNewFile(string uriString, dynamic file, dynamic checksum, dynamic version)
+        {
+            try
+            {
+                LogDebug($"Preparing to download file: {file}");
+                LogDebug($"Download URI: {uriString}");
+                LogDebug($"Checksum: {checksum}");
+                LogDebug($"Version: {version}");
+
+                using (WebClient webClient = new WebClient())
+                {
+                    webClient.DownloadProgressChanged += Wc_DownloadProgressChanged;
+                    webClient.DownloadFileCompleted += Wc_DownloadFileCompleted;
                     webClient.QueryString.Add("file", file.ToString());
                     webClient.QueryString.Add("checksum", checksum.ToString());
                     webClient.QueryString.Add("version", version.ToString());
-                    webClient.DownloadFileAsync(new Uri(uriString), installPath + "/" + file);
+
+                    LogDebug("Starting file download...");
+                    webClient.DownloadFileAsync(new Uri(uriString), Path.Combine(installPath, file.ToString()));
+                    
                     while (webClient.IsBusy)
-                        System.Threading.Thread.Sleep(1000);
-                    Console.Write("  COMPLETED!");
-                    Console.WriteLine();
+                        Thread.Sleep(100);
+
+                    LogDebug("File download completed.");
+                }
+                return true;
+            }
+            catch (UriFormatException ex)
+            {
+                LogDebug($"Invalid URI format: {ex.Message}");
+                throw;
+            }
+            catch (WebException ex)
+            {
+                LogDebug($"Web error occurred during download: {ex.Message}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                LogDebug($"An unexpected error occurred during download: {ex.Message}");
+                throw;
+            }
+        }
+       private static readonly object ConsoleWriterLock = new object();
+private int _lastProgress = -1;
+private int _lastConsoleLine = -1;
+
+private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+{
+    var progress = (int)((double)e.BytesReceived / e.TotalBytesToReceive * 100);
+    if (progress != _lastProgress)
+    {
+        _log.Debug($"Downloading {stringUpdateFile}: {e.BytesReceived / 1024:n0} kb / {e.TotalBytesToReceive / 1024:n0} kb");
+        
+        int consoleWidth = Console.WindowWidth;
+        string progressText = $" [ Downloading {stringUpdateFile}: {e.BytesReceived / 1024:n0} kb / {e.TotalBytesToReceive / 1024:n0} kb ]";
+        int progressBarWidth = Math.Max(consoleWidth - progressText.Length - 7, 10); // Ensure minimum width of 10
+        int filledWidth = (int)((double)progress / 100 * progressBarWidth);
+        string progressBar = $"[{new string('■', filledWidth)}{new string(' ', progressBarWidth - filledWidth)}] {progress}%";
+        
+        string fullLine = (progressText + " " + progressBar).PadRight(consoleWidth);
+
+        lock (ConsoleWriterLock)
+        {
+            try
+            {
+                int currentLine = Console.CursorTop;
+                if (_lastConsoleLine == -1)
+                {
+                    _lastConsoleLine = currentLine;
                 }
                 else
                 {
-                    _log.Info("File matches checksum, starting extraction");
-                    
-                    unzipFile((installPath + "\\" + file).ToString(), version.ToString());
+                    currentLine = _lastConsoleLine;
                 }
+
+                if (currentLine >= Console.BufferHeight - 1)
+                {
+                    Console.SetCursorPosition(0, Console.BufferHeight - 2);
+                    Console.WriteLine();
+                    currentLine = Console.CursorTop;
+                    _lastConsoleLine = currentLine;
+                }
+
+                Console.SetCursorPosition(0, currentLine);
+                Console.Write(fullLine);
             }
-            else
+            catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("File not found, downloading");
-                using WebClient webClient2 = new WebClient();
-                webClient2.DownloadProgressChanged += wc_DownloadProgressChanged;
-                webClient2.DownloadFileCompleted += wc_DownloadFileCompleted;
-                webClient2.QueryString.Add("file", file.ToString());
-                webClient2.QueryString.Add("checksum", checksum.ToString());
-                webClient2.QueryString.Add("version", version.ToString());
-                webClient2.DownloadFileAsync(new Uri(uriString), installPath + "/" + file);
-                while (webClient2.IsBusy)
-                    System.Threading.Thread.Sleep(1000);
-                Console.Write("  COMPLETED!");
-                Console.WriteLine();
+                // If we encounter an out of range error, reset the console cursor to a safe position
+                Console.SetCursorPosition(0, 0);
+                _lastConsoleLine = 0;
             }
         }
-        private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        
+        _lastProgress = progress;
+    }
+}
+        private void Wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            var p = e.BytesReceived / 1000;
-            Console.Write("\r [ Downloading " + stringupdfile + ": " + string.Format("{0:n0}", e.BytesReceived / 1000) + " kb" + "]");
-            Console.WriteLine() ;
-            Console.Write("\n [");
-            for (int i =0; i < 100; i++)
-            {
-                if (i >= p)
-                    Console.Write(' ');
-                else
-                    Console.Write(_block);
-            }
-            Console.Write("] \n");
-
-
-
-
-        }
-        private void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            
             if (e.Error != null)
             {
-                MessageBox.Show("An error ocurred while trying to download file:" + e.Error.Message);
-                _log.Error("Something went wrong during the download: " + e.Error.Message);
+                _log.Error("Download error", e.Error);
+                MessageBox.Show($"An error occurred while downloading: {e.Error.Message}");
                 return;
             }
-            _log.Info("Download completed");
-            
-            string text = ((WebClient)sender).QueryString["file"];
-            string checksum = ((WebClient)sender).QueryString["checksum"];
-            string version = ((WebClient)sender).QueryString["version"];
-            _log.Info("Verifying checksum of downloaded file.");
-            if (updateHandler.checkIfChecksumMatches(installPath + "/" + text, checksum))
+
+            LogDebug("Download completed");
+            WebClient webClient = (WebClient)sender;
+            string file = webClient.QueryString["file"];
+            string checksum = webClient.QueryString["checksum"];
+            string version = webClient.QueryString["version"];
+
+            if (updateHandler.checkIfChecksumMatches(Path.Combine(installPath, file), checksum))
             {
-                _log.Info("File checksum matches");
-                
-                unzipFile((installPath + "\\" + text).ToString(), version);
+                LogDebug("File checksum matches");
+                UnzipFile(Path.Combine(installPath, file), version);
             }
             else
             {
-                _log.Error("File checksum does not match, download invalid. Restart launcher to try again.");
-                
-                MessageBox.Show("The download looks to be invalid, please relaunch the launcher to try again.");
+                _log.Error("File checksum mismatch");
+                MessageBox.Show("The download appears to be invalid. Please restart the launcher to try again.");
+            }
+        }
+        private static string CalculateMD5(string filename)
+        {
+            using (MD5 md5 = MD5.Create())
+            using (FileStream stream = File.OpenRead(filename))
+            {
+                byte[] hash = md5.ComputeHash(stream);
+                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
             }
         }
 
-        private static string CalculateMD5(string filename)
+        private void EnablePlayButton()
         {
-            using MD5 mD = MD5.Create();
-            using FileStream inputStream = File.OpenRead(filename);
-            return BitConverter.ToString(mD.ComputeHash(inputStream)).Replace("-", "").ToLowerInvariant();
-        }
-        private void enablePlayButton()
-        {
-            
-            _log.Info("Play button enabled");
+            LogDebug("Play button enabled");
             enableLaunch = true;
+        }
+
+        private void LaunchGame()
+        {
+            try
+            {
+                string clientPath = Path.Combine(installPath, "bin", "client", "Sb_client.exe");
+                LogDebug($"Launching game from: {clientPath}");
+                Process.Start(clientPath);
+            }
+            catch (Exception e)
+            {
+                _log.Error("Error launching game", e);
+                MessageBox.Show($"Failed to launch the game: {e.Message}", "Launch Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     } 
     public class FFXIVhandler
     {
+        private static string DecryptPassword(string encryptedPassword)
+        {
+            try
+            {
+                byte[] encryptedBytes = Convert.FromBase64String(encryptedPassword);
+                byte[] salt = Encoding.ASCII.GetBytes("dalamud");
+
+                using (Aes aesAlg = Aes.Create())
+                {
+                    var key = new Rfc2898DeriveBytes(encryptedPassword, salt, 1000);
+                    aesAlg.Key = key.GetBytes(aesAlg.KeySize / 8);
+                    aesAlg.IV = key.GetBytes(aesAlg.BlockSize / 8);
+
+                    using (MemoryStream msDecrypt = new MemoryStream(encryptedBytes))
+                    {
+                        using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, aesAlg.CreateDecryptor(), CryptoStreamMode.Read))
+                        {
+                            using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                            {
+                                return srDecrypt.ReadToEnd();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error decrypting password: {e.Message}");
+                return null;
+            }
+        }
+
         public static void HandleFFXivReq(string[] args)
         {
             string username = "";
@@ -537,7 +726,10 @@ namespace handlerlaunch
             {
                 string passunsanitized = Program.TextFollowing(args[0], ":?pass=");
                 if (passunsanitized.Contains(':'))
-                    password = passunsanitized.Split(':')[0];
+                {
+                    string encryptedPassword = passunsanitized.Split(':')[0];
+                    password = DecryptPassword(encryptedPassword);
+                }
 #if DEBUG
                 Console.WriteLine(password);
 #else
@@ -615,13 +807,6 @@ namespace handlerlaunch
                 Console.WriteLine(expansionLevel);
             }
 
-
-
-
-
-
-           
-
             try
             {
                 var sid = networklogic.GetRealSid(gamepath, username, password, otp, isSteam);
@@ -629,15 +814,11 @@ namespace handlerlaunch
                     return;
 
                 var ffxivGame = networklogic.LaunchGameAsync(gamepath, sid, langs, dx11, expansionLevel, isSteam, region);
-
-
-
             }
             catch (Exception exc)
             {
                 Console.WriteLine(exc.Message);
             }
-            
         }
     }
 }

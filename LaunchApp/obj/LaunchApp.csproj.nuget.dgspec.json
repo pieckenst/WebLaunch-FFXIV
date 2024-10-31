@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj": {}
+    "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj": {
+    "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj",
+        "projectUniqueName": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
         "projectName": "LaunchApp",
-        "projectPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\LaunchApp.csproj",
-        "packagesPath": "C:\\Users\\rsncra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LaunchApp\\obj\\",
+        "projectPath": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
+        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+        "outputPath": "G:\\code\\WebLaunch\\LaunchApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\sdks\\NuGetPackages"
+          "D:\\sdk\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rsncra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -39,24 +39,48 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Masa.Blazor": {
               "target": "Package",
-              "version": "[0.6.0-rc.7, )"
+              "version": "[1.7.7, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[7.0.20, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[7.0.20, )"
+            },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0-rc.2.24473.5, )",
+              "autoReferenced": true
             }
           },
           "imports": [
@@ -75,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

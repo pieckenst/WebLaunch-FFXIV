@@ -16,21 +16,21 @@
           "SpinningWheelLib": "1.0.0",
           "WpfAnimatedGif": "2.0.2",
           "log4net": "2.0.15",
-          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.17763.27"
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.17763.43"
         },
         "runtime": {
           "WMconsole.dll": {}
         }
       },
-      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.17763.27": {
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.17763.43": {
         "runtime": {
           "Microsoft.Windows.SDK.NET.dll": {
-            "assemblyVersion": "10.0.17763.24",
-            "fileVersion": "10.0.17763.27"
+            "assemblyVersion": "10.0.17763.38",
+            "fileVersion": "10.0.17763.43"
           },
           "WinRT.Runtime.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.39961"
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.2.47512"
           }
         }
       },
@@ -294,7 +294,10 @@
           "Serilog": "2.12.0"
         },
         "runtime": {
-          "CoreLibLaunchSupport.dll": {}
+          "CoreLibLaunchSupport.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "LibDalamud/1.0.0": {
@@ -309,7 +312,10 @@
           "System.Runtime.InteropServices": "4.3.0"
         },
         "runtime": {
-          "LibDalamud.dll": {}
+          "LibDalamud.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "SpinningWheelLib/1.0.0": {
@@ -317,7 +323,10 @@
           "XamlAnimatedGif": "2.0.3"
         },
         "runtime": {
-          "SpinningWheelLib.dll": {}
+          "SpinningWheelLib.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -328,7 +337,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.17763.27": {
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.17763.43": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""

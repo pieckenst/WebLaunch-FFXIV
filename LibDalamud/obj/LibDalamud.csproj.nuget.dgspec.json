@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LibDalamud\\LibDalamud.csproj": {}
+    "G:\\code\\WebLaunch\\LibDalamud\\LibDalamud.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LibDalamud\\LibDalamud.csproj": {
+    "G:\\code\\WebLaunch\\LibDalamud\\LibDalamud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LibDalamud\\LibDalamud.csproj",
+        "projectUniqueName": "G:\\code\\WebLaunch\\LibDalamud\\LibDalamud.csproj",
         "projectName": "LibDalamud",
-        "projectPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LibDalamud\\LibDalamud.csproj",
-        "packagesPath": "C:\\Users\\rsncra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rsncra\\source\\repos\\WebLaunch-FFXIV\\LibDalamud\\obj\\",
+        "projectPath": "G:\\code\\WebLaunch\\LibDalamud\\LibDalamud.csproj",
+        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+        "outputPath": "G:\\code\\WebLaunch\\LibDalamud\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\sdks\\NuGetPackages"
+          "D:\\sdk\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rsncra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,7 +39,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net6.0": {
@@ -94,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,885 @@
+2024-10-14 16:52:47.725 - Application started
+2024-10-14 16:52:47.741 - Entering CopyFiles method
+2024-10-14 16:52:47.741 - Entering GetInstallPath method
+2024-10-14 16:52:47.741 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 16:52:47.741 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 16:52:47.741 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 16:52:47.742 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 16:52:47.742 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 16:52:47.742 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 16:52:47.743 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 16:52:47.744 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 16:52:47.744 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 16:52:47.745 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 16:52:47.746 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 16:52:47.746 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 16:52:47.747 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 16:52:47.747 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 16:52:47.748 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 16:52:47.748 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 16:52:47.748 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 16:52:47.749 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 16:52:47.749 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 16:52:47.750 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 16:52:47.750 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 16:52:47.750 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 16:52:47.751 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 16:52:47.751 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 16:52:47.751 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 16:52:47.752 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 16:52:47.752 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 16:52:47.758 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 16:52:47.758 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 16:52:47.762 - Entering RegisterProtocolHandler method
+2024-10-14 16:52:47.764 - Entering GetInstallPath method
+2024-10-14 16:52:47.764 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 16:52:47.764 - No arguments received, showing registration notification
+2024-10-14 16:52:47.825 - Showing notification: Protocol handler registered - Protocol handler has been registered - you may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game
+2024-10-14 17:03:40.887 - Application started
+2024-10-14 17:03:40.933 - Entering CopyFiles method
+2024-10-14 17:03:40.934 - Entering GetInstallPath method
+2024-10-14 17:03:40.934 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:03:40.934 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:03:40.935 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:03:40.935 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:03:40.935 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:03:40.935 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:03:40.936 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:03:40.937 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:03:40.937 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:03:40.937 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:03:40.938 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:03:40.939 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:03:40.939 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:03:40.939 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:03:40.940 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:03:40.940 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:03:40.941 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:03:40.941 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:03:40.941 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:03:40.942 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:03:40.942 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:03:40.943 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:03:40.943 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:03:40.943 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:03:40.944 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:03:40.944 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:03:40.944 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:03:40.958 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:03:40.958 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:03:40.962 - Entering RegisterProtocolHandler method
+2024-10-14 17:03:40.963 - Entering GetInstallPath method
+2024-10-14 17:03:40.964 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:03:40.964 - Received arguments: ?spellbornhandle=yes
+2024-10-14 17:03:40.964 - Handling Spellborn request
+2024-10-14 17:03:42.002 - Showing progress window
+2024-10-14 17:03:52.643 - Closed progress window
+2024-10-14 17:03:52.675 - Showing notification: Game process has been launched - You may now play the game
+2024-10-14 17:06:06.617 - Application started
+2024-10-14 17:06:06.633 - Entering CopyFiles method
+2024-10-14 17:06:06.633 - Entering GetInstallPath method
+2024-10-14 17:06:06.634 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:06:06.634 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:06:06.634 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:06:06.634 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:06:06.634 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:06:06.634 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:06:06.635 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:06:06.635 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:06:06.636 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:06:06.636 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:06:06.637 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:06:06.637 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:06:06.637 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:06:06.638 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:06:06.638 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:06:06.639 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:06:06.639 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:06:06.639 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:06:06.640 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:06:06.640 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:06:06.640 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:06:06.641 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:06:06.641 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:06:06.641 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:06:06.642 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:06:06.642 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:06:06.642 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:06:06.654 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:06:06.655 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:06:06.660 - Entering RegisterProtocolHandler method
+2024-10-14 17:06:06.661 - Entering GetInstallPath method
+2024-10-14 17:06:06.661 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:06:06.661 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:06:06.661 - Handling Spellborn request
+2024-10-14 17:06:06.763 - Entering TextFollowing method
+2024-10-14 17:06:07.386 - Showing progress window
+2024-10-14 17:06:17.847 - Closed progress window
+2024-10-14 17:06:17.888 - Showing notification: Game process has been launched - You may now play the game
+2024-10-14 17:07:15.333 - Application started
+2024-10-14 17:07:15.350 - Entering CopyFiles method
+2024-10-14 17:07:15.351 - Entering GetInstallPath method
+2024-10-14 17:07:15.351 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:07:15.351 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:07:15.352 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:07:15.352 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:07:15.352 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:07:15.353 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:07:15.354 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:07:15.354 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:07:15.354 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:07:15.355 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:07:15.356 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:07:15.357 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:07:15.358 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:07:15.359 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:07:15.360 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:07:15.360 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:07:15.361 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:07:15.362 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:07:15.362 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:07:15.363 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:07:15.364 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:07:15.364 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:07:15.365 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:07:15.365 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:07:15.366 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:07:15.366 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:07:15.367 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:07:15.381 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:07:15.382 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:07:15.386 - Entering RegisterProtocolHandler method
+2024-10-14 17:07:15.387 - Entering GetInstallPath method
+2024-10-14 17:07:15.387 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:07:15.388 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:07:15.388 - Handling Spellborn request
+2024-10-14 17:07:15.475 - Entering TextFollowing method
+2024-10-14 17:07:16.070 - Showing progress window
+2024-10-14 17:07:26.582 - Closed progress window
+2024-10-14 17:07:26.623 - Showing notification: Game process has been launched - You may now play the game
+2024-10-14 17:10:36.000 - Application started
+2024-10-14 17:10:36.018 - Entering CopyFiles method
+2024-10-14 17:10:36.018 - Entering GetInstallPath method
+2024-10-14 17:10:36.019 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:10:36.019 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:10:36.019 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:10:36.019 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:10:36.020 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:10:36.020 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:10:36.021 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:10:36.022 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:10:36.023 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:10:36.023 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:10:36.024 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:10:36.025 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:10:36.025 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:10:36.026 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:10:36.026 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:10:36.027 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:10:36.027 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:10:36.028 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:10:36.028 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:10:36.029 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:10:36.030 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:10:36.030 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:10:36.031 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:10:36.031 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:10:36.032 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:10:36.032 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:10:36.033 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:10:36.043 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:10:36.044 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:10:36.062 - Entering RegisterProtocolHandler method
+2024-10-14 17:10:36.064 - Entering GetInstallPath method
+2024-10-14 17:10:36.064 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:10:36.065 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:10:36.065 - Handling Spellborn request
+2024-10-14 17:10:36.073 - Starting Spellborn startup routine
+2024-10-14 17:10:36.153 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:10:36.154 - Entering TextFollowing method
+2024-10-14 17:10:36.164 - Extracted game path: D:/spellborns
+2024-10-14 17:10:36.165 - Clean install detected/no registry installpath key found
+2024-10-14 17:10:36.174 - Installed version: false
+2024-10-14 17:10:36.834 - Fetched latest.json file
+2024-10-14 17:10:36.887 - Version mismatch detected
+2024-10-14 17:10:36.887 - Clean install detected, proceeding with full install
+2024-10-14 17:10:36.889 - Downloading latest version: 1.1.1.5
+2024-10-14 17:10:36.940 - Showing progress window
+2024-10-14 17:10:47.430 - Closed progress window
+2024-10-14 17:10:47.473 - Showing notification: Game process has been launched - You may now play the game
+2024-10-14 17:13:21.065 - Application started
+2024-10-14 17:13:21.081 - Entering CopyFiles method
+2024-10-14 17:13:21.082 - Entering GetInstallPath method
+2024-10-14 17:13:21.082 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:13:21.082 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:13:21.082 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:13:21.082 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:13:21.082 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:13:21.082 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:13:21.083 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:13:21.084 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:13:21.085 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:13:21.085 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:13:21.086 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:13:21.087 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:13:21.087 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:13:21.088 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:13:21.088 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:13:21.089 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:13:21.090 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:13:21.091 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:13:21.092 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:13:21.092 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:13:21.093 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:13:21.094 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:13:21.094 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:13:21.095 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:13:21.095 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:13:21.095 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:13:21.096 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:13:21.107 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:13:21.108 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:13:21.112 - Entering RegisterProtocolHandler method
+2024-10-14 17:13:21.113 - Entering GetInstallPath method
+2024-10-14 17:13:21.113 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:13:21.114 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:13:21.114 - Handling Spellborn request
+2024-10-14 17:13:21.123 - Starting Spellborn startup routine
+2024-10-14 17:13:21.202 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:13:21.202 - Entering TextFollowing method
+2024-10-14 17:13:21.211 - Extracted game path: D:/spellborns
+2024-10-14 17:13:21.212 - Clean install detected/no registry installpath key found
+2024-10-14 17:13:21.220 - Installed version: false
+2024-10-14 17:13:21.877 - Fetched latest.json file
+2024-10-14 17:13:21.929 - Version mismatch detected
+2024-10-14 17:13:21.929 - Clean install detected, proceeding with full install
+2024-10-14 17:13:21.931 - Downloading latest version: 1.1.1.5
+2024-10-14 17:13:21.977 - Showing progress window
+2024-10-14 17:13:32.473 - Closed progress window
+2024-10-14 17:13:32.505 - Showing notification: Game process has been launched - You may now play the game
+2024-10-14 17:15:42.400 - Application started
+2024-10-14 17:15:42.417 - Entering CopyFiles method
+2024-10-14 17:15:42.417 - Entering GetInstallPath method
+2024-10-14 17:15:42.418 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:15:42.418 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:15:42.418 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:15:42.418 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:15:42.418 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:15:42.418 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:15:42.419 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:15:42.419 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:15:42.420 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:15:42.420 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:15:42.421 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:15:42.421 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:15:42.422 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:15:42.422 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:15:42.423 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:15:42.423 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:15:42.424 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:15:42.424 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:15:42.425 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:15:42.425 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:15:42.426 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:15:42.426 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:15:42.426 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:15:42.427 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:15:42.427 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:15:42.428 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:15:42.428 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:15:42.435 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:15:42.436 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:15:42.440 - Entering RegisterProtocolHandler method
+2024-10-14 17:15:42.441 - Entering GetInstallPath method
+2024-10-14 17:15:42.441 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:15:42.441 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:15:42.441 - Handling Spellborn request
+2024-10-14 17:15:42.449 - Starting Spellborn startup routine
+2024-10-14 17:15:42.524 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:15:42.525 - Entering TextFollowing method
+2024-10-14 17:15:42.535 - Extracted game path: D:/spellborns
+2024-10-14 17:15:42.536 - Clean install detected/no registry installpath key found
+2024-10-14 17:15:42.545 - Installed version: false
+2024-10-14 17:15:43.295 - Fetched latest.json file
+2024-10-14 17:15:43.346 - Version mismatch detected
+2024-10-14 17:15:43.346 - Clean install detected, proceeding with full install
+2024-10-14 17:15:43.348 - Downloading latest version: 1.1.1.5
+2024-10-14 17:15:43.404 - Showing progress window
+2024-10-14 17:15:53.867 - Closed progress window
+2024-10-14 17:15:53.906 - Showing notification: Game process has been launched - You may now play the game
+2024-10-14 17:15:56.744 - Application started
+2024-10-14 17:15:56.755 - Entering CopyFiles method
+2024-10-14 17:15:56.755 - Entering GetInstallPath method
+2024-10-14 17:15:56.756 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:15:56.756 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:15:56.756 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:15:56.756 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:15:56.756 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:15:56.756 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:15:56.757 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:15:56.758 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:15:56.758 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:15:56.758 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:15:56.759 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:15:56.760 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:15:56.760 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:15:56.760 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:15:56.761 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:15:56.761 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:15:56.762 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:15:56.762 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:15:56.763 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:15:56.763 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:15:56.764 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:15:56.764 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:15:56.765 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:15:56.765 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:15:56.765 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:15:56.766 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:15:56.766 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:15:56.773 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:15:56.773 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:15:56.774 - Entering RegisterProtocolHandler method
+2024-10-14 17:15:56.776 - Entering GetInstallPath method
+2024-10-14 17:15:56.776 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:15:56.777 - Received arguments: -ToastActivated, -Embedding
+2024-10-14 17:18:45.262 - Application started
+2024-10-14 17:18:45.278 - Entering CopyFiles method
+2024-10-14 17:18:45.279 - Entering GetInstallPath method
+2024-10-14 17:18:45.279 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:18:45.279 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:18:45.279 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:18:45.280 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:18:45.280 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:18:45.280 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:18:45.281 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:18:45.281 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:18:45.282 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:18:45.282 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:18:45.283 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:18:45.284 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:18:45.284 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:18:45.284 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:18:45.285 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:18:45.286 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:18:45.286 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:18:45.287 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:18:45.287 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:18:45.288 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:18:45.289 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:18:45.290 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:18:45.290 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:18:45.291 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:18:45.291 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:18:45.292 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:18:45.292 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:18:45.301 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:18:45.301 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:18:45.305 - Entering RegisterProtocolHandler method
+2024-10-14 17:18:45.307 - Entering GetInstallPath method
+2024-10-14 17:18:45.307 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:18:45.307 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:18:45.307 - Handling Spellborn request
+2024-10-14 17:18:45.315 - Starting Spellborn startup routine
+2024-10-14 17:18:45.389 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:18:45.389 - Entering TextFollowing method
+2024-10-14 17:18:45.398 - Extracted game path: D:/spellborns
+2024-10-14 17:18:45.399 - Clean install detected/no registry installpath key found
+2024-10-14 17:18:45.407 - Installed version: false
+2024-10-14 17:18:45.908 - Fetched latest.json file
+2024-10-14 17:18:45.961 - Version mismatch detected
+2024-10-14 17:18:45.962 - Clean install detected, proceeding with full install
+2024-10-14 17:18:45.963 - Downloading latest version: 1.1.1.5
+2024-10-14 17:18:46.016 - Showing progress window
+2024-10-14 17:26:39.288 - Application started
+2024-10-14 17:26:39.304 - Entering CopyFiles method
+2024-10-14 17:26:39.305 - Entering GetInstallPath method
+2024-10-14 17:26:39.305 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:26:39.305 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:26:39.305 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:26:39.305 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:26:39.305 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:26:39.305 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:26:39.306 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:26:39.307 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:26:39.307 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:26:39.307 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:26:39.308 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:26:39.309 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:26:39.309 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:26:39.310 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:26:39.310 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:26:39.311 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:26:39.311 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:26:39.312 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:26:39.312 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:26:39.313 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:26:39.313 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:26:39.314 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:26:39.314 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:26:39.314 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:26:39.315 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:26:39.315 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:26:39.316 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:26:39.322 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:26:39.323 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:26:39.327 - Entering RegisterProtocolHandler method
+2024-10-14 17:26:39.328 - Entering GetInstallPath method
+2024-10-14 17:26:39.329 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:26:39.329 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:26:39.329 - Handling Spellborn request
+2024-10-14 17:26:39.338 - Starting Spellborn startup routine
+2024-10-14 17:26:39.421 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:26:39.422 - Entering TextFollowing method
+2024-10-14 17:26:39.431 - Extracted game path: D:/spellborns
+2024-10-14 17:26:39.431 - Game path set: D:/spellborns
+2024-10-14 17:26:39.432 - Clean install detected/no registry installpath key found
+2024-10-14 17:26:39.432 - Install directory ensured: True
+2024-10-14 17:26:39.440 - Installed version: false
+2024-10-14 17:26:40.076 - Fetched latest.json file
+2024-10-14 17:26:40.135 - Version mismatch detected
+2024-10-14 17:26:40.136 - Clean install detected, proceeding with full install
+2024-10-14 17:26:40.138 - Downloading latest version: 1.1.1.5
+2024-10-14 17:26:40.151 - Error in DownloadFile: The best overloaded method match for 'System.IO.Path.Combine(string, string)' has some invalid arguments
+2024-10-14 17:26:40.152 - Download failed
+2024-10-14 17:26:40.152 - Version checked and updated
+2024-10-14 17:26:40.195 - Showing progress window
+2024-10-14 17:26:50.691 - Closed progress window
+2024-10-14 17:26:50.729 - Showing notification: Game process has been launched - You may now play the game
+2024-10-14 17:27:54.635 - Application started
+2024-10-14 17:27:54.651 - Entering CopyFiles method
+2024-10-14 17:27:54.652 - Entering GetInstallPath method
+2024-10-14 17:27:54.652 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:27:54.652 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:27:54.652 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:27:54.652 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:27:54.652 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:27:54.653 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:27:54.653 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:27:54.654 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:27:54.654 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:27:54.655 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:27:54.656 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:27:54.656 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:27:54.657 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:27:54.657 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:27:54.658 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:27:54.658 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:27:54.659 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:27:54.659 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:27:54.660 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:27:54.660 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:27:54.661 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:27:54.661 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:27:54.662 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:27:54.662 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:27:54.663 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:27:54.663 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:27:54.663 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:27:54.670 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:27:54.671 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:27:54.675 - Entering RegisterProtocolHandler method
+2024-10-14 17:27:54.676 - Entering GetInstallPath method
+2024-10-14 17:27:54.676 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:27:54.677 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:27:54.677 - Handling Spellborn request
+2024-10-14 17:27:54.685 - Starting Spellborn startup routine
+2024-10-14 17:27:54.758 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:27:54.758 - Entering TextFollowing method
+2024-10-14 17:27:54.767 - Extracted game path: D:/spellborns
+2024-10-14 17:27:54.767 - Game path set: D:/spellborns
+2024-10-14 17:27:54.768 - Clean install detected/no registry installpath key found
+2024-10-14 17:27:54.768 - Install directory ensured: True
+2024-10-14 17:27:54.777 - Installed version: false
+2024-10-14 17:27:55.328 - Fetched latest.json file
+2024-10-14 17:27:55.378 - Version mismatch detected
+2024-10-14 17:27:55.378 - Clean install detected, proceeding with full install
+2024-10-14 17:27:55.380 - Downloading latest version: 1.1.1.5
+2024-10-14 17:27:55.394 - Error in DownloadFile: The best overloaded method match for 'System.IO.Path.Combine(string, string)' has some invalid arguments
+2024-10-14 17:27:55.395 - Download failed
+2024-10-14 17:27:55.395 - Version checked and updated
+2024-10-14 17:27:55.434 - Showing progress window
+2024-10-14 17:29:28.143 - Application started
+2024-10-14 17:29:28.160 - Entering CopyFiles method
+2024-10-14 17:29:28.161 - Entering GetInstallPath method
+2024-10-14 17:29:28.161 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:29:28.161 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:29:28.161 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:29:28.162 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:29:28.162 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:29:28.162 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:29:28.163 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:29:28.163 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:29:28.164 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:29:28.164 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:29:28.165 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:29:28.166 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:29:28.167 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:29:28.167 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:29:28.168 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:29:28.168 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:29:28.169 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:29:28.169 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:29:28.170 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:29:28.171 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:29:28.171 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:29:28.172 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:29:28.172 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:29:28.173 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:29:28.173 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:29:28.174 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:29:28.174 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:29:28.182 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:29:28.183 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:29:28.188 - Entering RegisterProtocolHandler method
+2024-10-14 17:29:28.191 - Entering GetInstallPath method
+2024-10-14 17:29:28.191 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:29:28.191 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:29:28.191 - Handling Spellborn request
+2024-10-14 17:29:28.200 - Starting Spellborn startup routine
+2024-10-14 17:29:28.276 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:29:28.277 - Entering TextFollowing method
+2024-10-14 17:29:28.286 - Extracted game path: D:/spellborns
+2024-10-14 17:29:28.286 - Game path set: D:/spellborns
+2024-10-14 17:29:28.287 - Clean install detected/no registry installpath key found
+2024-10-14 17:29:28.287 - Install directory ensured: True
+2024-10-14 17:29:28.297 - Installed version: false
+2024-10-14 17:29:28.786 - Fetched latest.json file
+2024-10-14 17:29:28.840 - Version mismatch detected
+2024-10-14 17:29:28.841 - Clean install detected, proceeding with full install
+2024-10-14 17:29:28.843 - Downloading latest version: 1.1.1.5
+2024-10-14 17:29:28.855 - Error in DownloadFile: The best overloaded method match for 'System.IO.Path.Combine(string, string)' has some invalid arguments
+2024-10-14 17:29:28.856 - Download failed
+2024-10-14 17:29:28.856 - Error in CheckAndUpdateVersion: Failed to download and install latest version
+2024-10-14 17:29:28.857 - Error in StartupRoutine: Failed to check and update version
+2024-10-14 17:32:53.527 - Application started
+2024-10-14 17:32:53.543 - Entering CopyFiles method
+2024-10-14 17:32:53.544 - Entering GetInstallPath method
+2024-10-14 17:32:53.544 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:32:53.544 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:32:53.544 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:32:53.544 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:32:53.545 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:32:53.545 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:32:53.546 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:32:53.546 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:32:53.546 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:32:53.547 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:32:53.548 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:32:53.548 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:32:53.549 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:32:53.549 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:32:53.550 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:32:53.551 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:32:53.551 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:32:53.552 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:32:53.553 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:32:53.553 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:32:53.554 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:32:53.554 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:32:53.555 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:32:53.556 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:32:53.556 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:32:53.557 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:32:53.558 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:32:53.571 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:32:53.572 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:32:53.576 - Entering RegisterProtocolHandler method
+2024-10-14 17:32:53.577 - Entering GetInstallPath method
+2024-10-14 17:32:53.577 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:32:53.577 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:32:53.578 - Handling Spellborn request
+2024-10-14 17:32:53.586 - Starting Spellborn startup routine
+2024-10-14 17:32:53.661 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:32:53.661 - Entering TextFollowing method
+2024-10-14 17:32:53.670 - Extracted game path: D:/spellborns
+2024-10-14 17:32:53.671 - Game path set: D:/spellborns
+2024-10-14 17:32:53.671 - Clean install detected/no registry installpath key found
+2024-10-14 17:32:53.671 - Install directory ensured: True
+2024-10-14 17:32:53.680 - Installed version: false
+2024-10-14 17:32:54.313 - Fetched latest.json file
+2024-10-14 17:32:54.369 - Version mismatch detected
+2024-10-14 17:32:54.369 - Clean install detected, proceeding with full install
+2024-10-14 17:32:54.372 - Downloading latest version: 1.1.1.5
+2024-10-14 17:32:54.385 - Error in DownloadFile: Cannot implicitly convert type 'void' to 'object'
+2024-10-14 17:32:54.385 - Download failed
+2024-10-14 17:32:54.386 - Error in CheckAndUpdateVersion: Failed to download and install latest version
+2024-10-14 17:32:54.387 - Error in StartupRoutine: Failed to check and update version
+2024-10-14 17:35:23.024 - Application started
+2024-10-14 17:35:23.040 - Entering CopyFiles method
+2024-10-14 17:35:23.041 - Entering GetInstallPath method
+2024-10-14 17:35:23.041 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:35:23.041 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:35:23.041 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:35:23.042 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:35:23.042 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:35:23.042 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:35:23.042 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:35:23.043 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:35:23.043 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:35:23.044 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:35:23.045 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:35:23.045 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:35:23.046 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:35:23.047 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:35:23.047 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:35:23.048 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:35:23.048 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:35:23.049 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:35:23.049 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:35:23.050 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:35:23.050 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:35:23.051 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:35:23.051 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:35:23.052 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:35:23.052 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:35:23.052 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:35:23.053 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:35:23.060 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:35:23.061 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:35:23.065 - Entering RegisterProtocolHandler method
+2024-10-14 17:35:23.067 - Entering GetInstallPath method
+2024-10-14 17:35:23.068 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:35:23.068 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:35:23.068 - Handling Spellborn request
+2024-10-14 17:35:23.078 - Starting Spellborn startup routine
+2024-10-14 17:35:23.154 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:35:23.154 - Entering TextFollowing method
+2024-10-14 17:35:23.163 - Extracted game path: D:/spellborns
+2024-10-14 17:35:23.163 - Game path set: D:/spellborns
+2024-10-14 17:35:23.164 - Clean install detected/no registry installpath key found
+2024-10-14 17:35:23.164 - Install directory ensured: True
+2024-10-14 17:35:23.173 - Installed version: false
+2024-10-14 17:35:23.822 - Fetched latest.json file
+2024-10-14 17:35:23.875 - Version mismatch detected
+2024-10-14 17:35:23.875 - Clean install detected, proceeding with full install
+2024-10-14 17:35:23.878 - Downloading latest version: 1.1.1.5
+2024-10-14 17:35:23.893 - Preparing to download file: SpellbornLatest.zip
+2024-10-14 17:35:23.893 - Download URI: https://files.spellborn.org/SpellbornLatest.zip
+2024-10-14 17:35:23.893 - Checksum: 216d6731102b10bdc4a4848c6546f045
+2024-10-14 17:35:23.893 - Version: 1.1.1.5
+2024-10-14 17:35:23.897 - Starting file download...
+2024-10-14 17:37:20.372 - Application started
+2024-10-14 17:37:20.388 - Entering CopyFiles method
+2024-10-14 17:37:20.388 - Entering GetInstallPath method
+2024-10-14 17:37:20.389 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:37:20.389 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:37:20.389 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:37:20.389 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:37:20.389 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:37:20.389 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:37:20.390 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:37:20.391 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:37:20.391 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:37:20.392 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:37:20.393 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:37:20.393 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:37:20.393 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:37:20.394 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:37:20.394 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:37:20.395 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:37:20.395 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:37:20.396 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:37:20.396 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:37:20.397 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:37:20.397 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:37:20.398 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:37:20.398 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:37:20.399 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:37:20.399 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:37:20.400 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:37:20.400 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:37:20.407 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:37:20.408 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:37:20.412 - Entering RegisterProtocolHandler method
+2024-10-14 17:37:20.413 - Entering GetInstallPath method
+2024-10-14 17:37:20.413 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:37:20.413 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:37:20.414 - Handling Spellborn request
+2024-10-14 17:37:20.422 - Starting Spellborn startup routine
+2024-10-14 17:37:20.494 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:37:20.495 - Entering TextFollowing method
+2024-10-14 17:37:20.503 - Extracted game path: D:/spellborns
+2024-10-14 17:37:20.504 - Game path set: D:/spellborns
+2024-10-14 17:37:20.504 - Clean install detected/no registry installpath key found
+2024-10-14 17:37:20.505 - Install directory ensured: True
+2024-10-14 17:37:20.513 - Installed version: false
+2024-10-14 17:37:21.140 - Fetched latest.json file
+2024-10-14 17:37:21.190 - Version mismatch detected
+2024-10-14 17:37:21.190 - Clean install detected, proceeding with full install
+2024-10-14 17:37:21.192 - Downloading latest version: 1.1.1.5
+2024-10-14 17:37:21.211 - File SpellbornLatest.zip already exists, checking checksum
+2024-10-14 17:37:21.282 - Checksum mismatch, re-downloading file
+2024-10-14 17:37:21.288 - Preparing to download file: SpellbornLatest.zip
+2024-10-14 17:37:21.288 - Download URI: https://files.spellborn.org/SpellbornLatest.zip
+2024-10-14 17:37:21.288 - Checksum: 216d6731102b10bdc4a4848c6546f045
+2024-10-14 17:37:21.288 - Version: 1.1.1.5
+2024-10-14 17:37:21.292 - Starting file download...
+2024-10-14 17:38:14.747 - Application started
+2024-10-14 17:38:14.763 - Entering CopyFiles method
+2024-10-14 17:38:14.764 - Entering GetInstallPath method
+2024-10-14 17:38:14.764 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:38:14.764 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:38:14.764 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:38:14.765 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:38:14.765 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:38:14.765 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:38:14.766 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:38:14.766 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:38:14.767 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:38:14.767 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:38:14.769 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:38:14.769 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:38:14.770 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:38:14.770 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:38:14.771 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:38:14.772 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:38:14.773 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:38:14.773 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:38:14.774 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:38:14.774 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:38:14.775 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:38:14.775 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:38:14.776 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:38:14.776 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:38:14.776 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:38:14.777 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:38:14.777 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:38:14.783 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:38:14.784 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:38:14.788 - Entering RegisterProtocolHandler method
+2024-10-14 17:38:14.789 - Entering GetInstallPath method
+2024-10-14 17:38:14.789 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:38:14.790 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:38:14.790 - Handling Spellborn request
+2024-10-14 17:38:14.798 - Starting Spellborn startup routine
+2024-10-14 17:38:14.870 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:38:14.871 - Entering TextFollowing method
+2024-10-14 17:38:14.882 - Extracted game path: D:/spellborns
+2024-10-14 17:38:14.882 - Game path set: D:/spellborns
+2024-10-14 17:38:14.883 - Clean install detected/no registry installpath key found
+2024-10-14 17:38:14.883 - Install directory ensured: True
+2024-10-14 17:38:14.891 - Installed version: false
+2024-10-14 17:38:15.859 - Fetched latest.json file
+2024-10-14 17:38:15.909 - Version mismatch detected
+2024-10-14 17:38:15.910 - Clean install detected, proceeding with full install
+2024-10-14 17:38:15.912 - Downloading latest version: 1.1.1.5
+2024-10-14 17:38:15.925 - File SpellbornLatest.zip already exists, checking checksum
+2024-10-14 17:38:15.933 - Checksum mismatch, re-downloading file
+2024-10-14 17:38:15.938 - Preparing to download file: SpellbornLatest.zip
+2024-10-14 17:38:15.938 - Download URI: https://files.spellborn.org/SpellbornLatest.zip
+2024-10-14 17:38:15.938 - Checksum: 216d6731102b10bdc4a4848c6546f045
+2024-10-14 17:38:15.938 - Version: 1.1.1.5
+2024-10-14 17:38:15.941 - Starting file download...
+2024-10-14 17:43:28.680 - Application started
+2024-10-14 17:43:28.696 - Entering CopyFiles method
+2024-10-14 17:43:28.696 - Entering GetInstallPath method
+2024-10-14 17:43:28.697 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:43:28.697 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:43:28.697 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:43:28.697 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:43:28.697 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:43:28.697 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:43:28.698 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:43:28.698 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:43:28.699 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:43:28.699 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:43:28.700 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:43:28.700 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:43:28.701 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:43:28.701 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:43:28.702 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:43:28.702 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:43:28.703 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:43:28.703 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:43:28.704 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:43:28.704 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:43:28.705 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:43:28.705 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:43:28.706 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:43:28.706 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:43:28.706 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:43:28.707 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:43:28.707 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:43:28.715 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:43:28.716 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:43:28.720 - Entering RegisterProtocolHandler method
+2024-10-14 17:43:28.721 - Entering GetInstallPath method
+2024-10-14 17:43:28.722 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:43:28.722 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:43:28.722 - Handling Spellborn request
+2024-10-14 17:43:28.730 - Starting Spellborn startup routine
+2024-10-14 17:43:28.807 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:43:28.807 - Entering TextFollowing method
+2024-10-14 17:43:28.817 - Extracted game path: D:/spellborns
+2024-10-14 17:43:28.817 - Game path set: D:/spellborns
+2024-10-14 17:43:28.818 - Clean install detected/no registry installpath key found
+2024-10-14 17:43:28.819 - Install directory ensured: True
+2024-10-14 17:43:28.828 - Installed version: false
+2024-10-14 17:43:29.471 - Fetched latest.json file
+2024-10-14 17:43:29.521 - Version mismatch detected
+2024-10-14 17:43:29.522 - Clean install detected, proceeding with full install
+2024-10-14 17:43:29.523 - Downloading latest version: 1.1.1.5
+2024-10-14 17:43:29.537 - File SpellbornLatest.zip already exists, checking checksum
+2024-10-14 17:43:29.731 - Checksum mismatch, re-downloading file
+2024-10-14 17:43:29.736 - Preparing to download file: SpellbornLatest.zip
+2024-10-14 17:43:29.736 - Download URI: https://files.spellborn.org/SpellbornLatest.zip
+2024-10-14 17:43:29.736 - Checksum: 216d6731102b10bdc4a4848c6546f045
+2024-10-14 17:43:29.737 - Version: 1.1.1.5
+2024-10-14 17:43:29.739 - Starting file download...
+2024-10-14 17:47:09.385 - Application started
+2024-10-14 17:47:09.400 - Entering CopyFiles method
+2024-10-14 17:47:09.401 - Entering GetInstallPath method
+2024-10-14 17:47:09.401 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll
+2024-10-14 17:47:09.401 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:47:09.401 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Release
+2024-10-14 17:47:09.402 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:47:09.402 - Created install directory: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame
+2024-10-14 17:47:09.402 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0
+2024-10-14 17:47:09.403 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMconsole.dll
+2024-10-14 17:47:09.403 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe
+2024-10-14 17:47:09.403 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.runtimeconfig.json
+2024-10-14 17:47:09.404 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CoreLibLaunchSupport.dll
+2024-10-14 17:47:09.405 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SpinningWheelLib.dll
+2024-10-14 17:47:09.405 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WpfAnimatedGif.dll
+2024-10-14 17:47:09.406 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\XamlAnimatedGif.dll
+2024-10-14 17:47:09.406 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\DotNetZip.dll
+2024-10-14 17:47:09.407 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Newtonsoft.Json.dll
+2024-10-14 17:47:09.407 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\log4net.dll
+2024-10-14 17:47:09.408 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Goblinfactory.Konsole.dll
+2024-10-14 17:47:09.408 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\CommandLine.dll
+2024-10-14 17:47:09.408 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Downloader.dll
+2024-10-14 17:47:09.409 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-10-14 17:47:09.409 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\LibDalamud.dll
+2024-10-14 17:47:09.410 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Mono.Nat.dll
+2024-10-14 17:47:09.410 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\MonoTorrent.dll
+2024-10-14 17:47:09.411 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\ReusableTasks.dll
+2024-10-14 17:47:09.411 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Serilog.dll
+2024-10-14 17:47:09.412 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\SharedMemory.dll
+2024-10-14 17:47:09.412 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-10-14 17:47:09.419 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-10-14 17:47:09.419 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WinRT.Runtime.dll
+2024-10-14 17:47:09.423 - Entering RegisterProtocolHandler method
+2024-10-14 17:47:09.424 - Entering GetInstallPath method
+2024-10-14 17:47:09.425 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Release\HandleGame\WMConsole.exe %1
+2024-10-14 17:47:09.425 - Received arguments: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:47:09.425 - Handling Spellborn request
+2024-10-14 17:47:09.433 - Starting Spellborn startup routine
+2024-10-14 17:47:09.507 - Processing args: ?spellbornhandle=yes:?gamepath=D:/spellborns
+2024-10-14 17:47:09.508 - Entering TextFollowing method
+2024-10-14 17:47:09.516 - Extracted game path: D:/spellborns
+2024-10-14 17:47:09.517 - Game path set: D:/spellborns
+2024-10-14 17:47:09.517 - Clean install detected/no registry installpath key found
+2024-10-14 17:47:09.517 - Install directory ensured: True
+2024-10-14 17:47:09.527 - Installed version: false
+2024-10-14 17:47:10.044 - Fetched latest.json file
+2024-10-14 17:47:10.099 - Version mismatch detected
+2024-10-14 17:47:10.099 - Clean install detected, proceeding with full install
+2024-10-14 17:47:10.101 - Downloading latest version: 1.1.1.5
+2024-10-14 17:47:10.114 - File SpellbornLatest.zip already exists, checking checksum
+2024-10-14 17:47:11.918 - Checksum mismatch, re-downloading file
+2024-10-14 17:47:11.923 - Preparing to download file: SpellbornLatest.zip
+2024-10-14 17:47:11.923 - Download URI: https://files.spellborn.org/SpellbornLatest.zip
+2024-10-14 17:47:11.923 - Checksum: 216d6731102b10bdc4a4848c6546f045
+2024-10-14 17:47:11.924 - Version: 1.1.1.5
+2024-10-14 17:47:11.926 - Starting file download...
