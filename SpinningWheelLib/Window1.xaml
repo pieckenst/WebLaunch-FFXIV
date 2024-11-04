@@ -4,17 +4,56 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpinningWheelLib"
-        xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
         mc:Ignorable="d"
-        AllowsTransparency="True"
-        Title="Window1" Height="500" Width="1300" Background="{x:Null}" WindowStyle="None" WindowStartupLocation="CenterScreen" Foreground="{x:Null}">
+        Title="Launcher View" Height="464" Width="1146" 
+        Background="#FF8C8585"
+        WindowStyle="ThreeDBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
-        <Image HorizontalAlignment="Center" Height="396"  VerticalAlignment="Top" Width="1276" Source="/SpinningWheelLib;component/roundrect.png" Stretch="UniformToFill" Margin="0,54,0,0"/>
-        <Label Content="Loading the game - please wait" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Cascadia Code" Height="110" Width="900"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0">
+            <Image HorizontalAlignment="Center" Height="340" VerticalAlignment="Top" Width="1094" 
+                   Source="/SpinningWheelLib;component/roundrect.png" 
+                   Stretch="UniformToFill" Margin="0,25,0,0"/>
+            <Label Content="Loading the game - please wait" 
+                   HorizontalAlignment="Center" Margin="0,244,0,0" 
+                   VerticalAlignment="Top" FontSize="48" 
+                   FontFamily="Cascadia Code" Height="80" Width="900"/>
+            <local:CircularProgressBar x:Name="progressBar"
+                Progress="0"
+                ProgressColor="Green"
+                ProgressLeftColor="LightGreen"
+                TextColor="DarkGreen"
+                Thickness="4"
+                Width="200" Height="200"
+                VerticalAlignment="Top"
+                Margin="0,44,0,0"/>
+        </Grid>
 
-
-
-
+        <Expander Grid.Row="1" Header="Console Output" 
+                  Background="#FF2D2D2D"
+                  Foreground="White"
+                  Expanded="Expander_Expanded"
+                  Collapsed="Expander_Collapsed">
+            <RichTextBox x:Name="consoleOutput" 
+                     Height="200"
+                     Background="Black" 
+                     Foreground="White"
+                     IsReadOnly="True"
+                     FontFamily="Consolas"
+                     VerticalScrollBarVisibility="Auto"
+                     Margin="5">
+                <RichTextBox.Resources>
+                    <Style TargetType="{x:Type Paragraph}">
+                        <Setter Property="Margin" Value="0"/>
+                    </Style>
+                </RichTextBox.Resources>
+            </RichTextBox>
+        </Expander>
     </Grid>
 </Window>

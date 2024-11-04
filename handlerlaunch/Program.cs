@@ -7,12 +7,73 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using Microsoft.Toolkit.Uwp.Notifications;
+
+using System.Runtime.InteropServices;
+
+using SpinningWheelLib;
+using System.Windows.Threading;
 using System.Diagnostics;
+using System.Windows.Media;
+using System.Text;
 
 namespace WMConsole
 {
+    internal class ConsoleOutputRedirector : TextWriter
+    {
+        private readonly Window1 _window;
+
+        public ConsoleOutputRedirector(Window1 window)
+        {
+            _window = window;
+        }
+
+        public override void Write(string value)
+        {
+            _window.WriteToConsole(value, Colors.White);
+        }
+
+        public override void WriteLine(string value)
+        {
+            _window.WriteToConsole(value + Environment.NewLine, Colors.White);
+        }
+
+        public override Encoding Encoding => Encoding.UTF8;
+    }
+
+    internal class MultiWriter : TextWriter
+{
+    private readonly TextWriter[] writers;
+    
+    public MultiWriter(TextWriter[] writers)
+    {
+        this.writers = writers;
+    }
+
+    public override void Write(string value)
+    {
+        foreach (var writer in writers)
+            writer.Write(value);
+    }
+
+    public override void WriteLine(string value)
+    {
+        foreach (var writer in writers)
+            writer.WriteLine(value);
+    }
+
+    public override Encoding Encoding => Encoding.UTF8;
+}
+
     class Program
     {
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        const int SW_HIDE = 0;
+        const int SW_SHOW = 5;
         private const string DefaultInstallPath = @"D:\HandleGame\";
         private static string? _installPath;
         private static readonly string LogFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "debug.log");
@@ -147,126 +208,195 @@ namespace WMConsole
         [STAThread]
         static void Main(string[] args)
         {
-            LogDebug("Application started");
-            Console.Title = "Protocol Handler Process";
-            Console.WriteLine("Initializing...");
+            // Hide console window immediately on startup
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, SW_HIDE);
+
+            string tempLogFile = Path.Combine(Path.GetTempPath(), $"console_output_{Guid.NewGuid()}.txt");
+            TextWriter originalConsole = Console.Out;
+            StreamWriter fileWriter = null;
 
             try
             {
+                fileWriter = new StreamWriter(new FileStream(tempLogFile, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite));
+                var multiWriter = new MultiWriter(new TextWriter[] { originalConsole, fileWriter });
+                Console.SetOut(multiWriter);
+
+                LogDebug("Application started");
+                ShowNotification("Application Started", "Initializing launcher...");
+
                 CopyFiles();
                 RegisterProtocolHandler();
 
-                if (args != null && args.Length > 0)
+                if (args?.Length > 0)
                 {
-                    try
+                    LogDebug($"Received arguments: {string.Join(", ", args)}");
+
+                    if (args[0].Contains("?ffxivhandle=yes"))
                     {
-                        LogDebug($"Received arguments: {string.Join(", ", args)}");
-                        if (args[0].Contains("?ffxivhandle=yes"))
+                        ShowNotification("FFXIV Launch", "Starting Final Fantasy XIV...");
+
+                        if (!args[0].Contains("login=") || !args[0].Contains("pass="))
                         {
-                            LogDebug("Handling FFXIV request");
-                            bool errorOccurred = false;
-                            try
-                            {
-                                FFXIVhandler.HandleFFXivReq(args);
-                            }
-                            catch (Exception ex)
-                            {
-                                LogDebug($"Error handling FFXIV request: {ex.Message}");
-                                errorOccurred = true;
-                            }
-                            if (!errorOccurred)
-                            {
-                                try
-                                {
-                                    ShowProgressWindow();
-                                }
-                                catch (Exception ex)
-                                {
-                                    LogDebug($"Error showing progress window: {ex.Message}");
-                                }
-                            }
-                            try
-                            {
-                                ShowNotification("Game process has been launched", "You may now play the game");
-                            }
-                            catch (Exception ex)
-                            {
-                                LogDebug($"Error showing notification: {ex.Message}");
-                            }
+                            throw new ArgumentException("Missing required login credentials");
                         }
-                        else if (args[0].Contains("?spellbornhandle=yes"))
+
+                        bool errorOccurred = false;
+                        string previousOutput = "";
+
+                        try
                         {
-                            LogDebug("Handling Spellborn request");
-                            var splbornobj = new SpellbornSupporter();
-                            bool errorOccurred = false;
-                            try
+                            FFXIVhandler.HandleFFXivReq(args);
+                            fileWriter.Flush();
+                            previousOutput = File.ReadAllText(tempLogFile);
+                        }
+                        catch (Exception ex)
+                        {
+                            LogDebug($"Error handling FFXIV request: {ex.Message}");
+                            errorOccurred = true;
+                            ShowNotification("Error", $"Failed to launch FFXIV: {ex.Message}");
+                        }
+
+                        if (!errorOccurred)
+                        {
+                            Application.Current?.Dispatcher?.Invoke(() =>
                             {
-                                splbornobj.StartupRoutine(args);
-                            }
-                            catch (Exception ex)
-                            {
-                                LogDebug($"Error in Spellborn startup routine: {ex.Message}");
-                                errorOccurred = true;
-                            }
-                            if (!errorOccurred)
-                            {
-                                try
-                                {
-                                    ShowProgressWindow();
-                                }
-                                catch (Exception ex)
-                                {
-                                    LogDebug($"Error showing progress window: {ex.Message}");
-                                }
-                            }
-                            try
-                            {
-                                ShowNotification("Game process has been launched", "You may now play the game");
-                            }
-                            catch (Exception ex)
-                            {
-                                LogDebug($"Error showing notification: {ex.Message}");
-                            }
+                                ShowProgressWindow(previousOutput);
+                            });
                         }
                     }
-                    catch (Exception ex)
+                    else if (args[0].Contains("?spellbornhandle=yes"))
                     {
-                        LogDebug($"Error processing arguments: {ex.Message}");
+                        ShowNotification("Spellborn Launch", "Starting Chronicles of Spellborn...");
+
+                        if (!args[0].Contains("gamepath="))
+                        {
+                            throw new ArgumentException("Missing required game path");
+                        }
+
+                        bool errorOccurred = false;
+                        string previousOutput = "";
+
+                        try
+                        {
+                            var splbornobj = new SpellbornSupporter();
+                            splbornobj.StartupRoutine(args);
+                            fileWriter.Flush();
+                            previousOutput = File.ReadAllText(tempLogFile);
+                        }
+                        catch (Exception ex)
+                        {
+                            LogDebug($"Error in Spellborn startup routine: {ex.Message}");
+                            errorOccurred = true;
+                            ShowNotification("Error", $"Failed to launch Spellborn: {ex.Message}");
+                        }
+
+                        if (!errorOccurred)
+                        {
+                            Application.Current?.Dispatcher?.Invoke(() =>
+                            {
+                                ShowProgressWindow(previousOutput);
+                            });
+                        }
                     }
                 }
                 else
                 {
-                    LogDebug("No arguments received, showing registration notification");
-                    try
-                    {
-                        ShowNotification("Protocol handler registered", 
-                            "Protocol handler has been registered - you may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game");
-                    }
-                    catch (Exception ex)
-                    {
-                        LogDebug($"Error showing registration notification: {ex.Message}");
-                    }
-                    Console.WriteLine("Listening...");
-                    Console.ReadLine();
+                    ShowNotification("Protocol Handler Registered",
+                        "You may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game");
                 }
             }
             catch (Exception ex)
             {
+                ShowNotification("Error", ex.Message);
                 LogDebug($"An error occurred: {ex.Message}");
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                Console.ReadLine();
+            }
+            finally
+            {
+                if (fileWriter != null)
+                {
+                    Console.SetOut(originalConsole);
+                    fileWriter.Flush();
+                    fileWriter.Close();
+                    fileWriter.Dispose();
+                }
+
+                try
+                {
+                    if (File.Exists(tempLogFile))
+                    {
+                        File.Delete(tempLogFile);
+                    }
+                }
+                catch { }
             }
         }
 
-        private static void ShowProgressWindow()
+
+
+
+
+
+
+
+
+        private static void ShowProgressWindow(string previousOutput)
+{
+    LogDebug("Showing progress window");
+    var app = new Application();
+    var progressWindow = new Window1(30);
+    
+    // Display previous console output
+    progressWindow.WriteToConsole(previousOutput, Colors.White);
+    
+    var checkProcessTimer = new DispatcherTimer
+    {
+        Interval = TimeSpan.FromMilliseconds(100)
+    };
+    
+    checkProcessTimer.Tick += (s, e) =>
+    {
+        try
         {
-            LogDebug("Showing progress window");
-            Window1 windower = new Window1();
-            windower.Show();
-            System.Threading.Thread.Sleep(10000);
-            windower.Close();
-            LogDebug("Closed progress window");
+            var processes = Process.GetProcessesByName("ffxiv_dx11");
+            if (processes.Length > 0)
+            {
+                checkProcessTimer.Stop();
+                progressWindow.Close();
+            }
         }
+        catch (Exception ex)
+        {
+            LogDebug($"Error checking process: {ex.Message}");
+            checkProcessTimer.Stop();
+            progressWindow.Close();
+        }
+    };
+
+    // Create a custom TextWriter that writes to both console and window
+    var customWriter = new MultiWriter(new TextWriter[] 
+    { 
+        Console.Out,
+        new ConsoleOutputRedirector(progressWindow)
+    });
+    Console.SetOut(customWriter);
+
+    // Hide console window
+    var handle = GetConsoleWindow();
+    ShowWindow(handle, SW_HIDE);
+    
+    checkProcessTimer.Start();
+    app.Run(progressWindow);
+    
+    // Restore original console output and show console window
+    Console.SetOut(Console.Out);
+    ShowWindow(handle, SW_SHOW);
+    
+    LogDebug("Progress window closed");
+}
+
+
+
 
         private static void ShowNotification(string title, string content)
         {

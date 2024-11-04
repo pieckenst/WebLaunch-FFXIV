@@ -650,8 +650,8 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\wasm_m2n_invoke.g.h
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\icall-table.h
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\m2n_cache.txt
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\emcc-compile.rsp
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\corebindings.o
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\pinvoke.o
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\corebindings.o
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\driver.o
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\emcc-link.rsp
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\dotnet.native.wasm
@@ -1071,9 +1071,9 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\mqh2pdv1b6-lfu7j35m59.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\fpgfvou72u-oyz0vx2fzb.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lmcyilvykc-ja0ciuhr8m.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\sw4mtv5kd6-am16amz4r7.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-r2ooo99pcd.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-etwfveh7fv.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-lk479ymf3l.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-1kxzzq9t4y.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-2q6fdf76jj.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-jedbyyejy0.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.development.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
