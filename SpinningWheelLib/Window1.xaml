@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpinningWheelLib"
         mc:Ignorable="d"
-        Title="Launcher View" Height="464" Width="1146" 
-        Background="#FF8C8585"
+        Title="Launcher View" Height="464" Width="1146"
+        Background="#ECE9D8"
         WindowStyle="ThreeDBorderWindow"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
@@ -17,35 +17,48 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Image HorizontalAlignment="Center" Height="340" VerticalAlignment="Top" Width="1094" 
-                   Source="/SpinningWheelLib;component/roundrect.png" 
-                   Stretch="UniformToFill" Margin="0,25,0,0"/>
-            <Label Content="Loading the game - please wait" 
-                   HorizontalAlignment="Center" Margin="0,244,0,0" 
-                   VerticalAlignment="Top" FontSize="48" 
-                   FontFamily="Cascadia Code" Height="80" Width="900"/>
-            <local:CircularProgressBar x:Name="progressBar"
-                Progress="0"
-                ProgressColor="Green"
-                ProgressLeftColor="LightGreen"
-                TextColor="DarkGreen"
-                Thickness="4"
-                Width="200" Height="200"
-                VerticalAlignment="Top"
-                Margin="0,44,0,0"/>
+            <Border Background="#FFFFFF" 
+                    BorderBrush="#ACA899" 
+                    BorderThickness="1" 
+                    Margin="10,10,10,5">
+                <Grid>
+                    <Label Content="Loading..." 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" 
+                           FontSize="72"
+                           FontFamily="Tahoma" 
+                           Height="138" 
+                           Width="324"/>
+                    <local:CircularProgressBar x:Name="progressBar"
+                        Visibility="Collapsed"
+                        Progress="0"
+                        ProgressColor="#2B7213"
+                        ProgressLeftColor="#90EE90"
+                        TextColor="#0A5100"
+                        Thickness="4" 
+                        Width="200" 
+                        Height="200"
+                        VerticalAlignment="Top"
+                        Margin="0,44,0,0"/>
+                </Grid>
+            </Border>
         </Grid>
 
-        <Expander Grid.Row="1" Header="Console Output" 
-                  Background="#FF2D2D2D"
-                  Foreground="White"
+        <Expander Grid.Row="1" 
+                  Header="Console Output"
+                  Background="#ECE9D8"
+                  BorderBrush="#ACA899"
+                  BorderThickness="1"
+                  Foreground="#000000"
+                  Margin="10,0,10,0"
                   Expanded="Expander_Expanded"
                   Collapsed="Expander_Collapsed">
-            <RichTextBox x:Name="consoleOutput" 
+            <RichTextBox x:Name="consoleOutput"
                      Height="200"
-                     Background="Black" 
-                     Foreground="White"
+                     Background="#FFFFFF"
+                     Foreground="#000000"
                      IsReadOnly="True"
-                     FontFamily="Consolas"
+                     FontFamily="Lucida Console"
                      VerticalScrollBarVisibility="Auto"
                      Margin="5">
                 <RichTextBox.Resources>

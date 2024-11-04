@@ -20,14 +20,27 @@ namespace SpinningWheelLib
             InitializeComponent();
             _estimatedDuration = estimatedDurationInSeconds;
             _stopwatch = new Stopwatch();
-            
+        
             _timer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromMilliseconds(16)
             };
             _timer.Tick += Timer_Tick;
 
+            var showProgressTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(2)
+            };
+            showProgressTimer.Tick += (s, e) =>
+            {
+                progressBar.Visibility = Visibility.Visible;
+                showProgressTimer.Stop();
+            };
+            showProgressTimer.Start();
+
             StartProgress();
+        
+            SizeToContent = SizeToContent.Height;
         }
 
         private void Expander_Expanded(object sender, RoutedEventArgs e)

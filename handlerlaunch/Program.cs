@@ -238,7 +238,7 @@ namespace WMConsole
 
                         if (!args[0].Contains("login=") || !args[0].Contains("pass="))
                         {
-                            throw new ArgumentException("Missing required login credentials");
+                            throw new ArgumentException("Missing required login credentials - provide ?=login and ?=pass arguments during launch"); 
                         }
 
                         bool errorOccurred = false;
