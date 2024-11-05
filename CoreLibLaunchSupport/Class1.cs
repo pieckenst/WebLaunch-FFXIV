@@ -17,9 +17,14 @@ using LibDalamud;
 using static XIVLauncher.Common.Game.Launcher;
 using XIVLauncher.Common.Encryption;
 using XIVLauncher.Common.Game.Exceptions;
+using Newtonsoft.Json;
 
 namespace CoreLibLaunchSupport
 {
+    public class NoValidSubscriptionException : Exception
+{
+    public NoValidSubscriptionException(string message) : base(message) { }
+}
     public enum DpiAwareness
     {
         Aware,
@@ -632,55 +637,52 @@ namespace CoreLibLaunchSupport
     public class launchers
     {
         public Process? LaunchGame(IGameRunner runner, string sessionId, int region, int expansionLevel,
-                               bool isSteamServiceAccount, string additionalArguments,
-                               DirectoryInfo gamePath, bool isDx11, ClientLanguage language,
-                               bool encryptArguments, DpiAwareness dpiAwareness)
-        {
-            Log.Information(
-                $"XivGame::LaunchGame(steamServiceAccount:{isSteamServiceAccount}, args:{additionalArguments})");
+                   bool isSteamServiceAccount, string additionalArguments,
+                   DirectoryInfo gamePath, bool isDx11, ClientLanguage language,
+                   bool encryptArguments, DpiAwareness dpiAwareness)
+{
+    Log.Information(
+        $"XivGame::LaunchGame(steamServiceAccount:{isSteamServiceAccount}, args:{additionalArguments})");
 
-            var exePath = Path.Combine(gamePath.FullName, "game", "ffxiv_dx11.exe");
-            if (!isDx11)
-                exePath = Path.Combine(gamePath.FullName, "game", "ffxiv.exe");
+    var exePath = Path.Combine(gamePath.FullName, "game", "ffxiv_dx11.exe");
 
-            var environment = new Dictionary<string, string>();
+    var environment = new Dictionary<string, string>();
 
-            var argumentBuilder = new ArgumentBuilder()
-                                  .Append("DEV.DataPathType", "1")
-                                  .Append("DEV.MaxEntitledExpansionID", expansionLevel.ToString())
-                                  .Append("DEV.TestSID", sessionId)
-                                  .Append("DEV.UseSqPack", "1")
-                                  .Append("SYS.Region", region.ToString())
-                                  .Append("language", ((int)language).ToString())
-                                  .Append("resetConfig", "0")
-                                  .Append("ver", Repository.Ffxiv.GetVer(gamePath));
+    var argumentBuilder = new ArgumentBuilder()
+                          .Append("DEV.DataPathType", "1")
+                          .Append("DEV.MaxEntitledExpansionID", expansionLevel.ToString())
+                          .Append("DEV.TestSID", sessionId)
+                          .Append("DEV.UseSqPack", "1")
+                          .Append("SYS.Region", region.ToString())
+                          .Append("language", ((int)language).ToString())
+                          .Append("resetConfig", "0")
+                          .Append("ver", Repository.Ffxiv.GetVer(gamePath));
 
-            if (isSteamServiceAccount)
-            {
-                // These environment variable and arguments seems to be set when ffxivboot is started with "-issteam" (27.08.2019)
-                environment.Add("IS_FFXIV_LAUNCH_FROM_STEAM", "1");
-                argumentBuilder.Append("IsSteam", "1");
-            }
+    if (isSteamServiceAccount)
+    {
+        environment.Add("IS_FFXIV_LAUNCH_FROM_STEAM", "1");
+        argumentBuilder.Append("IsSteam", "1");
+    }
 
-            // This is a bit of a hack; ideally additionalArguments would be a dictionary or some KeyValue structure
-            if (!string.IsNullOrEmpty(additionalArguments))
-            {
-                var regex = new Regex(@"\s*(?<key>[^\s=]+)\s*=\s*(?<value>([^=]*$|[^=]*\s(?=[^\s=]+)))\s*", RegexOptions.Compiled);
-                foreach (Match match in regex.Matches(additionalArguments))
-                    argumentBuilder.Append(match.Groups["key"].Value, match.Groups["value"].Value.Trim());
-            }
+    if (!string.IsNullOrEmpty(additionalArguments))
+    {
+        var regex = new Regex(@"\s*(?<key>[^\s=]+)\s*=\s*(?<value>([^=]*$|[^=]*\s(?=[^\s=]+)))\s*", RegexOptions.Compiled);
+        foreach (Match match in regex.Matches(additionalArguments))
+            argumentBuilder.Append(match.Groups["key"].Value, match.Groups["value"].Value.Trim());
+    }
 
-            if (!File.Exists(exePath))
-                throw new BinaryNotPresentException(exePath);
+    if (!File.Exists(exePath))
+        throw new BinaryNotPresentException(exePath);
 
-            var workingDir = Path.Combine(gamePath.FullName, "game");
+    var workingDir = Path.Combine(gamePath.FullName, "game");
 
-            var arguments = encryptArguments
-                ? argumentBuilder.BuildEncrypted()
-                : argumentBuilder.Build();
+    var arguments = encryptArguments
+        ? argumentBuilder.BuildEncrypted()
+        : argumentBuilder.Build();
 
-            return runner.Start(exePath, workingDir, arguments, environment, dpiAwareness);
-        }
+    return runner.Start(exePath, workingDir, arguments, environment, dpiAwareness);
+}
+
     }
     public class networklogic
     {
@@ -696,211 +698,246 @@ namespace CoreLibLaunchSupport
         
 
         public static async Task<Process> LaunchGameAsync(string gamePath, string realsid, int language, bool dx11, int expansionlevel, bool isSteam, int region)
+{
+    storage = new Storage("protocolhandle");
+    var dalamudOk = false;
+    var gameArgs = string.Empty;
+    IDalamudRunner dalamudRunner;
+    launchers launcher = new launchers();
+    IDalamudCompatibilityCheck dalamudCompatCheck;
+    dalamudRunner = new WindowsDalamudRunner();
+    dalamudCompatCheck = new WindowsDalamudCompatibilityCheck();
+    string hardcodeddir = "D:\\HandleGame\\Dalamud";
+    
+    if (!Directory.Exists(hardcodeddir))
+    {
+        System.IO.Directory.CreateDirectory(hardcodeddir);
+    }
+    
+    DirectoryInfo dalamudpath = new DirectoryInfo(hardcodeddir);
+    Troubleshooting.LogTroubleshooting(gamePath);
+    DirectoryInfo gamePather = new DirectoryInfo(gamePath);
+    DalamudLoadInfo = new DalamudOverlayInfoProxy();
+    
+    try
+    {
+        DalamudUpdater = new DalamudUpdater(storage.GetFolder("dalamud"), storage.GetFolder("runtime"), 
+            storage.GetFolder("dalamudAssets"), storage.Root, null, null)
         {
-            storage = new Storage("protocolhandle");
-            var dalamudOk = false;
-            var gameArgs = string.Empty;
-            IDalamudRunner dalamudRunner;
-            launchers launcher = new launchers();
-            IDalamudCompatibilityCheck dalamudCompatCheck;
-            dalamudRunner = new WindowsDalamudRunner();
-            dalamudCompatCheck = new WindowsDalamudCompatibilityCheck();
-            string hardcodeddir = "D:\\HandleGame\\Dalamud";
-            if (!Directory.Exists(hardcodeddir))
-            {
-                System.IO.Directory.CreateDirectory(hardcodeddir);
-            }
-            DirectoryInfo dalamudpath = new DirectoryInfo(hardcodeddir);
-            Troubleshooting.LogTroubleshooting(gamePath);
-            DirectoryInfo gamePather = new DirectoryInfo(gamePath);
-            DalamudLoadInfo = new DalamudOverlayInfoProxy();
-            try
-            {
-                DalamudUpdater = new DalamudUpdater(storage.GetFolder("dalamud"), storage.GetFolder("runtime"), storage.GetFolder("dalamudAssets"), storage.Root, null, null)
-                {
-                    Overlay = DalamudLoadInfo
-                };
-                DalamudUpdater.Run();
-            }
-            
-            
-            catch (Exception ex)
-            {
-                Log.Error(ex, "Could not start dalamud updater");
-            }
-            var dalamudLauncher = new DalamudLauncher(dalamudRunner, DalamudUpdater, DalamudLoadMethod.DllInject,
-                gamePather, dalamudpath, (LibDalamud.ClientLanguage)ClientLanguage.English, 0, false, false, false,
-                Troubleshooting.GetTroubleshootingJson(gamePath));
-            
-            try
-            {
-                dalamudCompatCheck.EnsureCompatibility();
-            }
-            catch (IDalamudCompatibilityCheck.NoRedistsException ex)
-            {
-                Log.Error(ex, "No Dalamud Redists found");
+            Overlay = DalamudLoadInfo
+        };
+        DalamudUpdater.Run();
+    }
+    catch (Exception ex)
+    {
+        Log.Error(ex, "Could not start dalamud updater");
+    }
 
-                throw;
-                /*
-                CustomMessageBox.Show(
-                    Loc.Localize("DalamudVc2019RedistError",
-                        "The XIVLauncher in-game addon needs the Microsoft Visual C++ 2015-2019 redistributable to be installed to continue. Please install it from the Microsoft homepage."),
-                    "XIVLauncher", MessageBoxButton.OK, MessageBoxImage.Exclamation, parentWindow: _window);
-                    */
-            }
-            catch (IDalamudCompatibilityCheck.ArchitectureNotSupportedException ex)
-            {
-                Log.Error(ex, "Architecture not supported");
+    var dalamudLauncher = new DalamudLauncher(dalamudRunner, DalamudUpdater, DalamudLoadMethod.DllInject,
+        gamePather, dalamudpath, (LibDalamud.ClientLanguage)ClientLanguage.English, 0, false, false, false,
+        Troubleshooting.GetTroubleshootingJson(gamePath));
 
-                throw;
-                /*
-                CustomMessageBox.Show(
-                    Loc.Localize("DalamudArchError",
-                        "Dalamud cannot run your computer's architecture. Please make sure that you are running a 64-bit version of Windows.\nIf you are using Windows on ARM, please make sure that x64-Emulation is enabled for XIVLauncher."),
-                    "XIVLauncher", MessageBoxButton.OK, MessageBoxImage.Exclamation, parentWindow: _window);
-                    */
-            }
-            try
-            {
-                try
-                {
-                    dalamudOk = dalamudLauncher.HoldForUpdate(gamePather) == DalamudLauncher.DalamudInstallState.Ok;
-                }
-                catch (DalamudRunnerException ex)
-                {
-                    Log.Error(ex, "Couldn't ensure Dalamud runner");
+    try
+    {
+        dalamudCompatCheck.EnsureCompatibility();
+    }
+    catch (IDalamudCompatibilityCheck.NoRedistsException ex)
+    {
+        Log.Error(ex, "No Dalamud Redists found");
+        throw;
+    }
+    catch (IDalamudCompatibilityCheck.ArchitectureNotSupportedException ex)
+    {
+        Log.Error(ex, "Architecture not supported");
+        throw;
+    }
 
-                    
-
-                    throw;
-                    /*
-                    CustomMessageBox.Builder
-                                    .NewFrom(runnerErrorMessage)
-                                    .WithImage(MessageBoxImage.Error)
-                                    .WithButtons(MessageBoxButton.OK)
-                                    .WithShowHelpLinks()
-                                    .WithParentWindow(_window)
-                                    .Show();
-                                    */
-                }
-                IGameRunner runner;
-                runner = new WindowsGameRunner(dalamudLauncher, dalamudOk, DalamudUpdater.Runtime);
-                Process ffxivgame = launcher.LaunchGame(runner, realsid,
-                region, expansionlevel, isSteam,gameArgs, gamePather, dx11, ClientLanguage.English,true,
-            DpiAwareness.Unaware);
-
-                var addonMgr = new AddonManager();
-                try
-                {
-                    List<AddonEntry> xex = new List<AddonEntry>();
-
-                    var addons = xex.Where(x => x.IsEnabled).Select(x => x.Addon).Cast<IAddon>().ToList();
-
-                    addonMgr.RunAddons(ffxivgame.Id, addons);
-                }
-                catch (Exception ex)
-                {
-                    /*
-                    CustomMessageBox.Builder
-                                    .NewFrom(ex, "Addons")
-                                    .WithAppendText("\n\n")
-                                    .WithAppendText(Loc.Localize("AddonLoadError",
-                                        "This could be caused by your antivirus, please check its logs and add any needed exclusions."))
-                                    .WithParentWindow(_window)
-                                    .Show();
-                                    */
-
-                    
-
-                    addonMgr.StopAddons();
-                    throw;
-                }
-
-                Log.Debug("Waiting for game to exit");
-                
-                await Task.Run(() => ffxivgame!.WaitForExit()).ConfigureAwait(false);
-
-
-                Log.Verbose("Game has exited");
-
-                if (addonMgr.IsRunning)
-                    addonMgr.StopAddons();
-                return ffxivgame;
-            }
-            catch (Exception exc)
-            {
-                if (language == 0)
-                {
-                    Debug.WriteLine("実行可能ファイルを起動できませんでした。 ゲームパスは正しいですか? " + exc);
-                }
-                if (language == 1)
-                {
-                    Debug.WriteLine("Could not launch executable. Is your game path correct? " + exc);
-                }
-                if (language == 2)
-                {
-                    Debug.WriteLine("Die ausführbare Datei konnte nicht gestartet werden. Ist dein Spielpfad korrekt? " + exc);
-                }
-                if (language == 3)
-                {
-                    Debug.WriteLine("Impossible de lancer l'exécutable. Votre chemin de jeu est-il correct? " + exc);
-                }
-                if (language == 4)
-                {
-                    Debug.WriteLine("Не удалось запустить файл. Ввели ли вы корректный путь к игре? " + exc);
-                }
-
-            }
-
-            return null;
+    try
+    {
+        try
+        {
+            dalamudOk = dalamudLauncher.HoldForUpdate(gamePather) == DalamudLauncher.DalamudInstallState.Ok;
+        }
+        catch (DalamudRunnerException ex)
+        {
+            Log.Error(ex, "Couldn't ensure Dalamud runner");
+            throw;
         }
 
-        public static string GetRealSid(string gamePath, string username, string password, string otp, bool isSteam)
+        IGameRunner runner;
+        runner = new WindowsGameRunner(dalamudLauncher, dalamudOk, DalamudUpdater.Runtime);
+        Process ffxivgame = launcher.LaunchGame(runner, realsid,
+            region, expansionlevel, isSteam, gameArgs, gamePather, dx11, ClientLanguage.English, true,
+            DpiAwareness.Unaware);
+
+        var addonMgr = new AddonManager();
+        try
         {
-            string hashstr = "";
-            try
-            {
-                // make the string of hashed files to prove game version//make the string of hashed files to prove game version
-                hashstr = "ffxivboot.exe/" + GenerateHash(gamePath + "/boot/ffxivboot.exe") +
-                          ",ffxivboot64.exe/" + GenerateHash(gamePath + "/boot/ffxivboot64.exe") +
-                          ",ffxivlauncher.exe/" + GenerateHash(gamePath + "/boot/ffxivlauncher.exe") +
-                          ",ffxivlauncher64.exe/" + GenerateHash(gamePath + "/boot/ffxivlauncher64.exe") +
-                          ",ffxivupdater.exe/" + GenerateHash(gamePath + "/boot/ffxivupdater.exe") +
-                          ",ffxivupdater64.exe/" + GenerateHash(gamePath + "/boot/ffxivupdater64.exe");
-            }
-            catch (Exception exc)
-            {
-                Debug.WriteLine("Could not generate hashes. Is your game path correct? " + exc);
-            }
+            List<AddonEntry> xex = new List<AddonEntry>();
+            var addons = xex.Where(x => x.IsEnabled).Select(x => x.Addon).Cast<IAddon>().ToList();
+            addonMgr.RunAddons(ffxivgame.Id, addons);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            addonMgr.StopAddons();
+            throw;
+        }
 
-            WebClient sidClient = new WebClient();
-            sidClient.Headers.Add("X-Hash-Check", "enabled");
-            sidClient.Headers.Add("user-agent", UserAgent);
-            sidClient.Headers.Add("Referer", "https://ffxiv-login.square-enix.com/oauth/ffxivarr/login/top?lng=en&rgn=3");
-            sidClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+        Log.Debug("Waiting for game to exit");
+        await Task.Run(() => ffxivgame!.WaitForExit()).ConfigureAwait(false);
+        Log.Verbose("Game has exited");
 
-            InitiateSslTrust();
+        if (addonMgr.IsRunning)
+            addonMgr.StopAddons();
+            
+        return ffxivgame;
+    }
+    catch (Exception exc)
+    {
+        switch(language)
+        {
+            case 0:
+                Debug.WriteLine("実行可能ファイルを起動できませんでした。 ゲームパスは正しいですか? " + exc);
+                break;
+            case 1:
+                Debug.WriteLine("Could not launch executable. Is your game path correct? " + exc);
+                break;
+            case 2:
+                Debug.WriteLine("Die ausführbare Datei konnte nicht gestartet werden. Ist dein Spielpfad korrekt? " + exc);
+                break;
+            case 3:
+                Debug.WriteLine("Impossible de lancer l'exécutable. Votre chemin de jeu est-il correct? " + exc);
+                break;
+            case 4:
+                Debug.WriteLine("Не удалось запустить файл. Ввели ли вы корректный путь к игре? " + exc);
+                break;
+        }
+    }
+    return null;
+}
 
-            try
+
+        public static string GetRealSid(string gamePath, string username, string password, string otp, bool isSteam)
+{
+    string hashstr = "";
+    try
+    {
+        #if DEBUG
+        Console.WriteLine($"GetRealSid called with path: {gamePath}");
+        Console.WriteLine($"Username: {username}, OTP Length: {otp?.Length}, Steam: {isSteam}");
+        #endif
+
+        if (!Directory.Exists(gamePath))
+        {
+            throw new DirectoryNotFoundException($"Game directory not found: {gamePath}");
+        }
+
+        var bootPath = Path.Combine(gamePath, "boot");
+        var files = Directory.GetFiles(bootPath);
+        
+        #if DEBUG
+        Console.WriteLine("Found files in boot directory:");
+        foreach (var file in files)
+        {
+            Console.WriteLine(file);
+        }
+        #endif
+
+        bool is64BitOnly = !File.Exists(Path.Combine(bootPath, "ffxivlauncher.exe")) && 
+                          File.Exists(Path.Combine(bootPath, "ffxivlauncher64.exe"));
+
+        hashstr = GenerateHashString(bootPath, is64BitOnly);
+
+        #if DEBUG
+        Console.WriteLine($"Generated hash string: {hashstr}");
+        Console.WriteLine($"Steam status: {isSteam}");
+        #endif
+
+        using (WebClient sidClient = new WebClient())
+        {
+            try 
             {
+                ConfigureWebClient(sidClient);
                 var localGameVer = GetLocalGamever(gamePath);
                 var localSid = GetSid(username, password, otp, isSteam);
 
                 if (localGameVer.Equals("BAD") || localSid.Equals("BAD"))
                 {
-                    return "BAD";
+                    throw new NoValidSubscriptionException("Failed to obtain game version or session ID");
                 }
 
-                var url = "https://patch-gamever.ffxiv.com/http/win32/ffxivneo_release_game/" + localGameVer + "/" + localSid;
-                sidClient.UploadString(url, hashstr); //request real session id
-            }
-            catch (Exception exc)
-            {
-                Debug.WriteLine($"Unable to retrieve a session ID from the server.\n" + exc);
-            }
+                var url = $"https://patch-gamever.ffxiv.com/http/win32/ffxivneo_release_game/{localGameVer}/{localSid}";
+                
+                #if DEBUG
+                Console.WriteLine($"Requesting SID from: {url}");
+                #endif
 
-            return sidClient.ResponseHeaders["X-Patch-Unique-Id"];
+                sidClient.UploadString(url, hashstr);
+                var uniqueId = sidClient.ResponseHeaders["X-Patch-Unique-Id"];
+                
+                if (string.IsNullOrEmpty(uniqueId))
+                {
+                    throw new NoValidSubscriptionException("Failed to obtain unique ID from server");
+                }
+                
+                return uniqueId;
+            }
+            catch (WebException ex) when (ex.Response is HttpWebResponse response)
+            {
+                if (response.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    throw new NoValidSubscriptionException("No active subscription found for this account");
+                }
+                throw;
+            }
         }
+    }
+    catch (NoValidSubscriptionException ex)
+    {
+        Console.WriteLine($"Subscription Error: {ex.Message}");
+        return "BAD";
+    }
+    catch (Exception exc)
+    {
+        Console.WriteLine($"GetRealSid Error: {exc.Message}");
+        Console.WriteLine($"Stack trace: {exc.StackTrace}");
+        return "BAD";
+    }
+}
+
+
+private static string GenerateHashString(string bootPath, bool is64BitOnly)
+{
+    if (is64BitOnly)
+    {
+        return "ffxivboot64.exe/" + GenerateHash(Path.Combine(bootPath, "ffxivboot64.exe")) +
+               ",ffxivlauncher64.exe/" + GenerateHash(Path.Combine(bootPath, "ffxivlauncher64.exe")) +
+               ",ffxivupdater64.exe/" + GenerateHash(Path.Combine(bootPath, "ffxivupdater64.exe"));
+    }
+
+    var bootExe = File.Exists(Path.Combine(bootPath, "ffxivboot64.exe")) ? 
+                 "ffxivboot64.exe" : "ffxivboot.exe";
+    var launcherExe = File.Exists(Path.Combine(bootPath, "ffxivlauncher64.exe")) ?
+                     "ffxivlauncher64.exe" : "ffxivlauncher.exe";
+    var updaterExe = File.Exists(Path.Combine(bootPath, "ffxivupdater64.exe")) ?
+                    "ffxivupdater64.exe" : "ffxivupdater.exe";
+
+    return $"{bootExe}/" + GenerateHash(Path.Combine(bootPath, bootExe)) +
+           $",{launcherExe}/" + GenerateHash(Path.Combine(bootPath, launcherExe)) +
+           $",{updaterExe}/" + GenerateHash(Path.Combine(bootPath, updaterExe));
+}
+
+private static void ConfigureWebClient(WebClient client)
+{
+    client.Headers.Add("X-Hash-Check", "enabled");
+    client.Headers.Add("user-agent", UserAgent);
+    client.Headers.Add("Referer", "https://ffxiv-login.square-enix.com/oauth/ffxivarr/login/top?lng=en&rgn=3");
+    client.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+    InitiateSslTrust();
+}
+
+
 
         private static string GetStored(bool isSteam) //this is needed to be able to access the login site correctly
         {
@@ -986,24 +1023,84 @@ namespace CoreLibLaunchSupport
             return length + "/" + hashstring;
         }
 
-        public static bool GetGateStatus()
+       public static bool CheckGateStatus()
+{
+    try
+    {
+        using (WebClient client = new WebClient())
         {
-            try
+            client.Headers.Add("user-agent", UserAgent);
+            var task = Task.Run(() => client.DownloadDataTaskAsync(new Uri("http://frontier.ffxiv.com/worldStatus/gate_status.json")));
+            
+            if (Task.WaitAny(new[] { task }, 3000) == -1) // 3 second timeout
             {
-                using (WebClient client = new WebClient())
-                {
-                    string reply = client.DownloadString("http://frontier.ffxiv.com/worldStatus/gate_status.json");
-
-                    return Convert.ToBoolean(int.Parse(reply[10].ToString()));
-                }
-            }
-            catch (Exception exc)
-            {
-                Debug.WriteLine("Failed getting gate status. " + exc);
-                return false;
+                #if DEBUG
+                Console.WriteLine("Gate status check timed out, defaulting to true");
+                #endif
+                return true;
             }
 
+            var response = task.Result;
+            string reply = Encoding.UTF8.GetString(response);
+            
+            #if DEBUG
+            Console.WriteLine($"Gate status reply: {reply}");
+            #endif
+            
+            var jsonData = JsonConvert.DeserializeObject<dynamic>(reply);
+            return Convert.ToBoolean(jsonData.status);
         }
+    }
+    catch (Exception exc)
+    {
+        #if DEBUG
+        Console.WriteLine($"Gate status check failed: {exc.Message}");
+        Console.WriteLine($"Stack trace: {exc.StackTrace}");
+        #endif
+        return true; // Default to true if check fails
+    }
+}
+
+public static bool CheckLoginStatus()
+{
+    try
+    {
+        using (WebClient client = new WebClient())
+        {
+            client.Headers.Add("user-agent", UserAgent);
+            var task = Task.Run(() => client.DownloadDataTaskAsync(new Uri("http://frontier.ffxiv.com/worldStatus/login_status.json")));
+            
+            if (Task.WaitAny(new[] { task }, 3000) == -1) // 3 second timeout
+            {
+                #if DEBUG
+                Console.WriteLine("Login status check timed out, defaulting to true");
+                #endif
+                return true;
+            }
+
+            var response = task.Result;
+            string reply = Encoding.UTF8.GetString(response);
+            
+            #if DEBUG
+            Console.WriteLine($"Login status reply: {reply}");
+            #endif
+            
+            var jsonData = JsonConvert.DeserializeObject<dynamic>(reply);
+            return Convert.ToBoolean(jsonData.status);
+        }
+    }
+    catch (Exception exc)
+    {
+        #if DEBUG
+        Console.WriteLine($"Login status check failed: {exc.Message}");
+        Console.WriteLine($"Stack trace: {exc.StackTrace}");
+        #endif
+        return true; // Default to true if check fails
+    }
+}
+
+
+
 
         private static void InitiateSslTrust()
         {

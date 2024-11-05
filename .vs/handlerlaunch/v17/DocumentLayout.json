@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|g:\\code\\weblaunch\\handlerlaunch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|solutionrelative:handlerlaunch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -15,12 +19,16 @@
       "RelativeMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|solutionrelative:handlerlaunch\\supportobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\circularprogressbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\circularprogressbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\converters\\sizetofontsizeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\converters\\sizetofontsizeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\circularprogressbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\circularprogressbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\circularprogressbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -48,14 +56,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\launchapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\launchapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|g:\\code\\weblaunch\\launchapp\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7BE0ADB-A1AE-456C-BBCF-E1ADCF32E874}|LaunchApp\\LaunchApp.csproj|solutionrelative:launchapp\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,8 +65,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\code\\WebLaunch\\handlerlaunch\\Program.cs",
+              "RelativeDocumentMoniker": "handlerlaunch\\Program.cs",
+              "ToolTip": "G:\\code\\WebLaunch\\handlerlaunch\\Program.cs",
+              "RelativeToolTip": "handlerlaunch\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:39:16.38Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -75,14 +88,14 @@
               "RelativeDocumentMoniker": "SpinningWheelLib\\Window1.xaml.cs",
               "ToolTip": "G:\\code\\WebLaunch\\SpinningWheelLib\\Window1.xaml.cs",
               "RelativeToolTip": "SpinningWheelLib\\Window1.xaml.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAnwFIAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwL8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T14:12:03.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Class1.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\Class1.cs",
               "RelativeDocumentMoniker": "SpinningWheelLib\\Class1.cs",
@@ -90,25 +103,11 @@
               "RelativeToolTip": "SpinningWheelLib\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T13:49:30.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T13:49:30.459Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SizeToFontSizeConverter.cs",
-              "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\Converters\\SizeToFontSizeConverter.cs",
-              "RelativeDocumentMoniker": "SpinningWheelLib\\Converters\\SizeToFontSizeConverter.cs",
-              "ToolTip": "G:\\code\\WebLaunch\\SpinningWheelLib\\Converters\\SizeToFontSizeConverter.cs",
-              "RelativeToolTip": "SpinningWheelLib\\Converters\\SizeToFontSizeConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T13:49:25.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Window1.xaml",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\Window1.xaml",
               "RelativeDocumentMoniker": "SpinningWheelLib\\Window1.xaml",
@@ -120,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CircularProgressBar.xaml.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\CircularProgressBar.xaml.cs",
               "RelativeDocumentMoniker": "SpinningWheelLib\\CircularProgressBar.xaml.cs",
@@ -128,24 +127,22 @@
               "RelativeToolTip": "SpinningWheelLib\\CircularProgressBar.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T13:27:10.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T13:27:10.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CircularProgressBar.xaml",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\CircularProgressBar.xaml",
               "RelativeDocumentMoniker": "SpinningWheelLib\\CircularProgressBar.xaml",
               "ToolTip": "G:\\code\\WebLaunch\\SpinningWheelLib\\CircularProgressBar.xaml",
               "RelativeToolTip": "SpinningWheelLib\\CircularProgressBar.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T13:27:09.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T13:27:09.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "cache.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\CoreLibLaunchSupport\\cache.cs",
               "RelativeDocumentMoniker": "CoreLibLaunchSupport\\cache.cs",
@@ -153,12 +150,11 @@
               "RelativeToolTip": "CoreLibLaunchSupport\\cache.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T19:28:25.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T19:28:25.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Program.cs",
               "RelativeDocumentMoniker": "LaunchApp\\Program.cs",
@@ -170,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "LaunchApp.csproj",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
@@ -182,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "WasmApp.Common.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
@@ -192,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "LaunchApp",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
@@ -203,40 +199,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SupportObjects.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\handlerlaunch\\SupportObjects.cs",
               "RelativeDocumentMoniker": "handlerlaunch\\SupportObjects.cs",
               "ToolTip": "G:\\code\\WebLaunch\\handlerlaunch\\SupportObjects.cs",
               "RelativeToolTip": "handlerlaunch\\SupportObjects.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAnwNQAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAIDAAAAAAAAAAAuwCEDAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T17:44:16.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "Counter.razor",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "LaunchApp\\Pages\\Counter.razor",
               "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\Pages\\Counter.razor",
               "RelativeToolTip": "LaunchApp\\Pages\\Counter.razor",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswD0AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T17:28:49.28Z"
+              "WhenOpened": "2024-10-31T17:28:49.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
               "RelativeDocumentMoniker": "LaunchApp\\Shared\\MainLayout.razor",
               "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
               "RelativeToolTip": "LaunchApp\\Shared\\MainLayout.razor",
-              "ViewState": "AgIAAA8AAAAAAAAAAIBJwCcAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T15:35:47.153Z"
+              "WhenOpened": "2024-10-31T15:35:47.153Z",
+              "EditorCaption": ""
             }
           ]
         }

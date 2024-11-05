@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibDalamud")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a3b3802fa3b18bbe25302e0a9a328688dc2354d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+450458f801eff279ee868abc3ee55667b0041d70")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibDalamud")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibDalamud")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

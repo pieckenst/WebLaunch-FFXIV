@@ -208,7 +208,6 @@ namespace WMConsole
         [STAThread]
         static void Main(string[] args)
         {
-            // Hide console window immediately on startup
             var handle = GetConsoleWindow();
             ShowWindow(handle, SW_HIDE);
 
@@ -231,31 +230,60 @@ namespace WMConsole
                 if (args?.Length > 0)
                 {
                     LogDebug($"Received arguments: {string.Join(", ", args)}");
+                   if (args[0].Contains("?debugtest=yes"))
+{
+    bool errorOccurred = false;
+    string previousOutput = "";
+    try
+    {
+        if (fileWriter != null)
+        {
+            fileWriter.Flush();
+            using (var reader = new StreamReader(new FileStream(tempLogFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            {
+                previousOutput = reader.ReadToEnd();
+            }
+        }
+        ShowProgressWindow(previousOutput, true, "Custom Message", 300, 200); // Message box with default size
+    }
+    catch (Exception ex)
+    {
+        LogDebug($"Error in debug test: {ex.Message}");
+        errorOccurred = true;
+        ShowNotification("Error", $"Failed to launch debug test: {ex.Message}");
+    }
+}
 
-                    if (args[0].Contains("?ffxivhandle=yes"))
+
+                    else if (args[0].Contains("?ffxivhandle=yes"))
                     {
                         ShowNotification("FFXIV Launch", "Starting Final Fantasy XIV...");
 
-                        if (!args[0].Contains("login=") || !args[0].Contains("pass="))
+                        if (!args[0].Contains("login=") || !args[0].Contains("pass=") || !args[0].Contains("hash="))
                         {
-                            throw new ArgumentException("Missing required login credentials - provide ?=login and ?=pass arguments during launch"); 
+                            throw new ArgumentException("Missing required login credentials");
                         }
 
                         bool errorOccurred = false;
                         string previousOutput = "";
-
-                        try
-                        {
-                            FFXIVhandler.HandleFFXivReq(args);
-                            fileWriter.Flush();
-                            previousOutput = File.ReadAllText(tempLogFile);
-                        }
-                        catch (Exception ex)
-                        {
-                            LogDebug($"Error handling FFXIV request: {ex.Message}");
-                            errorOccurred = true;
-                            ShowNotification("Error", $"Failed to launch FFXIV: {ex.Message}");
-                        }
+try 
+{
+    FFXIVhandler.HandleFFXivReq(args);
+    if (fileWriter != null)
+    {
+        fileWriter.Flush();
+        using (var reader = new StreamReader(new FileStream(tempLogFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+        {
+            previousOutput = reader.ReadToEnd();
+        }
+    }
+}
+catch (Exception ex)
+{
+    LogDebug($"Error handling FFXIV request: {ex.Message}");
+    errorOccurred = true;
+    ShowNotification("Error", $"Failed to launch FFXIV: {ex.Message}");
+}
 
                         if (!errorOccurred)
                         {
@@ -313,23 +341,37 @@ namespace WMConsole
             }
             finally
             {
-                if (fileWriter != null)
-                {
-                    Console.SetOut(originalConsole);
-                    fileWriter.Flush();
-                    fileWriter.Close();
-                    fileWriter.Dispose();
-                }
-
                 try
                 {
+                    if (fileWriter != null)
+                    {
+                        Console.SetOut(originalConsole);
+                        fileWriter.Flush();
+                        fileWriter.Close();
+                        fileWriter.Dispose();
+                    }
+
                     if (File.Exists(tempLogFile))
                     {
-                        File.Delete(tempLogFile);
+                        try
+                        {
+                            File.Delete(tempLogFile);
+                        }
+                        catch (IOException)
+                        {
+                            // Ignore file deletion errors
+                            LogDebug("Could not delete temporary log file - will be cleaned up later");
+                        }
                     }
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    LogDebug($"Error during cleanup: {ex.Message}");
+                }
             }
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadLine();
         }
 
 
@@ -340,60 +382,86 @@ namespace WMConsole
 
 
 
-        private static void ShowProgressWindow(string previousOutput)
+
+
+       private static void ShowProgressWindow(string previousOutput, bool isMessageBox = false, string customLabel = "Loading...", double? customWidth = null, double? customHeight = null)
 {
-    LogDebug("Showing progress window");
-    var app = new Application();
-    var progressWindow = new Window1(30);
+    LogDebug($"Showing {(isMessageBox ? "message box" : "progress window")}");
     
-    // Display previous console output
-    progressWindow.WriteToConsole(previousOutput, Colors.White);
-    
-    var checkProcessTimer = new DispatcherTimer
+    var thread = new Thread(() =>
     {
-        Interval = TimeSpan.FromMilliseconds(100)
-    };
-    
-    checkProcessTimer.Tick += (s, e) =>
-    {
-        try
+        var app = new Application();
+        var window = new Window1(30, isMessageBox, customLabel, customWidth, customHeight);
+        
+        if (!string.IsNullOrEmpty(previousOutput))
         {
-            var processes = Process.GetProcessesByName("ffxiv_dx11");
-            if (processes.Length > 0)
+            window.WriteToConsole(previousOutput, Colors.White);
+        }
+        
+        var checkProcessTimer = new DispatcherTimer
+        {
+            Interval = TimeSpan.FromMilliseconds(100)
+        };
+        
+        checkProcessTimer.Tick += (s, e) =>
+        {
+            try
             {
-                checkProcessTimer.Stop();
-                progressWindow.Close();
+                if (!isMessageBox)
+                {
+                    var processes = Process.GetProcessesByName("ffxiv_dx11");
+                    if (processes.Length > 0)
+                    {
+                        checkProcessTimer.Stop();
+                        app.Dispatcher.Invoke(() => 
+                        {
+                            window.Close();
+                            app.Shutdown();
+                        });
+                    }
+                }
             }
-        }
-        catch (Exception ex)
+            catch (Exception ex)
+            {
+                LogDebug($"Error checking process: {ex.Message}");
+                checkProcessTimer.Stop();
+                app.Dispatcher.Invoke(() => 
+                {
+                    window.Close();
+                    app.Shutdown();
+                });
+            }
+        };
+
+        window.Closed += (s, e) =>
         {
-            LogDebug($"Error checking process: {ex.Message}");
             checkProcessTimer.Stop();
-            progressWindow.Close();
+            app.Shutdown();
+        };
+
+        var handle = GetConsoleWindow();
+        ShowWindow(handle, SW_HIDE);
+        
+        if (!isMessageBox)
+        {
+            checkProcessTimer.Start();
         }
-    };
-
-    // Create a custom TextWriter that writes to both console and window
-    var customWriter = new MultiWriter(new TextWriter[] 
-    { 
-        Console.Out,
-        new ConsoleOutputRedirector(progressWindow)
+        
+        window.Show();
+        app.Run();
+        
+        ShowWindow(handle, SW_SHOW);
     });
-    Console.SetOut(customWriter);
-
-    // Hide console window
-    var handle = GetConsoleWindow();
-    ShowWindow(handle, SW_HIDE);
     
-    checkProcessTimer.Start();
-    app.Run(progressWindow);
+    thread.SetApartmentState(ApartmentState.STA);
+    thread.Start();
     
-    // Restore original console output and show console window
-    Console.SetOut(Console.Out);
-    ShowWindow(handle, SW_SHOW);
-    
-    LogDebug("Progress window closed");
+    LogDebug($"{(isMessageBox ? "Message box" : "Progress window")} initialized");
 }
+
+
+
+
 
 
 

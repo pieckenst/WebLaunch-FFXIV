@@ -5,46 +5,85 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpinningWheelLib"
         mc:Ignorable="d"
-        Title="Launcher View" Height="464" Width="1146"
+        Title="Launcher View" 
+        Width="1166"
+        MinWidth="200"
+        Height="464"
+        MinHeight="200"
+        MaxHeight="684"
         Background="#ECE9D8"
         WindowStyle="ThreeDBorderWindow"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
+
+    <Window.Resources>
+        <Style x:Key="XPButton" TargetType="Button">
+            <Setter Property="Background" Value="#ECE9D8"/>
+            <Setter Property="BorderBrush" Value="#ACA899"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Padding" Value="10,3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="3">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Border Background="#FFFFFF" 
-                    BorderBrush="#ACA899" 
-                    BorderThickness="1" 
-                    Margin="10,10,10,5">
-                <Grid>
-                    <Label Content="Loading..." 
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center" 
-                           FontSize="72"
-                           FontFamily="Tahoma" 
-                           Height="138" 
-                           Width="324"/>
-                    <local:CircularProgressBar x:Name="progressBar"
-                        Visibility="Collapsed"
-                        Progress="0"
-                        ProgressColor="#2B7213"
-                        ProgressLeftColor="#90EE90"
-                        TextColor="#0A5100"
-                        Thickness="4" 
-                        Width="200" 
-                        Height="200"
-                        VerticalAlignment="Top"
-                        Margin="0,44,0,0"/>
-                </Grid>
-            </Border>
+    <Border Background="#FFFFFF" 
+            BorderBrush="#ACA899" 
+            BorderThickness="1" 
+            Margin="10,10,10,5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <local:CircularProgressBar x:Name="progressBar"
+                Grid.Column="0"
+                Visibility="Collapsed"
+                Progress="0"
+                ProgressColor="#2B7213"
+                ProgressLeftColor="#90EE90"
+                TextColor="#0A5100"
+                Thickness="4" 
+                Width="200" 
+                Height="200"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="20,0,20,0"/>
+                
+            <Label x:Name="MainLabel"
+                   Grid.Column="1"
+                   Content="Loading..." 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" 
+                   FontSize="72"
+                   FontFamily="Tahoma" 
+                   Height="138" 
+                   Width="324"/>
         </Grid>
+    </Border>
+</Grid>
 
         <Expander Grid.Row="1" 
+                  x:Name="ConsoleExpander"
                   Header="Console Output"
                   Background="#ECE9D8"
                   BorderBrush="#ACA899"
@@ -54,19 +93,40 @@
                   Expanded="Expander_Expanded"
                   Collapsed="Expander_Collapsed">
             <RichTextBox x:Name="consoleOutput"
-                     Height="200"
-                     Background="#FFFFFF"
-                     Foreground="#000000"
-                     IsReadOnly="True"
-                     FontFamily="Lucida Console"
-                     VerticalScrollBarVisibility="Auto"
-                     Margin="5">
-                <RichTextBox.Resources>
-                    <Style TargetType="{x:Type Paragraph}">
-                        <Setter Property="Margin" Value="0"/>
-                    </Style>
-                </RichTextBox.Resources>
-            </RichTextBox>
+             Height="200"
+             Background="#FFFFFF"
+             Foreground="#000000"
+             IsReadOnly="True"
+             FontFamily="Lucida Console"
+             VerticalScrollBarVisibility="Auto"
+             Margin="5">
+    <RichTextBox.Resources>
+        <Style TargetType="{x:Type Paragraph}">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Foreground" Value="#000000"/>
+        </Style>
+    </RichTextBox.Resources>
+</RichTextBox>
         </Expander>
+
+        <StackPanel Grid.Row="2" 
+                    x:Name="MessageBoxButtons"
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right"
+                    Margin="10,5,10,10"
+                    Visibility="Collapsed">
+            <Button Content="OK" 
+                    Width="75" 
+                    Height="23"
+                    Margin="5,0,0,0"
+                    Click="OkButton_Click"
+                    Style="{StaticResource XPButton}"/>
+            <Button Content="Cancel" 
+                    Width="75" 
+                    Height="23"
+                    Margin="5,0,0,0"
+                    Click="CancelButton_Click"
+                    Style="{StaticResource XPButton}"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -660,45 +660,52 @@ private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEv
                 MessageBox.Show($"Failed to launch the game: {e.Message}", "Launch Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-    } 
+    }
     public class FFXIVhandler
     {
-        private static string DecryptPassword(string encryptedPassword)
+        private static string DecryptPassword(string encryptedPassword, string hash)
         {
             try
             {
+                Console.WriteLine("Starting password decryption");
+                Console.WriteLine($"Hash received: {hash}");
+
                 byte[] encryptedBytes = Convert.FromBase64String(encryptedPassword);
-                byte[] salt = Encoding.ASCII.GetBytes("dalamud");
+                Console.WriteLine($"Encrypted bytes length: {encryptedBytes.Length}");
 
-                using (Aes aesAlg = Aes.Create())
+                byte[] keyBytes = Encoding.UTF8.GetBytes(hash.Substring(0, 16));
+                Console.WriteLine($"Key bytes length: {keyBytes.Length}");
+
+                byte[] decryptedBytes = new byte[encryptedBytes.Length];
+                for (int i = 0; i < encryptedBytes.Length; i++)
                 {
-                    var key = new Rfc2898DeriveBytes(encryptedPassword, salt, 1000);
-                    aesAlg.Key = key.GetBytes(aesAlg.KeySize / 8);
-                    aesAlg.IV = key.GetBytes(aesAlg.BlockSize / 8);
-
-                    using (MemoryStream msDecrypt = new MemoryStream(encryptedBytes))
-                    {
-                        using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, aesAlg.CreateDecryptor(), CryptoStreamMode.Read))
-                        {
-                            using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-                            {
-                                return srDecrypt.ReadToEnd();
-                            }
-                        }
-                    }
+                    decryptedBytes[i] = (byte)(encryptedBytes[i] ^ keyBytes[i % keyBytes.Length]);
                 }
+
+                string decryptedPassword = Encoding.UTF8.GetString(decryptedBytes);
+                Console.WriteLine("Decryption completed successfully");
+#if DEBUG
+                Console.WriteLine($"Decrypted password: {decryptedPassword}");
+#endif
+                return decryptedPassword;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine($"Error decrypting password: {e.Message}");
+                Console.WriteLine($"Error decrypting password: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return null;
             }
         }
+
+
+
+
 
         public static void HandleFFXivReq(string[] args)
         {
             string username = "";
             string password = "";
+            string hash = "";
             string otp = "";
             string gamepath = "";
             string issteams = "";
@@ -707,11 +714,23 @@ private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEv
             int langs = 1;
             bool dx11 = true;
             bool isSteam = false;
+
+            var gateTask = Task.Run(() => networklogic.CheckGateStatus());
+    var loginTask = Task.Run(() => networklogic.CheckLoginStatus());
+    
+    Task.WaitAll(new[] { gateTask, loginTask }, 3000); // 3 second timeout for both checks
+    
+    if (!gateTask.Result || !loginTask.Result)
+    {
+        return;
+    }
+
 #if DEBUG
             Console.WriteLine(args[0]);
 #else
-                Console.WriteLine("");
+        Console.WriteLine("");
 #endif
+
             if (args[0].Contains("?login="))
             {
                 string usernameunsanitized = Program.TextFollowing(args[0], "login=");
@@ -720,23 +739,26 @@ private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEv
 #if DEBUG
                 Console.WriteLine(username);
 #else
-                     Console.Write("");
+            Console.Write("");
 #endif
             }
+
             if (args[0].Contains(":?pass="))
             {
                 string passunsanitized = Program.TextFollowing(args[0], ":?pass=");
                 if (passunsanitized.Contains(':'))
                 {
                     string encryptedPassword = passunsanitized.Split(':')[0];
-                    password = DecryptPassword(encryptedPassword);
+                    hash = Program.TextFollowing(args[0], ":?hash=").Split(':')[0];
+                    password = DecryptPassword(encryptedPassword, hash);
                 }
 #if DEBUG
                 Console.WriteLine(password);
 #else
-                    Console.Write("");
+            Console.Write("");
 #endif
             }
+
             if (args[0].Contains(":?otp="))
             {
                 string otpns = Program.TextFollowing(args[0], ":?otp=");
@@ -745,9 +767,10 @@ private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEv
 #if DEBUG
                 Console.WriteLine(otp);
 #else
-                    Console.Write("");
+            Console.Write("");
 #endif
             }
+
             if (args[0].Contains(":?gamepath="))
             {
                 string gamepathns = Program.TextFollowing(args[0], ":?gamepath=");
@@ -756,70 +779,86 @@ private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEv
                 string thirdsanitationstep = "";
                 if (gamepathns.Contains(":?"))
                     gamepathcst = gamepathns.Split(":?")[0];
-                if (gamepathcst.Contains("%22")) { secsanitationstep = gamepathcst.Replace("%22", ""); } else { secsanitationstep = gamepathcst; }
-                if (gamepathcst.Contains("%5C")) { thirdsanitationstep = secsanitationstep.Replace("%5C", "/"); }
+                if (gamepathcst.Contains("%22"))
+                    secsanitationstep = gamepathcst.Replace("%22", "");
+                else
+                    secsanitationstep = gamepathcst;
+                if (gamepathcst.Contains("%5C"))
+                    thirdsanitationstep = secsanitationstep.Replace("%5C", "/");
                 gamepath = thirdsanitationstep;
 #if DEBUG
                 Console.WriteLine(gamepath);
 #else
-                    Console.Write("");
+            Console.Write("");
 #endif
             }
+
             if (args[0].Contains(":?issteam="))
             {
                 string issteamsns = Program.TextFollowing(args[0], ":?issteam=");
                 if (issteamsns.Contains(':'))
                     issteams = issteamsns.Split(':')[0];
+#if DEBUG
                 Console.WriteLine(issteams);
-                if (issteams == "yes")
-                {
-                    isSteam = true;
-                }
-                else
-                {
-                    isSteam = false;
-                }
+#else
+            Console.Write("");
+#endif
+                isSteam = issteams == "yes";
             }
-            var xpacPath = "";
-            if (Program.ReturnXpacNum(1) == "ex1") { xpacPath = "ex1"; }
-            if (Program.ReturnXpacNum(2) == "ex2") { xpacPath = "ex2"; }
-            if (Program.ReturnXpacNum(3) == "ex3") { xpacPath = "ex3"; }
-            if (Program.ReturnXpacNum(4) == "ex4") { xpacPath = "ex4"; }
-            var sqpack = $@"{gamepath}\sqpack\{xpacPath}";
 
-            if (xpacPath == "ex1")
+            var xpacPath = "";
+            if (Program.ReturnXpacNum(1) == "ex1") xpacPath = "ex1";
+            if (Program.ReturnXpacNum(2) == "ex2") xpacPath = "ex2";
+            if (Program.ReturnXpacNum(3) == "ex3") xpacPath = "ex3";
+            if (Program.ReturnXpacNum(4) == "ex4") xpacPath = "ex4";
+
+            var sqpack = $@"{gamepath}\sqpack\{xpacPath}";
+            expansionLevel = xpacPath switch
             {
-                expansionLevel = 1;
-                Console.WriteLine(expansionLevel);
-            }
-            if (xpacPath == "ex2")
-            {
-                expansionLevel = 2;
-                Console.WriteLine(expansionLevel);
-            }
-            if (xpacPath == "ex3")
-            {
-                expansionLevel = 3;
-                Console.WriteLine(expansionLevel);
-            }
-            if (xpacPath == "ex4")
-            {
-                expansionLevel = 4;
-                Console.WriteLine(expansionLevel);
-            }
+                "ex1" => 1,
+                "ex2" => 2,
+                "ex3" => 3,
+                "ex4" => 4,
+                _ => 0
+            };
+
+#if DEBUG
+            Console.WriteLine(expansionLevel);
+            Console.Write("\n");
+#endif
 
             try
             {
-                var sid = networklogic.GetRealSid(gamepath, username, password, otp, isSteam);
-                if (sid.Equals("BAD"))
-                    return;
-
-                var ffxivGame = networklogic.LaunchGameAsync(gamepath, sid, langs, dx11, expansionLevel, isSteam, region);
+                Console.WriteLine($"Attempting to get SID for user {username} at path {gamepath}");
+    var sid = networklogic.GetRealSid(gamepath, username, password, otp, isSteam);
+    
+    if (sid.Equals("BAD"))
+    {
+        Console.WriteLine("Failed to obtain valid SID");
+#if DEBUG
+            Console.WriteLine(sid);
+#else
+            Console.Write("");
+#endif
+        return;
+    }
+    
+    Console.WriteLine("SID obtained successfully, launching game...");
+    var ffxivGame = networklogic.LaunchGameAsync(gamepath, sid, langs, dx11, expansionLevel, isSteam, region);
+    
+    Console.WriteLine($"Game launch initiated with expansion level {expansionLevel}");
+    if (ffxivGame != null)
+    {
+        Console.WriteLine("Game process started successfully");
+    }
             }
             catch (Exception exc)
             {
-                Console.WriteLine(exc.Message);
+                Console.WriteLine($"FFXIV Launch Error: {exc.Message}");
+    Console.WriteLine($"Stack trace: {exc.StackTrace}");
+    throw;
             }
         }
     }
+
 }
