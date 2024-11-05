@@ -15,7 +15,7 @@
         WindowStyle="ThreeDBorderWindow"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
-
+    
     <Window.Resources>
         <Style x:Key="XPButton" TargetType="Button">
             <Setter Property="Background" Value="#ECE9D8"/>
@@ -37,96 +37,169 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-    <Border Background="#FFFFFF" 
-            BorderBrush="#ACA899" 
-            BorderThickness="1" 
-            Margin="10,10,10,5">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            
-            <local:CircularProgressBar x:Name="progressBar"
-                Grid.Column="0"
-                Visibility="Collapsed"
-                Progress="0"
-                ProgressColor="#2B7213"
-                ProgressLeftColor="#90EE90"
-                TextColor="#0A5100"
-                Thickness="4" 
-                Width="200" 
-                Height="200"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Right"
-                Margin="20,0,20,0"/>
-                
-            <Label x:Name="MainLabel"
-                   Grid.Column="1"
-                   Content="Loading..." 
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" 
-                   FontSize="72"
-                   FontFamily="Tahoma" 
-                   Height="138" 
-                   Width="324"/>
+    <Grid x:Name="MainGrid">
+        <!-- Progress Window Content -->
+        <Grid x:Name="ProgressContent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Border Background="#FFFFFF" 
+                        BorderBrush="#ACA899" 
+                        BorderThickness="1" 
+                        Margin="10,10,10,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <local:CircularProgressBar x:Name="progressBar"
+                            Grid.Column="0"
+                            Visibility="Collapsed"
+                            Progress="0"
+                            ProgressColor="#2B7213"
+                            ProgressLeftColor="#90EE90"
+                            TextColor="#0A5100"
+                            Thickness="4" 
+                            Width="200" 
+                            Height="200"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Margin="20,0,20,0"/>
+                            
+                        <Label x:Name="MainLabel"
+                               Grid.Column="1"
+                               Content="Loading..." 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" 
+                               FontSize="72"
+                               FontFamily="Tahoma" 
+                               Height="138" 
+                               Width="324"/>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <Expander Grid.Row="1" 
+                      x:Name="ConsoleExpander"
+                      Header="Console Output"
+                      Background="#ECE9D8"
+                      BorderBrush="#ACA899"
+                      BorderThickness="1"
+                      Foreground="#000000"
+                      Margin="10,0,10,0"
+                      Expanded="Expander_Expanded"
+                      Collapsed="Expander_Collapsed">
+                <RichTextBox x:Name="consoleOutput"
+                         Height="200"
+                         Background="#FFFFFF"
+                         Foreground="#000000"
+                         IsReadOnly="True"
+                         FontFamily="Lucida Console"
+                         VerticalScrollBarVisibility="Auto"
+                         Margin="5">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+            </Expander>
         </Grid>
-    </Border>
-</Grid>
 
-        <Expander Grid.Row="1" 
-                  x:Name="ConsoleExpander"
-                  Header="Console Output"
-                  Background="#ECE9D8"
-                  BorderBrush="#ACA899"
-                  BorderThickness="1"
-                  Foreground="#000000"
-                  Margin="10,0,10,0"
-                  Expanded="Expander_Expanded"
-                  Collapsed="Expander_Collapsed">
-            <RichTextBox x:Name="consoleOutput"
-             Height="200"
-             Background="#FFFFFF"
-             Foreground="#000000"
-             IsReadOnly="True"
-             FontFamily="Lucida Console"
-             VerticalScrollBarVisibility="Auto"
-             Margin="5">
-    <RichTextBox.Resources>
-        <Style TargetType="{x:Type Paragraph}">
-            <Setter Property="Margin" Value="0"/>
-            <Setter Property="Foreground" Value="#000000"/>
-        </Style>
-    </RichTextBox.Resources>
-</RichTextBox>
-        </Expander>
+        <!-- MessageBox Content -->
+        <Grid x:Name="MessageBoxContent" Visibility="Collapsed">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/> <!-- Icon and message row -->
+        <RowDefinition Height="Auto"/> <!-- Title row -->
+        <RowDefinition Height="*"/>    <!-- ListBox with dynamic height -->
+        <RowDefinition Height="Auto"/> <!-- Footer and buttons row -->
+    </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="2" 
+    <!-- Icon and Message container -->
+    <Grid Grid.Row="0" Margin="10,10,10,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/> <!-- For icon -->
+            <ColumnDefinition Width="*"/>    <!-- For message text -->
+        </Grid.ColumnDefinitions>
+        
+        <!-- Large warning icon on the left -->
+        <TextBlock x:Name="MessageIcon"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontSize="48"
+                   FontWeight="Bold"
+                   Foreground="Red"
+                   Margin="10,0,20,0"/>
+
+        <!-- Message text to the right of icon -->
+        <TextBlock x:Name="MessageText"
+                   Grid.Column="1"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"
+                   Margin="15,5,10,5"/>
+    </Grid>
+
+    <!-- Title below icon and message -->
+    <TextBlock x:Name="MessageTitle"
+               Grid.Row="1"
+               HorizontalAlignment="Left"
+               FontSize="16"
+               FontWeight="Bold"
+               Margin="45,5,10,5"/>
+
+    <!-- Dynamic ListBox -->
+    <ListBox x:Name="MessageList"
+             Grid.Row="2"
+             Margin="45,5,10,5"
+             Visibility="Collapsed"
+             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+             ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+    <!-- Footer and Buttons container -->
+    <Grid Grid.Row="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>      <!-- For footer text -->
+            <ColumnDefinition Width="Auto"/>   <!-- For buttons -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Footer text -->
+        <TextBlock x:Name="MessageFooter"
+                   Grid.Column="0"
+                   TextWrapping="Wrap"
+                   Margin="45,5,10,10"/>
+
+        <!-- Button panel -->
+        <StackPanel Grid.Column="1"
                     x:Name="MessageBoxButtons"
-                    Orientation="Horizontal" 
+                    Orientation="Horizontal"
                     HorizontalAlignment="Right"
-                    Margin="10,5,10,10"
-                    Visibility="Collapsed">
-            <Button Content="OK" 
-                    Width="75" 
+                    Margin="0,5,10,10">
+            <Button Content="OK"
+                    Width="75"
                     Height="23"
-                    Margin="5,0,0,0"
+                    Margin="5,0,5,0"
                     Click="OkButton_Click"
                     Style="{StaticResource XPButton}"/>
-            <Button Content="Cancel" 
-                    Width="75" 
+            <Button Content="Cancel"
+                    Width="75"
                     Height="23"
-                    Margin="5,0,0,0"
+                    Margin="0,0,0,0"
                     Click="CancelButton_Click"
                     Style="{StaticResource XPButton}"/>
         </StackPanel>
+    </Grid>
+</Grid>
+
+
+
+
+
     </Grid>
 </Window>

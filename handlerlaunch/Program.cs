@@ -244,8 +244,7 @@ namespace WMConsole
                 previousOutput = reader.ReadToEnd();
             }
         }
-        ShowProgressWindow(previousOutput, true, "Custom Message", 300, 200); // Message box with default size
-    }
+        ShowProgressWindow(previousOutput, true, "Game Launch Status", 1000, 1500, "Launch Progress", "X", new List<string> { "Checking game files...", "Verifying credentials...", "Initializing game launcher..." }, "Please wait while the game launches...");    }
     catch (Exception ex)
     {
         LogDebug($"Error in debug test: {ex.Message}");
@@ -384,14 +383,18 @@ catch (Exception ex)
 
 
 
-       private static void ShowProgressWindow(string previousOutput, bool isMessageBox = false, string customLabel = "Loading...", double? customWidth = null, double? customHeight = null)
+       private static void ShowProgressWindow(string previousOutput, bool isMessageBox = false, 
+    string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
+    string messageTitle = "", string messageIcon = "!", List<string> listItems = null,
+    string footerText = "", SpinningWheelLib.Window1.ListItemsProvider listItemsProvider = null)
 {
     LogDebug($"Showing {(isMessageBox ? "message box" : "progress window")}");
     
     var thread = new Thread(() =>
     {
         var app = new Application();
-        var window = new Window1(30, isMessageBox, customLabel, customWidth, customHeight);
+        var window = new Window1(30, isMessageBox, customLabel, customWidth, customHeight,
+        messageTitle, messageIcon, listItems, footerText, listItemsProvider);
         
         if (!string.IsNullOrEmpty(previousOutput))
         {
@@ -458,6 +461,9 @@ catch (Exception ex)
     
     LogDebug($"{(isMessageBox ? "Message box" : "Progress window")} initialized");
 }
+
+
+
 
 
 

@@ -7,6 +7,9 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace SpinningWheelLib
 {
@@ -63,17 +66,23 @@ public class MultiWriter : TextWriter
     private readonly Stopwatch _stopwatch;
     private readonly double _estimatedDuration;
     private const double BaseHeight = 464;
-private const double ExpandedHeight = 684;
-private const double MessageBoxHeight = 200;
-private const double MessageBoxWidth = 400;
-private const double ProgressWindowWidth = 1166;
+    private const double ExpandedHeight = 684;
+    private const double MessageBoxMinHeight = 200;
+    private const double MessageBoxMinWidth = 200;
+    private const double ProgressWindowWidth = 1146;
+    private const double ProgressWindowPadding = 20;
     public bool DialogResult { get; private set; }
 
     private readonly TextWriter _originalConsole;
     private readonly StreamWriter _fileWriter;
     private readonly string _tempLogFile;
 
-    public Window1(double estimatedDurationInSeconds = 30, bool isMessageBox = false, string customLabel = "Loading...", double? customWidth = null, double? customHeight = null)
+    public delegate IEnumerable<string> ListItemsProvider();
+
+public Window1(double estimatedDurationInSeconds = 30, bool isMessageBox = false, 
+    string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
+    string messageTitle = "", string messageIcon = "!", List<string> listItems = null, 
+    string footerText = "", ListItemsProvider listItemsProvider = null)
 {
     InitializeComponent();
     _estimatedDuration = estimatedDurationInSeconds;
@@ -97,67 +106,74 @@ private const double ProgressWindowWidth = 1166;
 
     if (isMessageBox)
     {
-        double width = customWidth ?? MessageBoxWidth;
-        double height = customHeight ?? MessageBoxHeight;
-        ConfigureAsMessageBox(customLabel, width, height);
+        ConfigureAsMessageBox(customLabel, messageTitle, messageIcon, listItems, footerText, customWidth, customHeight, listItemsProvider);
     }
     else
     {
         ConfigureAsProgressWindow();
         MainLabel.Content = customLabel;
     }
-
-    SizeToContent = SizeToContent.Height;
 }
 
-
-private void ConfigureAsMessageBox(string message, double width, double height)
+private void ConfigureAsMessageBox(string message, string title, string icon, List<string> listItems,
+    string footerText, double? customWidth, double? customHeight, ListItemsProvider listItemsProvider)
 {
-    Title = "Message";
-    Width = width;
-    Height = height;
-    if (MainLabel != null)
+    Title = title;
+    Width = customWidth ?? MessageBoxMinWidth;
+    Height = customHeight ?? MessageBoxMinHeight;
+    MinWidth = MessageBoxMinWidth;
+    MinHeight = MessageBoxMinHeight;
+    WindowStyle = WindowStyle.ThreeDBorderWindow;
+    
+    ProgressContent.Visibility = Visibility.Collapsed;
+    MessageBoxContent.Visibility = Visibility.Visible;
+    
+    MessageIcon.Text = icon;
+    MessageTitle.Text = title;
+    MessageText.Text = message;
+    
+    if (listItems != null && listItems.Count > 0)
     {
-        MainLabel.FontSize = 14;
-        MainLabel.Content = message;
-        MainLabel.Height = Double.NaN;
-        MainLabel.Width = Double.NaN;
+        MessageList.Visibility = Visibility.Visible;
+        foreach (var item in listItems)
+        {
+            MessageList.Items.Add(item);
+        }
     }
-    if (progressBar != null)
+    else if (listItemsProvider != null)
     {
-        progressBar.Visibility = Visibility.Collapsed;
+        MessageList.Visibility = Visibility.Visible;
+        foreach (var item in listItemsProvider())
+        {
+            MessageList.Items.Add(item);
+        }
     }
-    if (ConsoleExpander != null)
-    {
-        ConsoleExpander.Visibility = Visibility.Collapsed;
-    }
-    if (MessageBoxButtons != null)
-    {
-        MessageBoxButtons.Visibility = Visibility.Visible;
-    }
-    Background = new SolidColorBrush(Color.FromRgb(236, 233, 216));
-    ResizeMode = ResizeMode.NoResize;
-    WindowStyle = WindowStyle.SingleBorderWindow;
+    
+    MessageFooter.Text = footerText;
 }
 
-    // All existing methods remain fully implemented
     private void ConfigureAsProgressWindow()
-{
-    Width = ProgressWindowWidth;
-    Height = BaseHeight;
-    var showProgressTimer = new DispatcherTimer
     {
-        Interval = TimeSpan.FromSeconds(2)
-    };
-    showProgressTimer.Tick += (s, e) =>
-    {
-        progressBar.Visibility = Visibility.Visible;
-        showProgressTimer.Stop();
-    };
-    showProgressTimer.Start();
-    MessageBoxButtons.Visibility = Visibility.Collapsed;
-    StartProgress();
-}
+        Width = ProgressWindowWidth + ProgressWindowPadding;
+        Height = BaseHeight;
+        MinWidth = ProgressWindowWidth + ProgressWindowPadding;
+        MinHeight = BaseHeight;
+        ProgressContent.Visibility = Visibility.Visible;
+        MessageBoxContent.Visibility = Visibility.Collapsed;
+        
+        var showProgressTimer = new DispatcherTimer
+        {
+            Interval = TimeSpan.FromSeconds(2)
+        };
+        showProgressTimer.Tick += (s, e) =>
+        {
+            progressBar.Visibility = Visibility.Visible;
+            showProgressTimer.Stop();
+        };
+        showProgressTimer.Start();
+        MessageBoxButtons.Visibility = Visibility.Collapsed;
+        StartProgress();
+    }
 
     private void Expander_Expanded(object sender, RoutedEventArgs e)
     {
@@ -194,7 +210,7 @@ private void ConfigureAsMessageBox(string message, double width, double height)
         var paragraph = new Paragraph();
         var run = new Run(text)
         {
-            Foreground = new SolidColorBrush(Colors.Black) // Force black text color
+            Foreground = new SolidColorBrush(Colors.Black)
         };
         paragraph.Inlines.Add(run);
         consoleOutput.Document.Blocks.Add(paragraph);
@@ -255,6 +271,8 @@ private void ConfigureAsMessageBox(string message, double width, double height)
         }
         
         base.Close();
-    }}
+    }
+}
+
 
 }
