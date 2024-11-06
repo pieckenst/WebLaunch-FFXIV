@@ -36,3 +36,5 @@ G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net6.0-windows\SpinningWheelLib.dll
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net6.0-windows\refint\SpinningWheelLib.dll
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net6.0-windows\SpinningWheelLib.pdb
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net6.0-windows\ref\SpinningWheelLib.dll
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net6.0-windows\SettingsWindow.baml
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net6.0-windows\SettingsWindow.g.cs

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "G:\\code\\WebLaunch\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|g:\\code\\weblaunch\\handlerlaunch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|solutionrelative:handlerlaunch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|g:\\code\\weblaunch\\spinningwheellib\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1629F3CE-F4A2-42EC-ABF2-C9200EB1BD38}|SpinningWheelLib\\SpinningWheelLib.csproj|solutionrelative:spinningwheellib\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D7D239E-33BB-4509-AC21-1DC7C36D403F}|handlerlaunch\\handlerlaunch.csproj|g:\\code\\weblaunch\\handlerlaunch\\supportobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,11 +69,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SettingsWindow.xaml",
+              "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\SettingsWindow.xaml",
+              "RelativeDocumentMoniker": "SpinningWheelLib\\SettingsWindow.xaml",
+              "ToolTip": "G:\\code\\WebLaunch\\SpinningWheelLib\\SettingsWindow.xaml*",
+              "RelativeToolTip": "SpinningWheelLib\\SettingsWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T09:43:14.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\handlerlaunch\\Program.cs",
               "RelativeDocumentMoniker": "handlerlaunch\\Program.cs",
@@ -82,20 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Window1.xaml.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\Window1.xaml.cs",
               "RelativeDocumentMoniker": "SpinningWheelLib\\Window1.xaml.cs",
               "ToolTip": "G:\\code\\WebLaunch\\SpinningWheelLib\\Window1.xaml.cs",
               "RelativeToolTip": "SpinningWheelLib\\Window1.xaml.cs",
-              "ViewState": "AgIAALoAAAAAAAAAAAAwwKcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAwwNEAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T14:12:03.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Class1.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\Class1.cs",
               "RelativeDocumentMoniker": "SpinningWheelLib\\Class1.cs",
@@ -107,18 +123,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Window1.xaml",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\Window1.xaml",
               "RelativeDocumentMoniker": "SpinningWheelLib\\Window1.xaml",
               "ToolTip": "G:\\code\\WebLaunch\\SpinningWheelLib\\Window1.xaml",
               "RelativeToolTip": "SpinningWheelLib\\Window1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T13:33:34.391Z"
+              "WhenOpened": "2024-11-04T13:33:34.391Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CircularProgressBar.xaml.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\CircularProgressBar.xaml.cs",
               "RelativeDocumentMoniker": "SpinningWheelLib\\CircularProgressBar.xaml.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CircularProgressBar.xaml",
               "DocumentMoniker": "G:\\code\\WebLaunch\\SpinningWheelLib\\CircularProgressBar.xaml",
               "RelativeDocumentMoniker": "SpinningWheelLib\\CircularProgressBar.xaml",
@@ -141,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "cache.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\CoreLibLaunchSupport\\cache.cs",
               "RelativeDocumentMoniker": "CoreLibLaunchSupport\\cache.cs",
@@ -153,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Program.cs",
               "RelativeDocumentMoniker": "LaunchApp\\Program.cs",
@@ -165,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "LaunchApp.csproj",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
@@ -177,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "WasmApp.Common.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\packs\\Microsoft.NET.Runtime.WebAssembly.Sdk\\9.0.0-rc.2.24473.5\\Sdk\\WasmApp.Common.targets",
@@ -187,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "LaunchApp",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
               "RelativeDocumentMoniker": "LaunchApp\\LaunchApp.csproj",
@@ -198,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SupportObjects.cs",
               "DocumentMoniker": "G:\\code\\WebLaunch\\handlerlaunch\\SupportObjects.cs",
               "RelativeDocumentMoniker": "handlerlaunch\\SupportObjects.cs",
@@ -210,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Counter.razor",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "LaunchApp\\Pages\\Counter.razor",
@@ -222,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
               "RelativeDocumentMoniker": "LaunchApp\\Shared\\MainLayout.razor",

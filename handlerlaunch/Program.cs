@@ -389,10 +389,12 @@ catch (Exception ex)
                     LogDebug($"Error during cleanup: {ex.Message}");
                 }
             }
-
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadLine();
-        }
+                      Console.WriteLine("Press any key to exit or wait 60 seconds...");
+                      Task.WhenAny(
+                          Task.Run(() => Console.ReadLine()),
+                          Task.Delay(TimeSpan.FromSeconds(60))
+                      ).Wait();
+                  }
 
 
 
