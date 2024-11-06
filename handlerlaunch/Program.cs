@@ -348,15 +348,7 @@ catch (Exception ex)
     bool errorOccurred = false;
     string previousOutput = "";
     var outputLock = new object();
-
-    var app = new Application();
-    app.Startup += (s, e) =>
-    {
-        ShowProgressWindow(previousOutput, true, "Spellborn Launch", 400, 300,
-            "Launch Progress", "!",
-            new List<string> { "Checking game files...", "Verifying installation...", "Starting game..." },
-            "Please wait while the game launches...");
-    };
+    var completionSource = new TaskCompletionSource<bool>();
 
     try
     {
@@ -379,10 +371,18 @@ catch (Exception ex)
                 }
                 return false;
             }
+            finally
+            {
+                completionSource.SetResult(true);
+            }
         });
 
-        app.Run();
+        ShowProgressWindow(previousOutput, true, "Spellborn Launch", 400, 300,
+            "Launch Progress", "!", 
+            new List<string> { "Checking game files...", "Verifying installation...", "Starting game..." },
+            "Please wait while the game launches...", null, null, null, true, 30);
 
+        task.Wait();
         errorOccurred = !task.Result;
     }
     catch (Exception ex)
@@ -391,6 +391,8 @@ catch (Exception ex)
         errorOccurred = true;
         ShowNotification("Error", $"Failed to launch Spellborn: {ex.Message}");
     }
+
+    completionSource.Task.Wait();
 }
 
                 }

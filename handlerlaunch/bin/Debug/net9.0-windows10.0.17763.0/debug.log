@@ -357,3 +357,68 @@
 2024-11-06 18:29:00.582 - Game launched
 2024-11-06 18:29:20.483 - Window closed event triggered
 2024-11-06 18:29:20.505 - Showing console window
+2024-11-06 18:35:32.113 - Application started
+2024-11-06 18:35:32.126 - Showing notification: Application Started - Initializing launcher...
+2024-11-06 18:35:32.272 - Entering CopyFiles method
+2024-11-06 18:35:32.273 - Entering GetInstallPath method
+2024-11-06 18:35:32.273 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\WMconsole.dll
+2024-11-06 18:35:32.273 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-06 18:35:32.273 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-06 18:35:32.274 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-06 18:35:32.274 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-06 18:35:32.275 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-06 18:35:32.276 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe
+2024-11-06 18:35:32.276 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json
+2024-11-06 18:35:32.277 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll
+2024-11-06 18:35:32.278 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll
+2024-11-06 18:35:32.279 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll
+2024-11-06 18:35:32.279 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll
+2024-11-06 18:35:32.280 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll
+2024-11-06 18:35:32.281 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll
+2024-11-06 18:35:32.281 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll
+2024-11-06 18:35:32.282 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll
+2024-11-06 18:35:32.282 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll
+2024-11-06 18:35:32.282 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll
+2024-11-06 18:35:32.283 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-06 18:35:32.283 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll
+2024-11-06 18:35:32.284 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll
+2024-11-06 18:35:32.285 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll
+2024-11-06 18:35:32.285 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll
+2024-11-06 18:35:32.285 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll
+2024-11-06 18:35:32.286 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll
+2024-11-06 18:35:32.286 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-06 18:35:32.300 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-06 18:35:32.300 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll
+2024-11-06 18:35:32.301 - Entering RegisterProtocolHandler method
+2024-11-06 18:35:32.301 - Entering GetInstallPath method
+2024-11-06 18:35:32.301 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-06 18:35:32.301 - Received arguments: ?spellbornhandle=yes?gamepath=D:\games\Spellborn
+2024-11-06 18:35:32.302 - Showing notification: Spellborn Launch - Starting Chronicles of Spellborn...
+2024-11-06 18:35:32.321 - Showing message box
+2024-11-06 18:35:32.322 - Starting window thread
+2024-11-06 18:35:32.322 - Message box initialized
+2024-11-06 18:35:32.331 - Creating window with specified parameters
+2024-11-06 18:35:32.321 - Processing args: ?spellbornhandle=yes?gamepath=D:\games\Spellborn
+2024-11-06 18:35:32.358 - Entering TextFollowing method
+2024-11-06 18:35:32.365 - Extracted game path: D:\games\Spellborn
+2024-11-06 18:35:32.368 - Starting Spellborn startup routine
+2024-11-06 18:35:32.368 - Processing args: ?spellbornhandle=yes?gamepath=D:\games\Spellborn
+2024-11-06 18:35:32.369 - Entering TextFollowing method
+2024-11-06 18:35:32.369 - Extracted game path: D:\games\Spellborn
+2024-11-06 18:35:32.369 - Game path set: D:\games\Spellborn
+2024-11-06 18:35:32.369 - Clean install detected/no registry installpath key found
+2024-11-06 18:35:32.369 - Install directory ensured: True
+2024-11-06 18:35:32.376 - Installed version: 1.1.1.8a
+2024-11-06 18:35:32.618 - Hiding console window
+2024-11-06 18:35:32.619 - Showing window
+2024-11-06 18:35:33.258 - Fetched latest.json file
+2024-11-06 18:35:33.305 - Version mismatch detected
+2024-11-06 18:35:33.305 - Updating existing installation
+2024-11-06 18:35:33.307 - Checking updates for version: 1.1.1.8a
+2024-11-06 18:35:33.399 - No updates found, enabling play button
+2024-11-06 18:35:33.399 - Play button enabled
+2024-11-06 18:35:33.399 - Version checked and updated
+2024-11-06 18:35:33.399 - Launching game from: D:\games\Spellborn\bin\client\Sb_client.exe
+2024-11-06 18:35:34.547 - Game launched
+2024-11-06 18:36:02.645 - Window closed event triggered
+2024-11-06 18:36:02.668 - Showing console window
