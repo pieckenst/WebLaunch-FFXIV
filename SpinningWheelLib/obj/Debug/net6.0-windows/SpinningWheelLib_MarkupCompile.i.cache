@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 
-2353795972
+31119863461
 
-6-1444080399
+7347039814
 195670779193
-CircularProgressBar.xaml;Window1.xaml;
+CircularProgressBar.xaml;SettingsWindow.xaml;Window1.xaml;
 
-True
+False
 

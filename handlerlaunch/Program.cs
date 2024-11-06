@@ -244,7 +244,30 @@ namespace WMConsole
                 previousOutput = reader.ReadToEnd();
             }
         }
-        ShowProgressWindow(previousOutput, true, "Game Launch Status", 1000, 1500, "Launch Progress", "X", new List<string> { "Checking game files...", "Verifying credentials...", "Initializing game launcher..." }, "Please wait while the game launches...");    }
+
+        if (args[0].Contains("-type=progress"))
+        {
+            ShowProgressWindow(previousOutput);
+        }
+        else if (args[0].Contains("-type=custom"))
+        {
+            ShowProgressWindow(previousOutput, true, "Custom Progress", 400, 250, "Debug Test", "!", 
+                new List<string> { "Step 1", "Step 2", "Step 3" }, "Processing...", null,
+                (s, e) => { LogDebug("OK clicked"); },
+                (s, e) => { LogDebug("Cancel clicked"); });
+        }
+        else if (args[0].Contains("-type=autoclose"))
+        {
+            ShowProgressWindow(previousOutput, true, "Auto-closing Message", 400, 250, "Debug Test", "!", 
+                null, "This window will close automatically", null, null, null, true, 5);
+        }
+        else
+        {
+            ShowProgressWindow(previousOutput, true, "Game Launch Status", 1000, 1500, "Launch Progress", "X", 
+                new List<string> { "Checking game files...", "Verifying credentials...", "Initializing game launcher..." }, 
+                "Please wait while the game launches...");
+        }
+    }
     catch (Exception ex)
     {
         LogDebug($"Error in debug test: {ex.Message}");
@@ -253,9 +276,7 @@ namespace WMConsole
     }
 }
 
-
-                    else if (args[0].Contains("?ffxivhandle=yes"))
-                    {
+                    else if (args[0].Contains("?ffxivhandle=yes"))                    {
                         ShowNotification("FFXIV Launch", "Starting Final Fantasy XIV...");
 
                         if (!args[0].Contains("login=") || !args[0].Contains("pass=") || !args[0].Contains("hash="))
@@ -386,7 +407,9 @@ catch (Exception ex)
        private static void ShowProgressWindow(string previousOutput, bool isMessageBox = false, 
     string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
     string messageTitle = "", string messageIcon = "!", List<string> listItems = null,
-    string footerText = "", SpinningWheelLib.Window1.ListItemsProvider listItemsProvider = null)
+    string footerText = "", SpinningWheelLib.Window1.ListItemsProvider listItemsProvider = null,
+    RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null,
+    bool hideButtons = false, int? autoCloseSeconds = null)
 {
     LogDebug($"Showing {(isMessageBox ? "message box" : "progress window")}");
     
@@ -394,7 +417,8 @@ catch (Exception ex)
     {
         var app = new Application();
         var window = new Window1(30, isMessageBox, customLabel, customWidth, customHeight,
-        messageTitle, messageIcon, listItems, footerText, listItemsProvider);
+            messageTitle, messageIcon, listItems, footerText, listItemsProvider,
+            okHandler, cancelHandler, hideButtons, autoCloseSeconds);
         
         if (!string.IsNullOrEmpty(previousOutput))
         {

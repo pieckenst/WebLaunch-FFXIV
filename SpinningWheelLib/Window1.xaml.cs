@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Controls;
 
 
 namespace SpinningWheelLib
@@ -78,46 +79,69 @@ public class MultiWriter : TextWriter
     private readonly string _tempLogFile;
 
     public delegate IEnumerable<string> ListItemsProvider();
-
+    public delegate void ButtonClickHandler(object sender, RoutedEventArgs e);
+    private DispatcherTimer _autoCloseTimer;
 public Window1(double estimatedDurationInSeconds = 30, bool isMessageBox = false, 
-    string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
-    string messageTitle = "", string messageIcon = "!", List<string> listItems = null, 
-    string footerText = "", ListItemsProvider listItemsProvider = null)
-{
-    InitializeComponent();
-    _estimatedDuration = estimatedDurationInSeconds;
-    _stopwatch = new Stopwatch();
+        string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
+        string messageTitle = "", string messageIcon = "!", List<string> listItems = null, 
+        string footerText = "", ListItemsProvider listItemsProvider = null,
+        RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null,
+        bool hideButtons = false, int? autoCloseSeconds = null)
+    {
+        InitializeComponent();
+        _estimatedDuration = estimatedDurationInSeconds;
+        _stopwatch = new Stopwatch();
 
-    if (!isMessageBox)
-    {
-        var multiWriter = new MultiWriter(new TextWriter[] 
-        { 
-            Console.Out,
-            new ConsoleOutputRedirector(this)
-        });
-        Console.SetOut(multiWriter);
-    }
+        if (!isMessageBox)
+        {
+            var multiWriter = new MultiWriter(new TextWriter[] 
+            { 
+                Console.Out,
+                new ConsoleOutputRedirector(this)
+            });
+            Console.SetOut(multiWriter);
+        }
 
-    _timer = new DispatcherTimer
-    {
-        Interval = TimeSpan.FromMilliseconds(16)
-    };
-    _timer.Tick += Timer_Tick;
+        _timer = new DispatcherTimer
+        {
+            Interval = TimeSpan.FromMilliseconds(16)
+        };
+        _timer.Tick += Timer_Tick;
 
-    if (isMessageBox)
-    {
-        ConfigureAsMessageBox(customLabel, messageTitle, messageIcon, listItems, footerText, customWidth, customHeight, listItemsProvider);
+        if (isMessageBox)
+        {
+            ConfigureAsMessageBox(customLabel, messageTitle, messageIcon, listItems, footerText, 
+                customWidth, customHeight, listItemsProvider, okHandler, cancelHandler, hideButtons);
+
+            if (autoCloseSeconds.HasValue)
+            {
+                ConfigureAutoClose(autoCloseSeconds.Value);
+            }
+        }
+        else
+        {
+            ConfigureAsProgressWindow();
+            MainLabel.Content = customLabel;
+        }
     }
-    else
+private void ConfigureAutoClose(int seconds)
     {
-        ConfigureAsProgressWindow();
-        MainLabel.Content = customLabel;
+        _autoCloseTimer = new DispatcherTimer
+        {
+            Interval = TimeSpan.FromSeconds(seconds)
+        };
+        _autoCloseTimer.Tick += (s, e) =>
+        {
+            _autoCloseTimer.Stop();
+            Close();
+        };
+        _autoCloseTimer.Start();
     }
-}
 
 private void ConfigureAsMessageBox(string message, string title, string icon, List<string> listItems,
-    string footerText, double? customWidth, double? customHeight, ListItemsProvider listItemsProvider)
-{
+        string footerText, double? customWidth, double? customHeight, ListItemsProvider listItemsProvider,
+        RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null, bool hideButtons = false)
+    {
     Title = title;
     Width = customWidth ?? MessageBoxMinWidth;
     Height = customHeight ?? MessageBoxMinHeight;
@@ -131,6 +155,27 @@ private void ConfigureAsMessageBox(string message, string title, string icon, Li
     MessageIcon.Text = icon;
     MessageTitle.Text = title;
     MessageText.Text = message;
+
+    if (hideButtons)
+        {
+            MessageBoxButtons.Visibility = Visibility.Collapsed;
+        }
+        else
+        {
+            if (okHandler != null)
+            {
+                var okButton = MessageBoxButtons.Children.OfType<Button>().First(b => b.Content.ToString() == "OK");
+                okButton.Click -= OkButton_Click;
+                okButton.Click += okHandler;
+            }
+            
+            if (cancelHandler != null)
+            {
+                var cancelButton = MessageBoxButtons.Children.OfType<Button>().Last(b => b.Content.ToString() == "Cancel");
+                cancelButton.Click -= CancelButton_Click;
+                cancelButton.Click += cancelHandler;
+            }
+        }
     
     if (listItems != null && listItems.Count > 0)
     {
@@ -235,43 +280,45 @@ private void ConfigureAsMessageBox(string message, string title, string icon, Li
     }
 
     public new void Close()
+{
+    if (_timer != null)
     {
-        if (_timer != null)
-        {
-            _timer.Stop();
-        }
-        
-        if (_stopwatch != null)
-        {
-            _stopwatch.Stop();
-        }
-
-        if (_originalConsole != null)
-        {
-            Console.SetOut(_originalConsole);
-        }
-
-        if (_fileWriter != null)
-        {
-            _fileWriter.Flush();
-            _fileWriter.Close();
-            _fileWriter.Dispose();
-        }
-        
-        try
-        {
-            if (!string.IsNullOrEmpty(_tempLogFile) && File.Exists(_tempLogFile))
-            {
-                File.Delete(_tempLogFile);
-            }
-        }
-        catch (IOException)
-        {
-            // File will be cleaned up later
-        }
-        
-        base.Close();
+        _timer.Stop();
     }
+    
+    if (_stopwatch != null)
+    {
+        _stopwatch.Stop();
+    }
+
+    if (_originalConsole != null)
+    {
+        Console.SetOut(_originalConsole);
+    }
+
+    if (_fileWriter != null)
+    {
+        _fileWriter.Flush();
+        _fileWriter.Close();
+        _fileWriter.Dispose();
+    }
+    
+    _autoCloseTimer?.Stop();
+    
+    try
+    {
+        if (!string.IsNullOrEmpty(_tempLogFile) && File.Exists(_tempLogFile))
+        {
+            File.Delete(_tempLogFile);
+        }
+    }
+    catch (IOException)
+    {
+        // File will be cleaned up later
+    }
+    
+    base.Close();
+}
 }
 
 
