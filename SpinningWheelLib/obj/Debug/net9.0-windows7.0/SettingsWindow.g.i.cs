@@ -53,7 +53,7 @@ namespace SpinningWheelLib {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SpinningWheelLib;component/settingswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SpinningWheelLib;V1.0.0.0;component/settingswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SettingsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

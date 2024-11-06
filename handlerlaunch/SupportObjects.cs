@@ -21,6 +21,7 @@ using System.Diagnostics;
 using Ionic.Zip;
 using Konsole;
 using WMConsole;
+using System.Security.Principal;
 
 namespace handlerlaunch
 {
@@ -647,19 +648,43 @@ private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEv
         }
 
         private void LaunchGame()
+{
+    try
+    {
+        string clientPath = Path.Combine(installPath, "bin", "client", "Sb_client.exe");
+        LogDebug($"Launching game from: {clientPath}");
+        
+        bool isElevated = new WindowsPrincipal(WindowsIdentity.GetCurrent())
+            .IsInRole(WindowsBuiltInRole.Administrator);
+            
+        if (!isElevated)
         {
-            try
+            ProcessStartInfo elevatedStart = new ProcessStartInfo
             {
-                string clientPath = Path.Combine(installPath, "bin", "client", "Sb_client.exe");
-                LogDebug($"Launching game from: {clientPath}");
-                Process.Start(clientPath);
-            }
-            catch (Exception e)
-            {
-                _log.Error("Error launching game", e);
-                MessageBox.Show($"Failed to launch the game: {e.Message}", "Launch Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+                FileName = clientPath,
+                WorkingDirectory = Path.Combine(installPath, "bin", "client"),
+                UseShellExecute = true,
+                Verb = "runas"
+            };
+            Process.Start(elevatedStart);
         }
+        else
+        {
+            ProcessStartInfo normalStart = new ProcessStartInfo
+            {
+                FileName = clientPath,
+                WorkingDirectory = Path.Combine(installPath, "bin", "client"),
+                UseShellExecute = false
+            };
+            Process.Start(normalStart);
+        }
+    }
+    catch (Exception e)
+    {
+        _log.Error("Error launching game", e);
+        MessageBox.Show($"Failed to launch the game: {e.Message}", "Launch Error", MessageBoxButton.OK, MessageBoxImage.Error);
+    }
+}
     }
     public class FFXIVhandler
     {

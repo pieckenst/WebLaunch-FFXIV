@@ -131,58 +131,80 @@ namespace WMConsole
         }
 
         private static void CopyFiles()
+{
+    LogDebug("Entering CopyFiles method");
+    string installPath = GetInstallPath();
+    
+    if (!Directory.Exists(installPath))
+    {
+        Directory.CreateDirectory(installPath);
+    }
+    
+    string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+    string baseDir = Path.GetDirectoryName(exePath) ?? throw new InvalidOperationException("Unable to determine base directory");
+    
+    LogDebug($"Base directory: {baseDir}");
+
+    var filesToCopy = new[]
+    {
+        exePath,
+        Path.Combine(baseDir, "WMConsole.exe"),
+        Path.Combine(baseDir, "WMConsole.runtimeconfig.json"),
+        Path.Combine(baseDir, "CoreLibLaunchSupport.dll"),
+        Path.Combine(baseDir, "SpinningWheelLib.dll"),
+        Path.Combine(baseDir, "WpfAnimatedGif.dll"),
+        Path.Combine(baseDir, "XamlAnimatedGif.dll"),
+        Path.Combine(baseDir, "DotNetZip.dll"),
+        Path.Combine(baseDir, "Newtonsoft.Json.dll"),
+        Path.Combine(baseDir, "log4net.dll"),
+        Path.Combine(baseDir, "Goblinfactory.Konsole.dll"),
+        Path.Combine(baseDir, "CommandLine.dll"),
+        Path.Combine(baseDir, "Downloader.dll"),
+        Path.Combine(baseDir, "Facepunch.Steamworks.Win64.dll"),
+        Path.Combine(baseDir, "LibDalamud.dll"),
+        Path.Combine(baseDir, "Mono.Nat.dll"),
+        Path.Combine(baseDir, "MonoTorrent.dll"),
+        Path.Combine(baseDir, "ReusableTasks.dll"),
+        Path.Combine(baseDir, "Serilog.dll"),
+        Path.Combine(baseDir, "SharedMemory.dll"),
+        Path.Combine(baseDir, "Microsoft.Toolkit.Uwp.Notifications.dll"),
+        Path.Combine(baseDir, "Microsoft.Windows.SDK.NET.dll"),
+        Path.Combine(baseDir, "WinRT.Runtime.dll")
+    };
+
+    foreach (string sourceFile in filesToCopy)
+    {
+        try
         {
-            LogDebug("Entering CopyFiles method");
-            string installPath = GetInstallPath();
-            Directory.CreateDirectory(installPath);
-            LogDebug($"Created install directory: {installPath}");
-
-            string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string baseDir = Path.GetDirectoryName(exePath) ?? throw new InvalidOperationException("Unable to determine base directory");
-            LogDebug($"Base directory: {baseDir}");
-
-            var filesToCopy = new[]
+            if (!File.Exists(sourceFile))
             {
-                exePath,
-                Path.Combine(baseDir, "WMConsole.exe"),
-                Path.Combine(baseDir, "WMConsole.runtimeconfig.json"),
-                Path.Combine(baseDir, "CoreLibLaunchSupport.dll"),
-                Path.Combine(baseDir, "SpinningWheelLib.dll"),
-                Path.Combine(baseDir, "WpfAnimatedGif.dll"),
-                Path.Combine(baseDir, "XamlAnimatedGif.dll"),
-                Path.Combine(baseDir, "DotNetZip.dll"),
-                Path.Combine(baseDir, "Newtonsoft.Json.dll"),
-                Path.Combine(baseDir, "log4net.dll"),
-                Path.Combine(baseDir, "Goblinfactory.Konsole.dll"),
-                Path.Combine(baseDir, "CommandLine.dll"),
-                Path.Combine(baseDir, "Downloader.dll"),
-                Path.Combine(baseDir, "Facepunch.Steamworks.Win64.dll"),
-                Path.Combine(baseDir, "LibDalamud.dll"),
-                Path.Combine(baseDir, "Mono.Nat.dll"),
-                Path.Combine(baseDir, "MonoTorrent.dll"),
-                Path.Combine(baseDir, "ReusableTasks.dll"),
-                Path.Combine(baseDir, "Serilog.dll"),
-                Path.Combine(baseDir, "SharedMemory.dll"),
-                Path.Combine(baseDir, "Microsoft.Toolkit.Uwp.Notifications.dll"),
-                Path.Combine(baseDir, "Microsoft.Windows.SDK.NET.dll"),
-                Path.Combine(baseDir, "WinRT.Runtime.dll")
-            };
-
-            foreach (string sourceFile in filesToCopy)
-            {
-                try
-                {
-                    string fileName = Path.GetFileName(sourceFile);
-                    string destFile = Path.Combine(installPath, fileName);
-                    File.Copy(sourceFile, destFile, true);
-                    LogDebug($"Copied file: {sourceFile} to {destFile}");
-                }
-                catch (Exception ex)
-                {
-                    LogDebug($"Error copying file {sourceFile}: {ex.Message}");
-                }
+                LogDebug($"Source file not found: {sourceFile}");
+                continue;
             }
+
+            string fileName = Path.GetFileName(sourceFile);
+            string destFile = Path.Combine(installPath, fileName);
+
+            if (File.Exists(destFile))
+            {
+                File.SetAttributes(destFile, FileAttributes.Normal);
+            }
+
+            using (var sourceStream = new FileStream(sourceFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (var destStream = new FileStream(destFile, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                sourceStream.CopyTo(destStream);
+            }
+            
+            LogDebug($"Copied file: {sourceFile} to {destFile}");
         }
+        catch (Exception ex)
+        {
+            LogDebug($"Error copying file {sourceFile}: {ex.Message}");
+        }
+    }
+}
+
 
         private static void RegisterProtocolHandler()
         {
@@ -212,6 +234,7 @@ namespace WMConsole
             ShowWindow(handle, SW_HIDE);
 
             string tempLogFile = Path.Combine(Path.GetTempPath(), $"console_output_{Guid.NewGuid()}.txt");
+
             TextWriter originalConsole = Console.Out;
             StreamWriter fileWriter = null;
 
@@ -314,39 +337,62 @@ catch (Exception ex)
                         }
                     }
                     else if (args[0].Contains("?spellbornhandle=yes"))
-                    {
-                        ShowNotification("Spellborn Launch", "Starting Chronicles of Spellborn...");
+{
+    ShowNotification("Spellborn Launch", "Starting Chronicles of Spellborn...");
 
-                        if (!args[0].Contains("gamepath="))
-                        {
-                            throw new ArgumentException("Missing required game path");
-                        }
+    if (!args[0].Contains("gamepath="))
+    {
+        throw new ArgumentException("Missing required game path");
+    }
 
-                        bool errorOccurred = false;
-                        string previousOutput = "";
+    bool errorOccurred = false;
+    string previousOutput = "";
+    var outputLock = new object();
 
-                        try
-                        {
-                            var splbornobj = new SpellbornSupporter();
-                            splbornobj.StartupRoutine(args);
-                            fileWriter.Flush();
-                            previousOutput = File.ReadAllText(tempLogFile);
-                        }
-                        catch (Exception ex)
-                        {
-                            LogDebug($"Error in Spellborn startup routine: {ex.Message}");
-                            errorOccurred = true;
-                            ShowNotification("Error", $"Failed to launch Spellborn: {ex.Message}");
-                        }
+    var app = new Application();
+    app.Startup += (s, e) =>
+    {
+        ShowProgressWindow(previousOutput, true, "Spellborn Launch", 400, 300,
+            "Launch Progress", "!",
+            new List<string> { "Checking game files...", "Verifying installation...", "Starting game..." },
+            "Please wait while the game launches...");
+    };
 
-                        if (!errorOccurred)
-                        {
-                            Application.Current?.Dispatcher?.Invoke(() =>
-                            {
-                                ShowProgressWindow(previousOutput);
-                            });
-                        }
-                    }
+    try
+    {
+        var splbornobj = new SpellbornSupporter();
+        var consoleOutput = new StringBuilder();
+        
+        var task = Task.Run(() =>
+        {
+            try
+            {
+                Directory.SetCurrentDirectory(splbornobj.GetGamePathFromArgs(args));
+                splbornobj.StartupRoutine(args);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lock (outputLock)
+                {
+                    consoleOutput.AppendLine($"Error: {ex.Message}");
+                }
+                return false;
+            }
+        });
+
+        app.Run();
+
+        errorOccurred = !task.Result;
+    }
+    catch (Exception ex)
+    {
+        LogDebug($"Error in Spellborn startup routine: {ex.Message}");
+        errorOccurred = true;
+        ShowNotification("Error", $"Failed to launch Spellborn: {ex.Message}");
+    }
+}
+
                 }
                 else
                 {
@@ -406,7 +452,7 @@ catch (Exception ex)
 
 
 
-       private static void ShowProgressWindow(string previousOutput, bool isMessageBox = false, 
+      private static void ShowProgressWindow(string previousOutput, bool isMessageBox = false,
     string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
     string messageTitle = "", string messageIcon = "!", List<string> listItems = null,
     string footerText = "", SpinningWheelLib.Window1.ListItemsProvider listItemsProvider = null,
@@ -417,72 +463,90 @@ catch (Exception ex)
     
     var thread = new Thread(() =>
     {
-        var app = new Application();
-        var window = new Window1(30, isMessageBox, customLabel, customWidth, customHeight,
-            messageTitle, messageIcon, listItems, footerText, listItemsProvider,
-            okHandler, cancelHandler, hideButtons, autoCloseSeconds);
-        
-        if (!string.IsNullOrEmpty(previousOutput))
+        try
         {
-            window.WriteToConsole(previousOutput, Colors.White);
-        }
-        
-        var checkProcessTimer = new DispatcherTimer
-        {
-            Interval = TimeSpan.FromMilliseconds(100)
-        };
-        
-        checkProcessTimer.Tick += (s, e) =>
-        {
-            try
+            LogDebug("Creating window with specified parameters");
+            Window1 window = null;
+            
+            SynchronizationContext.SetSynchronizationContext(
+                new DispatcherSynchronizationContext(Dispatcher.CurrentDispatcher));
+            
+            if (Application.Current == null)
             {
-                if (!isMessageBox)
+                new Application();
+            }
+
+            window = new Window1(30, isMessageBox, customLabel, customWidth, customHeight,
+                messageTitle, messageIcon, listItems, footerText, listItemsProvider,
+                okHandler, cancelHandler, hideButtons, autoCloseSeconds);
+            
+            if (!string.IsNullOrEmpty(previousOutput))
+            {
+                LogDebug("Writing previous output to console");
+                window.WriteToConsole(previousOutput, Colors.White);
+            }
+            
+            var checkProcessTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(100)
+            };
+            
+            checkProcessTimer.Tick += (s, e) =>
+            {
+                try
                 {
-                    var processes = Process.GetProcessesByName("ffxiv_dx11");
-                    if (processes.Length > 0)
+                    if (!isMessageBox)
                     {
-                        checkProcessTimer.Stop();
-                        app.Dispatcher.Invoke(() => 
+                        var processes = Process.GetProcessesByName("ffxiv_dx11");
+                        if (processes.Length > 0)
                         {
+                            LogDebug("Target process found, closing window");
+                            checkProcessTimer.Stop();
                             window.Close();
-                            app.Shutdown();
-                        });
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                LogDebug($"Error checking process: {ex.Message}");
-                checkProcessTimer.Stop();
-                app.Dispatcher.Invoke(() => 
+                catch (Exception ex)
                 {
+                    LogDebug($"Error checking process: {ex.Message}");
+                    checkProcessTimer.Stop();
                     window.Close();
-                    app.Shutdown();
-                });
+                }
+            };
+
+            window.Closed += (s, e) =>
+            {
+                LogDebug("Window closed event triggered");
+                checkProcessTimer.Stop();
+                Dispatcher.CurrentDispatcher.InvokeShutdown();
+            };
+
+            LogDebug("Hiding console window");
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, SW_HIDE);
+            
+            if (!isMessageBox)
+            {
+                LogDebug("Starting process check timer");
+                checkProcessTimer.Start();
             }
-        };
-
-        window.Closed += (s, e) =>
-        {
-            checkProcessTimer.Stop();
-            app.Shutdown();
-        };
-
-        var handle = GetConsoleWindow();
-        ShowWindow(handle, SW_HIDE);
-        
-        if (!isMessageBox)
-        {
-            checkProcessTimer.Start();
+            
+            LogDebug("Showing window");
+            window.Show();
+            Dispatcher.Run();
+            
+            LogDebug("Showing console window");
+            ShowWindow(handle, SW_SHOW);
         }
-        
-        window.Show();
-        app.Run();
-        
-        ShowWindow(handle, SW_SHOW);
+        catch (Exception ex)
+        {
+            LogDebug($"Critical error in window thread: {ex.Message}");
+            LogDebug($"Stack trace: {ex.StackTrace}");
+        }
     });
     
     thread.SetApartmentState(ApartmentState.STA);
+    LogDebug("Starting window thread");
     thread.Start();
     
     LogDebug($"{(isMessageBox ? "Message box" : "Progress window")} initialized");

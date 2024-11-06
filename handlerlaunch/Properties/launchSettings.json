@@ -2,7 +2,7 @@
   "profiles": {
     "handlerlaunch": {
       "commandName": "Project",
-      "commandLineArgs": "?debugtest=yes"
+      "commandLineArgs": "?spellbornhandle=yes?gamepath=D:\\games\\Spellborn"
     }
   }
 }

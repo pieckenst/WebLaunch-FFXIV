@@ -3,6 +3,7 @@ G:\code\WebLaunch\SpinningWheelLib\bin\Debug\net9.0-windows7.0\SpinningWheelLib.
 G:\code\WebLaunch\SpinningWheelLib\bin\Debug\net9.0-windows7.0\SpinningWheelLib.pdb
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.csproj.AssemblyReference.cache
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\CircularProgressBar.baml
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\Dictionary1.baml
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SettingsWindow.baml
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\CircularProgressBar.g.cs
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SettingsWindow.g.cs
@@ -21,4 +22,3 @@ G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\refint\SpinningWheelLib.dll
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.pdb
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\ref\SpinningWheelLib.dll
-G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\Dictionary1.baml
