@@ -98,7 +98,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows10.0.17763.0"
+          "net9.0-windows10.0.17763.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -106,8 +106,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows10.0.17763": {
-            "targetAlias": "net6.0-windows10.0.17763.0",
+          "net9.0-windows10.0.17763": {
+            "targetAlias": "net9.0-windows10.0.17763.0",
             "projectReferences": {
               "G:\\code\\WebLaunch\\CoreLibLaunchSupport\\CoreLibLaunchSupport.csproj": {
                 "projectPath": "G:\\code\\WebLaunch\\CoreLibLaunchSupport\\CoreLibLaunchSupport.csproj"
@@ -131,8 +131,8 @@
         "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net6.0-windows10.0.17763": {
-          "targetAlias": "net6.0-windows10.0.17763.0",
+        "net9.0-windows10.0.17763": {
+          "targetAlias": "net9.0-windows10.0.17763.0",
           "dependencies": {
             "DotNetZip": {
               "target": "Package",
@@ -173,7 +173,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.17763.43, 10.0.17763.43]"
+              "version": "[10.0.17763.45, 10.0.17763.45]"
             }
           ],
           "frameworkReferences": {
@@ -184,7 +184,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -306,7 +306,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net9.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -314,8 +314,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows7.0",
             "projectReferences": {}
           }
         },
@@ -332,8 +332,8 @@
         "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows7.0",
           "dependencies": {
             "XamlAnimatedGif": {
               "target": "Package",
@@ -359,7 +359,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

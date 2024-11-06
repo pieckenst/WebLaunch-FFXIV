@@ -63,6 +63,7 @@ public class MultiWriter : TextWriter
 }
     public partial class Window1 : Window
 {
+    private bool IsWindows11OrGreater => Environment.OSVersion.Version.Major >= 10 && Environment.OSVersion.Version.Build >= 22000;
     private readonly DispatcherTimer _timer;
     private readonly Stopwatch _stopwatch;
     private readonly double _estimatedDuration;
@@ -89,6 +90,13 @@ public Window1(double estimatedDurationInSeconds = 30, bool isMessageBox = false
         bool hideButtons = false, int? autoCloseSeconds = null)
     {
         InitializeComponent();
+        if (IsWindows11OrGreater)
+        {
+            Resources.MergedDictionaries.Add(new ResourceDictionary
+            {
+                Source = new Uri("Dictionary1.xaml", UriKind.Relative)
+            });
+        }
         _estimatedDuration = estimatedDurationInSeconds;
         _stopwatch = new Stopwatch();
 

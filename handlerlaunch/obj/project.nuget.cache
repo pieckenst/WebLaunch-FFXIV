@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ROJywRvWGT4=",
+  "dgSpecHash": "WwMl4Gzg18g=",
   "success": true,
   "projectFilePath": "G:\\code\\WebLaunch\\handlerlaunch\\handlerlaunch.csproj",
   "expectedPackageFiles": [
@@ -42,7 +42,7 @@
     "C:\\Users\\Andrey\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\xamlanimatedgif\\2.0.3\\xamlanimatedgif.2.0.3.nupkg.sha512",
-    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.43\\microsoft.windows.sdk.net.ref.10.0.17763.43.nupkg.sha512"
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.45\\microsoft.windows.sdk.net.ref.10.0.17763.45.nupkg.sha512"
   ],
   "logs": [
     {
@@ -52,7 +52,7 @@
       "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
       "libraryId": "System.Drawing.Common",
       "targetGraphs": [
-        "net6.0-windows10.0.17763"
+        "net9.0-windows10.0.17763"
       ]
     }
   ]

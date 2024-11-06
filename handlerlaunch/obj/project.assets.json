@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows10.0.17763": {
+    "net9.0-windows10.0.17763": {
       "CommandLineParser/2.9.1": {
         "type": "package",
         "compile": {
@@ -617,7 +617,7 @@
       },
       "SpinningWheelLib/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "XamlAnimatedGif": "2.0.3"
         },
@@ -2106,7 +2106,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0-windows10.0.17763": [
+    "net9.0-windows10.0.17763": [
       "CoreLibLaunchSupport >= 1.0.0",
       "DotNetZip >= 1.16.0",
       "Goblinfactory.Konsole >= 6.2.2",
@@ -2139,7 +2139,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows10.0.17763.0"
+        "net9.0-windows10.0.17763.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2147,8 +2147,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows10.0.17763": {
-          "targetAlias": "net6.0-windows10.0.17763.0",
+        "net9.0-windows10.0.17763": {
+          "targetAlias": "net9.0-windows10.0.17763.0",
           "projectReferences": {
             "G:\\code\\WebLaunch\\CoreLibLaunchSupport\\CoreLibLaunchSupport.csproj": {
               "projectPath": "G:\\code\\WebLaunch\\CoreLibLaunchSupport\\CoreLibLaunchSupport.csproj"
@@ -2172,8 +2172,8 @@
       "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net6.0-windows10.0.17763": {
-        "targetAlias": "net6.0-windows10.0.17763.0",
+      "net9.0-windows10.0.17763": {
+        "targetAlias": "net9.0-windows10.0.17763.0",
         "dependencies": {
           "DotNetZip": {
             "target": "Package",
@@ -2214,7 +2214,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.17763.43, 10.0.17763.43]"
+            "version": "[10.0.17763.45, 10.0.17763.45]"
           }
         ],
         "frameworkReferences": {
@@ -2225,7 +2225,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2237,7 +2237,7 @@
       "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
       "libraryId": "System.Drawing.Common",
       "targetGraphs": [
-        "net6.0-windows10.0.17763"
+        "net9.0-windows10.0.17763"
       ]
     }
   ]

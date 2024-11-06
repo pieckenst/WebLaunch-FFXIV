@@ -17,6 +17,9 @@
         ResizeMode="NoResize">
     
     <Window.Resources>
+        <ResourceDictionary>
+        
+    
         <Style x:Key="XPButton" TargetType="Button">
             <Setter Property="Background" Value="#ECE9D8"/>
             <Setter Property="BorderBrush" Value="#ACA899"/>
@@ -36,6 +39,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        </ResourceDictionary>
     </Window.Resources>
 
     <Grid x:Name="MainGrid">
