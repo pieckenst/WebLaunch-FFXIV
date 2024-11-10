@@ -106,6 +106,16 @@
                 <RowDefinition Height="Auto"/> <!-- Progress Bar -->
             </Grid.RowDefinitions>
 
+            <tb:TaskbarIcon x:Name="TrayIcon"
+                ToolTipText="Window Controls"
+                MenuActivation="LeftOrRightClick" >
+    <tb:TaskbarIcon.IconSource>
+        <tb:GeneratedIconSource Text="⚙️" 
+                               FontSize="36"
+                               BorderThickness="5"/>
+    </tb:TaskbarIcon.IconSource>
+</tb:TaskbarIcon>
+
             <!-- Console Output Expander -->
             <Expander Grid.Row="0" 
                       x:Name="ConsoleExpander"

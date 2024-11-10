@@ -155,3 +155,73 @@
 2024-11-06 18:31:01.673 - Game launched
 2024-11-06 18:31:21.334 - Window closed event triggered
 2024-11-06 18:31:21.349 - Showing console window
+2024-11-10 23:02:23.007 - Application started
+2024-11-10 23:02:23.015 - Showing notification: Application Started - Initializing launcher...
+2024-11-10 23:02:23.096 - Entering CopyFiles method
+2024-11-10 23:02:23.096 - Entering GetInstallPath method
+2024-11-10 23:02:23.096 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-10 23:02:23.096 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-10 23:02:23.096 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-10 23:02:23.097 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-10 23:02:23.097 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-10 23:02:23.097 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll' because it is being used by another process.
+2024-11-10 23:02:23.098 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe' because it is being used by another process.
+2024-11-10 23:02:23.098 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json' because it is being used by another process.
+2024-11-10 23:02:23.098 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll' because it is being used by another process.
+2024-11-10 23:02:23.098 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll' because it is being used by another process.
+2024-11-10 23:02:23.099 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll' because it is being used by another process.
+2024-11-10 23:02:23.099 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll' because it is being used by another process.
+2024-11-10 23:02:23.099 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll' because it is being used by another process.
+2024-11-10 23:02:23.099 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll' because it is being used by another process.
+2024-11-10 23:02:23.100 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll' because it is being used by another process.
+2024-11-10 23:02:23.100 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll' because it is being used by another process.
+2024-11-10 23:02:23.100 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll' because it is being used by another process.
+2024-11-10 23:02:23.101 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll' because it is being used by another process.
+2024-11-10 23:02:23.101 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll' because it is being used by another process.
+2024-11-10 23:02:23.101 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll' because it is being used by another process.
+2024-11-10 23:02:23.102 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll' because it is being used by another process.
+2024-11-10 23:02:23.102 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll' because it is being used by another process.
+2024-11-10 23:02:23.102 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll' because it is being used by another process.
+2024-11-10 23:02:23.103 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll' because it is being used by another process.
+2024-11-10 23:02:23.103 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll' because it is being used by another process.
+2024-11-10 23:02:23.103 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll' because it is being used by another process.
+2024-11-10 23:02:23.103 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-10 23:02:23.104 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll' because it is being used by another process.
+2024-11-10 23:02:23.104 - Entering RegisterProtocolHandler method
+2024-11-10 23:02:23.104 - Entering GetInstallPath method
+2024-11-10 23:02:23.104 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-10 23:02:23.104 - Received arguments: handlewebrequest:HandleReqLaunch?spellbornhandle=yes:?gamepath=D:%5Cgames%5CSpellborn
+2024-11-10 23:02:23.105 - Showing notification: Spellborn Launch - Starting Chronicles of Spellborn...
+2024-11-10 23:02:23.112 - Showing message box
+2024-11-10 23:02:23.112 - Starting window thread
+2024-11-10 23:02:23.112 - Message box initialized
+2024-11-10 23:02:23.115 - Creating window with specified parameters
+2024-11-10 23:02:23.112 - Processing args: handlewebrequest:HandleReqLaunch?spellbornhandle=yes:?gamepath=D:%5Cgames%5CSpellborn
+2024-11-10 23:02:23.136 - Entering TextFollowing method
+2024-11-10 23:02:23.143 - Extracted game path: D:/games/Spellborn
+2024-11-10 23:02:23.144 - Starting Spellborn startup routine
+2024-11-10 23:02:23.144 - Processing args: handlewebrequest:HandleReqLaunch?spellbornhandle=yes:?gamepath=D:%5Cgames%5CSpellborn
+2024-11-10 23:02:23.144 - Entering TextFollowing method
+2024-11-10 23:02:23.144 - Extracted game path: D:/games/Spellborn
+2024-11-10 23:02:23.145 - Game path set: D:/games/Spellborn
+2024-11-10 23:02:23.145 - Clean install detected/no registry installpath key found
+2024-11-10 23:02:23.145 - Install directory ensured: True
+2024-11-10 23:02:23.146 - Installed version: 1.1.1.8a
+2024-11-10 23:02:23.184 - Critical error in window thread: 'Set connectionId threw an exception.' Line number '15' and line position '9'.
+2024-11-10 23:02:23.199 - Stack trace:    at System.Windows.Markup.XamlReader.RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   at System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   at SpinningWheelLib.Window1.InitializeComponent()
+   at SpinningWheelLib.Window1..ctor(Double estimatedDurationInSeconds, Boolean isMessageBox, String customLabel, Nullable`1 customWidth, Nullable`1 customHeight, String messageTitle, String messageIcon, List`1 listItems, String footerText, ListItemsProvider listItemsProvider, RoutedEventHandler okHandler, RoutedEventHandler cancelHandler, Boolean hideButtons, Nullable`1 autoCloseSeconds)
+   at WMConsole.Program.<>c__DisplayClass14_0.<ShowProgressWindow>b__0()
+2024-11-10 23:02:35.853 - Fetched latest.json file
+2024-11-10 23:02:35.887 - Version mismatch detected
+2024-11-10 23:02:35.888 - Updating existing installation
+2024-11-10 23:02:35.889 - Checking updates for version: 1.1.1.8a
+2024-11-10 23:02:36.191 - No updates found, enabling play button
+2024-11-10 23:02:36.191 - Play button enabled
+2024-11-10 23:02:36.191 - Version checked and updated
+2024-11-10 23:02:36.191 - Launching game from: D:/games/Spellborn\bin\client\Sb_client.exe
+2024-11-10 23:02:39.035 - Game launched
