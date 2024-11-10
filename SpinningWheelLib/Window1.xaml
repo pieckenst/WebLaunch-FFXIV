@@ -12,7 +12,7 @@
         Background="#ECE9D8"
         WindowStyle="None"
         AllowsTransparency="True"
-        
+        xmlns:tb="clr-namespace:H.NotifyIcon;assembly=H.NotifyIcon.Wpf"
         Topmost="True"
         ResizeMode="NoResize">
 
@@ -211,6 +211,16 @@
             <ColumnDefinition Width="*"/>    <!-- For message text -->
         </Grid.ColumnDefinitions>
         
+
+       <tb:TaskbarIcon x:Name="TrayIcon"
+                ToolTipText="Window Controls"
+                MenuActivation="LeftOrRightClick">
+    <tb:TaskbarIcon.IconSource>
+        <tb:GeneratedIconSource Text="⚙️" 
+                               FontSize="36"
+                               BorderThickness="5"/>
+    </tb:TaskbarIcon.IconSource>
+</tb:TaskbarIcon>
         <!-- Large warning icon on the left -->
         <TextBlock x:Name="MessageIcon"
                    Grid.Column="0"

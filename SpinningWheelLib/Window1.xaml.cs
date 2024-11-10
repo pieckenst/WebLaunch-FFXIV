@@ -13,6 +13,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
+using H.NotifyIcon;
 
 namespace SpinningWheelLib
 {
@@ -257,12 +258,7 @@ private double _desiredHeight;
     RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null, bool hideButtons = false)
 {
     Console.WriteLine($"[ConfigureAsMessageBox] Start - {DateTime.Now}");
-    var stackTrace = new StackTrace(true);
-    Console.WriteLine("Full Call Stack:");
-    foreach (var frame in stackTrace.GetFrames())
-    {
-        Console.WriteLine($"   at {frame.GetMethod().DeclaringType}.{frame.GetMethod().Name}");
-    }
+    LogCallStack();
 
     Title = title;
     Width = customWidth ?? MessageBoxMinWidth;
@@ -274,9 +270,17 @@ private double _desiredHeight;
     Background = new SolidColorBrush(Color.FromRgb(236, 233, 216));
     ResizeMode = ResizeMode.NoResize;
 
+    // Configure tray icon
+    TrayIcon.ToolTipText = "Window Controls";
+    
+    TrayIcon.ContextMenu = new ContextMenu();
+    var centerMenuItem = new MenuItem { Header = "Center Window" };
+    centerMenuItem.Click += CenterWindow_Click;
+    TrayIcon.ContextMenu.Items.Add(centerMenuItem);
+
+    // Configure window content
     ProgressContent.Visibility = Visibility.Collapsed;
     MessageBoxContent.Visibility = Visibility.Visible;
-
     MessageIcon.Text = icon;
     MessageTitle.Text = title;
     MessageText.Text = message;
@@ -285,44 +289,49 @@ private double _desiredHeight;
     ConfigureMessageBoxList(listItems, listItemsProvider);
     MessageFooter.Text = footerText;
 
-    Console.WriteLine("Forcing window position");
-    WindowStartupLocation = WindowStartupLocation.Manual;
+    ForceWindowToCenter();
+}
+
+private void ForceWindowToCenter()
+{
+    Console.WriteLine("Forcing window to center position");
+    
+    // First position at 0,0
     Left = 0;
     Top = 0;
-    
-    // Force immediate layout update
     UpdateLayout();
     
-    // Now move to center
-    var screenWidth = SystemParameters.PrimaryScreenWidth;
-    var screenHeight = SystemParameters.PrimaryScreenHeight;
+    var source = PresentationSource.FromVisual(this);
+    var dpiScale = source?.CompositionTarget?.TransformFromDevice.M11 ?? 1.0;
     
-    Left = (screenWidth - Width) / 2;
-    Top = (screenHeight - Height) / 2;
+    var workArea = SystemParameters.WorkArea;
+    double scaledWidth = Width * dpiScale;
+    double scaledHeight = Height * dpiScale;
     
-    // Force position using Win32 if needed
-    try 
-    {
-        var helper = new WindowInteropHelper(this);
-        if (helper.Handle != IntPtr.Zero)
-        {
-            SetWindowPos(helper.Handle, IntPtr.Zero, 
-                (int)Left, (int)Top, 
-                (int)Width, (int)Height, 
-                SWP_NOZORDER | SWP_SHOWWINDOW);
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Win32 positioning failed: {ex.Message}");
-    }
+    double x = (workArea.Width - scaledWidth) / 2;
+    double y = (workArea.Height - scaledHeight) / 2;
+    
+    var helper = new WindowInteropHelper(this);
+    SetWindowPos(helper.Handle, IntPtr.Zero, (int)x, (int)y, 
+        (int)scaledWidth, (int)scaledHeight, 
+        SWP_NOZORDER | SWP_SHOWWINDOW);
+    
+    Console.WriteLine($"Window positioned at: X={x}, Y={y}");
+}
 
-    _positionSet = true;
-    Console.WriteLine($"Final forced position: Left={Left}, Top={Top}, Width={Width}, Height={Height}");
-    Console.WriteLine("Setting up deferred centering");
-    _needsCentering = true;
-    _desiredWidth = customWidth ?? MessageBoxMinWidth;
-    _desiredHeight = customHeight ?? MessageBoxMinHeight;
+private void CenterWindow_Click(object sender, RoutedEventArgs e)
+{
+    ForceWindowToCenter();
+}
+
+private void LogCallStack()
+{
+    var stackTrace = new StackTrace(true);
+    Console.WriteLine("Full Call Stack:");
+    foreach (var frame in stackTrace.GetFrames())
+    {
+        Console.WriteLine($"   at {frame.GetMethod().DeclaringType}.{frame.GetMethod().Name}");
+    }
 }
 
 

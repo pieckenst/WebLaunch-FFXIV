@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Andrey\.nuget\packages\" />
     <SourceRoot Include="D:\sdk\NuGetPackages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgH_NotifyIcon_Wpf Condition=" '$(PkgH_NotifyIcon_Wpf)' == '' ">C:\Users\Andrey\.nuget\packages\h.notifyicon.wpf\2.1.4</PkgH_NotifyIcon_Wpf>
+  </PropertyGroup>
 </Project>

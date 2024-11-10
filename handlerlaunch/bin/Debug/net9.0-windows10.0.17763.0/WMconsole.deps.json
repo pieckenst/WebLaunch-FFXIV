@@ -78,6 +78,39 @@
           }
         }
       },
+      "H.GeneratedIcons.System.Drawing/2.1.4": {
+        "dependencies": {
+          "System.Drawing.Common": "8.0.10"
+        },
+        "runtime": {
+          "lib/net8.0/H.GeneratedIcons.System.Drawing.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.4.0"
+          }
+        }
+      },
+      "H.NotifyIcon/2.1.4": {
+        "dependencies": {
+          "H.GeneratedIcons.System.Drawing": "2.1.4"
+        },
+        "runtime": {
+          "lib/net8.0/H.NotifyIcon.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.4.0"
+          }
+        }
+      },
+      "H.NotifyIcon.Wpf/2.1.4": {
+        "dependencies": {
+          "H.NotifyIcon": "2.1.4"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/H.NotifyIcon.Wpf.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.4.0"
+          }
+        }
+      },
       "log4net/2.0.15": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.5.0"
@@ -94,7 +127,7 @@
       "Microsoft.Toolkit.Uwp.Notifications/7.1.2": {
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "System.Drawing.Common": "4.7.0",
+          "System.Drawing.Common": "8.0.10",
           "System.Reflection.Emit": "4.7.0",
           "System.ValueTuple": "4.5.0"
         },
@@ -111,11 +144,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "Microsoft.Win32.SystemEvents/4.7.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.1"
-        }
-      },
+      "Microsoft.Win32.SystemEvents/8.0.0": {},
       "Mono.Nat/3.0.1": {
         "runtime": {
           "lib/netstandard2.1/Mono.Nat.dll": {
@@ -177,10 +206,9 @@
           "System.Security.Permissions": "4.7.0"
         }
       },
-      "System.Drawing.Common/4.7.0": {
+      "System.Drawing.Common/8.0.10": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.1",
-          "Microsoft.Win32.SystemEvents": "4.7.0"
+          "Microsoft.Win32.SystemEvents": "8.0.0"
         }
       },
       "System.IO/4.3.0": {
@@ -269,7 +297,7 @@
       "System.ValueTuple/4.5.0": {},
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
-          "System.Drawing.Common": "4.7.0"
+          "System.Drawing.Common": "8.0.10"
         }
       },
       "WpfAnimatedGif/2.0.2": {
@@ -320,6 +348,7 @@
       },
       "SpinningWheelLib/1.0.0": {
         "dependencies": {
+          "H.NotifyIcon.Wpf": "2.1.4",
           "XamlAnimatedGif": "2.0.3"
         },
         "runtime": {
@@ -377,6 +406,27 @@
       "path": "goblinfactory.konsole/6.2.2",
       "hashPath": "goblinfactory.konsole.6.2.2.nupkg.sha512"
     },
+    "H.GeneratedIcons.System.Drawing/2.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MjW8AmrbVHnFl17WzTqVA0LvUcgKtV/1gL04fTQdYgHotrjkz9Q8mgDxtrxevPCYE8SGvQBrKTPttCwkS1zsMw==",
+      "path": "h.generatedicons.system.drawing/2.1.4",
+      "hashPath": "h.generatedicons.system.drawing.2.1.4.nupkg.sha512"
+    },
+    "H.NotifyIcon/2.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-puxd5k0RQQilmIReQZjz+lyJWWmko/WWYkNbEUpqymPXZsCv9ILrhdz1j6YARR1OJCl9RWykV7WWvxYJRsVdMw==",
+      "path": "h.notifyicon/2.1.4",
+      "hashPath": "h.notifyicon.2.1.4.nupkg.sha512"
+    },
+    "H.NotifyIcon.Wpf/2.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JXwEhOXo8smlx6p4SjbxRQ8C0WDDgm2j/3nitA9yeksY3kTaMADL34zxaheQM0Qbf9efoaV2PTC7DXjNaBUHXA==",
+      "path": "h.notifyicon.wpf/2.1.4",
+      "hashPath": "h.notifyicon.wpf.2.1.4.nupkg.sha512"
+    },
     "log4net/2.0.15": {
       "type": "package",
       "serviceable": true,
@@ -412,12 +462,12 @@
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
     },
-    "Microsoft.Win32.SystemEvents/4.7.0": {
+    "Microsoft.Win32.SystemEvents/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
-      "path": "microsoft.win32.systemevents/4.7.0",
-      "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+      "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
+      "path": "microsoft.win32.systemevents/8.0.0",
+      "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
     },
     "Mono.Nat/3.0.1": {
       "type": "package",
@@ -468,12 +518,12 @@
       "path": "system.configuration.configurationmanager/4.5.0",
       "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
     },
-    "System.Drawing.Common/4.7.0": {
+    "System.Drawing.Common/8.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
-      "path": "system.drawing.common/4.7.0",
-      "hashPath": "system.drawing.common.4.7.0.nupkg.sha512"
+      "sha512": "sha512-MdajRp3P+FOlThgY6FBjAqnmLiVl5t2yWEC/2AsDMqx1zYbJG3G5TnscFBQ4obqcaGqvN5UnhQHSFaJFG2HftQ==",
+      "path": "system.drawing.common/8.0.10",
+      "hashPath": "system.drawing.common.8.0.10.nupkg.sha512"
     },
     "System.IO/4.3.0": {
       "type": "package",
