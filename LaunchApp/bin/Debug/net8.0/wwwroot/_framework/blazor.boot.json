@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "LaunchApp",
   "resources": {
-    "hash": "sha256-Xfwi4Ai0KLVhgKZqHzQjWAWjsOJggWVCGv+W9DWwR3k=",
+    "hash": "sha256-Zn7RP7ETUX7YRn5+cbPEZfgQSxX93ld1VqL6Sk5k8kM=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-1EwRZvAH1alkH5y3kRRgT+eiBmAP5xBMmZkSuWtGOvw="
     },
@@ -217,10 +217,10 @@
       "mscorlib.wasm": "sha256-KvqZaNpjwhrOuzE4b4aMFsI+VUTyiWfoDI4zn4l9BM8=",
       "netstandard.wasm": "sha256-v+s7sWxtOM6bnOvC0jFrtnm6uMfbDymwl2nHNgbS2LM=",
       "System.Private.CoreLib.wasm": "sha256-pklll63uFQoY6vaD3vbluS9osYiJWLLLmob1yHFgepI=",
-      "LaunchApp.wasm": "sha256-99m8g0p7uuW7xeCGuYKs6b0btnEEew0NMtRphf4gyD4="
+      "LaunchApp.wasm": "sha256-qHCE3+P8Yt8Gm01mjEF9i2tsX2xOCagkRlSBMKjLk+0="
     },
     "pdb": {
-      "LaunchApp.pdb": "sha256-O3pFR0621yOmzwKErkg7HO7Xy5ZtrXdowtyw82TGdxw="
+      "LaunchApp.pdb": "sha256-R+NT1eOWJnGt3T4vNuCmCoqRGX5xdHn5raOviwypF8s="
     }
   },
   "debugLevel": -1,
