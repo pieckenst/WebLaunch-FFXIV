@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
@@ -113,7 +115,16 @@ private bool _positionSet;
         public delegate IEnumerable<string> ListItemsProvider();
         public delegate void ButtonClickHandler(object sender, RoutedEventArgs e);
         private DispatcherTimer _autoCloseTimer;
+        private const uint HWND_TOP = 0;
+private const uint SWP_SHOWWINDOW = 0x0040;
+private const uint SWP_NOZORDER = 0x0004;
 
+[DllImport("user32.dll")]
+private static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
+
+private bool _needsCentering;
+private double _desiredWidth;
+private double _desiredHeight;
 
         public Window1(double estimatedDurationInSeconds = 30, bool isMessageBox = false,
     string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
@@ -244,74 +255,77 @@ private bool _positionSet;
         private void ConfigureAsMessageBox(string message, string title, string icon, List<string> listItems,
     string footerText, double? customWidth, double? customHeight, ListItemsProvider listItemsProvider,
     RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null, bool hideButtons = false)
+{
+    Console.WriteLine($"[ConfigureAsMessageBox] Start - {DateTime.Now}");
+    var stackTrace = new StackTrace(true);
+    Console.WriteLine("Full Call Stack:");
+    foreach (var frame in stackTrace.GetFrames())
+    {
+        Console.WriteLine($"   at {frame.GetMethod().DeclaringType}.{frame.GetMethod().Name}");
+    }
+
+    Title = title;
+    Width = customWidth ?? MessageBoxMinWidth;
+    Height = customHeight ?? MessageBoxMinHeight;
+    MinWidth = MessageBoxMinWidth;
+    MinHeight = MessageBoxMinHeight;
+    WindowStyle = WindowStyle.SingleBorderWindow;
+    AllowsTransparency = false;
+    Background = new SolidColorBrush(Color.FromRgb(236, 233, 216));
+    ResizeMode = ResizeMode.NoResize;
+
+    ProgressContent.Visibility = Visibility.Collapsed;
+    MessageBoxContent.Visibility = Visibility.Visible;
+
+    MessageIcon.Text = icon;
+    MessageTitle.Text = title;
+    MessageText.Text = message;
+
+    ConfigureMessageBoxButtons(hideButtons, okHandler, cancelHandler);
+    ConfigureMessageBoxList(listItems, listItemsProvider);
+    MessageFooter.Text = footerText;
+
+    Console.WriteLine("Forcing window position");
+    WindowStartupLocation = WindowStartupLocation.Manual;
+    Left = 0;
+    Top = 0;
+    
+    // Force immediate layout update
+    UpdateLayout();
+    
+    // Now move to center
+    var screenWidth = SystemParameters.PrimaryScreenWidth;
+    var screenHeight = SystemParameters.PrimaryScreenHeight;
+    
+    Left = (screenWidth - Width) / 2;
+    Top = (screenHeight - Height) / 2;
+    
+    // Force position using Win32 if needed
+    try 
+    {
+        var helper = new WindowInteropHelper(this);
+        if (helper.Handle != IntPtr.Zero)
         {
-            try
-            {
-                Console.WriteLine($"[ConfigureAsMessageBox] Start - {DateTime.Now}");
-        
-                // Get full stack trace using StackTrace class
-                var stackTrace = new StackTrace(true);
-                Console.WriteLine("Full Call Stack:");
-                foreach (var frame in stackTrace.GetFrames() ?? Array.Empty<StackFrame>())
-                {
-                    try
-                    {
-                        var method = frame?.GetMethod();
-                        var fileName = frame?.GetFileName();
-                        Console.WriteLine($"   at {method?.DeclaringType}.{method?.Name} in {fileName}:line {frame?.GetFileLineNumber()}");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Error getting stack frame details: {ex.Message}");
-                    }
-                }
-
-                Console.WriteLine($"Parameters: Title={title}, Width={customWidth}, Height={customHeight}, Icon={icon}");
-
-                Title = title ?? string.Empty;
-                Width = customWidth ?? MessageBoxMinWidth;
-                Height = customHeight ?? MessageBoxMinHeight;
-                MinWidth = MessageBoxMinWidth;
-                MinHeight = MessageBoxMinHeight;
-
-                Console.WriteLine("Setting window properties");
-                ResizeMode = ResizeMode.NoResize;
-                ShowInTaskbar = true;
-
-                Console.WriteLine("Configuring visibility");
-                if (ProgressContent != null)
-                    ProgressContent.Visibility = Visibility.Collapsed;
-                if (MessageBoxContent != null)
-                    MessageBoxContent.Visibility = Visibility.Visible;
-
-                Console.WriteLine("Setting message content");
-                if (MessageIcon != null)
-                    MessageIcon.Text = icon ?? string.Empty;
-                if (MessageTitle != null)
-                    MessageTitle.Text = title ?? string.Empty;
-                if (MessageText != null)
-                    MessageText.Text = message ?? string.Empty;
-
-                ConfigureMessageBoxButtons(hideButtons, okHandler, cancelHandler);
-                ConfigureMessageBoxList(listItems, listItemsProvider);
-                if (MessageFooter != null)
-                    MessageFooter.Text = footerText ?? string.Empty;
-
-                Console.WriteLine("Setting window position");
-                var workArea = SystemParameters.WorkArea;
-                Left = (workArea.Width - Width) / 2;
-                Top = (workArea.Height - Height) / 2;
-                _positionSet = true;
-
-                Console.WriteLine($"Final window position: Left={Left}, Top={Top}, Width={Width}, Height={Height}");
-                Console.WriteLine($"[ConfigureAsMessageBox] End - {DateTime.Now}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in ConfigureAsMessageBox: {ex.Message}");
-                throw;
-            }
+            SetWindowPos(helper.Handle, IntPtr.Zero, 
+                (int)Left, (int)Top, 
+                (int)Width, (int)Height, 
+                SWP_NOZORDER | SWP_SHOWWINDOW);
         }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Win32 positioning failed: {ex.Message}");
+    }
+
+    _positionSet = true;
+    Console.WriteLine($"Final forced position: Left={Left}, Top={Top}, Width={Width}, Height={Height}");
+    Console.WriteLine("Setting up deferred centering");
+    _needsCentering = true;
+    _desiredWidth = customWidth ?? MessageBoxMinWidth;
+    _desiredHeight = customHeight ?? MessageBoxMinHeight;
+}
+
+
 
         private void ConfigureMessageBoxButtons(bool hideButtons, RoutedEventHandler okHandler, RoutedEventHandler cancelHandler)
         {
@@ -411,20 +425,64 @@ private bool _positionSet;
             }
         }
         protected override void OnSourceInitialized(EventArgs e)
+{
+    base.OnSourceInitialized(e);
+    Console.WriteLine($"Initial window position: Left={Left}, Top={Top}");
+
+    if (_needsCentering)
+    {
+        var helper = new WindowInteropHelper(this);
+        var source = PresentationSource.FromVisual(this);
+        double dpiScale = source?.CompositionTarget?.TransformFromDevice.M11 ?? 1.0;
+        
+        // Force initial position to 0,0
+        Left = 0;
+        Top = 0;
+        UpdateLayout();
+        Console.WriteLine($"Position after reset: Left={Left}, Top={Top}");
+        
+        var workArea = SystemParameters.WorkArea;
+        double scaledWidth = ActualWidth * dpiScale;
+        double scaledHeight = ActualHeight * dpiScale;
+        
+        // Calculate center position
+        double centerX = (workArea.Width - scaledWidth) / 2;
+        double centerY = (workArea.Height - scaledHeight) / 2;
+        Console.WriteLine($"Calculated center: X={centerX}, Y={centerY}");
+        
+        // First position update
+        SetWindowPos(helper.Handle, IntPtr.Zero, 
+            (int)centerX, (int)centerY,
+            (int)scaledWidth, (int)scaledHeight,
+            SWP_NOZORDER | SWP_SHOWWINDOW);
+        
+        Console.WriteLine($"Position after first update: Left={Left}, Top={Top}");
+        
+        // If not at 0,0, force it
+        if (Math.Abs(Left) > 0 || Math.Abs(Top) > 0)
         {
-            base.OnSourceInitialized(e);
-            Console.WriteLine($"OnSourceInitialized called, _positionSet={_positionSet}, _isMessageBox={_isMessageBox}");
-
-            if (_isMessageBox)
-            {
-                Console.WriteLine("MessageBox mode - skipping SetWindowPosition");
-                return;
-            }
-
-            SetWindowPosition();
+            Console.WriteLine("Position not at 0,0, forcing center position");
+            SetWindowPos(helper.Handle, IntPtr.Zero, 0, 0,
+                (int)scaledWidth, (int)scaledHeight,
+                SWP_NOZORDER | SWP_SHOWWINDOW);
+            
+            // Final center calculation from 0,0
+            centerX = workArea.Width / 2 - scaledWidth / 2;
+            centerY = workArea.Height / 2 - scaledHeight / 2;
+            
+            SetWindowPos(helper.Handle, IntPtr.Zero, 
+                (int)centerX, (int)centerY,
+                (int)scaledWidth, (int)scaledHeight,
+                SWP_NOZORDER | SWP_SHOWWINDOW);
         }
-
-
+        
+        Console.WriteLine($"Final position: Left={Left}, Top={Top}");
+    }
+    else if (!_isMessageBox)
+    {
+        SetWindowPosition();
+    }
+}
         private void Expander_Expanded(object sender, RoutedEventArgs e)
         {
             var workArea = SystemParameters.WorkArea;

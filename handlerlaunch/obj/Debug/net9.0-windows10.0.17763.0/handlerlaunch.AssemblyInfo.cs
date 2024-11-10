@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WMconsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48d22586120c1272eefb99abe48d9b5747a13ca4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b4d1e82d67fe2c8cea8fefbdce731155328f891")]
 [assembly: System.Reflection.AssemblyProductAttribute("WMconsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WMconsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
