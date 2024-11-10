@@ -214,7 +214,7 @@
 
        <tb:TaskbarIcon x:Name="TrayIcon"
                 ToolTipText="Window Controls"
-                MenuActivation="LeftOrRightClick">
+                MenuActivation="LeftOrRightClick" >
     <tb:TaskbarIcon.IconSource>
         <tb:GeneratedIconSource Text="⚙️" 
                                FontSize="36"
