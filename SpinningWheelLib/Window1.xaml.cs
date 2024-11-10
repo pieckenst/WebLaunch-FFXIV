@@ -69,7 +69,7 @@ namespace SpinningWheelLib
     public class MultiWriter : TextWriter
     {
         private readonly TextWriter[] writers;
-        
+
         public MultiWriter(TextWriter[] writers)
         {
             this.writers = writers;
@@ -96,6 +96,8 @@ namespace SpinningWheelLib
         private readonly DispatcherTimer _timer;
         private readonly Stopwatch _stopwatch;
         private readonly double _estimatedDuration;
+        private bool _isMessageBox;
+private bool _positionSet;
         private const double BaseHeight = 464;
         private const double ExpandedHeight = 684;
         private const double MessageBoxMinHeight = 200;
@@ -112,16 +114,18 @@ namespace SpinningWheelLib
         public delegate void ButtonClickHandler(object sender, RoutedEventArgs e);
         private DispatcherTimer _autoCloseTimer;
 
-        public Window1(double estimatedDurationInSeconds = 30, bool isMessageBox = false, 
-            string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
-            string messageTitle = "", string messageIcon = "!", List<string> listItems = null, 
-            string footerText = "", ListItemsProvider listItemsProvider = null,
-            RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null,
-            bool hideButtons = false, int? autoCloseSeconds = null)
+
+        public Window1(double estimatedDurationInSeconds = 30, bool isMessageBox = false,
+    string customLabel = "Loading...", double? customWidth = null, double? customHeight = null,
+    string messageTitle = "", string messageIcon = "!", List<string> listItems = null,
+    string footerText = "", ListItemsProvider listItemsProvider = null,
+    RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null,
+    bool hideButtons = false, int? autoCloseSeconds = null)
         {
+            Console.WriteLine($"Constructor called - isMessageBox: {isMessageBox}");
             InitializeComponent();
-            
-           
+
+            _isMessageBox = isMessageBox;
             _estimatedDuration = estimatedDurationInSeconds;
             _stopwatch = new Stopwatch();
             _timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(16) };
@@ -129,11 +133,15 @@ namespace SpinningWheelLib
 
             if (isMessageBox)
             {
-                ConfigureAsMessageBox(customLabel, messageTitle, messageIcon, listItems, footerText, 
+                Console.WriteLine("Configuring as MessageBox");
+                WindowStyle = WindowStyle.SingleBorderWindow;
+                AllowsTransparency = false;
+                ConfigureAsMessageBox(customLabel, messageTitle, messageIcon, listItems, footerText,
                     customWidth, customHeight, listItemsProvider, okHandler, cancelHandler, hideButtons);
             }
             else
             {
+                Console.WriteLine("Configuring as Progress Window");
                 ConfigureAsProgressWindow();
                 ProgressText.Text = customLabel;
             }
@@ -142,16 +150,33 @@ namespace SpinningWheelLib
             {
                 ConfigureAutoClose(autoCloseSeconds.Value);
             }
+        }
 
-            SetWindowPosition();
+
+        private void CenterWindowOnScreen()
+        {
+            // Get the working area of the primary screen
+            var workArea = SystemParameters.WorkArea;
+
+            // Calculate center position
+            Left = (workArea.Width - ActualWidth) / 2;
+            Top = (workArea.Height - ActualHeight) / 2;
         }
 
         private void SetWindowPosition()
-        {
-            var workArea = SystemParameters.WorkArea;
-            Left = workArea.Right - Width;
-            Top = workArea.Bottom - Height;
-        }
+{
+    if (_isMessageBox || _positionSet)
+    {
+        Console.WriteLine("SetWindowPosition skipped - MessageBox mode or position already set");
+        return;
+    }
+
+    Console.WriteLine("Setting ProgressWindow position");
+    var workArea = SystemParameters.WorkArea;
+    Left = workArea.Right - Width;
+    Top = workArea.Bottom - Height;
+    Console.WriteLine($"ProgressWindow position set to: Left={Left}, Top={Top}");
+}
 
         private void ConfigureAsProgressWindow()
         {
@@ -167,7 +192,7 @@ namespace SpinningWheelLib
                 showProgressTimer.Stop();
             };
             showProgressTimer.Start();
-            
+
             StartProgress();
         }
 
@@ -217,87 +242,212 @@ namespace SpinningWheelLib
         }
 
         private void ConfigureAsMessageBox(string message, string title, string icon, List<string> listItems,
-            string footerText, double? customWidth, double? customHeight, ListItemsProvider listItemsProvider,
-            RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null, bool hideButtons = false)
+    string footerText, double? customWidth, double? customHeight, ListItemsProvider listItemsProvider,
+    RoutedEventHandler okHandler = null, RoutedEventHandler cancelHandler = null, bool hideButtons = false)
         {
-            Title = title;
-            Width = customWidth ?? MessageBoxMinWidth;
-            Height = customHeight ?? MessageBoxMinHeight;
-            MinWidth = MessageBoxMinWidth;
-            MinHeight = MessageBoxMinHeight;
-            WindowStyle = WindowStyle.ThreeDBorderWindow;
-            
-            ProgressContent.Visibility = Visibility.Collapsed;
-            MessageBoxContent.Visibility = Visibility.Visible;
-            
-            MessageIcon.Text = icon;
-            MessageTitle.Text = title;
-            MessageText.Text = message;
+            try
+            {
+                Console.WriteLine($"[ConfigureAsMessageBox] Start - {DateTime.Now}");
+        
+                // Get full stack trace using StackTrace class
+                var stackTrace = new StackTrace(true);
+                Console.WriteLine("Full Call Stack:");
+                foreach (var frame in stackTrace.GetFrames() ?? Array.Empty<StackFrame>())
+                {
+                    try
+                    {
+                        var method = frame?.GetMethod();
+                        var fileName = frame?.GetFileName();
+                        Console.WriteLine($"   at {method?.DeclaringType}.{method?.Name} in {fileName}:line {frame?.GetFileLineNumber()}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error getting stack frame details: {ex.Message}");
+                    }
+                }
 
-            if (hideButtons)
-            {
-                MessageBoxButtons.Visibility = Visibility.Collapsed;
+                Console.WriteLine($"Parameters: Title={title}, Width={customWidth}, Height={customHeight}, Icon={icon}");
+
+                Title = title ?? string.Empty;
+                Width = customWidth ?? MessageBoxMinWidth;
+                Height = customHeight ?? MessageBoxMinHeight;
+                MinWidth = MessageBoxMinWidth;
+                MinHeight = MessageBoxMinHeight;
+
+                Console.WriteLine("Setting window properties");
+                ResizeMode = ResizeMode.NoResize;
+                ShowInTaskbar = true;
+
+                Console.WriteLine("Configuring visibility");
+                if (ProgressContent != null)
+                    ProgressContent.Visibility = Visibility.Collapsed;
+                if (MessageBoxContent != null)
+                    MessageBoxContent.Visibility = Visibility.Visible;
+
+                Console.WriteLine("Setting message content");
+                if (MessageIcon != null)
+                    MessageIcon.Text = icon ?? string.Empty;
+                if (MessageTitle != null)
+                    MessageTitle.Text = title ?? string.Empty;
+                if (MessageText != null)
+                    MessageText.Text = message ?? string.Empty;
+
+                ConfigureMessageBoxButtons(hideButtons, okHandler, cancelHandler);
+                ConfigureMessageBoxList(listItems, listItemsProvider);
+                if (MessageFooter != null)
+                    MessageFooter.Text = footerText ?? string.Empty;
+
+                Console.WriteLine("Setting window position");
+                var workArea = SystemParameters.WorkArea;
+                Left = (workArea.Width - Width) / 2;
+                Top = (workArea.Height - Height) / 2;
+                _positionSet = true;
+
+                Console.WriteLine($"Final window position: Left={Left}, Top={Top}, Width={Width}, Height={Height}");
+                Console.WriteLine($"[ConfigureAsMessageBox] End - {DateTime.Now}");
             }
-            else
+            catch (Exception ex)
             {
-                if (okHandler != null)
-                {
-                    var okButton = MessageBoxButtons.Children.OfType<Button>().First(b => b.Content.ToString() == "OK");
-                    okButton.Click -= OkButton_Click;
-                    okButton.Click += okHandler;
-                }
-                
-                if (cancelHandler != null)
-                {
-                    var cancelButton = MessageBoxButtons.Children.OfType<Button>().Last(b => b.Content.ToString() == "Cancel");
-                    cancelButton.Click -= CancelButton_Click;
-                    cancelButton.Click += cancelHandler;
-                }
+                Console.WriteLine($"Error in ConfigureAsMessageBox: {ex.Message}");
+                throw;
             }
-            
-            if (listItems != null && listItems.Count > 0)
-            {
-                MessageList.Visibility = Visibility.Visible;
-                foreach (var item in listItems)
-                {
-                    MessageList.Items.Add(item);
-                }
-            }
-            else if (listItemsProvider != null)
-            {
-                MessageList.Visibility = Visibility.Visible;
-                foreach (var item in listItemsProvider())
-                {
-                    MessageList.Items.Add(item);
-                }
-            }
-            
-            MessageFooter.Text = footerText;
         }
 
-        private void Expander_Expanded(object sender, RoutedEventArgs e)
-{
-    var workArea = SystemParameters.WorkArea;
-    var expandedHeight = Height + consoleOutput.Height + 20;
-    var newTop = workArea.Bottom - expandedHeight;
-    
-    BeginAnimation(HeightProperty, new DoubleAnimation(expandedHeight, TimeSpan.FromSeconds(0.3)));
-    BeginAnimation(TopProperty, new DoubleAnimation(newTop, TimeSpan.FromSeconds(0.3)));
-}
+        private void ConfigureMessageBoxButtons(bool hideButtons, RoutedEventHandler okHandler, RoutedEventHandler cancelHandler)
+        {
+            try
+            {
+                Console.WriteLine("Configuring MessageBox buttons");
+                if (MessageBoxButtons == null)
+                {
+                    Console.WriteLine("MessageBoxButtons control not found");
+                    return;
+                }
 
-private void Expander_Collapsed(object sender, RoutedEventArgs e)
-{
-    var workArea = SystemParameters.WorkArea;
-    var originalHeight = 200;
-    var originalTop = workArea.Bottom - originalHeight;
-    
-    BeginAnimation(HeightProperty, new DoubleAnimation(originalHeight, TimeSpan.FromSeconds(0.3)));
-    BeginAnimation(TopProperty, new DoubleAnimation(originalTop, TimeSpan.FromSeconds(0.3)));
-}
+                if (hideButtons)
+                {
+                    MessageBoxButtons.Visibility = Visibility.Collapsed;
+                    Console.WriteLine("Buttons hidden");
+                    return;
+                }
+
+                var buttons = MessageBoxButtons.Children.OfType<Button>().ToList();
+                var okButton = buttons.FirstOrDefault(b => b?.Content?.ToString() == "OK");
+                var cancelButton = buttons.FirstOrDefault(b => b?.Content?.ToString() == "Cancel");
+
+                if (okButton == null || cancelButton == null)
+                {
+                    Console.WriteLine("Required buttons not found");
+                    return;
+                }
+
+                Console.WriteLine("Configuring button handlers");
+                okButton.Click -= OkButton_Click;
+                cancelButton.Click -= CancelButton_Click;
+
+                okButton.Click += okHandler ?? OkButton_Click;
+                cancelButton.Click += cancelHandler ?? CancelButton_Click;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in ConfigureMessageBoxButtons: {ex.Message}");
+                throw;
+            }
+        }
+
+        private void ConfigureMessageBoxList(List<string> listItems, ListItemsProvider listItemsProvider)
+        {
+            try
+            {
+                Console.WriteLine("Configuring MessageBox list");
+                if (MessageList == null)
+                {
+                    Console.WriteLine("MessageList control not found");
+                    return;
+                }
+
+                if (listItems?.Count > 0 || listItemsProvider != null)
+                {
+                    MessageList.Visibility = Visibility.Visible;
+                    MessageList.Items.Clear();
+
+                    if (listItems != null)
+                    {
+                        Console.WriteLine($"Adding {listItems.Count} list items");
+                        foreach (var item in listItems)
+                        {
+                            if (item != null)
+                                MessageList.Items.Add(item);
+                        }
+                    }
+                    else if (listItemsProvider != null)
+                    {
+                        try
+                        {
+                            var items = listItemsProvider()?.ToList() ?? new List<string>();
+                            Console.WriteLine($"Adding {items.Count} items from provider");
+                            foreach (var item in items)
+                            {
+                                if (item != null)
+                                    MessageList.Items.Add(item);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Error getting items from provider: {ex.Message}");
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No list items to configure");
+                    MessageList.Visibility = Visibility.Collapsed;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in ConfigureMessageBoxList: {ex.Message}");
+                throw;
+            }
+        }
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+            Console.WriteLine($"OnSourceInitialized called, _positionSet={_positionSet}, _isMessageBox={_isMessageBox}");
+
+            if (_isMessageBox)
+            {
+                Console.WriteLine("MessageBox mode - skipping SetWindowPosition");
+                return;
+            }
+
+            SetWindowPosition();
+        }
+
+
+        private void Expander_Expanded(object sender, RoutedEventArgs e)
+        {
+            var workArea = SystemParameters.WorkArea;
+            var expandedHeight = Height + consoleOutput.Height + 20;
+            var newTop = workArea.Bottom - expandedHeight;
+
+            BeginAnimation(HeightProperty, new DoubleAnimation(expandedHeight, TimeSpan.FromSeconds(0.3)));
+            BeginAnimation(TopProperty, new DoubleAnimation(newTop, TimeSpan.FromSeconds(0.3)));
+        }
+
+        private void Expander_Collapsed(object sender, RoutedEventArgs e)
+        {
+            var workArea = SystemParameters.WorkArea;
+            var originalHeight = 200;
+            var originalTop = workArea.Bottom - originalHeight;
+
+            BeginAnimation(HeightProperty, new DoubleAnimation(originalHeight, TimeSpan.FromSeconds(0.3)));
+            BeginAnimation(TopProperty, new DoubleAnimation(originalTop, TimeSpan.FromSeconds(0.3)));
+        }
 
         public void SetProgress(double value)
         {
-            Dispatcher.Invoke(() => 
+            Dispatcher.Invoke(() =>
             {
                 progressBar.Value = value;
                 ProgressPercentage.Text = $"{(int)value}%";
@@ -322,7 +472,7 @@ private void Expander_Collapsed(object sender, RoutedEventArgs e)
             {
                 _timer.Stop();
             }
-            
+
             if (_stopwatch != null)
             {
                 _stopwatch.Stop();
@@ -339,9 +489,9 @@ private void Expander_Collapsed(object sender, RoutedEventArgs e)
                 _fileWriter.Close();
                 _fileWriter.Dispose();
             }
-            
+
             _autoCloseTimer?.Stop();
-            
+
             try
             {
                 if (!string.IsNullOrEmpty(_tempLogFile) && File.Exists(_tempLogFile))
@@ -353,7 +503,7 @@ private void Expander_Collapsed(object sender, RoutedEventArgs e)
             {
                 // File will be cleaned up later
             }
-            
+
             base.Close();
         }
     }

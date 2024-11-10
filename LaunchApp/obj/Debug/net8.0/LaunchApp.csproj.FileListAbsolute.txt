@@ -650,8 +650,8 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\wasm_m2n_invoke.g.h
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\icall-table.h
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\m2n_cache.txt
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\emcc-compile.rsp
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\corebindings.o
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\pinvoke.o
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\corebindings.o
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\driver.o
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\emcc-link.rsp
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\dotnet.native.wasm
@@ -1071,6 +1071,9 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\mqh2pdv1b6-lfu7j35m59.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\fpgfvou72u-oyz0vx2fzb.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lmcyilvykc-bfg2rl3fgr.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\sw4mtv5kd6-w5w8cv9844.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-m4014s4urp.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-bghnpxgyae.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-amz7djo2do.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.development.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1086,6 +1089,3 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.dll
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\refint\LaunchApp.dll
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.pdb
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\ref\LaunchApp.dll
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-4txeizd9sy.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-597wkrty0b.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-bm9sdl8j0k.gz
