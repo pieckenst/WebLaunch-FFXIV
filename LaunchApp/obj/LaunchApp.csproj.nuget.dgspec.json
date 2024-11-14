@@ -51,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "LumexUI": {
+              "target": "Package",
+              "version": "[1.0.0-preview.3, )"
+            },
             "Masa.Blazor": {
               "target": "Package",
               "version": "[1.7.7, )"

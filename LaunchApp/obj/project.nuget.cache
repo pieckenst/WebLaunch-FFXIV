@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nVdlOQpJk7Q=",
+  "dgSpecHash": "mIt5bZ8R2PY=",
   "success": true,
   "projectFilePath": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Andrey\\.nuget\\packages\\deepcloner\\0.10.4\\deepcloner.0.10.4.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
+    "C:\\Users\\Andrey\\.nuget\\packages\\lumexui\\1.0.0-preview.3\\lumexui.1.0.0-preview.3.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\masa.blazor\\1.7.7\\masa.blazor.1.7.7.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.10\\microsoft.aspnetcore.authorization.8.0.10.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.10\\microsoft.aspnetcore.components.8.0.10.nupkg.sha512",
@@ -41,6 +42,7 @@
     "C:\\Users\\Andrey\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\oneof\\3.0.223\\oneof.3.0.223.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\oneof.sourcegenerator\\3.0.223\\oneof.sourcegenerator.3.0.223.nupkg.sha512",
+    "C:\\Users\\Andrey\\.nuget\\packages\\planetarium.lrucachenet\\1.2.0\\planetarium.lrucachenet.1.2.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\runtime.any.system.diagnostics.tools\\4.3.0\\runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\runtime.any.system.diagnostics.tracing\\4.3.0\\runtime.any.system.diagnostics.tracing.4.3.0.nupkg.sha512",
@@ -129,6 +131,7 @@
     "C:\\Users\\Andrey\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Andrey\\.nuget\\packages\\tailwindmerge.net\\0.3.0\\tailwindmerge.net.0.3.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\util.reflection\\1.0.3\\util.reflection.1.0.3.nupkg.sha512"
   ],
   "logs": []

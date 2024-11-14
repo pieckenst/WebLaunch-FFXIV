@@ -9,8 +9,108 @@
       "PackagePath": "staticwebassets\\LaunchApp.styles.css"
     },
     {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\fonts\\FiraCode-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\FiraCode-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\fonts\\Inter-VariableFont_slnt,wght.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Inter-VariableFont_slnt,wght.ttf"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\gradients\\blue-purple-1.svg",
+      "PackagePath": "staticwebassets\\assets\\gradients\\blue-purple-1.svg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\gradients\\docs-left.png",
+      "PackagePath": "staticwebassets\\assets\\gradients\\docs-left.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\gradients\\docs-left.svg",
+      "PackagePath": "staticwebassets\\assets\\gradients\\docs-left.svg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\gradients\\docs-right.png",
+      "PackagePath": "staticwebassets\\assets\\gradients\\docs-right.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\gradients\\docs-right.svg",
+      "PackagePath": "staticwebassets\\assets\\gradients\\docs-right.svg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\gradients\\green.svg",
+      "PackagePath": "staticwebassets\\assets\\gradients\\green.svg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\gradients\\looper-pattern.svg",
+      "PackagePath": "staticwebassets\\assets\\gradients\\looper-pattern.svg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\assets\\images\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\assets\\images\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\apple-touch-icon.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\card-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\card-1.jpg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\card-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\card-2.jpg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\card-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\card-4.jpg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\card-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\card-5.jpg"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\isotipo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\isotipo.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\mstile-144x144.png",
+      "PackagePath": "staticwebassets\\assets\\images\\mstile-144x144.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\mstile-150x150.png",
+      "PackagePath": "staticwebassets\\assets\\images\\mstile-150x150.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\mstile-310x150.png",
+      "PackagePath": "staticwebassets\\assets\\images\\mstile-310x150.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\mstile-310x310.png",
+      "PackagePath": "staticwebassets\\assets\\images\\mstile-310x310.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\mstile-70x70.png",
+      "PackagePath": "staticwebassets\\assets\\images\\mstile-70x70.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\assets\\images\\storybook-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\storybook-logo.png"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\ads.css",
+      "PackagePath": "staticwebassets\\css\\ads.css"
+    },
+    {
       "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\blazor.css",
+      "PackagePath": "staticwebassets\\css\\blazor.css"
     },
     {
       "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -27,6 +127,18 @@
     {
       "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\fluent-dark-base.css",
       "PackagePath": "staticwebassets\\css\\fluent-dark-base.css"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\fonts.css",
+      "PackagePath": "staticwebassets\\css\\fonts.css"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\globals.css",
+      "PackagePath": "staticwebassets\\css\\globals.css"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\input.css",
+      "PackagePath": "staticwebassets\\css\\input.css"
     },
     {
       "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\loaderspinner.css",
@@ -65,6 +177,10 @@
       "PackagePath": "staticwebassets\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\nprogress.css",
+      "PackagePath": "staticwebassets\\css\\nprogress.css"
+    },
+    {
       "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
@@ -101,8 +217,24 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\prism.css",
+      "PackagePath": "staticwebassets\\css\\prism.css"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\sandpack.css",
+      "PackagePath": "staticwebassets\\css\\sandpack.css"
+    },
+    {
       "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\css\\theme.css",
+      "PackagePath": "staticwebassets\\css\\theme.css"
     },
     {
       "Id": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\favicon.ico",

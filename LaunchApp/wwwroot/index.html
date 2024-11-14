@@ -15,6 +15,7 @@
     <link href="css/material3-base.css" rel="stylesheet" id="theme-light" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
+    <link href="css/output.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
@@ -41,22 +42,29 @@
     
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/Masa.Blazor/js/masa-blazor.js"></script>
+    <script src="_content/LumexUI/LumexUI.js"></script>
 
     <script>
-        // Add timestamp to prevent browser caching
+        
+
+        window.Lumex = {
+        elementReference: {
+            getScrollHeight: function(element) {
+                return element.scrollHeight;
+            }
+        }
+    };
         document.querySelectorAll('script').forEach(script => {
             if (script.src) {
                 script.src = script.src + '?v=' + Date.now();
             }
         });
     
-        // Enable debugging support
         window.Blazor = window.Blazor || {};
         window.Blazor.isDebuggingSupported = function() {
             return true;
         };
     
-        // Clear site storage on load
         window.addEventListener('load', () => {
             localStorage.clear();
             sessionStorage.clear();
@@ -68,7 +76,6 @@
             }
         });
     
-        // Remove service worker to fix fetch handler warning
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.getRegistrations().then(registrations => {
                 registrations.forEach(registration => {
@@ -92,7 +99,8 @@
         const darkModeMatch = window.matchMedia('(prefers-color-scheme: dark)');
         switchTheme(darkModeMatch.matches);
         darkModeMatch.addEventListener('change', e => switchTheme(e.matches));
-    </script>
 
+        
+    </script>
 </body>
 </html>

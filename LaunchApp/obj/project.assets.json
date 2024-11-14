@@ -57,6 +57,31 @@
           }
         }
       },
+      "LumexUI/1.0.0-preview.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.6",
+          "TailwindMerge.NET": "0.3.0"
+        },
+        "compile": {
+          "lib/net8.0/LumexUI.Utilities.dll": {},
+          "lib/net8.0/LumexUI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LumexUI.Utilities.dll": {},
+          "lib/net8.0/LumexUI.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/LumexUI.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/LumexUI.props": {}
+        }
+      },
       "Masa.Blazor/1.7.7": {
         "type": "package",
         "dependencies": {
@@ -622,6 +647,15 @@
       },
       "OneOf.SourceGenerator/3.0.223": {
         "type": "package"
+      },
+      "Planetarium.LruCacheNet/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LruCacheNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LruCacheNet.dll": {}
+        }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
         "type": "package",
@@ -1849,6 +1883,23 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "TailwindMerge.NET/0.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Planetarium.LruCacheNet": "1.2.0"
+        },
+        "compile": {
+          "lib/net8.0/TailwindMerge.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/TailwindMerge.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Util.Reflection/1.0.3": {
         "type": "package",
         "compile": {
@@ -1913,6 +1964,31 @@
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "LumexUI/1.0.0-preview.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.6",
+          "TailwindMerge.NET": "0.3.0"
+        },
+        "compile": {
+          "lib/net8.0/LumexUI.Utilities.dll": {},
+          "lib/net8.0/LumexUI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LumexUI.Utilities.dll": {},
+          "lib/net8.0/LumexUI.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/LumexUI.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/LumexUI.props": {}
         }
       },
       "Masa.Blazor/1.7.7": {
@@ -2480,6 +2556,15 @@
       },
       "OneOf.SourceGenerator/3.0.223": {
         "type": "package"
+      },
+      "Planetarium.LruCacheNet/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LruCacheNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LruCacheNet.dll": {}
+        }
       },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
@@ -3717,6 +3802,23 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "TailwindMerge.NET/0.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Planetarium.LruCacheNet": "1.2.0"
+        },
+        "compile": {
+          "lib/net8.0/TailwindMerge.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/TailwindMerge.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Util.Reflection/1.0.3": {
         "type": "package",
         "compile": {
@@ -3798,6 +3900,47 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "LumexUI/1.0.0-preview.3": {
+      "sha512": "leI8VjOEx7GQ+KcwGENvBgQOwUe/ibXBI90yWNPp5XsjI/9AxCphRxOk9EKZhQe1eScRYYDd2ybpdMZ1B2FLkQ==",
+      "type": "package",
+      "path": "lumexui/1.0.0-preview.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "build/LumexUI.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/LumexUI.props",
+        "buildTransitive/LumexUI.props",
+        "lib/net8.0/LumexUI.Utilities.dll",
+        "lib/net8.0/LumexUI.dll",
+        "lib/net8.0/LumexUI.xml",
+        "lumexui.1.0.0-preview.3.nupkg.sha512",
+        "lumexui.nuspec",
+        "staticwebassets/js/LumexUI.js",
+        "staticwebassets/js/components/input.js",
+        "staticwebassets/js/components/popover.bundle.js",
+        "staticwebassets/js/components/popover.js",
+        "staticwebassets/js/elementReference.js",
+        "staticwebassets/js/utils/dom.js",
+        "theme/components/Accordion.cs",
+        "theme/components/Button.cs",
+        "theme/components/Card.cs",
+        "theme/components/Checkbox.cs",
+        "theme/components/Collapse.cs",
+        "theme/components/ColorVariants.cs",
+        "theme/components/Divider.cs",
+        "theme/components/Icon.cs",
+        "theme/components/InputField.cs",
+        "theme/components/Link.cs",
+        "theme/components/Navbar.cs",
+        "theme/components/Popover.cs",
+        "theme/components/Switch.cs",
+        "theme/components/Utils.cs",
+        "theme/plugin.js"
       ]
     },
     "Masa.Blazor/1.7.7": {
@@ -4857,6 +5000,18 @@
         "oneof.sourcegenerator.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "Planetarium.LruCacheNet/1.2.0": {
+      "sha512": "WE2eblbDjsOoJhOBA+Jiwk/c+xrbFTRu+KaUOhhRWklCyScWSGCFS3gNmuc7zjjdJPSjotGAoKjAJIkHsXPXxQ==",
+      "type": "package",
+      "path": "planetarium.lrucachenet/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/LruCacheNet.dll",
+        "planetarium.lrucachenet.1.2.0.nupkg.sha512",
+        "planetarium.lrucachenet.nuspec"
       ]
     },
     "runtime.any.System.Collections/4.3.0": {
@@ -8499,6 +8654,22 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "TailwindMerge.NET/0.3.0": {
+      "sha512": "e6X7yTGNWGCneyNDICExT+OJGBAh2unpbCY323UlNKaVn2CJwi49clXYPA38xtQxIwps0EeygoGHeC4fgQ7zsw==",
+      "type": "package",
+      "path": "tailwindmerge.net/0.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "lib/net8.0/TailwindMerge.dll",
+        "lib/net8.0/TailwindMerge.xml",
+        "logo.png",
+        "tailwindmerge.net.0.3.0.nupkg.sha512",
+        "tailwindmerge.net.nuspec"
+      ]
+    },
     "Util.Reflection/1.0.3": {
       "sha512": "uKQLJZ9KKXvQ6JYLbOCISyBpssmBAX4HGXhmTifRsD/kD1E4bZYyivwDqBvTleNIE1/tmj/XhapsukxKNQEK5A==",
       "type": "package",
@@ -8514,6 +8685,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "LumexUI >= 1.0.0-preview.3",
       "Masa.Blazor >= 1.7.7",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.10",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.10",
@@ -8574,6 +8746,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "LumexUI": {
+            "target": "Package",
+            "version": "[1.0.0-preview.3, )"
+          },
           "Masa.Blazor": {
             "target": "Package",
             "version": "[1.7.7, )"

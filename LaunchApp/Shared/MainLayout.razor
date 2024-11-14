@@ -1,33 +1,65 @@
-﻿@inherits LayoutComponentBase
+﻿@using LumexUI
+@using LumexUI.Common
+@inherits LayoutComponentBase
 @inject MasaBlazor MasaBlazor
 @inject IJSRuntime JSRuntime
 @inject NavigationManager Navigation
 @implements IDisposable
 
+<LumexThemeProvider />
 <MApp Dark="@MasaBlazor.Theme.Dark">
     <MErrorHandler DisablePopupIfErrorContentRender>
         <ChildContent>
-            <MAppBar Id="app-bar" App Class="default-app-bar m-bar--underline" Flat Height="64" Style="left: 0">
-                <MAppBarTitle>Game Launcher</MAppBarTitle>
-                <MSpacer />
+            <LumexNavbar Class="default-app-bar" ShouldHideOnScroll>
+                <LumexNavbarContent>
+                    <LumexNavbarMenuToggle Class="sm:hidden" />
+                    <LumexNavbarBrand Class="ml-4">
+                        <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
+                            <path clip-rule="evenodd"
+                                d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span class="font-bold text-xl ml-2">Game Launcher</span>
+                    </LumexNavbarBrand>
+                </LumexNavbarContent>
 
-                @if (!MasaBlazor.Breakpoint.Mobile)
-                {
-                    <MButton Href="" Text>
-                        <MIcon>mdi-home</MIcon>
-                        <span>Home</span>
-                    </MButton>
-                }
+                <LumexNavbarContent Class="hidden sm:flex justify-center flex-1">
+                    <LumexNavbarItem>
+                        <LumexLink Href="" Color="@ThemeColor.None">
+                            <MIcon>mdi-home</MIcon>
+                            Home
+                        </LumexLink>
+                    </LumexNavbarItem>
+                </LumexNavbarContent>
 
-                <MToggle Value="@MasaBlazor.Theme.Dark"
-                         ValueChanged="@(async (v) => {
-                            MasaBlazor.ToggleTheme();
-                            await JSRuntime.InvokeVoidAsync("switchTheme", MasaBlazor.Theme.Dark);
-                         })"
-                         DataOn="@("mdi-weather-night")"
-                         DataOff="@("mdi-weather-sunny")">
-                </MToggle>
-            </MAppBar>
+                <LumexNavbarContent Justify="End">
+                    <LumexNavbarItem>
+                        <LumexSwitch 
+                StartIcon="@LumexUI.Icons.Rounded.LightMode" 
+                EndIcon="@LumexUI.Icons.Rounded.DarkMode" 
+                Color="@ThemeColor.Danger" 
+                Size="@Size.Medium" 
+                Value="@MasaBlazor.Theme.Dark"
+                ValueChanged="@(async (v) => {
+                    MasaBlazor.ToggleTheme();
+                    await JSRuntime.InvokeVoidAsync("switchTheme", MasaBlazor.Theme.Dark);
+                })">
+                Dark Mode
+            </LumexSwitch>
+                    </LumexNavbarItem>
+                    <LumexNavbarItem>
+                        <LumexButton Size="@Size.Small" Color="@ThemeColor.Primary" Variant="@Variant.Flat">
+                            Launch Game
+                        </LumexButton>
+                    </LumexNavbarItem>
+                </LumexNavbarContent>
+
+                <LumexNavbarMenu Class="sm:hidden">
+                    <LumexNavbarMenuItem>
+                        <LumexLink Href="" Color="@ThemeColor.None">Home</LumexLink>
+                    </LumexNavbarMenuItem>
+                </LumexNavbarMenu>
+            </LumexNavbar>
 
             <MMain>
                 <MTransition Name="fade-transition">
@@ -40,7 +72,6 @@
     </MErrorHandler>
 </MApp>
 
-
 <style>
     .game-content {
         min-height: 100vh;
@@ -52,6 +83,9 @@
         border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 </style>
+
+
+
 
 @code {
     private DotNetObjectReference<MainLayout>? _objRef;

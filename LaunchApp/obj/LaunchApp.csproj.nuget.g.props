@@ -17,6 +17,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.net.sdk.webassembly.pack\9.0.0-rc.2.24473.5\build\Microsoft.NET.Sdk.WebAssembly.Pack.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.sdk.webassembly.pack\9.0.0-rc.2.24473.5\build\Microsoft.NET.Sdk.WebAssembly.Pack.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\8.0.10\build\net8.0\Microsoft.AspNetCore.Components.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\8.0.10\build\net8.0\Microsoft.AspNetCore.Components.WebAssembly.props')" />
     <Import Project="$(NuGetPackageRoot)masa.blazor\1.7.7\buildTransitive\Masa.Blazor.props" Condition="Exists('$(NuGetPackageRoot)masa.blazor\1.7.7\buildTransitive\Masa.Blazor.props')" />
+    <Import Project="$(NuGetPackageRoot)lumexui\1.0.0-preview.3\buildTransitive\LumexUI.props" Condition="Exists('$(NuGetPackageRoot)lumexui\1.0.0-preview.3\buildTransitive\LumexUI.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgOneOf_SourceGenerator Condition=" '$(PkgOneOf_SourceGenerator)' == '' ">C:\Users\Andrey\.nuget\packages\oneof.sourcegenerator\3.0.223</PkgOneOf_SourceGenerator>

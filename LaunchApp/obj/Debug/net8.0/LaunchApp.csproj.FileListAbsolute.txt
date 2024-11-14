@@ -1,3 +1,10 @@
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.csproj.AssemblyReference.cache
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.GeneratedMSBuildEditorConfig.editorconfig
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.AssemblyInfoInputs.cache
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.AssemblyInfo.cs
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.csproj.CoreCompileInputs.cache
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.MvcApplicationPartsAssemblyInfo.cache
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.sourcelink.json
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\BemIt.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
@@ -16,6 +23,9 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LaunchApp.pdb
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LaunchApp.wasm
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LruCacheNet.wasm
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LumexUI.Utilities.wasm
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LumexUI.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\Masa.Blazor.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm
@@ -209,6 +219,7 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlDo
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlSerializer.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.XDocument.wasm
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\TailwindMerge.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\Util.Reflection.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\WindowsBase.wasm
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Security.AccessControl.wasm.gz
@@ -225,7 +236,9 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNet
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Primitives.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\OneOf.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Net.Primitives.wasm.gz
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LumexUI.Utilities.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebSockets.Client.wasm.gz
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LruCacheNet.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LaunchApp.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Text.RegularExpressions.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Threading.ThreadPool.wasm.gz
@@ -297,6 +310,7 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Threading
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Emit.Lightweight.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.StackTrace.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.DiagnosticSource.wasm.gz
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\TailwindMerge.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Tasks.Dataflow.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Buffers.wasm.gz
@@ -369,6 +383,7 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Resources
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.IO.UnmanagedMemoryStream.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.Tools.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Tasks.wasm.gz
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\LumexUI.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebClient.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.CompilerServices.Unsafe.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Collections.NonGeneric.wasm.gz
@@ -426,6 +441,8 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.I
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\_framework\System.Transactions.wasm.gz
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\service-worker.js
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\wwwroot\service-worker-assets.js
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\package-lock.json
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\package.json
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\LaunchApp.staticwebassets.runtime.json
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\LaunchApp.staticwebassets.endpoints.json
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\LaunchApp.dll
@@ -434,6 +451,8 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\BemIt.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\DeepCloner.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\FluentValidation.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\LumexUI.Utilities.dll
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\LumexUI.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Masa.Blazor.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
@@ -459,7 +478,9 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Microsoft.JSInterop.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\OneOf.dll
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\LruCacheNet.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\System.IO.Pipelines.dll
+G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\TailwindMerge.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Util.Reflection.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Microsoft.CSharp.dll
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\Microsoft.VisualBasic.Core.dll
@@ -637,13 +658,6 @@ G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\icudt_CJK.dat
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\icudt_EFIGS.dat
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\icudt_no_CJK.dat
 G:\code\WebLaunch\LaunchApp\bin\Debug\net8.0\emcc-props.json
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.csproj.AssemblyReference.cache
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.GeneratedMSBuildEditorConfig.editorconfig
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.AssemblyInfoInputs.cache
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.AssemblyInfo.cs
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.csproj.CoreCompileInputs.cache
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.MvcApplicationPartsAssemblyInfo.cache
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.sourcelink.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\runtime-icall-table.h
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\pinvoke-table.h
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\wasm\for-build\wasm_m2n_invoke.g.h
@@ -660,6 +674,8 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\BemIt.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\DeepCloner.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\FluentValidation.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\FluentValidation.DependencyInjectionExtensions.wasm
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\LumexUI.Utilities.wasm
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\LumexUI.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Masa.Blazor.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
@@ -685,7 +701,9 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Microsoft.Extensions.Primiti
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Microsoft.JSInterop.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Microsoft.JSInterop.WebAssembly.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\OneOf.wasm
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\LruCacheNet.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\System.IO.Pipelines.wasm
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\TailwindMerge.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Util.Reflection.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Microsoft.CSharp.wasm
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\webcil\Microsoft.VisualBasic.Core.wasm
@@ -866,6 +884,8 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lwcqu8c6gr-9ci0d0am18.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\yccvj1ji4g-01ggxdl51t.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\88cnrx26gj-psv1xceu9w.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\5uktp1usk5-41c0wmz8h2.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1l3fg2ftic-9z6fupqdi0.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\q5f65taued-oy3ium8i1h.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\k7b1ci63la-sybroad689.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\ro9pc3byvf-6w1zqjldva.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\hsg0fl2pm8-6t2s5s7vwk.gz
@@ -891,7 +911,9 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\54zxlsrxwf-lsakbjp1fg.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\viqr0iiswy-p0vxia9jxs.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\8t2mgh9urg-vcjk96qxfw.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1i4nb65tng-z1vz4pqseg.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1mr0z4r3aj-wkgbemt0ni.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\6fa66era82-iudrcw56e1.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\e1fmo0sd7v-eq0fwfkrxe.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\7vye53zrms-3yeepjwilb.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\ak7jxedajb-23sp573mos.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\y2ur714de2-mcz7t13l0n.gz
@@ -1069,11 +1091,8 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\835vgzlgzs-tjcz0u77k5.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\esdba3bnux-tptq2av103.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\mqh2pdv1b6-lfu7j35m59.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\fpgfvou72u-oyz0vx2fzb.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lmcyilvykc-bfg2rl3fgr.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\sw4mtv5kd6-w5w8cv9844.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-m4014s4urp.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-bghnpxgyae.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-amz7djo2do.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lmcyilvykc-f4d6zu5prt.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\sw4mtv5kd6-8otidw61b0.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.development.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1089,3 +1108,6 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.dll
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\refint\LaunchApp.dll
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\LaunchApp.pdb
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\ref\LaunchApp.dll
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-ny9ibbmwxv.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-dcb7zsxflc.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-74fu46l570.gz

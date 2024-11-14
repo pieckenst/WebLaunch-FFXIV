@@ -5,7 +5,7 @@
 @using System.Security.Cryptography;
 
 <PageTitle>FFXIV Login</PageTitle>
-
+<GameSubHeader IsVisible="true" NavigationLinks="@_navLinks" />
 <MContainer Fluid>
     <div class="game-header">
     <MImage Src="https://img.finalfantasyxiv.com/lds/h/V/U5TjBZoXVbddg1ZB7H4k0fkYqo.jpg" 
@@ -215,6 +215,14 @@
     }
 </style>
 @code {
+    private List<GameSubHeader.NavLink> _navLinks = new()
+    {
+        new() { Text = "About", Url = "#", IsActive = true },
+        new() { Text = "Shop", Url = "#" },
+        new() { Text = "News", Url = "#" },
+        new() { Text = "Guides", Url = "#" },
+        new() { Text = "Updates", Url = "#" }
+    };
     private string statusstring = "Awaiting input";
     private string usernameinp = "";
     private string passinp = "";

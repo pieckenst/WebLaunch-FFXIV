@@ -106,7 +106,7 @@
                 <RowDefinition Height="Auto"/> <!-- Progress Bar -->
             </Grid.RowDefinitions>
 
-            <tb:TaskbarIcon x:Name="TrayIcon"
+            <tb:TaskbarIcon x:Name="TrayIcon_1"
                 ToolTipText="Window Controls"
                 MenuActivation="LeftOrRightClick" >
     <tb:TaskbarIcon.IconSource>
