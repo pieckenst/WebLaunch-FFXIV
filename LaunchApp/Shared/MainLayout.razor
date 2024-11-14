@@ -82,8 +82,8 @@
                 </LumexNavbar>
 
                 @if (ShowGameNav && !MasaBlazor.Breakpoint.Mobile)
-                {
-                    <div class="game-subheader">
+                {               
+                    <div class="game-subheader @(isHiding ? "hiding" : "")">
                         <LumexNavbar Dense ShouldHideOnScroll>
                             <LumexNavbarContent Class="justify-center">
                                 @foreach (var link in GameNavLinks)
@@ -143,10 +143,38 @@
     }
 
     .game-subheader {
-        width: 100%;
-        background: var(--background-secondary);
-        border-bottom: 1px solid var(--subheader-border);
+    width: 100%;
+    background: var(--background-secondary);
+    border-bottom: 1px solid var(--subheader-border);
+    animation: slideDown 0.3s ease-out forwards;
+    transform-origin: top;
+}
+
+@@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
     }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.game-subheader.hiding {
+    animation: slideUp 0.3s ease-in forwards;
+}
 
     .active-link {
         color: var(--primary) !important;
@@ -180,6 +208,9 @@
 </style>
 
 @code {
+
+    private bool isHiding = false;
+
     private DotNetObjectReference<MainLayout>? _objRef;
     public bool ShowGameNav { get; set; }
     public List<(string Text, string Url, string Icon, bool IsActive)> GameNavLinks { get; set; } = new();
@@ -198,12 +229,19 @@
                 StateHasChanged();
             });
 
-        MessagingCenter.Subscribe<LaunchApp.Pages.Index>(this, "hide_subheader", (sender) =>
-        {
-            ShowGameNav = false;
-            GameNavLinks.Clear();
-            StateHasChanged();
-        });
+        MessagingCenter.Subscribe<LaunchApp.Pages.Index>(this, "hide_subheader", async (sender) =>
+{
+    if (ShowGameNav)
+    {
+        isHiding = true;
+        StateHasChanged();
+        await Task.Delay(300);
+        ShowGameNav = false;
+        isHiding = false;
+        GameNavLinks.Clear();
+        StateHasChanged();
+    }
+});
     }
 
     private async Task InitializeTheme()

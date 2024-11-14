@@ -112,8 +112,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "LaunchApp\\Shared\\MainLayout.razor",
+              "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "LaunchApp\\Shared\\MainLayout.razor",
+              "ViewState": "AgIAANcAAAAAAAAAAAAowOQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T16:38:17.534Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -425,19 +438,6 @@
               "ViewState": "AgIAAOUAAAAAAAAAAAAtwPEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-31T17:28:49.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
-              "RelativeDocumentMoniker": "LaunchApp\\Shared\\MainLayout.razor",
-              "ToolTip": "G:\\code\\WebLaunch\\LaunchApp\\Shared\\MainLayout.razor",
-              "RelativeToolTip": "LaunchApp\\Shared\\MainLayout.razor",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAqwKkAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T15:35:47.153Z",
               "EditorCaption": ""
             }
           ]
