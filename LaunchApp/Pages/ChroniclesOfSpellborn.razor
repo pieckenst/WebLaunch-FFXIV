@@ -2,41 +2,40 @@
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
 @inject MasaBlazor MasaBlazor
+@using AKSoftware.Blazor.Utilities
 
 <PageTitle>Chronicles of Spellborn</PageTitle>
 
-
 <MContainer Fluid>
     <div class="game-header">
-    <MImage Src="https://www.mobygames.com/images/promo/l/123769-the-chronicles-of-spellborn-wallpaper.jpg" 
-            Height="600" 
-        
-            Style="position: relative;">
-        <div class="header-content d-flex align-center">
-            <div class="flex-grow-1">
-                <h1 class="text-h2">Chronicles of Spellborn</h1>
-                <div class="text-subtitle-1">A Unique Fantasy Experience</div>
+        <MImage Src="https://www.mobygames.com/images/promo/l/123769-the-chronicles-of-spellborn-wallpaper.jpg" 
+                Height="600" 
+                Style="position: relative;">
+            <div class="header-content d-flex align-center">
+                <div class="flex-grow-1">
+                    <h1 class="text-h2">Chronicles of Spellborn</h1>
+                    <div class="text-subtitle-1">A Unique Fantasy Experience</div>
+                </div>
+                <MSpacer></MSpacer>
+                @if (!MasaBlazor.Breakpoint.Mobile)
+                {
+                    <MCard Class="play-card">
+                        <MButton Color="primary"
+                                OnClick="processlaunchusespl"
+                                XLarge
+                                Class="play-button">
+                            Play Now
+                        </MButton>
+                        <MButton Icon
+                                Class="settings-button"
+                                OnClick="ModalShow">
+                            <MIcon>mdi-cog</MIcon>
+                        </MButton>
+                    </MCard>
+                }
             </div>
-            <MSpacer></MSpacer>
-            @if (!MasaBlazor.Breakpoint.Mobile)
-            {
-                <MCard Class="play-card" >
-                    <MButton Color="primary"
-                            OnClick="processlaunchusespl"
-                            XLarge
-                            Class="play-button">
-                        Play Now
-                    </MButton>
-                    <MButton Icon
-                            Class="settings-button"
-                            OnClick="ModalShow">
-                        <MIcon>mdi-cog</MIcon>
-                    </MButton>
-                </MCard>
-            }
-        </div>
-    </MImage>
-</div>
+        </MImage>
+    </div>
 
     <MRow Class="mt-6">
         <MCol Cols="12" Md="8">
@@ -95,8 +94,6 @@
                 </MRow>
             </MCard>
         </MCol>
-
-        
     </MRow>
 </MContainer>
 
@@ -136,7 +133,8 @@
         right: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
-        animation: fadeIn 0.5s ease-out forwards;
+        opacity: 0;
+        animation: fadeIn 0.3s ease-out forwards;
     }
 
     .header-content {
@@ -145,18 +143,19 @@
         left: 0;
         right: 0;
         padding: 2rem;
-        color: white;
-        animation: fadeIn 0.5s ease-out 0.2s forwards;
+        color: var(--foreground);
+        opacity: 0;
+        animation: fadeIn 0.3s ease-out 0.15s forwards;
     }
 
     .play-card {
         padding: 1rem;
         background-color: rgb(var(--theme-background-rgb)) !important;
-        opacity: 0.9;
+        opacity: 0;
         border: 1px solid var(--theme-dividers);
         display: flex;
         gap: 0.5rem;
-        animation: fadeIn 0.5s ease-out 0.4s forwards;
+        animation: fadeIn 0.3s ease-out 0.3s forwards;
         box-shadow: var(--theme-shadow-4);
         transition: background-color 0.3s ease;
     }
@@ -174,19 +173,38 @@
     @@keyframes fadeIn {
         0% {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(10px);
         }
         100% {
             opacity: 1;
             transform: translateY(0);
         }
     }
+
+    @@media (max-width: 600px) {
+        .play-card {
+            display: none;
+        }
+    }
 </style>
 
 @code {
-    
     private string gamepathersinp = "";
     bool showModal = false;
+
+    protected override void OnInitialized()
+    {
+        var links = new List<(string Text, string Url, string Icon, bool IsActive)>
+        {
+            ("Overview", "", "", true),
+            ("World", "world", "", false),
+            ("Classes", "classes", "", false),
+            ("Community", "community", "", false)
+        };
+
+        MessagingCenter.Send(this, "update_nav", links);
+    }
+
     void ModalOk()
     {
         Console.WriteLine("Modal ok");

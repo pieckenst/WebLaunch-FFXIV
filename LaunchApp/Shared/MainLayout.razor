@@ -3,11 +3,13 @@
 @using LaunchApp.Pages
 @using LaunchApp.Models
 @using AKSoftware.Blazor.Utilities
+
 @inherits LayoutComponentBase
 @inject MasaBlazor MasaBlazor
 @inject IJSRuntime JSRuntime
 @inject NavigationManager Navigation
 @implements IDisposable
+
 
 <LumexThemeProvider />
 <MApp Dark="@MasaBlazor.Theme.Dark">
@@ -86,28 +88,28 @@
                     <div class="game-subheader @(isHiding ? "hiding" : "")">
                         <LumexNavbar Dense ShouldHideOnScroll>
                             <LumexNavbarContent Class="justify-center">
-                                @foreach (var link in GameNavLinks)
-                                {
-                                    <LumexNavbarItem>
-                                        <LumexLink Href="@link.Url"
-                                                 Color="@ThemeColor.None"
-                                                 Class="@(link.IsActive ? "active-link" : "")">
-                                            @if (!string.IsNullOrEmpty(link.Icon))
-                                            {
-                                                <MIcon Size="20" Class="mr-2">@link.Icon</MIcon>
-                                            }
-                                            @link.Text
-                                        </LumexLink>
-                                    </LumexNavbarItem>
-                                }
-                            </LumexNavbarContent>
+    @foreach (var link in GameNavLinks)
+    {
+        <LumexNavbarItem>
+            <LumexLink @onclick="@(() => SelectSection(link.Url, link.PageName))"
+                      Color="@ThemeColor.None"
+                      Class="@(link.IsActive ? "active-link" : "")">
+                @if (!string.IsNullOrEmpty(link.Icon))
+                {
+                    <MIcon Size="20" Class="mr-2">@link.Icon</MIcon>
+                }
+                @link.Text
+            </LumexLink>
+        </LumexNavbarItem>
+    }
+</LumexNavbarContent>
                         </LumexNavbar>
                     </div>
                 }
             </div>
 
             <MMain>
-                <MTransition Name="fade-transition">
+                <MTransition Name="fade-transition" Mode="@TransitionMode.OutIn">
                     <div class="game-content @(ShowGameNav && !MasaBlazor.Breakpoint.Mobile ? "with-subheader" : "")">
                         @Body
                     </div>
@@ -118,6 +120,15 @@
 </MApp>
 
 <style>
+    ::deep .fade-transition-enter-active,
+    ::deep .fade-transition-leave-active {
+        transition: opacity 0.15s ease;
+    }
+
+    ::deep .fade-transition-enter,
+    ::deep .fade-transition-leave-to {
+        opacity: 0;
+    }
     .navbar-wrapper {
         position: fixed;
         top: 0;
@@ -143,38 +154,38 @@
     }
 
     .game-subheader {
-    width: 100%;
-    background: var(--background-secondary);
-    border-bottom: 1px solid var(--subheader-border);
-    animation: slideDown 0.3s ease-out forwards;
-    transform-origin: top;
-}
+        width: 100%;
+        background: var(--background-secondary);
+        border-bottom: 1px solid var(--subheader-border);
+        animation: slideDown 0.3s ease-out forwards;
+        transform-origin: top;
+    }
 
-@@keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
+    @@keyframes slideDown {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
-@@keyframes slideUp {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
+    @@keyframes slideUp {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
     }
-    100% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-}
 
-.game-subheader.hiding {
-    animation: slideUp 0.3s ease-in forwards;
-}
+    .game-subheader.hiding {
+        animation: slideUp 0.3s ease-in forwards;
+    }
 
     .active-link {
         color: var(--primary) !important;
@@ -201,27 +212,110 @@
         }
     }
     @@media (max-width: 600px) {
-    .desktop-launch-button {
-        display: none;
+        .desktop-launch-button {
+            display: none;
+        }
     }
-}
+
 </style>
 
 @code {
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    protected override void OnInitialized()
+    {
+        NavigationManager.LocationChanged += HandleLocationChanged;
+        base.OnInitialized();
+    }
+
+    
+private void SelectSection(string url, string pageName)
+{
+    GameNavLinks = GameNavLinks.Select(link => (
+        link.Text,
+        link.Url,
+        link.Icon,
+        link.Url == url && link.PageName == pageName,
+        link.PageName
+    )).ToList();
+    
+    Navigation.NavigateTo($"{pageName}/{url}", false);
+    StateHasChanged();
+}
+
+    private void HandleLocationChanged(object sender, LocationChangedEventArgs e)
+{
+    var uri = new Uri(e.Location);
+    var section = uri.Segments.LastOrDefault()?.TrimEnd('/');
+    var pageName = uri.Segments.Skip(1).FirstOrDefault()?.TrimEnd('/');
+    
+    if (!string.IsNullOrEmpty(section))
+    {
+        GameNavLinks = GameNavLinks.Select(link => (
+            link.Text,
+            link.Url,
+            link.Icon,
+            link.Url == section && link.PageName == pageName,
+            link.PageName
+        )).ToList();
+        
+        StateHasChanged();
+    }
+}
 
     private bool isHiding = false;
 
     private DotNetObjectReference<MainLayout>? _objRef;
     public bool ShowGameNav { get; set; }
-    public List<(string Text, string Url, string Icon, bool IsActive)> GameNavLinks { get; set; } = new();
+    public List<(string Text, string Url, string Icon, bool IsActive, string PageName)> GameNavLinks { get; set; } = new();
 
+
+
+
+
+   
+private void NavigateToSection(string url)
+{
+    var currentPage = Navigation.Uri.Split('/')[^1].Split('#')[0];
+    Navigation.NavigateTo($"{currentPage}#{url}");
+    
+    GameNavLinks = GameNavLinks.Select(link => (
+        link.Text,
+        link.Url,
+        link.Icon,
+        link.Url == url && link.PageName == currentPage,
+        link.PageName
+    )).ToList();
+    
+    StateHasChanged();
+}
+
+private void UpdateActiveSection(string url)
+{
+    var section = url.Split('/').LastOrDefault();
+    var pageName = url.Split('/').Skip(1).FirstOrDefault();
+    
+    GameNavLinks = GameNavLinks.Select(link => (
+        link.Text,
+        link.Url,
+        link.Icon,
+        link.Url == section && link.PageName == pageName,
+        link.PageName
+    )).ToList();
+    
+    StateHasChanged();
+}
+
+    
     protected override async Task OnInitializedAsync()
     {
         _objRef = DotNetObjectReference.Create(this);
         MasaBlazor.MobileChanged += MasaBlazorOnMobileChanged;
         await InitializeTheme();
         
-        MessagingCenter.Subscribe<Counter, List<(string, string, string, bool)>>(
+        MessagingCenter.Subscribe<Counter, List<(string, string, string, bool,string)>>(
             this, "update_nav", (sender, links) =>
             {
                 GameNavLinks = links;
@@ -229,19 +323,28 @@
                 StateHasChanged();
             });
 
+        
+        MessagingCenter.Subscribe<ChroniclesOfSpellborn, List<(string, string, string, bool,string)>>(
+            this, "update_nav", (sender, links) =>
+            {
+                GameNavLinks = links;
+                ShowGameNav = true;
+                StateHasChanged();
+        });
+
         MessagingCenter.Subscribe<LaunchApp.Pages.Index>(this, "hide_subheader", async (sender) =>
-{
-    if (ShowGameNav)
-    {
-        isHiding = true;
-        StateHasChanged();
-        await Task.Delay(300);
-        ShowGameNav = false;
-        isHiding = false;
-        GameNavLinks.Clear();
-        StateHasChanged();
-    }
-});
+        {
+            if (ShowGameNav)
+            {
+                isHiding = true;
+                StateHasChanged();
+                await Task.Delay(300);
+                ShowGameNav = false;
+                isHiding = false;
+                GameNavLinks.Clear();
+                StateHasChanged();
+            }
+        });
     }
 
     private async Task InitializeTheme()
@@ -272,6 +375,11 @@
         MasaBlazor.MobileChanged -= MasaBlazorOnMobileChanged;
         _objRef?.Dispose();
         MessagingCenter.Unsubscribe<Counter, List<(string, string, string, bool)>>(this, "update_nav");
+        MessagingCenter.Unsubscribe<ChroniclesOfSpellborn, List<(string, string, string, bool)>>(this, "update_nav");
+
+
         MessagingCenter.Unsubscribe<LaunchApp.Pages.Index>(this, "hide_subheader");
+
+        NavigationManager.LocationChanged -= HandleLocationChanged;
     }
 }
