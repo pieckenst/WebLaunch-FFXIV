@@ -1,5 +1,9 @@
-﻿@using LumexUI
+﻿@* MainLayout.razor *@
+@using LumexUI
 @using LumexUI.Common
+@using LaunchApp.Pages
+@using LaunchApp.Models
+@using AKSoftware.Blazor.Utilities
 @inherits LayoutComponentBase
 @inject MasaBlazor MasaBlazor
 @inject IJSRuntime JSRuntime
@@ -10,60 +14,89 @@
 <MApp Dark="@MasaBlazor.Theme.Dark">
     <MErrorHandler DisablePopupIfErrorContentRender>
         <ChildContent>
-            <LumexNavbar Class="default-app-bar" ShouldHideOnScroll>
-                <LumexNavbarContent>
-                    <LumexNavbarMenuToggle Class="sm:hidden" />
-                    <LumexNavbarBrand Class="ml-4">
-                        <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
-                            <path clip-rule="evenodd"
-                                d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-                                fill="currentColor" />
-                        </svg>
-                        <span class="font-bold text-xl ml-2">Game Launcher</span>
-                    </LumexNavbarBrand>
-                </LumexNavbarContent>
+            <div class="navbar-wrapper">
+                <LumexNavbar Class="default-app-bar" ShouldHideOnScroll>
+                    <LumexNavbarContent>
+                        <LumexNavbarMenuToggle Class="sm:hidden" />
+                        <LumexNavbarBrand Class="ml-4">
+                            <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
+                                <path clip-rule="evenodd" d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z" fill="currentColor" />
+                            </svg>
+                            <span class="font-bold text-xl ml-2">Game Launcher</span>
+                        </LumexNavbarBrand>
+                    </LumexNavbarContent>
 
-                <LumexNavbarContent Class="hidden sm:flex justify-center flex-1">
-                    <LumexNavbarItem>
-                        <LumexLink Href="" Color="@ThemeColor.None">
-                            <MIcon>mdi-home</MIcon>
-                            Home
-                        </LumexLink>
-                    </LumexNavbarItem>
-                </LumexNavbarContent>
+                    <LumexNavbarContent Class="hidden sm:flex justify-center flex-1">
+                        <LumexNavbarItem>
+                            <LumexLink Href="" Color="@ThemeColor.None">
+                                <MIcon>mdi-home</MIcon>
+                                Home
+                            </LumexLink>
+                        </LumexNavbarItem>
+                    </LumexNavbarContent>
 
-                <LumexNavbarContent Justify="End">
-                    <LumexNavbarItem>
-                        <LumexSwitch 
-                StartIcon="@LumexUI.Icons.Rounded.LightMode" 
-                EndIcon="@LumexUI.Icons.Rounded.DarkMode" 
-                Color="@ThemeColor.Danger" 
-                Size="@Size.Medium" 
-                Value="@MasaBlazor.Theme.Dark"
-                ValueChanged="@(async (v) => {
-                    MasaBlazor.ToggleTheme();
-                    await JSRuntime.InvokeVoidAsync("switchTheme", MasaBlazor.Theme.Dark);
-                })">
-                Dark Mode
-            </LumexSwitch>
-                    </LumexNavbarItem>
-                    <LumexNavbarItem>
-                        <LumexButton Size="@Size.Small" Color="@ThemeColor.Primary" Variant="@Variant.Flat">
-                            Launch Game
-                        </LumexButton>
-                    </LumexNavbarItem>
-                </LumexNavbarContent>
+                    <LumexNavbarContent Justify="End">
+                        <LumexNavbarItem>
+                            <LumexSwitch StartIcon="@LumexUI.Icons.Rounded.LightMode"
+                                        EndIcon="@LumexUI.Icons.Rounded.DarkMode"
+                                        Size="@Size.Small"
+                                        Value="@MasaBlazor.Theme.Dark"
+                                        ValueChanged="@(async (v) => {
+                                            MasaBlazor.ToggleTheme();
+                                            await JSRuntime.InvokeVoidAsync("switchTheme", MasaBlazor.Theme.Dark);
+                                        })" />
+                        </LumexNavbarItem>
+                        <LumexNavbarItem>
+                            <LumexButton Size="@Size.Small" Color="@ThemeColor.Primary" Variant="@Variant.Flat">
+                                Launch Game
+                            </LumexButton>
+                        </LumexNavbarItem>
+                    </LumexNavbarContent>
 
-                <LumexNavbarMenu Class="sm:hidden">
-                    <LumexNavbarMenuItem>
-                        <LumexLink Href="" Color="@ThemeColor.None">Home</LumexLink>
-                    </LumexNavbarMenuItem>
-                </LumexNavbarMenu>
-            </LumexNavbar>
+                    <LumexNavbarMenu Class="sm:hidden">
+                        <LumexNavbarMenuItem>
+                            <LumexLink Href="" Color="@ThemeColor.None">Home</LumexLink>
+                        </LumexNavbarMenuItem>
+                        @if (ShowGameNav)
+                        {
+                            @foreach (var link in GameNavLinks)
+                            {
+                                <LumexNavbarMenuItem>
+                                    <LumexLink Href="@link.Url" Color="@ThemeColor.None">@link.Text</LumexLink>
+                                </LumexNavbarMenuItem>
+                            }
+                        }
+                    </LumexNavbarMenu>
+                </LumexNavbar>
+
+                @if (ShowGameNav)
+                {
+                    <div class="game-subheader">
+                        <LumexNavbar Dense ShouldHideOnScroll>
+                            <LumexNavbarContent Class="justify-center">
+                                @foreach (var link in GameNavLinks)
+                                {
+                                    <LumexNavbarItem>
+                                        <LumexLink Href="@link.Url" 
+                                                 Color="@ThemeColor.None"
+                                                 Class="@(link.IsActive ? "active-link" : "")">
+                                            @if (!string.IsNullOrEmpty(link.Icon))
+                                            {
+                                                <MIcon Size="20" Class="mr-2">@link.Icon</MIcon>
+                                            }
+                                            @link.Text
+                                        </LumexLink>
+                                    </LumexNavbarItem>
+                                }
+                            </LumexNavbarContent>
+                        </LumexNavbar>
+                    </div>
+                }
+            </div>
 
             <MMain>
                 <MTransition Name="fade-transition">
-                    <div class="game-content">
+                    <div class="game-content @(ShowGameNav ? "with-subheader" : "")">
                         @Body
                     </div>
                 </MTransition>
@@ -73,28 +106,80 @@
 </MApp>
 
 <style>
+    .navbar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
     .game-content {
         min-height: 100vh;
         background-color: var(--theme-background);
         transition: background-color 0.3s ease;
+        padding-top: var(--navbar-height);
+    }
+
+    .game-content.with-subheader {
+        padding-top: calc(var(--navbar-height) + 48px);
     }
 
     .default-app-bar {
         border-bottom: 1px solid rgba(255,255,255,0.12);
     }
+
+    .game-subheader {
+        width: 100%;
+        background: var(--background-secondary);
+        border-bottom: 1px solid var(--subheader-border);
+    }
+
+    .active-link {
+        color: var(--primary) !important;
+        border-bottom: 2px solid var(--primary);
+    }
+
+    .header-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        color: var(--foreground);
+        animation: fadeIn 0.5s ease-out 0.2s forwards;
+    }
+
+    [data-theme="light"] .header-content {
+        color: var(--background);
+    }
 </style>
-
-
-
 
 @code {
     private DotNetObjectReference<MainLayout>? _objRef;
+    public bool ShowGameNav { get; set; }
+    public List<(string Text, string Url, string Icon, bool IsActive)> GameNavLinks { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
     {
         _objRef = DotNetObjectReference.Create(this);
         MasaBlazor.MobileChanged += MasaBlazorOnMobileChanged;
         await InitializeTheme();
+        
+        MessagingCenter.Subscribe<Counter, List<(string, string, string, bool)>>(
+            this, "update_nav", (sender, links) =>
+            {
+                GameNavLinks = links;
+                ShowGameNav = true;
+                StateHasChanged();
+            });
+
+        MessagingCenter.Subscribe<LaunchApp.Pages.Index>(this, "hide_subheader", (sender) => 
+        {
+            ShowGameNav = false;
+            GameNavLinks.Clear();
+            StateHasChanged();
+        });
     }
 
     private async Task InitializeTheme()
@@ -124,5 +209,7 @@
     {
         MasaBlazor.MobileChanged -= MasaBlazorOnMobileChanged;
         _objRef?.Dispose();
+        MessagingCenter.Unsubscribe<Counter, List<(string, string, string, bool)>>(this, "update_nav");
+        MessagingCenter.Unsubscribe<LaunchApp.Pages.Index>(this, "hide_subheader");
     }
 }

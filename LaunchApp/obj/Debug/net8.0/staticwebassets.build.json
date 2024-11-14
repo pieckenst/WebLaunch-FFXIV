@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QjtO3eGLB30HS27FlnJNf0fSwWi9aFgCYOFzHgiW4Qs=",
+  "Hash": "5iT7Y6nQDR8R8a9AW6NJcIgW9bQ8As2h0qDg1lCPw94=",
   "Source": "LaunchApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -710,6 +710,27 @@
       "OriginalItemSpec": "C:\\Users\\Andrey\\.nuget\\packages\\masa.blazor\\1.7.7\\staticwebassets\\Presets\\PageStack\\PPageStack.razor.js"
     },
     {
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AKSoftware.Blazor.Utilities.wasm",
+      "SourceId": "LaunchApp",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AKSoftware.Blazor.Utilities.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "62hehpqe45",
+      "Integrity": "It2wyQq+VUGftDknElvXWFZEOj4LJt5m1yQvgmV2kqM=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\webcil\\AKSoftware.Blazor.Utilities.wasm"
+    },
+    {
       "Identity": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BemIt.wasm",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
@@ -745,8 +766,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "74fu46l570",
-      "Integrity": "+WvJ0FTbCuWCy/lGL3Hcgvxg5fEu//+gGMeI1DNoPEc=",
+      "Fingerprint": "g1jkss8vmk",
+      "Integrity": "ZGlOmMud0d0P7f+LOq5pDqDMGZG6Y7NxZnAB40Qnq50=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -850,8 +871,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "native",
-      "Fingerprint": "8otidw61b0",
-      "Integrity": "uLOybr/BhwUSYFuyxuguBLZtoYSb91V3TFry/bF+1xo=",
+      "Fingerprint": "nd81td30d1",
+      "Integrity": "q6GwOHBSywEMVvPYYUhNwe6LHCYQisayvEVSG35cx40=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\wasm\\for-build\\dotnet.native.js"
@@ -871,8 +892,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "native",
-      "Fingerprint": "f4d6zu5prt",
-      "Integrity": "71JjuztbKJhfufYTOKti/DVP9QqIIpITlSExcBa8bnE=",
+      "Fingerprint": "6mg14d3o54",
+      "Integrity": "ou0lgUy+iu7Jicj6P90KCXDmxcJfp0fMGQxZcGEq2JY=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\wasm\\for-build\\dotnet.native.wasm"
@@ -1060,8 +1081,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "dcb7zsxflc",
-      "Integrity": "LfgLe+MFU5xyN6E+6SsTNkdD8Z+/003pMUw2Eij/FWk=",
+      "Fingerprint": "sbwm84of64",
+      "Integrity": "KCXdlE38Rz0YjvurnRPLnntoKTSMBYHP7RS5+1eMNf4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\LaunchApp.pdb"
@@ -1081,8 +1102,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "ny9ibbmwxv",
-      "Integrity": "EabD7nyKdbfGInzy2aZ0DfIhVLtH4J+m/txO1YoqR7k=",
+      "Fingerprint": "2w205r2p1x",
+      "Integrity": "ot9W77UsIKgTsuQ/qxU+qJ9XUuMIpW1Jac7FgmbTgjs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\webcil\\LaunchApp.wasm"
@@ -5624,7 +5645,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\LruCacheNet.wasm"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\1obbtagp6p-ny9ibbmwxv.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\1obbtagp6p-2w205r2p1x.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\",
@@ -5638,8 +5659,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\LaunchApp.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "tiscaqblc1",
-      "Integrity": "Zf3OKVOytVU41dqmBRDLZc9nfHHXDJRGhqnXeVOCDSA=",
+      "Fingerprint": "vo56ldbvdp",
+      "Integrity": "saTWDIpHyTuzA4rSa/z3yBGMMsHk8cwr2oQnBBmWE3g=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\LaunchApp.wasm"
@@ -5916,6 +5937,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm"
+    },
+    {
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\3vim51s3we-62hehpqe45.gz",
+      "SourceId": "LaunchApp",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AKSoftware.Blazor.Utilities.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AKSoftware.Blazor.Utilities.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "x6ull73c2g",
+      "Integrity": "GW1eMYVHDTEwEixZgGiiGMGlP+yJC1HFEP4rG5me+iQ=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AKSoftware.Blazor.Utilities.wasm"
     },
     {
       "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\3xkhqen5kz-rhslwj74e6.gz",
@@ -7934,7 +7976,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.IsolatedStorage.wasm"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lauxpm0ksv-dcb7zsxflc.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lauxpm0ksv-sbwm84of64.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\",
@@ -7948,8 +7990,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\LaunchApp.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "uxoi453tih",
-      "Integrity": "wnYpBtwT+71dxex5ISaQEBu+CwoAAXL0K5eg1pGhJwo=",
+      "Fingerprint": "jv1hppk11k",
+      "Integrity": "v2DjyCoJBbY5oAnzuLrtk7PgI4Dzi2zphLYHsUGqNts=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\LaunchApp.pdb"
@@ -7976,7 +8018,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Principal.wasm"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lmcyilvykc-f4d6zu5prt.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lmcyilvykc-6mg14d3o54.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\",
@@ -7990,8 +8032,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "atnhwe007d",
-      "Integrity": "MlUP9WfZ4RGfTPW6BBLP8Tsl/5rUtWf5JYkKRWNWbVM=",
+      "Fingerprint": "uac9lul924",
+      "Integrity": "hqOu1kDW9skeZ7hncp/6+yU3LjbHAqq26J5ZKA2Cyho=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
@@ -9005,7 +9047,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Threading.Tasks.Extensions.wasm"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\sw4mtv5kd6-8otidw61b0.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\sw4mtv5kd6-nd81td30d1.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\",
@@ -9019,8 +9061,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "hvsz6k23um",
-      "Integrity": "7fJGZZJTGUZs2GC+Gkqc31rESNXk11E/oBhI8AtnrGQ=",
+      "Fingerprint": "j86jplkmn0",
+      "Integrity": "U5P7Ug43ZcsB26YDcJ9EPvfgMl7bEoTCxOkmBOKFPlA=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.js"
@@ -9110,7 +9152,7 @@
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Numerics.wasm"
     },
     {
-      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\u19yvlzdbb-74fu46l570.gz",
+      "Identity": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\u19yvlzdbb-g1jkss8vmk.gz",
       "SourceId": "LaunchApp",
       "SourceType": "Computed",
       "ContentRoot": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\",
@@ -9124,8 +9166,8 @@
       "RelatedAsset": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zbcb6y8n7o",
-      "Integrity": "L+FiM5Mza79sX4k1k/UlConZrzrw6Xm1x2/772ITZU8=",
+      "Fingerprint": "m03z30ed5u",
+      "Integrity": "Bv3+gznOIc9RUI0RrO5e4An0QNE3g9w4nTbskX2b75U=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -9859,8 +9901,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "BlazorServiceWorker",
       "AssetTraitValue": "ServiceWorkerJs",
-      "Fingerprint": "70lxcrrgzm",
-      "Integrity": "aY/PhWc8PfX7fhr9msld9nxhItAxTgyLEAgK3UX5tq0=",
+      "Fingerprint": "1wnh5h3sjy",
+      "Integrity": "McwIBdtOaUhKt5S7UYJ1URNj7jwBsbi2+LMPg8q/XSo=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "wwwroot\\service-worker.js"
@@ -9880,8 +9922,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "BlazorServiceWorker",
       "AssetTraitValue": "ServiceWorkerManifest",
-      "Fingerprint": "tfvyr5rl9r",
-      "Integrity": "Vw3XOYO2grzclkNrBso0FuwW4fWh2qUqF5AgY3izPPc=",
+      "Fingerprint": "r8pmqwhm8h",
+      "Integrity": "tWy7RRY7GnTiaQW+Ny6r5Uo7gz3S9/x5OMwKr328OHw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\service-worker\\service-worker-assets.js.build"
@@ -11665,8 +11707,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "anjt9izhkm",
-      "Integrity": "Sla3Clag58elWDNoh7dvYwSwmXswLS6zDekIKtRF28E=",
+      "Fingerprint": "6x6moudf94",
+      "Integrity": "dlMnPAL4SpGizn3fY948DxaPZRrnzvIEh6I2xusp02Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -12937,6 +12979,143 @@
       ]
     },
     {
+      "Route": "_framework/AKSoftware.Blazor.Utilities.wasm",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AKSoftware.Blazor.Utilities.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"It2wyQq+VUGftDknElvXWFZEOj4LJt5m1yQvgmV2kqM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-It2wyQq+VUGftDknElvXWFZEOj4LJt5m1yQvgmV2kqM="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/AKSoftware.Blazor.Utilities.wasm",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\3vim51s3we-62hehpqe45.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0,000174520070"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5729"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GW1eMYVHDTEwEixZgGiiGMGlP+yJC1HFEP4rG5me+iQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"It2wyQq+VUGftDknElvXWFZEOj4LJt5m1yQvgmV2kqM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-It2wyQq+VUGftDknElvXWFZEOj4LJt5m1yQvgmV2kqM="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/AKSoftware.Blazor.Utilities.wasm.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\3vim51s3we-62hehpqe45.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GW1eMYVHDTEwEixZgGiiGMGlP+yJC1HFEP4rG5me+iQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GW1eMYVHDTEwEixZgGiiGMGlP+yJC1HFEP4rG5me+iQ="
+        }
+      ]
+    },
+    {
       "Route": "_framework/BemIt.wasm",
       "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\BemIt.wasm",
       "Selectors": [],
@@ -13084,7 +13263,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "20654"
+          "Value": "20752"
         },
         {
           "Name": "Content-Type",
@@ -13092,11 +13271,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+WvJ0FTbCuWCy/lGL3Hcgvxg5fEu//+gGMeI1DNoPEc=\""
+          "Value": "\"ZGlOmMud0d0P7f+LOq5pDqDMGZG6Y7NxZnAB40Qnq50=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:37:30 GMT"
+          "Value": "Thu, 14 Nov 2024 15:39:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13106,18 +13285,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+WvJ0FTbCuWCy/lGL3Hcgvxg5fEu//+gGMeI1DNoPEc="
+          "Value": "sha256-ZGlOmMud0d0P7f+LOq5pDqDMGZG6Y7NxZnAB40Qnq50="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\u19yvlzdbb-74fu46l570.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\u19yvlzdbb-g1jkss8vmk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0,000107158165"
+          "Quality": "0,000106587082"
         }
       ],
       "ResponseHeaders": [
@@ -13127,15 +13306,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9331"
+          "Value": "9381"
         },
         {
           "Name": "ETag",
-          "Value": "\"L+FiM5Mza79sX4k1k/UlConZrzrw6Xm1x2/772ITZU8=\""
+          "Value": "\"Bv3+gznOIc9RUI0RrO5e4An0QNE3g9w4nTbskX2b75U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:03 GMT"
+          "Value": "Thu, 14 Nov 2024 15:36:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13155,19 +13334,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"+WvJ0FTbCuWCy/lGL3Hcgvxg5fEu//+gGMeI1DNoPEc=\""
+          "Value": "W/\"ZGlOmMud0d0P7f+LOq5pDqDMGZG6Y7NxZnAB40Qnq50=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+WvJ0FTbCuWCy/lGL3Hcgvxg5fEu//+gGMeI1DNoPEc="
+          "Value": "sha256-ZGlOmMud0d0P7f+LOq5pDqDMGZG6Y7NxZnAB40Qnq50="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\u19yvlzdbb-74fu46l570.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\u19yvlzdbb-g1jkss8vmk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13176,7 +13355,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9331"
+          "Value": "9381"
         },
         {
           "Name": "Content-Type",
@@ -13184,11 +13363,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"L+FiM5Mza79sX4k1k/UlConZrzrw6Xm1x2/772ITZU8=\""
+          "Value": "\"Bv3+gznOIc9RUI0RrO5e4An0QNE3g9w4nTbskX2b75U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:03 GMT"
+          "Value": "Thu, 14 Nov 2024 15:36:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13206,7 +13385,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-L+FiM5Mza79sX4k1k/UlConZrzrw6Xm1x2/772ITZU8="
+          "Value": "sha256-Bv3+gznOIc9RUI0RrO5e4An0QNE3g9w4nTbskX2b75U="
         }
       ]
     },
@@ -13777,11 +13956,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uLOybr/BhwUSYFuyxuguBLZtoYSb91V3TFry/bF+1xo=\""
+          "Value": "\"q6GwOHBSywEMVvPYYUhNwe6LHCYQisayvEVSG35cx40=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 13 Nov 2024 20:02:05 GMT"
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13791,13 +13970,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uLOybr/BhwUSYFuyxuguBLZtoYSb91V3TFry/bF+1xo="
+          "Value": "sha256-q6GwOHBSywEMVvPYYUhNwe6LHCYQisayvEVSG35cx40="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.js",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\sw4mtv5kd6-8otidw61b0.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\sw4mtv5kd6-nd81td30d1.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -13816,11 +13995,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7fJGZZJTGUZs2GC+Gkqc31rESNXk11E/oBhI8AtnrGQ=\""
+          "Value": "\"U5P7Ug43ZcsB26YDcJ9EPvfgMl7bEoTCxOkmBOKFPlA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 13 Nov 2024 20:02:05 GMT"
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13840,19 +14019,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"uLOybr/BhwUSYFuyxuguBLZtoYSb91V3TFry/bF+1xo=\""
+          "Value": "W/\"q6GwOHBSywEMVvPYYUhNwe6LHCYQisayvEVSG35cx40=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uLOybr/BhwUSYFuyxuguBLZtoYSb91V3TFry/bF+1xo="
+          "Value": "sha256-q6GwOHBSywEMVvPYYUhNwe6LHCYQisayvEVSG35cx40="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.js.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\sw4mtv5kd6-8otidw61b0.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\sw4mtv5kd6-nd81td30d1.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13869,11 +14048,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7fJGZZJTGUZs2GC+Gkqc31rESNXk11E/oBhI8AtnrGQ=\""
+          "Value": "\"U5P7Ug43ZcsB26YDcJ9EPvfgMl7bEoTCxOkmBOKFPlA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 13 Nov 2024 20:02:05 GMT"
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13891,7 +14070,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7fJGZZJTGUZs2GC+Gkqc31rESNXk11E/oBhI8AtnrGQ="
+          "Value": "sha256-U5P7Ug43ZcsB26YDcJ9EPvfgMl7bEoTCxOkmBOKFPlA="
         }
       ]
     },
@@ -13914,11 +14093,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"71JjuztbKJhfufYTOKti/DVP9QqIIpITlSExcBa8bnE=\""
+          "Value": "\"ou0lgUy+iu7Jicj6P90KCXDmxcJfp0fMGQxZcGEq2JY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 13 Nov 2024 20:02:05 GMT"
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13928,13 +14107,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-71JjuztbKJhfufYTOKti/DVP9QqIIpITlSExcBa8bnE="
+          "Value": "sha256-ou0lgUy+iu7Jicj6P90KCXDmxcJfp0fMGQxZcGEq2JY="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.wasm",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lmcyilvykc-f4d6zu5prt.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lmcyilvykc-6mg14d3o54.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -13953,11 +14132,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MlUP9WfZ4RGfTPW6BBLP8Tsl/5rUtWf5JYkKRWNWbVM=\""
+          "Value": "\"hqOu1kDW9skeZ7hncp/6+yU3LjbHAqq26J5ZKA2Cyho=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 13 Nov 2024 20:02:05 GMT"
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13977,19 +14156,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"71JjuztbKJhfufYTOKti/DVP9QqIIpITlSExcBa8bnE=\""
+          "Value": "W/\"ou0lgUy+iu7Jicj6P90KCXDmxcJfp0fMGQxZcGEq2JY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-71JjuztbKJhfufYTOKti/DVP9QqIIpITlSExcBa8bnE="
+          "Value": "sha256-ou0lgUy+iu7Jicj6P90KCXDmxcJfp0fMGQxZcGEq2JY="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.wasm.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lmcyilvykc-f4d6zu5prt.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lmcyilvykc-6mg14d3o54.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14006,11 +14185,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MlUP9WfZ4RGfTPW6BBLP8Tsl/5rUtWf5JYkKRWNWbVM=\""
+          "Value": "\"hqOu1kDW9skeZ7hncp/6+yU3LjbHAqq26J5ZKA2Cyho=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 13 Nov 2024 20:02:05 GMT"
+          "Value": "Thu, 14 Nov 2024 15:13:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14028,7 +14207,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MlUP9WfZ4RGfTPW6BBLP8Tsl/5rUtWf5JYkKRWNWbVM="
+          "Value": "sha256-hqOu1kDW9skeZ7hncp/6+yU3LjbHAqq26J5ZKA2Cyho="
         }
       ]
     },
@@ -15139,7 +15318,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45528"
+          "Value": "48012"
         },
         {
           "Name": "Content-Type",
@@ -15147,11 +15326,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LfgLe+MFU5xyN6E+6SsTNkdD8Z+/003pMUw2Eij/FWk=\""
+          "Value": "\"KCXdlE38Rz0YjvurnRPLnntoKTSMBYHP7RS5+1eMNf4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:01 GMT"
+          "Value": "Thu, 14 Nov 2024 15:39:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15161,18 +15340,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LfgLe+MFU5xyN6E+6SsTNkdD8Z+/003pMUw2Eij/FWk="
+          "Value": "sha256-KCXdlE38Rz0YjvurnRPLnntoKTSMBYHP7RS5+1eMNf4="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.pdb",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lauxpm0ksv-dcb7zsxflc.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lauxpm0ksv-sbwm84of64.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0,000027299282"
+          "Quality": "0,000025961214"
         }
       ],
       "ResponseHeaders": [
@@ -15182,15 +15361,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "36630"
+          "Value": "38518"
         },
         {
           "Name": "ETag",
-          "Value": "\"wnYpBtwT+71dxex5ISaQEBu+CwoAAXL0K5eg1pGhJwo=\""
+          "Value": "\"v2DjyCoJBbY5oAnzuLrtk7PgI4Dzi2zphLYHsUGqNts=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:01 GMT"
+          "Value": "Thu, 14 Nov 2024 15:36:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15210,19 +15389,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"LfgLe+MFU5xyN6E+6SsTNkdD8Z+/003pMUw2Eij/FWk=\""
+          "Value": "W/\"KCXdlE38Rz0YjvurnRPLnntoKTSMBYHP7RS5+1eMNf4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LfgLe+MFU5xyN6E+6SsTNkdD8Z+/003pMUw2Eij/FWk="
+          "Value": "sha256-KCXdlE38Rz0YjvurnRPLnntoKTSMBYHP7RS5+1eMNf4="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.pdb.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lauxpm0ksv-dcb7zsxflc.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\lauxpm0ksv-sbwm84of64.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15231,7 +15410,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "36630"
+          "Value": "38518"
         },
         {
           "Name": "Content-Type",
@@ -15239,11 +15418,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wnYpBtwT+71dxex5ISaQEBu+CwoAAXL0K5eg1pGhJwo=\""
+          "Value": "\"v2DjyCoJBbY5oAnzuLrtk7PgI4Dzi2zphLYHsUGqNts=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:01 GMT"
+          "Value": "Thu, 14 Nov 2024 15:36:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15261,7 +15440,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wnYpBtwT+71dxex5ISaQEBu+CwoAAXL0K5eg1pGhJwo="
+          "Value": "sha256-v2DjyCoJBbY5oAnzuLrtk7PgI4Dzi2zphLYHsUGqNts="
         }
       ]
     },
@@ -15276,7 +15455,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "72469"
+          "Value": "79637"
         },
         {
           "Name": "Content-Type",
@@ -15284,11 +15463,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EabD7nyKdbfGInzy2aZ0DfIhVLtH4J+m/txO1YoqR7k=\""
+          "Value": "\"ot9W77UsIKgTsuQ/qxU+qJ9XUuMIpW1Jac7FgmbTgjs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:03 GMT"
+          "Value": "Thu, 14 Nov 2024 15:39:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15298,18 +15477,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EabD7nyKdbfGInzy2aZ0DfIhVLtH4J+m/txO1YoqR7k="
+          "Value": "sha256-ot9W77UsIKgTsuQ/qxU+qJ9XUuMIpW1Jac7FgmbTgjs="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.wasm",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\1obbtagp6p-ny9ibbmwxv.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\1obbtagp6p-2w205r2p1x.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0,000039627501"
+          "Quality": "0,000037399955"
         }
       ],
       "ResponseHeaders": [
@@ -15319,15 +15498,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "25234"
+          "Value": "26737"
         },
         {
           "Name": "ETag",
-          "Value": "\"Zf3OKVOytVU41dqmBRDLZc9nfHHXDJRGhqnXeVOCDSA=\""
+          "Value": "\"saTWDIpHyTuzA4rSa/z3yBGMMsHk8cwr2oQnBBmWE3g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:03 GMT"
+          "Value": "Thu, 14 Nov 2024 15:36:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15347,19 +15526,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"EabD7nyKdbfGInzy2aZ0DfIhVLtH4J+m/txO1YoqR7k=\""
+          "Value": "W/\"ot9W77UsIKgTsuQ/qxU+qJ9XUuMIpW1Jac7FgmbTgjs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EabD7nyKdbfGInzy2aZ0DfIhVLtH4J+m/txO1YoqR7k="
+          "Value": "sha256-ot9W77UsIKgTsuQ/qxU+qJ9XUuMIpW1Jac7FgmbTgjs="
         }
       ]
     },
     {
       "Route": "_framework/LaunchApp.wasm.gz",
-      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\1obbtagp6p-ny9ibbmwxv.gz",
+      "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\obj\\Debug\\net8.0\\compressed\\1obbtagp6p-2w205r2p1x.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15368,7 +15547,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "25234"
+          "Value": "26737"
         },
         {
           "Name": "Content-Type",
@@ -15376,11 +15555,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Zf3OKVOytVU41dqmBRDLZc9nfHHXDJRGhqnXeVOCDSA=\""
+          "Value": "\"saTWDIpHyTuzA4rSa/z3yBGMMsHk8cwr2oQnBBmWE3g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:35:03 GMT"
+          "Value": "Thu, 14 Nov 2024 15:36:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15398,7 +15577,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Zf3OKVOytVU41dqmBRDLZc9nfHHXDJRGhqnXeVOCDSA="
+          "Value": "sha256-saTWDIpHyTuzA4rSa/z3yBGMMsHk8cwr2oQnBBmWE3g="
         }
       ]
     },
@@ -49554,7 +49733,7 @@
       ]
     },
     {
-      "Route": "index.anjt9izhkm.html",
+      "Route": "index.6x6moudf94.html",
       "AssetFile": "G:\\code\\WebLaunch\\LaunchApp\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -49564,7 +49743,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3934"
+          "Value": "3931"
         },
         {
           "Name": "Content-Type",
@@ -49572,11 +49751,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Sla3Clag58elWDNoh7dvYwSwmXswLS6zDekIKtRF28E=\""
+          "Value": "\"dlMnPAL4SpGizn3fY948DxaPZRrnzvIEh6I2xusp02Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:37:25 GMT"
+          "Value": "Thu, 14 Nov 2024 14:42:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -49586,7 +49765,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "anjt9izhkm"
+          "Value": "6x6moudf94"
         },
         {
           "Name": "label",
@@ -49594,7 +49773,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Sla3Clag58elWDNoh7dvYwSwmXswLS6zDekIKtRF28E="
+          "Value": "sha256-dlMnPAL4SpGizn3fY948DxaPZRrnzvIEh6I2xusp02Y="
         }
       ]
     },
@@ -49609,7 +49788,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3934"
+          "Value": "3931"
         },
         {
           "Name": "Content-Type",
@@ -49617,11 +49796,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Sla3Clag58elWDNoh7dvYwSwmXswLS6zDekIKtRF28E=\""
+          "Value": "\"dlMnPAL4SpGizn3fY948DxaPZRrnzvIEh6I2xusp02Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:37:25 GMT"
+          "Value": "Thu, 14 Nov 2024 14:42:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -49631,7 +49810,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Sla3Clag58elWDNoh7dvYwSwmXswLS6zDekIKtRF28E="
+          "Value": "sha256-dlMnPAL4SpGizn3fY948DxaPZRrnzvIEh6I2xusp02Y="
         }
       ]
     },
@@ -49908,7 +50087,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aY/PhWc8PfX7fhr9msld9nxhItAxTgyLEAgK3UX5tq0=\""
+          "Value": "\"McwIBdtOaUhKt5S7UYJ1URNj7jwBsbi2+LMPg8q/XSo=\""
         },
         {
           "Name": "Last-Modified",
@@ -49922,7 +50101,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-aY/PhWc8PfX7fhr9msld9nxhItAxTgyLEAgK3UX5tq0="
+          "Value": "sha256-McwIBdtOaUhKt5S7UYJ1URNj7jwBsbi2+LMPg8q/XSo="
         }
       ]
     },
@@ -49937,7 +50116,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "47507"
+          "Value": "47652"
         },
         {
           "Name": "Content-Type",
@@ -49945,11 +50124,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Vw3XOYO2grzclkNrBso0FuwW4fWh2qUqF5AgY3izPPc=\""
+          "Value": "\"tWy7RRY7GnTiaQW+Ny6r5Uo7gz3S9/x5OMwKr328OHw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 14 Nov 2024 14:37:30 GMT"
+          "Value": "Thu, 14 Nov 2024 15:39:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -49959,7 +50138,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Vw3XOYO2grzclkNrBso0FuwW4fWh2qUqF5AgY3izPPc="
+          "Value": "sha256-tWy7RRY7GnTiaQW+Ny6r5Uo7gz3S9/x5OMwKr328OHw="
         }
       ]
     }

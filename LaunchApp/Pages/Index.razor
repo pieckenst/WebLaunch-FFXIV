@@ -101,6 +101,12 @@
 </style>
 
 @code {
+
+    protected override void OnInitialized()
+    {
+        // Send message to hide subheader when landing page loads
+        MessagingCenter.Send(this, "hide_subheader");
+    }
     private List<GameInfo> _games = new()
     {
         new GameInfo 

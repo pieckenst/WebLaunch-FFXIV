@@ -4,7 +4,7 @@
 @inject MasaBlazor MasaBlazor
 
 <PageTitle>Chronicles of Spellborn</PageTitle>
-<GameSubHeader IsVisible="true" NavigationLinks="@_navLinks" />
+
 
 <MContainer Fluid>
     <div class="game-header">
@@ -184,14 +184,7 @@
 </style>
 
 @code {
-    private List<GameSubHeader.NavLink> _navLinks = new()
-    {
-        new() { Text = "About", Url = "#", IsActive = true },
-        new() { Text = "Shop", Url = "#" },
-        new() { Text = "News", Url = "#" },
-        new() { Text = "Guides", Url = "#" },
-        new() { Text = "Updates", Url = "#" }
-    };
+    
     private string gamepathersinp = "";
     bool showModal = false;
     void ModalOk()

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AKSoftware.Blazor.Utilities/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/AKSoftware.Blazor.Utilities.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/AKSoftware.Blazor.Utilities.dll": {}
+        }
+      },
       "BemIt/2.2.0": {
         "type": "package",
         "compile": {
@@ -1911,6 +1923,18 @@
       }
     },
     "net8.0/browser-wasm": {
+      "AKSoftware.Blazor.Utilities/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/AKSoftware.Blazor.Utilities.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/AKSoftware.Blazor.Utilities.dll": {}
+        }
+      },
       "BemIt/2.2.0": {
         "type": "package",
         "compile": {
@@ -3831,6 +3855,20 @@
     }
   },
   "libraries": {
+    "AKSoftware.Blazor.Utilities/1.1.0": {
+      "sha512": "UuKxLidIOltVtsFRcXlJyJtcPLaJTK9Hmk2ESyqWi0u8f4u870jPVvBmMseb0ie8spvvgY/Q6vOfJzt6tznd+g==",
+      "type": "package",
+      "path": "aksoftware.blazor.utilities/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazor Utitlies.png",
+        "LICENSE",
+        "aksoftware.blazor.utilities.1.1.0.nupkg.sha512",
+        "aksoftware.blazor.utilities.nuspec",
+        "lib/net8.0/AKSoftware.Blazor.Utilities.dll"
+      ]
+    },
     "BemIt/2.2.0": {
       "sha512": "oSrFyB/9fvxKVEqwoMjHmxDSnEFiTjyxIFjdOEyXmc/4YVXoEiYhxrNhNA4B/4lAfAMQBVcOWXdllZ+bSkWNqg==",
       "type": "package",
@@ -8685,6 +8723,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AKSoftware.Blazor.Utilities >= 1.1.0",
       "LumexUI >= 1.0.0-preview.3",
       "Masa.Blazor >= 1.7.7",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.10",
@@ -8746,6 +8785,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "AKSoftware.Blazor.Utilities": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "LumexUI": {
             "target": "Package",
             "version": "[1.0.0-preview.3, )"

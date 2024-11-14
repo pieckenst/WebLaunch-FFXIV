@@ -3,9 +3,10 @@
 @inject IJSRuntime jsRuntime
 @inject MasaBlazor MasaBlazor
 @using System.Security.Cryptography;
+@using AKSoftware.Blazor.Utilities
 
 <PageTitle>FFXIV Login</PageTitle>
-<GameSubHeader IsVisible="true" NavigationLinks="@_navLinks" />
+
 <MContainer Fluid>
     <div class="game-header">
     <MImage Src="https://img.finalfantasyxiv.com/lds/h/V/U5TjBZoXVbddg1ZB7H4k0fkYqo.jpg" 
@@ -172,14 +173,18 @@
     }
 
     .header-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 2rem;
-        color: white;
-        animation: fadeIn 0.5s ease-out 0.2s forwards;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    color: var(--foreground);
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+}
+
+[data-theme="light"] .header-content {
+    color: var(--background);
+}
 
     .play-card {
         padding: 1rem;
@@ -215,14 +220,7 @@
     }
 </style>
 @code {
-    private List<GameSubHeader.NavLink> _navLinks = new()
-    {
-        new() { Text = "About", Url = "#", IsActive = true },
-        new() { Text = "Shop", Url = "#" },
-        new() { Text = "News", Url = "#" },
-        new() { Text = "Guides", Url = "#" },
-        new() { Text = "Updates", Url = "#" }
-    };
+    
     private string statusstring = "Awaiting input";
     private string usernameinp = "";
     private string passinp = "";
@@ -232,6 +230,18 @@
     private bool checkedValue;
     bool showModal = false;
 
+    protected override void OnInitialized()
+    {
+        var links = new List<(string Text, string Url, string Icon, bool IsActive)>
+        {
+            ("Overview", "", "", true),
+            ("Characters", "characters", "", false),
+            ("Shop", "shop", "", false)
+        };
+
+        MessagingCenter.Send(this, "update_nav", links);
+    }
+
     void ModalShow() => showModal = true;
     void ModalCancel() => showModal = false;
     void ModalOk()
@@ -239,6 +249,8 @@
         Console.WriteLine("Modal ok");
         showModal = false;
     }
+
+    
 
     private async Task<(string encrypted, string hash)> EncryptPassword(string password)
 {

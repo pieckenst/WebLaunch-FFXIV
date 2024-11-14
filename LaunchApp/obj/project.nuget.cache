@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mIt5bZ8R2PY=",
+  "dgSpecHash": "9vUNHLxBDSo=",
   "success": true,
   "projectFilePath": "G:\\code\\WebLaunch\\LaunchApp\\LaunchApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Andrey\\.nuget\\packages\\aksoftware.blazor.utilities\\1.1.0\\aksoftware.blazor.utilities.1.1.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\bemit\\2.2.0\\bemit.2.2.0.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\deepcloner\\0.10.4\\deepcloner.0.10.4.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",

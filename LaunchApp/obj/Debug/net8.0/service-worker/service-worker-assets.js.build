@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "5q0PHy5b",
+  "version": "2YFRR6QO",
   "assets": [
     {
       "hash": "sha256-QSlfH3mtzIkfydoBjG96HdwRsJMhmC2zWXK+kPvh5b8=",
@@ -138,6 +138,10 @@ self.assetsManifest = {
       "url": "_content/Masa.Blazor/js/vditor/vditor-helper.js"
     },
     {
+      "hash": "sha256-It2wyQq+VUGftDknElvXWFZEOj4LJt5m1yQvgmV2kqM=",
+      "url": "_framework/AKSoftware.Blazor.Utilities.wasm"
+    },
+    {
       "hash": "sha256-2ake0gd2dtojp4ggyggAonW/vaG9/g9H17nIL+b8YJI=",
       "url": "_framework/BemIt.wasm"
     },
@@ -154,11 +158,11 @@ self.assetsManifest = {
       "url": "_framework/FluentValidation.wasm"
     },
     {
-      "hash": "sha256-LfgLe+MFU5xyN6E+6SsTNkdD8Z+/003pMUw2Eij/FWk=",
+      "hash": "sha256-KCXdlE38Rz0YjvurnRPLnntoKTSMBYHP7RS5+1eMNf4=",
       "url": "_framework/LaunchApp.pdb"
     },
     {
-      "hash": "sha256-EabD7nyKdbfGInzy2aZ0DfIhVLtH4J+m/txO1YoqR7k=",
+      "hash": "sha256-ot9W77UsIKgTsuQ/qxU+qJ9XUuMIpW1Jac7FgmbTgjs=",
       "url": "_framework/LaunchApp.wasm"
     },
     {
@@ -950,7 +954,7 @@ self.assetsManifest = {
       "url": "_framework/WindowsBase.wasm"
     },
     {
-      "hash": "sha256-+WvJ0FTbCuWCy/lGL3Hcgvxg5fEu//+gGMeI1DNoPEc=",
+      "hash": "sha256-ZGlOmMud0d0P7f+LOq5pDqDMGZG6Y7NxZnAB40Qnq50=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -966,11 +970,11 @@ self.assetsManifest = {
       "url": "_framework/dotnet.js.map"
     },
     {
-      "hash": "sha256-uLOybr/BhwUSYFuyxuguBLZtoYSb91V3TFry/bF+1xo=",
+      "hash": "sha256-q6GwOHBSywEMVvPYYUhNwe6LHCYQisayvEVSG35cx40=",
       "url": "_framework/dotnet.native.js"
     },
     {
-      "hash": "sha256-71JjuztbKJhfufYTOKti/DVP9QqIIpITlSExcBa8bnE=",
+      "hash": "sha256-ou0lgUy+iu7Jicj6P90KCXDmxcJfp0fMGQxZcGEq2JY=",
       "url": "_framework/dotnet.native.wasm"
     },
     {
@@ -1342,7 +1346,7 @@ self.assetsManifest = {
       "url": "images/logo.png"
     },
     {
-      "hash": "sha256-Sla3Clag58elWDNoh7dvYwSwmXswLS6zDekIKtRF28E=",
+      "hash": "sha256-dlMnPAL4SpGizn3fY948DxaPZRrnzvIEh6I2xusp02Y=",
       "url": "index.html"
     },
     {
