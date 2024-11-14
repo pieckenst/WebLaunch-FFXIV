@@ -1,5 +1,4 @@
-﻿@* MainLayout.razor *@
-@using LumexUI
+﻿@using LumexUI
 @using LumexUI.Common
 @using LaunchApp.Pages
 @using LaunchApp.Models
@@ -46,7 +45,7 @@
                                             await JSRuntime.InvokeVoidAsync("switchTheme", MasaBlazor.Theme.Dark);
                                         })" />
                         </LumexNavbarItem>
-                        <LumexNavbarItem>
+                        <LumexNavbarItem Class="desktop-launch-button">
                             <LumexButton Size="@Size.Small" Color="@ThemeColor.Primary" Variant="@Variant.Flat">
                                 Launch Game
                             </LumexButton>
@@ -59,17 +58,30 @@
                         </LumexNavbarMenuItem>
                         @if (ShowGameNav)
                         {
+                            <MDivider Class="my-2"></MDivider>
                             @foreach (var link in GameNavLinks)
                             {
                                 <LumexNavbarMenuItem>
-                                    <LumexLink Href="@link.Url" Color="@ThemeColor.None">@link.Text</LumexLink>
+                                    <LumexLink Href="@link.Url" Color="@ThemeColor.None">
+                                        @if (!string.IsNullOrEmpty(link.Icon))
+                                        {
+                                            <MIcon Size="20" Class="mr-2">@link.Icon</MIcon>
+                                        }
+                                        @link.Text
+                                    </LumexLink>
                                 </LumexNavbarMenuItem>
                             }
+                            <MDivider Class="my-2"></MDivider>
+                            <LumexNavbarMenuItem>
+                                <LumexButton Block Color="@ThemeColor.Primary" Variant="@Variant.Flat">
+                                    Launch Game
+                                </LumexButton>
+                            </LumexNavbarMenuItem>
                         }
                     </LumexNavbarMenu>
                 </LumexNavbar>
 
-                @if (ShowGameNav)
+                @if (ShowGameNav && !MasaBlazor.Breakpoint.Mobile)
                 {
                     <div class="game-subheader">
                         <LumexNavbar Dense ShouldHideOnScroll>
@@ -77,7 +89,7 @@
                                 @foreach (var link in GameNavLinks)
                                 {
                                     <LumexNavbarItem>
-                                        <LumexLink Href="@link.Url" 
+                                        <LumexLink Href="@link.Url"
                                                  Color="@ThemeColor.None"
                                                  Class="@(link.IsActive ? "active-link" : "")">
                                             @if (!string.IsNullOrEmpty(link.Icon))
@@ -96,7 +108,7 @@
 
             <MMain>
                 <MTransition Name="fade-transition">
-                    <div class="game-content @(ShowGameNav ? "with-subheader" : "")">
+                    <div class="game-content @(ShowGameNav && !MasaBlazor.Breakpoint.Mobile ? "with-subheader" : "")">
                         @Body
                     </div>
                 </MTransition>
@@ -119,6 +131,7 @@
         background-color: var(--theme-background);
         transition: background-color 0.3s ease;
         padding-top: var(--navbar-height);
+        margin-top: 0;
     }
 
     .game-content.with-subheader {
@@ -153,6 +166,17 @@
     [data-theme="light"] .header-content {
         color: var(--background);
     }
+
+    @@media (max-width: 600px) {
+        .play-card {
+            display: none;
+        }
+    }
+    @@media (max-width: 600px) {
+    .desktop-launch-button {
+        display: none;
+    }
+}
 </style>
 
 @code {
@@ -174,7 +198,7 @@
                 StateHasChanged();
             });
 
-        MessagingCenter.Subscribe<LaunchApp.Pages.Index>(this, "hide_subheader", (sender) => 
+        MessagingCenter.Subscribe<LaunchApp.Pages.Index>(this, "hide_subheader", (sender) =>
         {
             ShowGameNav = false;
             GameNavLinks.Clear();
