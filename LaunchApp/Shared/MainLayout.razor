@@ -233,6 +233,14 @@
     
 private void SelectSection(string url, string pageName)
 {
+    Console.WriteLine($"SelectSection called with url: {url}, pageName: {pageName}");
+    
+    var currentUri = new Uri(Navigation.Uri);
+    var pathSegments = currentUri.AbsolutePath.Split('/', StringSplitOptions.RemoveEmptyEntries);
+    var currentPage = pathSegments.Length > 0 ? pathSegments[0] : "";
+    
+    Console.WriteLine($"Current page: {currentPage}");
+    
     GameNavLinks = GameNavLinks.Select(link => (
         link.Text,
         link.Url,
@@ -241,29 +249,35 @@ private void SelectSection(string url, string pageName)
         link.PageName
     )).ToList();
     
-    Navigation.NavigateTo($"{pageName}/{url}", false);
-    StateHasChanged();
+    var navigationTarget = $"/{currentPage}?section={url}";
+    Console.WriteLine($"Navigation target: {navigationTarget}");
+    
+    Navigation.NavigateTo(navigationTarget);
 }
+
 
     private void HandleLocationChanged(object sender, LocationChangedEventArgs e)
 {
+    Console.WriteLine($"Location changed to: {e.Location}");
     var uri = new Uri(e.Location);
-    var section = uri.Segments.LastOrDefault()?.TrimEnd('/');
-    var pageName = uri.Segments.Skip(1).FirstOrDefault()?.TrimEnd('/');
-    
-    if (!string.IsNullOrEmpty(section))
+    var currentPage = uri.AbsolutePath.TrimStart('/');
+    var fragment = uri.Fragment;
+    Console.WriteLine($"Current page: {currentPage}, Fragment: {fragment}");
+
+    if (GameNavLinks.Any(l => l.PageName == currentPage))
     {
+        var section = !string.IsNullOrEmpty(fragment) ? fragment.TrimStart('#') : "overview";
         GameNavLinks = GameNavLinks.Select(link => (
             link.Text,
             link.Url,
             link.Icon,
-            link.Url == section && link.PageName == pageName,
+            link.Url == section && link.PageName == currentPage,
             link.PageName
         )).ToList();
-        
         StateHasChanged();
     }
 }
+
 
     private bool isHiding = false;
 
@@ -276,35 +290,25 @@ private void SelectSection(string url, string pageName)
 
 
    
-private void NavigateToSection(string url)
-{
-    var currentPage = Navigation.Uri.Split('/')[^1].Split('#')[0];
-    Navigation.NavigateTo($"{currentPage}#{url}");
-    
-    GameNavLinks = GameNavLinks.Select(link => (
-        link.Text,
-        link.Url,
-        link.Icon,
-        link.Url == url && link.PageName == currentPage,
-        link.PageName
-    )).ToList();
-    
-    StateHasChanged();
-}
 
+private void NavigateToSection(string url, string pageName)
+{
+    Console.WriteLine($"Navigating to section: {url} on page: {pageName}");
+    var navigationTarget = $"/{pageName}/{url}";
+    Console.WriteLine($"Navigation target: {navigationTarget}");
+    
+    Navigation.NavigateTo(navigationTarget);
+}
 private void UpdateActiveSection(string url)
 {
-    var section = url.Split('/').LastOrDefault();
-    var pageName = url.Split('/').Skip(1).FirstOrDefault();
-    
+    Console.WriteLine($"Updating active section: {url}");
     GameNavLinks = GameNavLinks.Select(link => (
         link.Text,
         link.Url,
         link.Icon,
-        link.Url == section && link.PageName == pageName,
+        link.Url == url,
         link.PageName
     )).ToList();
-    
     StateHasChanged();
 }
 
@@ -315,7 +319,7 @@ private void UpdateActiveSection(string url)
         MasaBlazor.MobileChanged += MasaBlazorOnMobileChanged;
         await InitializeTheme();
         
-        MessagingCenter.Subscribe<Counter, List<(string, string, string, bool,string)>>(
+        MessagingCenter.Subscribe<FFXIVpage, List<(string, string, string, bool,string)>>(
             this, "update_nav", (sender, links) =>
             {
                 GameNavLinks = links;
@@ -374,7 +378,7 @@ private void UpdateActiveSection(string url)
     {
         MasaBlazor.MobileChanged -= MasaBlazorOnMobileChanged;
         _objRef?.Dispose();
-        MessagingCenter.Unsubscribe<Counter, List<(string, string, string, bool)>>(this, "update_nav");
+        MessagingCenter.Unsubscribe<FFXIVpage, List<(string, string, string, bool)>>(this, "update_nav");
         MessagingCenter.Unsubscribe<ChroniclesOfSpellborn, List<(string, string, string, bool)>>(this, "update_nav");
 
 

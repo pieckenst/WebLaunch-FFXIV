@@ -12,6 +12,9 @@ G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\H.Generated
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\H.NotifyIcon.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\H.NotifyIcon.Wpf.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\log4net.dll
+G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Microsoft.Extensions.DependencyInjection.dll
+G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Microsoft.Extensions.Logging.Abstractions.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Mono.Nat.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\MonoTorrent.dll
@@ -24,9 +27,11 @@ G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\XamlAnimate
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\WinRT.Runtime.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\CoreLibLaunchSupport.dll
+G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Elgar'nan.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\LibDalamud.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\SpinningWheelLib.dll
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\CoreLibLaunchSupport.pdb
+G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\Elgar'nan.xml
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\SpinningWheelLib.pdb
 G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\LibDalamud.pdb
 G:\code\WebLaunch\handlerlaunch\obj\Debug\net9.0-windows10.0.17763.0\handlerlaunch.csproj.AssemblyReference.cache

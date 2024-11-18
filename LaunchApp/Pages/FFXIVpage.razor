@@ -1,0 +1,527 @@
+﻿@page "/counter"
+@page "/counter/{Section}"
+
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+@inject MasaBlazor MasaBlazor
+@using System.Security.Cryptography;
+@using AKSoftware.Blazor.Utilities
+
+<PageTitle>FFXIV Login</PageTitle>
+
+<MContainer Fluid>
+    <div class="game-header">
+        <MImage Src="https://img.finalfantasyxiv.com/lds/h/V/U5TjBZoXVbddg1ZB7H4k0fkYqo.jpg" 
+                Height="600" 
+                Style="position: relative;">
+            <div class="header-content d-flex align-center">
+                <div class="flex-grow-1">
+                    <h1 class="text-h2">Final Fantasy XIV</h1>
+                    <div class="text-subtitle-1">Status: @statusstring</div>
+                </div>
+                <MSpacer></MSpacer>
+                @if (!MasaBlazor.Breakpoint.Mobile)
+                {
+                    <MCard Class="play-card">
+                        <MButton Color="primary"
+                                OnClick="processinputsx"
+                                XLarge
+                                Class="play-button">
+                            Play Now
+                        </MButton>
+                        <MButton Icon
+                                Class="settings-button"
+                                OnClick="ModalShow">
+                            <MIcon>mdi-cog</MIcon>
+                        </MButton>
+                    </MCard>
+                }
+            </div>
+        </MImage>
+    </div>
+
+
+    <div class="section-wrapper"><section  id="overview" class="section-content"><MRow Class="mt-6">
+            <MCol Cols="12" Md="8">
+                <MCard Class="pa-6 mb-6">
+                    <div class="text-h4 mb-4">About Final Fantasy XIV</div>
+                    <p class="text-body-1">
+                        Take part in an epic and ever-changing FINAL FANTASY as you adventure and explore with friends from around the world. Experience all the hallmarks of the best-selling franchise - airships, chocobos, moogles, and more.
+                    </p>
+                    <p class="text-body-1 mt-4">
+                        Embark on the adventure of a lifetime in a Final Fantasy that never ends. Join millions of adventurers in Eorzea, a realm reborn, and forge your legend in a tale that spans dimensions and generations.
+                    </p>
+                </MCard>
+
+                <MCard Class="pa-6 mb-6">
+                    <div class="text-h4 mb-4">Latest Expansion: Dawntrail</div>
+                    <p class="text-body-1">
+                        Journey to the New World in the latest expansion. Explore vibrant new lands, master new jobs, and continue your adventure in a story that will take you to the farthest reaches of Eorzea and beyond.
+                    </p>
+                </MCard>
+            </MCol>
+        </MRow> </section>
+
+        <section id="characters" class="section-content">
+        <MRow Class="mt-6">
+            <MCol Cols="12">
+                <MCard Class="pa-6 mb-6">
+                    <div class="text-h4 mb-4">Playable Races</div>
+                    <MRow>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">Hyur</div>
+                            <p>The most numerous of the civilized races in Eorzea.</p>
+                        </MCol>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">Miqo'te</div>
+                            <p>A feline race from the forgotten continents of Meracydia.</p>
+                        </MCol>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">Au Ra</div>
+                            <p>A scaled race from the Far Eastern continent of Othard.</p>
+                        </MCol>
+                    </MRow>
+                </MCard>
+            </MCol>
+        </MRow>
+    </section>
+
+    <section id="story" class="section-content">
+        <MRow Class="mt-6">
+            <MCol Cols="12">
+                <MCard Class="pa-6 mb-6">
+                    <div class="text-h4 mb-4">Epic Narrative</div>
+                    <p class="text-body-1">
+                        Experience an epic story spanning multiple expansions:
+                    </p>
+                    <MList>
+                        <MListItem>
+                            <MListItemTitle>A Realm Reborn - The beginning of your journey</MListItemTitle>
+                        </MListItem>
+                        <MListItem>
+                            <MListItemTitle>Heavensward - The dragon song war</MListItemTitle>
+                        </MListItem>
+                        <MListItem>
+                            <MListItemTitle>Stormblood - Liberation of Ala Mhigo</MListItemTitle>
+                        </MListItem>
+                        <MListItem>
+                            <MListItemTitle>Shadowbringers - Journey to the First</MListItemTitle>
+                        </MListItem>
+                        <MListItem>
+                            <MListItemTitle>Endwalker - The final days</MListItemTitle>
+                        </MListItem>
+                        <MListItem>
+                            <MListItemTitle>Dawntrail - New adventures await</MListItemTitle>
+                        </MListItem>
+                    </MList>
+                </MCard>
+            </MCol>
+        </MRow>
+    </section>
+
+    <section id="classes" class="section-content">
+        <MRow Class="mt-6">
+            <MCol Cols="12">
+                <MCard Class="pa-6 mb-6">
+                    <div class="text-h4 mb-4">Available Jobs</div>
+                    <MRow>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">Tank Roles</div>
+                            <MList Dense>
+                                <MListItem>
+                                    <MListItemTitle>Paladin</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Warrior</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Dark Knight</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Gunbreaker</MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </MCol>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">Healer Roles</div>
+                            <MList Dense>
+                                <MListItem>
+                                    <MListItemTitle>White Mage</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Scholar</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Astrologian</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Sage</MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </MCol>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">DPS Roles</div>
+                            <MList Dense>
+                                <MListItem>
+                                    <MListItemTitle>Monk</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Dragoon</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Ninja</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Samurai</MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </MCol>
+                    </MRow>
+                </MCard>
+            </MCol>
+        </MRow>
+    </section>
+
+    <section id="world" class="section-content">
+        <MRow Class="mt-6">
+            <MCol Cols="12">
+                <MCard Class="pa-6 mb-6">
+                    <div class="text-h4 mb-4">The World of Hydaelyn</div>
+                    <MRow>
+                        <MCol Cols="12" Md="6">
+                            <div class="text-h6 mb-2">Eorzea</div>
+                            <p>The realm where most of your adventures take place, comprising city-states:</p>
+                            <MList Dense>
+                                <MListItem>
+                                    <MListItemTitle>Gridania - The forest nation</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Ul'dah - The desert metropolis</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Limsa Lominsa - The maritime city-state</MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </MCol>
+                        <MCol Cols="12" Md="6">
+                            <div class="text-h6 mb-2">Other Regions</div>
+                            <MList Dense>
+                                <MListItem>
+                                    <MListItemTitle>Ishgard - The holy see</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Doma - The far eastern kingdom</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Garlemald - The imperial capital</MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </MCol>
+                    </MRow>
+                </MCard>
+            </MCol>
+        </MRow>
+    </section>
+
+    <section id="features" class="section-content">
+        <MRow Class="mt-6">
+            <MCol Cols="12">
+                <MCard Class="pa-6 mb-6">
+                    <div class="text-h4 mb-4">Game Features</div>
+                    <MRow>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">PvE Content</div>
+                            <MList Dense>
+                                <MListItem>
+                                    <MListItemTitle>Dungeons</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Raids</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Trials</MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </MCol>
+                        <MCol Cols="12" Md="4">
+                            <div class="text-h6 mb-2">Social Features</div>
+                            <MList Dense>
+                                <MListItem>
+                                    <MListItemTitle>Free Companies</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Housing</MListItemTitle>
+                                </MListItem>
+                                <MListItem>
+                                    <MListItemTitle>Gold Saucer</MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </MCol>
+                        <MCol Cols="12" Md="4"> <div class="text-h6 mb-2">Crafting & Gathering</div>
+                            <MList Dense>
+                                <MListItem>
+                                        <MListItemTitle>Disciples of the Hand</MListItemTitle>
+                                    </MListItem>
+                                    <MListItem>
+                                        <MListItemTitle>Disciples of the Land</MListItemTitle>
+                                    </MListItem>
+                                </MList>
+                        </MCol>
+                            
+                       
+                    </MRow>
+                </MCard>
+            </MCol>
+        </MRow>
+    </section> </div>
+    
+</MContainer>
+
+<MDialog @bind-Value="showModal"
+         MaxWidth="500"
+         Persistent>
+    <MCard>
+        <MCardTitle>
+            <span class="text-h5">Login Settings</span>
+        </MCardTitle>
+        <MCardText>
+            <MTextField @bind-Value="usernameinp"
+                       Label="Username"
+                       Filled
+                       Clearable
+                       Class="mb-4" />
+
+            <MTextField @bind-Value="passinp"
+                       Label="Password"
+                       Type="password"
+                       Filled
+                       Clearable
+                       Class="mb-4" />
+
+            <MTextField @bind-Value="otpinp"
+                       Label="OTP"
+                       Filled
+                       Clearable
+                       Class="mb-4" />
+
+            <MTextField @bind-Value="gamepatherinp"
+                       Label="Game Path"
+                       Filled
+                       Clearable
+                       Class="mb-4" />
+
+            <MSwitch @bind-Value="checkedValue"
+                    Label="Own game on Steam?"
+                    Class="mb-4" />
+        </MCardText>
+        <MCardActions>
+            <MSpacer></MSpacer>
+            <MButton Color="primary"
+                     OnClick="ModalOk"
+                     Class="mr-2">
+                Accept
+            </MButton>
+            <MButton OnClick="ModalCancel">
+                Cancel
+            </MButton>
+        </MCardActions>
+    </MCard>
+</MDialog>
+
+<style>
+    .game-header {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        opacity: 0;
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    .header-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        color: var(--foreground);
+        opacity: 0;
+        animation: fadeIn 0.3s ease-out 0.15s forwards;
+    }
+
+    .play-card {
+        padding: 1rem;
+        background-color: rgb(var(--theme-background-rgb)) !important;
+        opacity: 0;
+        border: 1px solid var(--theme-dividers);
+        display: flex;
+        gap: 0.5rem;
+        animation: fadeIn 0.3s ease-out 0.3s forwards;
+        box-shadow: var(--theme-shadow-4);
+        transition: background-color 0.3s ease;
+    }
+
+    .play-button {
+        background: var(--theme-colors-primary);
+        color: var(--theme-colors-on-primary);
+        font-weight: 500;
+    }
+
+    .settings-button {
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .section-content {
+        scroll-margin-top: 120px;
+    }
+
+    @@keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .play-card {
+            display: none;
+        }
+    }
+</style>
+
+@code {
+    private string currentSection = "";
+    private string statusstring = "Awaiting input";
+    private string usernameinp = "";
+    private string passinp = "";
+    private string otpinp = "";
+    private string gamepatherinp = "";
+    private string md5Hash = "";
+    private bool checkedValue;
+    bool showModal = false;
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? Section { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        var links = new List<(string Text, string Url, string Icon, bool IsActive, string PageName)>
+        {
+            ("Overview", "overview", "mdi-home", Section == "overview", "counter"),
+            ("Characters", "characters", "mdi-account-group", Section == "characters", "counter"),
+            ("Story", "story", "mdi-book-open-variant", Section == "story", "counter"),
+            ("Classes", "classes", "mdi-sword-cross", Section == "classes", "counter"),
+            ("World", "world", "mdi-earth", Section == "world", "counter"),
+            ("Features", "features", "mdi-star", Section == "features", "counter")
+        };
+
+        MessagingCenter.Send(this, "update_nav", links);
+    }
+    
+
+    
+
+    protected override void OnParametersSet()
+{
+    var uri = navigationManager.Uri;
+    var fragment = new Uri(uri).Fragment;
+    currentSection = !string.IsNullOrEmpty(fragment) ? fragment.TrimStart('#') : "overview";
+    StateHasChanged();
+}
+    void ModalShow() => showModal = true;
+    void ModalCancel() => showModal = false;
+    void ModalOk()
+    {
+        Console.WriteLine("Modal ok");
+        showModal = false;
+    }
+
+    private async Task<(string encrypted, string hash)> EncryptPassword(string password)
+    {
+        try
+        {
+            Console.WriteLine("Starting password encryption process");
+            
+            if (string.IsNullOrEmpty(password))
+            {
+                throw new ArgumentException("Password cannot be empty");
+            }
+
+            Console.WriteLine("Creating hash using SHA256");
+            string hash;
+            using (var sha256 = System.Security.Cryptography.SHA256.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.UTF8.GetBytes(password);
+                Console.WriteLine($"Input bytes length: {inputBytes.Length}");
+                
+                byte[] hashBytes = sha256.ComputeHash(inputBytes);
+                Console.WriteLine($"Hash bytes length: {hashBytes.Length}");
+                
+                hash = BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+                Console.WriteLine($"Hash created: {hash}");
+            }
+
+            Console.WriteLine("Performing XOR encryption");
+            byte[] dataBytes = System.Text.Encoding.UTF8.GetBytes(password);
+            byte[] keyBytes = System.Text.Encoding.UTF8.GetBytes(hash.Substring(0, 16));
+            
+            byte[] encryptedBytes = new byte[dataBytes.Length];
+            for (int i = 0; i < dataBytes.Length; i++)
+            {
+                encryptedBytes[i] = (byte)(dataBytes[i] ^ keyBytes[i % keyBytes.Length]);
+            }
+            
+            var result = Convert.ToBase64String(encryptedBytes);
+            Console.WriteLine("Encryption completed successfully");
+            
+            return (result, hash);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Detailed encryption error: {ex.GetType().Name}");
+            Console.WriteLine($"Error message: {ex.Message}");
+            Console.WriteLine($"Stack trace: {ex.StackTrace}");
+            statusstring = $"Encryption failed: {ex.Message}";
+            throw;
+        }
+    }
+
+    private async Task processinputsx()
+    {
+        try
+        {
+            Console.WriteLine("Starting game launch process...");
+            Console.WriteLine($"Username: {usernameinp}, OTP provided: {!string.IsNullOrEmpty(otpinp)}, Steam: {checkedValue}");
+            Console.WriteLine($"Game path: {gamepatherinp}");
+            Console.WriteLine($"Password provided: {!string.IsNullOrEmpty(passinp)}");
+
+            var (encryptedPassword, hash) = await EncryptPassword(passinp);
+            Console.WriteLine("Password encryption completed successfully");
+            passinp = "";
+
+            string steamParam = checkedValue ? "yes" : "no";
+            Console.WriteLine("Preparing navigation URL...");
+            
+            string navigationUrl = $"HandleWebRequest:HandleReqLaunch?ffxivhandle=yes?login={usernameinp}:?pass={encryptedPassword}:?hash={hash}:?otp={otpinp}:?gamepath={gamepatherinp}:?issteam={steamParam}";
+            Console.WriteLine($"Navigation URL prepared: {navigationUrl}");
+            
+            navigationManager.NavigateTo(navigationUrl);
+            Console.WriteLine("Navigation executed successfully");
+            
+            statusstring = "Game launched";
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during launch process: {ex.Message}");
+            Console.WriteLine($"Stack trace: {ex.StackTrace}");
+            statusstring = $"Launch failed: {ex.Message}";
+        }
+    }
+}

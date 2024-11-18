@@ -225,3 +225,243 @@
 2024-11-10 23:02:36.191 - Version checked and updated
 2024-11-10 23:02:36.191 - Launching game from: D:/games/Spellborn\bin\client\Sb_client.exe
 2024-11-10 23:02:39.035 - Game launched
+2024-11-18 18:46:57.808 - Entering GetInstallPath method
+2024-11-18 18:46:57.816 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-18 18:46:57.816 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 18:46:57.817 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-18 18:46:57.817 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 18:46:57.839 - Application started
+2024-11-18 18:46:57.840 - Showing notification: Application Started - Initializing launcher...
+2024-11-18 18:46:57.910 - Entering CopyFiles method
+2024-11-18 18:46:57.910 - Entering GetInstallPath method
+2024-11-18 18:46:57.911 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 18:46:57.911 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll' because it is being used by another process.
+2024-11-18 18:46:57.912 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe' because it is being used by another process.
+2024-11-18 18:46:57.912 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json' because it is being used by another process.
+2024-11-18 18:46:57.912 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll' because it is being used by another process.
+2024-11-18 18:46:57.913 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll' because it is being used by another process.
+2024-11-18 18:46:57.913 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll' because it is being used by another process.
+2024-11-18 18:46:57.913 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll' because it is being used by another process.
+2024-11-18 18:46:57.913 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll' because it is being used by another process.
+2024-11-18 18:46:57.914 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll' because it is being used by another process.
+2024-11-18 18:46:57.914 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll' because it is being used by another process.
+2024-11-18 18:46:57.914 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll' because it is being used by another process.
+2024-11-18 18:46:57.915 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll' because it is being used by another process.
+2024-11-18 18:46:57.915 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll' because it is being used by another process.
+2024-11-18 18:46:57.915 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll' because it is being used by another process.
+2024-11-18 18:46:57.916 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll' because it is being used by another process.
+2024-11-18 18:46:57.916 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll' because it is being used by another process.
+2024-11-18 18:46:57.916 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll' because it is being used by another process.
+2024-11-18 18:46:57.916 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll' because it is being used by another process.
+2024-11-18 18:46:57.917 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll' because it is being used by another process.
+2024-11-18 18:46:57.917 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll' because it is being used by another process.
+2024-11-18 18:46:57.917 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll' because it is being used by another process.
+2024-11-18 18:46:57.918 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-18 18:46:57.918 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll' because it is being used by another process.
+2024-11-18 18:46:57.918 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll' because it is being used by another process.
+2024-11-18 18:46:57.919 - Entering RegisterProtocolHandler method
+2024-11-18 18:46:57.919 - Entering GetInstallPath method
+2024-11-18 18:46:57.919 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-18 18:46:57.919 - Showing notification: Protocol Handler Registered - You may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game
+2024-11-18 18:53:25.720 - Entering GetInstallPath method
+2024-11-18 18:53:25.728 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-18 18:53:25.728 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 18:53:25.728 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-18 18:53:25.729 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 18:53:25.752 - Application started
+2024-11-18 18:53:25.752 - Showing notification: Application Started - Initializing launcher...
+2024-11-18 18:53:25.822 - Entering CopyFiles method
+2024-11-18 18:53:25.822 - Entering GetInstallPath method
+2024-11-18 18:53:25.822 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 18:53:25.823 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll' because it is being used by another process.
+2024-11-18 18:53:25.823 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe' because it is being used by another process.
+2024-11-18 18:53:25.823 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json' because it is being used by another process.
+2024-11-18 18:53:25.823 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll' because it is being used by another process.
+2024-11-18 18:53:25.824 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll' because it is being used by another process.
+2024-11-18 18:53:25.824 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll' because it is being used by another process.
+2024-11-18 18:53:25.824 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll' because it is being used by another process.
+2024-11-18 18:53:25.824 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll' because it is being used by another process.
+2024-11-18 18:53:25.825 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll' because it is being used by another process.
+2024-11-18 18:53:25.825 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll' because it is being used by another process.
+2024-11-18 18:53:25.825 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll' because it is being used by another process.
+2024-11-18 18:53:25.825 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll' because it is being used by another process.
+2024-11-18 18:53:25.826 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll' because it is being used by another process.
+2024-11-18 18:53:25.826 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll' because it is being used by another process.
+2024-11-18 18:53:25.826 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll' because it is being used by another process.
+2024-11-18 18:53:25.826 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll' because it is being used by another process.
+2024-11-18 18:53:25.826 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll' because it is being used by another process.
+2024-11-18 18:53:25.827 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll' because it is being used by another process.
+2024-11-18 18:53:25.827 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll' because it is being used by another process.
+2024-11-18 18:53:25.827 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll' because it is being used by another process.
+2024-11-18 18:53:25.827 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll' because it is being used by another process.
+2024-11-18 18:53:25.828 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-18 18:53:25.828 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll' because it is being used by another process.
+2024-11-18 18:53:25.828 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll' because it is being used by another process.
+2024-11-18 18:53:25.828 - Entering RegisterProtocolHandler method
+2024-11-18 18:53:25.829 - Entering GetInstallPath method
+2024-11-18 18:53:25.829 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-18 18:53:25.829 - Showing notification: Protocol Handler Registered - You may now proceed to https://pieckenst.github.io/WebLaunch-FFXIV/ to launch the game
+2024-11-18 19:06:01.468 - Entering GetInstallPath method
+2024-11-18 19:06:01.477 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-18 19:06:01.477 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:06:01.478 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-18 19:06:01.478 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:06:07.565 - Plugin loaded: FFXIV Game Launcher
+2024-11-18 19:06:07.571 - Application started
+2024-11-18 19:06:07.572 - Showing notification: Application Started - Initializing launcher...
+2024-11-18 19:06:07.634 - Entering CopyFiles method
+2024-11-18 19:06:07.634 - Entering GetInstallPath method
+2024-11-18 19:06:07.634 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:06:07.634 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll' because it is being used by another process.
+2024-11-18 19:06:07.635 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe' because it is being used by another process.
+2024-11-18 19:06:07.635 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json' because it is being used by another process.
+2024-11-18 19:06:07.636 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll' because it is being used by another process.
+2024-11-18 19:06:07.636 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll' because it is being used by another process.
+2024-11-18 19:06:07.636 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:06:07.637 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:06:07.637 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll' because it is being used by another process.
+2024-11-18 19:06:07.637 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll' because it is being used by another process.
+2024-11-18 19:06:07.638 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll' because it is being used by another process.
+2024-11-18 19:06:07.638 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll' because it is being used by another process.
+2024-11-18 19:06:07.638 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll' because it is being used by another process.
+2024-11-18 19:06:07.639 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll' because it is being used by another process.
+2024-11-18 19:06:07.639 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll' because it is being used by another process.
+2024-11-18 19:06:07.639 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll' because it is being used by another process.
+2024-11-18 19:06:07.640 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll' because it is being used by another process.
+2024-11-18 19:06:07.640 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll' because it is being used by another process.
+2024-11-18 19:06:07.640 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll' because it is being used by another process.
+2024-11-18 19:06:07.641 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll' because it is being used by another process.
+2024-11-18 19:06:07.641 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll' because it is being used by another process.
+2024-11-18 19:06:07.641 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll' because it is being used by another process.
+2024-11-18 19:06:07.642 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-18 19:06:07.642 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll' because it is being used by another process.
+2024-11-18 19:06:07.642 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll' because it is being used by another process.
+2024-11-18 19:06:07.643 - Entering RegisterProtocolHandler method
+2024-11-18 19:06:07.643 - Entering GetInstallPath method
+2024-11-18 19:06:07.643 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-18 19:06:07.643 - Showing notification: FFXIV Launch - Starting Final Fantasy XIV...
+2024-11-18 19:06:07.648 - Entering GetInstallPath method
+2024-11-18 19:06:07.660 - Showing notification: Error - Failed to launch FFXIV
+2024-11-18 19:07:45.297 - Entering GetInstallPath method
+2024-11-18 19:07:45.306 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-18 19:07:45.306 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:07:45.307 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-18 19:07:45.307 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:07:51.391 - Plugin loaded: FFXIV Game Launcher
+2024-11-18 19:07:51.395 - Application started
+2024-11-18 19:07:51.398 - Showing notification: Application Started - Initializing launcher...
+2024-11-18 19:07:51.462 - Entering CopyFiles method
+2024-11-18 19:07:51.462 - Entering GetInstallPath method
+2024-11-18 19:07:51.462 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:07:51.462 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll' because it is being used by another process.
+2024-11-18 19:07:51.463 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe' because it is being used by another process.
+2024-11-18 19:07:51.463 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json' because it is being used by another process.
+2024-11-18 19:07:51.463 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll' because it is being used by another process.
+2024-11-18 19:07:51.464 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll' because it is being used by another process.
+2024-11-18 19:07:51.464 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:07:51.464 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:07:51.464 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll' because it is being used by another process.
+2024-11-18 19:07:51.465 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll' because it is being used by another process.
+2024-11-18 19:07:51.465 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll' because it is being used by another process.
+2024-11-18 19:07:51.465 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll' because it is being used by another process.
+2024-11-18 19:07:51.465 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll' because it is being used by another process.
+2024-11-18 19:07:51.466 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll' because it is being used by another process.
+2024-11-18 19:07:51.466 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll' because it is being used by another process.
+2024-11-18 19:07:51.466 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll' because it is being used by another process.
+2024-11-18 19:07:51.466 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll' because it is being used by another process.
+2024-11-18 19:07:51.467 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll' because it is being used by another process.
+2024-11-18 19:07:51.467 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll' because it is being used by another process.
+2024-11-18 19:07:51.467 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll' because it is being used by another process.
+2024-11-18 19:07:51.468 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll' because it is being used by another process.
+2024-11-18 19:07:51.468 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll' because it is being used by another process.
+2024-11-18 19:07:51.468 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-18 19:07:51.468 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll' because it is being used by another process.
+2024-11-18 19:07:51.468 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll' because it is being used by another process.
+2024-11-18 19:07:51.469 - Entering RegisterProtocolHandler method
+2024-11-18 19:07:51.469 - Entering GetInstallPath method
+2024-11-18 19:07:51.469 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-18 19:07:51.469 - Showing notification: FFXIV Launch - Starting Final Fantasy XIV...
+2024-11-18 19:07:51.475 - Entering GetInstallPath method
+2024-11-18 19:07:51.490 - Showing notification: Error - Failed to launch FFXIV
+2024-11-18 19:11:56.104 - Entering GetInstallPath method
+2024-11-18 19:11:56.113 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-18 19:11:56.113 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:11:56.113 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-18 19:11:56.113 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:12:02.192 - Plugin loaded: FFXIV Game Launcher
+2024-11-18 19:12:02.193 - Application started
+2024-11-18 19:12:02.194 - Showing notification: Application Started - Initializing launcher...
+2024-11-18 19:12:02.256 - Entering CopyFiles method
+2024-11-18 19:12:02.256 - Entering GetInstallPath method
+2024-11-18 19:12:02.256 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:12:02.256 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll' because it is being used by another process.
+2024-11-18 19:12:02.257 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe' because it is being used by another process.
+2024-11-18 19:12:02.257 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json' because it is being used by another process.
+2024-11-18 19:12:02.257 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll' because it is being used by another process.
+2024-11-18 19:12:02.258 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll' because it is being used by another process.
+2024-11-18 19:12:02.258 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:12:02.258 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:12:02.258 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll' because it is being used by another process.
+2024-11-18 19:12:02.258 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll' because it is being used by another process.
+2024-11-18 19:12:02.258 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll' because it is being used by another process.
+2024-11-18 19:12:02.259 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll' because it is being used by another process.
+2024-11-18 19:12:02.259 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll' because it is being used by another process.
+2024-11-18 19:12:02.259 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll' because it is being used by another process.
+2024-11-18 19:12:02.259 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll' because it is being used by another process.
+2024-11-18 19:12:02.260 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll' because it is being used by another process.
+2024-11-18 19:12:02.260 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll' because it is being used by another process.
+2024-11-18 19:12:02.260 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll' because it is being used by another process.
+2024-11-18 19:12:02.260 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll' because it is being used by another process.
+2024-11-18 19:12:02.260 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll' because it is being used by another process.
+2024-11-18 19:12:02.261 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll' because it is being used by another process.
+2024-11-18 19:12:02.261 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll' because it is being used by another process.
+2024-11-18 19:12:02.261 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-18 19:12:02.261 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll' because it is being used by another process.
+2024-11-18 19:12:02.261 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll' because it is being used by another process.
+2024-11-18 19:12:02.262 - Entering RegisterProtocolHandler method
+2024-11-18 19:12:02.262 - Entering GetInstallPath method
+2024-11-18 19:12:02.262 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-18 19:12:02.262 - Showing notification: FFXIV Launch - Starting Final Fantasy XIV...
+2024-11-18 19:12:02.268 - Entering GetInstallPath method
+2024-11-18 19:12:02.282 - Showing notification: Error - Failed to launch FFXIV
+2024-11-18 19:17:31.454 - Entering GetInstallPath method
+2024-11-18 19:17:31.463 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll
+2024-11-18 19:17:31.464 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:17:31.464 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug
+2024-11-18 19:17:31.464 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:17:37.555 - Plugin loaded: FFXIV Game Launcher
+2024-11-18 19:17:37.557 - Application started
+2024-11-18 19:17:37.558 - Showing notification: Application Started - Initializing launcher...
+2024-11-18 19:17:37.621 - Entering CopyFiles method
+2024-11-18 19:17:37.621 - Entering GetInstallPath method
+2024-11-18 19:17:37.621 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame
+2024-11-18 19:17:37.622 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMconsole.dll' because it is being used by another process.
+2024-11-18 19:17:37.622 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe' because it is being used by another process.
+2024-11-18 19:17:37.622 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.runtimeconfig.json' because it is being used by another process.
+2024-11-18 19:17:37.622 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CoreLibLaunchSupport.dll' because it is being used by another process.
+2024-11-18 19:17:37.623 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SpinningWheelLib.dll' because it is being used by another process.
+2024-11-18 19:17:37.623 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WpfAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:17:37.623 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\XamlAnimatedGif.dll' because it is being used by another process.
+2024-11-18 19:17:37.623 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\DotNetZip.dll' because it is being used by another process.
+2024-11-18 19:17:37.624 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Newtonsoft.Json.dll' because it is being used by another process.
+2024-11-18 19:17:37.624 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\log4net.dll' because it is being used by another process.
+2024-11-18 19:17:37.624 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Goblinfactory.Konsole.dll' because it is being used by another process.
+2024-11-18 19:17:37.624 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\CommandLine.dll' because it is being used by another process.
+2024-11-18 19:17:37.625 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Downloader.dll' because it is being used by another process.
+2024-11-18 19:17:37.625 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Facepunch.Steamworks.Win64.dll' because it is being used by another process.
+2024-11-18 19:17:37.625 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\LibDalamud.dll' because it is being used by another process.
+2024-11-18 19:17:37.625 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Mono.Nat.dll' because it is being used by another process.
+2024-11-18 19:17:37.625 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\MonoTorrent.dll' because it is being used by another process.
+2024-11-18 19:17:37.626 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\ReusableTasks.dll' because it is being used by another process.
+2024-11-18 19:17:37.626 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Serilog.dll' because it is being used by another process.
+2024-11-18 19:17:37.626 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\SharedMemory.dll' because it is being used by another process.
+2024-11-18 19:17:37.626 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll' because it is being used by another process.
+2024-11-18 19:17:37.626 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-18 19:17:37.627 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WinRT.Runtime.dll' because it is being used by another process.
+2024-11-18 19:17:37.627 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\Elgar'nan.dll' because it is being used by another process.
+2024-11-18 19:17:37.627 - Entering RegisterProtocolHandler method
+2024-11-18 19:17:37.627 - Entering GetInstallPath method
+2024-11-18 19:17:37.628 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\HandleGame\WMConsole.exe %1
+2024-11-18 19:17:37.628 - Showing notification: FFXIV Launch - Starting Final Fantasy XIV...
+2024-11-18 19:17:37.633 - Entering GetInstallPath method
+2024-11-18 19:17:37.647 - Showing notification: Error - Failed to launch FFXIV

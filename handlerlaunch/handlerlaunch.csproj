@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreLibLaunchSupport\CoreLibLaunchSupport.csproj" />
+    <ProjectReference Include="..\El'GarnanPluginSystem\El'GarnanPluginSystem.csproj" />
     <ProjectReference Include="..\SpinningWheelLib\SpinningWheelLib.csproj" />
   </ItemGroup>
 
