@@ -151,8 +151,13 @@ namespace WMConsole
                 exePath,
                 Path.Combine(baseDir, "WMConsole.exe"),
                 Path.Combine(baseDir, "WMConsole.runtimeconfig.json"),
+                Path.Combine(baseDir, "WMconsole.dll"),
+                Path.Combine(baseDir, "WMconsole.pdb"),
+                Path.Combine(baseDir, "WMconsole.deps.json"),
                 Path.Combine(baseDir, "CoreLibLaunchSupport.dll"),
+                Path.Combine(baseDir, "CoreLibLaunchSupport.pdb"),
                 Path.Combine(baseDir, "SpinningWheelLib.dll"),
+                Path.Combine(baseDir, "SpinningWheelLib.pdb"),
                 Path.Combine(baseDir, "WpfAnimatedGif.dll"),
                 Path.Combine(baseDir, "XamlAnimatedGif.dll"),
                 Path.Combine(baseDir, "DotNetZip.dll"),
@@ -163,6 +168,7 @@ namespace WMConsole
                 Path.Combine(baseDir, "Downloader.dll"),
                 Path.Combine(baseDir, "Facepunch.Steamworks.Win64.dll"),
                 Path.Combine(baseDir, "LibDalamud.dll"),
+                Path.Combine(baseDir, "LibDalamud.pdb"),
                 Path.Combine(baseDir, "Mono.Nat.dll"),
                 Path.Combine(baseDir, "MonoTorrent.dll"),
                 Path.Combine(baseDir, "ReusableTasks.dll"),
@@ -171,7 +177,15 @@ namespace WMConsole
                 Path.Combine(baseDir, "Microsoft.Toolkit.Uwp.Notifications.dll"),
                 Path.Combine(baseDir, "Microsoft.Windows.SDK.NET.dll"),
                 Path.Combine(baseDir, "WinRT.Runtime.dll"),
-                Path.Combine(baseDir, "Elgar'nan.dll")
+                Path.Combine(baseDir, "Elgar'nan.dll"),
+                Path.Combine(baseDir, "Elgar'nan.xml"),
+                Path.Combine(baseDir, "H.GeneratedIcons.System.Drawing.dll"),
+                Path.Combine(baseDir, "H.NotifyIcon.dll"),
+                Path.Combine(baseDir, "H.NotifyIcon.Wpf.dll"),
+                Path.Combine(baseDir, "ImGui.NET.dll"),
+                Path.Combine(baseDir, "Microsoft.Extensions.DependencyInjection.Abstractions.dll"),
+                Path.Combine(baseDir, "Microsoft.Extensions.DependencyInjection.dll"),
+                Path.Combine(baseDir, "Microsoft.Extensions.Logging.Abstractions.dll")
             };
 
             foreach (string sourceFile in filesToCopy)

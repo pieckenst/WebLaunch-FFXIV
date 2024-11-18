@@ -14,18 +14,24 @@ namespace GamePlugins.FFXIV
         private dynamic _networkLogic;
         private readonly Dictionary<string, string> _config;
         private Assembly _coreSupportAssembly;
+        private Assembly _imGuiAssembly;
         private Type _networkLogicType;
+        private Type _imGuiType;
+        private dynamic _imGui;
+        private dynamic _vector4;
 
         public override string PluginId => "ffxiv-launcher";
         public override string Name => "FFXIV Game Launcher";
         public override string Description => "Launches Final Fantasy XIV with authentication";
         public override string TargetApplication => "ffxiv_dx11.exe";
         public override Version Version => new Version(1, 0, 0);
+        public override bool SupportsImGui => true;
+
         public override IReadOnlyCollection<PluginDependency> Dependencies => new[]
         {
-            new PluginDependency("CoreLibLaunchSupport", new Version(1, 0, 0))
-        };
-        public override bool SupportsHotReload => true;
+        new PluginDependency("CoreLibLaunchSupport", new Version(1, 0, 0)),
+        new PluginDependency("ImGui.NET", new Version(1, 89, 4))
+    };
 
         public FFXIVGamePlugin(ILogger logger) : base(logger)
         {
@@ -38,10 +44,18 @@ namespace GamePlugins.FFXIV
 
             var loadContext = new PluginLoadContext(AppContext.BaseDirectory);
             _coreSupportAssembly = loadContext.LoadFromAssemblyName(new AssemblyName("CoreLibLaunchSupport"));
-            _networkLogicType = _coreSupportAssembly.GetType("CoreLibLaunchSupport.networklogic");
-            _networkLogic = Activator.CreateInstance(_networkLogicType);
+            _imGuiAssembly = loadContext.LoadFromAssemblyName(new AssemblyName("ImGui.NET"));
 
-            try 
+            _networkLogicType = _coreSupportAssembly.GetType("CoreLibLaunchSupport.networklogic");
+            _imGuiType = _imGuiAssembly.GetType("ImGuiNET.ImGui");
+            _vector4 = _imGuiAssembly.GetType("System.Numerics.Vector4");
+
+            _networkLogic = Activator.CreateInstance(_networkLogicType);
+            _imGui = _imGuiType;
+
+            ShowNotification("Initialization", "Starting server checks...", NotificationType.Info);
+
+            try
             {
                 var checkGateStatus = _networkLogicType.GetMethod("CheckGateStatus");
                 var checkLoginStatus = _networkLogicType.GetMethod("CheckLoginStatus");
@@ -49,18 +63,72 @@ namespace GamePlugins.FFXIV
                 var gateStatus = await Task.Run(() => (bool)checkGateStatus.Invoke(_networkLogic, null));
                 if (!gateStatus)
                 {
-                    Logger.Warning("FFXIV game servers appear to be unavailable, but continuing anyway");
+                    ShowNotification("Server Status", "Game servers unavailable", NotificationType.Warning);
                 }
 
                 var loginStatus = await Task.Run(() => (bool)checkLoginStatus.Invoke(_networkLogic, null));
                 if (!loginStatus)
                 {
-                    Logger.Warning("FFXIV login servers appear to be unavailable, but continuing anyway");
+                    ShowNotification("Server Status", "Login servers unavailable", NotificationType.Warning);
+                }
+
+                if (gateStatus && loginStatus)
+                {
+                    ShowNotification("Server Status", "All systems operational", NotificationType.Success);
                 }
             }
             catch (Exception ex)
             {
-                Logger.Warning($"Server status check failed: {ex.Message}. Continuing anyway.");
+                ShowNotification("Error", $"Server check failed: {ex.Message}", NotificationType.Error);
+            }
+        }
+
+        public override void RenderImGui()
+        {
+            try
+            {
+                _imGui.GetMethod("Begin").Invoke(null, new object[] { "FFXIV Launcher Status" });
+
+                // Server Status Section
+                _imGui.GetMethod("Text").Invoke(null, new[] { "Server Status:" });
+                _imGui.GetMethod("SameLine").Invoke(null, null);
+
+                var gateStatus = (bool)_networkLogicType.GetMethod("CheckGateStatus").Invoke(_networkLogic, null);
+                var loginStatus = (bool)_networkLogicType.GetMethod("CheckLoginStatus").Invoke(_networkLogic, null);
+
+                var color = (gateStatus && loginStatus) ?
+                    Activator.CreateInstance(_vector4, 0f, 1f, 0f, 1f) :
+                    Activator.CreateInstance(_vector4, 1f, 1f, 0f, 1f);
+
+                _imGui.GetMethod("TextColored").Invoke(null, new[] { color, gateStatus && loginStatus ? "Online" : "Partial Outage" });
+
+                // Configuration Section
+                _imGui.GetMethod("Separator").Invoke(null, null);
+                _imGui.GetMethod("Text").Invoke(null, new[] { "Configuration:" });
+
+                if (_config.TryGetValue("GamePath", out var gamePath))
+                {
+                    _imGui.GetMethod("Text").Invoke(null, new[] { $"Game Path: {gamePath}" });
+                    if (!Directory.Exists(Path.Combine(gamePath, "game")))
+                    {
+                        _imGui.GetMethod("TextColored").Invoke(null, new[]
+                        {
+                        Activator.CreateInstance(_vector4, 1f, 0f, 0f, 1f),
+                        "Game directory not found!"
+                    });
+                    }
+                }
+
+                // Notifications Section
+                _imGui.GetMethod("Separator").Invoke(null, null);
+                _imGui.GetMethod("Text").Invoke(null, new[] { "Recent Events:" });
+                RenderDefaultNotifications();
+
+                _imGui.GetMethod("End").Invoke(null, null);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"ImGui rendering failed: {ex.Message}");
             }
         }
 
@@ -157,6 +225,7 @@ namespace GamePlugins.FFXIV
                 return Task.FromResult(false);
             }
         }
+
 
     }
 }

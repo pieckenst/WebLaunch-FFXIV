@@ -365,6 +365,21 @@ namespace El_Garnan_Plugin_Loader
             _loadedFiles.Clear();
         }
 
+
+        /// <summary>
+        /// Renders ImGui interfaces for all plugins that support it
+        /// </summary>
+        public void RenderPluginInterfaces()
+        {
+            foreach (var plugin in _loadedPlugins.Values)
+            {
+                if (plugin.SupportsImGui)
+                {
+                    plugin.RenderImGui();
+                }
+            }
+        }
+
         /// <summary>
         /// Disposes the resources used by the <see cref="CoreFunctions"/> class.
         /// </summary>

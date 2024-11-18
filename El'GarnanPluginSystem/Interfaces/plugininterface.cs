@@ -5,6 +5,13 @@ using El_Garnan_Plugin_Loader.Models;
 
 namespace El_Garnan_Plugin_Loader.Interfaces
 {
+    public interface INotificationService
+    {
+        /// <summary>
+        /// Shows a notification with the specified title, message and type
+        /// </summary>
+        void ShowNotification(string title, string message, NotificationType type = NotificationType.Info);
+    }
     /// <summary>
     /// Core interface for game launcher plugins
     /// </summary>
@@ -79,6 +86,29 @@ namespace El_Garnan_Plugin_Loader.Interfaces
         /// Validate plugin configuration
         /// </summary>
         Task<bool> ValidateConfigurationAsync();
+
+        /// <summary>
+        /// Renders default notifications using ImGui
+        /// </summary>
+        protected static void RenderDefaultNotifications()
+        {
+            // Default empty implementation
+        }
+
+        /// <summary>
+        /// Renders the plugin's ImGui interface if supported
+        /// </summary>
+        void RenderImGui() => RenderDefaultNotifications();
+
+        /// <summary>
+        /// Indicates if the plugin supports ImGui rendering
+        /// </summary>
+        bool SupportsImGui => false;
+
+        /// <summary>
+        /// Gets the plugin's notification queue
+        /// </summary>
+        Queue<PluginNotification> NotificationQueue { get; }
     }
 
     /// <summary>

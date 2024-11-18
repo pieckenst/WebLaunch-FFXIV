@@ -2,9 +2,15 @@ G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\Elgar'nan.deps.json
 G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\Elgar'nan.runtimeconfig.json
 G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\Elgar'nan.dll
 G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\Elgar'nan.xml
+G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\ImGui.NET.dll
 G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\runtimes\linux-x64\native\libcimgui.so
+G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\runtimes\osx\native\libcimgui.dylib
+G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\runtimes\win-arm64\native\cimgui.dll
+G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\runtimes\win-x64\native\cimgui.dll
+G:\code\WebLaunch\El'GarnanPluginSystem\bin\Debug\net9.0\runtimes\win-x86\native\cimgui.dll
 G:\code\WebLaunch\El'GarnanPluginSystem\obj\Debug\net9.0\El'GarnanPluginSystem.csproj.AssemblyReference.cache
 G:\code\WebLaunch\El'GarnanPluginSystem\obj\Debug\net9.0\El'GarnanPluginSystem.GeneratedMSBuildEditorConfig.editorconfig
 G:\code\WebLaunch\El'GarnanPluginSystem\obj\Debug\net9.0\El'GarnanPluginSystem.AssemblyInfoInputs.cache

@@ -6,9 +6,23 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>WMconsole</AssemblyName>
-	<EnableWindowsTargeting>true</EnableWindowsTargeting>
-	<ApplicationIcon>appicon.ico</ApplicationIcon>
-        
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <DebugType>embedded</DebugType>
+    <IncludeAllContentForSelfExtract>True</IncludeAllContentForSelfExtract>
+    <PublishReadyToRun>True</PublishReadyToRun>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PublishSingleFile>True</PublishSingleFile>
+    <Authors>pieckenst</Authors>
+    <Description>Protocol handler and plugin host for WebLaunch game launcher platform. Supports multiple games and launchers through a dynamic plugin system.</Description>
+    <AssemblyTitle>WebLaunch Protocol Handler and Plugin Host</AssemblyTitle>
+    <PackageProjectUrl>https://github.com/pieckenst/WebLaunch</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pieckenst/WebLaunch</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © 2024 pieckenst</Copyright>
+    
   </PropertyGroup>
 
   <ItemGroup>

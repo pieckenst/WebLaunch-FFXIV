@@ -1,16 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Threading;
 using System.Threading.Tasks;
 using El_Garnan_Plugin_Loader.Interfaces;
 using El_Garnan_Plugin_Loader.Models;
+using ImGuiNET;
 
 namespace El_Garnan_Plugin_Loader.Base
 {
     /// <summary>
     /// Base class for game plugins, providing common functionality and structure.
     /// </summary>
-    public abstract class GamePluginBase : IGamePlugin
+    public abstract class GamePluginBase : IGamePlugin, INotificationService
     {
         /// <summary>
         /// Logger instance for logging plugin activities and errors.
@@ -70,6 +72,12 @@ namespace El_Garnan_Plugin_Loader.Base
         /// Gets the last error message encountered by the plugin.
         /// </summary>
         public string LastError => _lastError;
+
+        public Queue<PluginNotification> NotificationQueue { get; } = new();
+        public virtual bool SupportsImGui => false;
+
+        protected Type ImGuiType;
+        protected dynamic ImGui;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GamePluginBase"/> class.
@@ -224,5 +232,62 @@ namespace El_Garnan_Plugin_Loader.Base
         /// </summary>
         /// <returns>A task representing the asynchronous operation, with a boolean result indicating success.</returns>
         protected virtual Task<bool> ValidateConfigurationInternalAsync() => Task.FromResult(true);
+
+
+       
+        
+
+        /// <summary>
+        /// Shows a notification using the plugin's notification system
+        /// </summary>
+        protected void ShowNotification(string title, string message, NotificationType type = NotificationType.Info)
+        {
+            NotificationQueue.Enqueue(new PluginNotification(title, message, type));
+            Logger.Information($"[{type}] {title}: {message}");
+        }
+
+        /// <summary>
+        /// Renders the plugin's ImGui interface
+        /// </summary>
+        public virtual void RenderImGui()
+        {
+            if (!SupportsImGui) return;
+            RenderDefaultNotifications();
+        }
+
+        
+
+        /// <summary>
+        /// Renders default ImGui notifications if no custom implementation is provided
+        /// </summary>
+        protected virtual void RenderDefaultNotifications()
+    {
+        if (!SupportsImGui || NotificationQueue.Count == 0) return;
+
+        ImGui.Begin($"{Name} Notifications");
+        
+        foreach (var notification in NotificationQueue.ToArray())
+        {
+            var color = notification.Type switch
+            {
+                NotificationType.Success => new Vector4(0, 1, 0, 1),
+                NotificationType.Warning => new Vector4(1, 1, 0, 1), 
+                NotificationType.Error => new Vector4(1, 0, 0, 1),
+                _ => new Vector4(0.4f, 0.7f, 1, 1)
+            };
+
+            ImGui.PushStyleColor(ImGuiCol.Text, color);
+            ImGui.Text($"[{notification.Timestamp:HH:mm:ss}] {notification.Title}: {notification.Message}");
+            ImGui.PopStyleColor();
+        }
+
+        ImGui.End();
+    }
+
+        void INotificationService.ShowNotification(string title, string message, NotificationType type)
+        {
+            NotificationQueue.Enqueue(new PluginNotification(title, message, type));
+            Logger.Information($"[{type}] {title}: {message}");
+        }
     }
 }
