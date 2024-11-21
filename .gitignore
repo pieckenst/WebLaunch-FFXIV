@@ -3,3 +3,7 @@
 /.vs
 /.vs/handlerlaunch
 *.vsidx
+
+.nx/installation
+.nx/cache
+.nx/workspace-data
