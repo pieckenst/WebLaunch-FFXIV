@@ -54,7 +54,7 @@
             Event triggered when a plugin encounters an error.
             </summary>
         </member>
-        <member name="M:El_Garnan_Plugin_Loader.CoreFunctions.#ctor(System.String,El_Garnan_Plugin_Loader.Interfaces.ILogger,System.Boolean)">
+        <member name="M:El_Garnan_Plugin_Loader.CoreFunctions.#ctor(System.String,El_Garnan_Plugin_Loader.Interfaces.ILogger,System.Boolean,System.Boolean)">
             <summary>
             Initializes a new instance of the <see cref="T:El_Garnan_Plugin_Loader.CoreFunctions"/> class.
             </summary>

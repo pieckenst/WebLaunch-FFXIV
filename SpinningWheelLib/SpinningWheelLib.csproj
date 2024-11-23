@@ -4,26 +4,32 @@
     <TargetFramework>net9.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-	<EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="output-onlinegiftools.gif" />
-    <None Remove="roundrect.png" />
-    <None Remove="roundrect100.png" />
+    <Page Include="**\*.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Update="**\*.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\**" />
+    <Resource Include="navigation.png" />
+    <Resource Include="output-onlinegiftools.gif" />
+    <Resource Include="roundrect.png" />
+    <Resource Include="roundrect100.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="H.NotifyIcon.Wpf" Version="2.1.4" />
     <PackageReference Include="XamlAnimatedGif" Version="2.0.3" />
-  </ItemGroup>
-
-  
-
-  <ItemGroup>
-    <Resource Include="output-onlinegiftools.gif" />
-    <Resource Include="roundrect.png" />
-    <Resource Include="roundrect100.png" />
   </ItemGroup>
 
 </Project>

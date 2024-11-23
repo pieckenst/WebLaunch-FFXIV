@@ -28,10 +28,12 @@ namespace GamePlugins.FFXIV
         public override bool SupportsImGui => true;
 
         public override IReadOnlyCollection<PluginDependency> Dependencies => new[]
-        {
-        new PluginDependency("CoreLibLaunchSupport", new Version(1, 0, 0)),
-        new PluginDependency("ImGui.NET", new Version(1, 89, 4))
-    };
+{
+    new PluginDependency("CoreLibLaunchSupport", new Version(1, 0, 0)),
+    new PluginDependency("LibDalamud", new Version(1, 0, 0)),
+    new PluginDependency("ImGui.NET", new Version(1, 89, 4)),
+    new PluginDependency("Veldrid", new Version(4, 9, 0))
+};
 
         public FFXIVGamePlugin(ILogger logger) : base(logger)
         {
@@ -39,98 +41,104 @@ namespace GamePlugins.FFXIV
         }
 
         protected override async Task InitializeInternalAsync()
-        {
-            Logger.Information("Initializing FFXIV plugin...");
+{
+    Logger.Information("Initializing FFXIV plugin...");
 
-            var loadContext = new PluginLoadContext(AppContext.BaseDirectory);
-            _coreSupportAssembly = loadContext.LoadFromAssemblyName(new AssemblyName("CoreLibLaunchSupport"));
-            _imGuiAssembly = loadContext.LoadFromAssemblyName(new AssemblyName("ImGui.NET"));
+    var loadContext = new PluginLoadContext(AppContext.BaseDirectory);
+    _coreSupportAssembly = loadContext.LoadFromAssemblyName(new AssemblyName("CoreLibLaunchSupport")) 
+        ?? throw new InvalidOperationException("Could not load CoreLibLaunchSupport assembly");
+    _imGuiAssembly = loadContext.LoadFromAssemblyName(new AssemblyName("ImGui.NET"))
+        ?? throw new InvalidOperationException("Could not load ImGui.NET assembly");
+    var numericsAssembly = loadContext.LoadFromAssemblyName(new AssemblyName("System.Numerics"))
+        ?? throw new InvalidOperationException("Could not load System.Numerics assembly");
 
-            _networkLogicType = _coreSupportAssembly.GetType("CoreLibLaunchSupport.networklogic");
-            _imGuiType = _imGuiAssembly.GetType("ImGuiNET.ImGui");
-            _vector4 = _imGuiAssembly.GetType("System.Numerics.Vector4");
+    _networkLogicType = _coreSupportAssembly.GetType("CoreLibLaunchSupport.networklogic") 
+        ?? throw new InvalidOperationException("Could not load networklogic type");
+    _imGuiType = _imGuiAssembly.GetType("ImGuiNET.ImGui")
+        ?? throw new InvalidOperationException("Could not load ImGui type");
+    _vector4 = numericsAssembly.GetType("System.Numerics.Vector4")
+        ?? throw new InvalidOperationException("Could not load Vector4 type");
 
-            _networkLogic = Activator.CreateInstance(_networkLogicType);
-            _imGui = _imGuiType;
+    _networkLogic = Activator.CreateInstance(_networkLogicType)
+        ?? throw new InvalidOperationException("Could not create networklogic instance");
 
-            ShowNotification("Initialization", "Starting server checks...", NotificationType.Info);
+    var checkGateStatus = _networkLogicType.GetMethod("CheckGateStatus")
+        ?? throw new InvalidOperationException("Could not find CheckGateStatus method");
+    var checkLoginStatus = _networkLogicType.GetMethod("CheckLoginStatus")
+        ?? throw new InvalidOperationException("Could not find CheckLoginStatus method");
 
-            try
-            {
-                var checkGateStatus = _networkLogicType.GetMethod("CheckGateStatus");
-                var checkLoginStatus = _networkLogicType.GetMethod("CheckLoginStatus");
+    var gateStatus = await Task.Run(() => (bool)checkGateStatus.Invoke(_networkLogic, null));
+    var loginStatus = await Task.Run(() => (bool)checkLoginStatus.Invoke(_networkLogic, null));
 
-                var gateStatus = await Task.Run(() => (bool)checkGateStatus.Invoke(_networkLogic, null));
-                if (!gateStatus)
-                {
-                    ShowNotification("Server Status", "Game servers unavailable", NotificationType.Warning);
-                }
+    Logger.Information($"Server Status - Gate: {gateStatus}, Login: {loginStatus}");
 
-                var loginStatus = await Task.Run(() => (bool)checkLoginStatus.Invoke(_networkLogic, null));
-                if (!loginStatus)
-                {
-                    ShowNotification("Server Status", "Login servers unavailable", NotificationType.Warning);
-                }
+    if (!gateStatus)
+    {
+        Logger.Warning("Game servers unavailable");
+    }
 
-                if (gateStatus && loginStatus)
-                {
-                    ShowNotification("Server Status", "All systems operational", NotificationType.Success);
-                }
-            }
-            catch (Exception ex)
-            {
-                ShowNotification("Error", $"Server check failed: {ex.Message}", NotificationType.Error);
-            }
-        }
+    if (!loginStatus)
+    {
+        Logger.Warning("Login servers unavailable");
+    }
+
+    if (gateStatus && loginStatus)
+    {
+        Logger.Information("All systems operational");
+    }
+}
+
 
         public override void RenderImGui()
+{
+    try
+    {
+        if (_imGuiType.GetMethod("Begin").Invoke(null, new object[] { "FFXIV Launcher Status" }) is true)
         {
-            try
+            // Server Status Section
+            _imGuiType.GetMethod("Text").Invoke(null, new[] { "Server Status:" });
+            _imGuiType.GetMethod("SameLine").Invoke(null, null);
+
+            var gateStatus = (bool)_networkLogicType.GetMethod("CheckGateStatus").Invoke(_networkLogic, null);
+            var loginStatus = (bool)_networkLogicType.GetMethod("CheckLoginStatus").Invoke(_networkLogic, null);
+
+            var statusColor = (gateStatus && loginStatus) 
+                ? Activator.CreateInstance(_vector4, new object[] { 0f, 1f, 0f, 1f })
+                : Activator.CreateInstance(_vector4, new object[] { 1f, 1f, 0f, 1f });
+
+            _imGuiType.GetMethod("TextColored").Invoke(null, new[] { statusColor, gateStatus && loginStatus ? "Online" : "Partial Outage" });
+
+            // Configuration Section
+            _imGuiType.GetMethod("Separator").Invoke(null, null);
+            _imGuiType.GetMethod("Text").Invoke(null, new[] { "Configuration:" });
+
+            if (_config.TryGetValue("GamePath", out var gamePath))
             {
-                _imGui.GetMethod("Begin").Invoke(null, new object[] { "FFXIV Launcher Status" });
-
-                // Server Status Section
-                _imGui.GetMethod("Text").Invoke(null, new[] { "Server Status:" });
-                _imGui.GetMethod("SameLine").Invoke(null, null);
-
-                var gateStatus = (bool)_networkLogicType.GetMethod("CheckGateStatus").Invoke(_networkLogic, null);
-                var loginStatus = (bool)_networkLogicType.GetMethod("CheckLoginStatus").Invoke(_networkLogic, null);
-
-                var color = (gateStatus && loginStatus) ?
-                    Activator.CreateInstance(_vector4, 0f, 1f, 0f, 1f) :
-                    Activator.CreateInstance(_vector4, 1f, 1f, 0f, 1f);
-
-                _imGui.GetMethod("TextColored").Invoke(null, new[] { color, gateStatus && loginStatus ? "Online" : "Partial Outage" });
-
-                // Configuration Section
-                _imGui.GetMethod("Separator").Invoke(null, null);
-                _imGui.GetMethod("Text").Invoke(null, new[] { "Configuration:" });
-
-                if (_config.TryGetValue("GamePath", out var gamePath))
+                _imGuiType.GetMethod("Text").Invoke(null, new[] { $"Game Path: {gamePath}" });
+                if (!Directory.Exists(Path.Combine(gamePath, "game")))
                 {
-                    _imGui.GetMethod("Text").Invoke(null, new[] { $"Game Path: {gamePath}" });
-                    if (!Directory.Exists(Path.Combine(gamePath, "game")))
+                    _imGuiType.GetMethod("TextColored").Invoke(null, new[]
                     {
-                        _imGui.GetMethod("TextColored").Invoke(null, new[]
-                        {
-                        Activator.CreateInstance(_vector4, 1f, 0f, 0f, 1f),
+                        Activator.CreateInstance(_vector4, new object[] { 1f, 0f, 0f, 1f }),
                         "Game directory not found!"
                     });
-                    }
                 }
-
-                // Notifications Section
-                _imGui.GetMethod("Separator").Invoke(null, null);
-                _imGui.GetMethod("Text").Invoke(null, new[] { "Recent Events:" });
-                RenderDefaultNotifications();
-
-                _imGui.GetMethod("End").Invoke(null, null);
             }
-            catch (Exception ex)
-            {
-                Logger.Error($"ImGui rendering failed: {ex.Message}");
-            }
+
+            // Notifications Section
+            _imGuiType.GetMethod("Separator").Invoke(null, null);
+            _imGuiType.GetMethod("Text").Invoke(null, new[] { "Recent Events:" });
+            RenderDefaultNotifications();
+
+            _imGuiType.GetMethod("End").Invoke(null, null);
         }
+    }
+    catch (Exception ex)
+    {
+        Logger.Error($"ImGui rendering failed: {ex.Message}");
+    }
+}
+
 
         protected override async Task<bool> LaunchGameInternalAsync(GameLaunchParameters parameters)
         {

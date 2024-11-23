@@ -4,13 +4,15 @@ G:\code\WebLaunch\SpinningWheelLib\bin\Debug\net9.0-windows7.0\SpinningWheelLib.
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.csproj.AssemblyReference.cache
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\CircularProgressBar.baml
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\Dictionary1.baml
-G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SettingsWindow.baml
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\CircularProgressBar.g.cs
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\CustomLonghornTitleBar.g.cs
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SettingsWindow.g.cs
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\Window1.g.cs
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\GeneratedInternalTypeHelper.g.cs
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib_MarkupCompile.cache
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib_MarkupCompile.lref
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\CustomLonghornTitleBar.baml
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SettingsWindow.baml
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\Window1.baml
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.g.resources
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.GeneratedMSBuildEditorConfig.editorconfig

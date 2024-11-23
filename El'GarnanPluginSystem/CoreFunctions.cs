@@ -45,19 +45,27 @@ namespace El_Garnan_Plugin_Loader
         /// </summary>
         public event EventHandler<PluginErrorEventArgs> PluginError;
 
+        private readonly IPluginRenderer _renderer;
+        private bool _useStandaloneWindow;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CoreFunctions"/> class.
         /// </summary>
         /// <param name="pluginsPath">The path to the plugins directory.</param>
         /// <param name="logger">The logger instance.</param>
         /// <param name="enableHotReload">Whether hot reload is enabled.</param>
-        public CoreFunctions(string pluginsPath, ILogger logger, bool enableHotReload = false)
+        public CoreFunctions(string pluginsPath, ILogger logger, bool enableHotReload = false,bool useStandaloneWindow = false)
         {
             _pluginsPath = pluginsPath;
             _logger = logger;
             _enableHotReload = enableHotReload;
             _loadedPlugins = new ConcurrentDictionary<string, IGamePlugin>();
             _pluginWatchers = new ConcurrentDictionary<string, FileSystemWatcher>();
+            _useStandaloneWindow = useStandaloneWindow;
+            if (_useStandaloneWindow)
+            {
+                _renderer = new ImGuiPluginRenderer(logger);
+            }
         }
 
         /// <summary>
@@ -380,6 +388,24 @@ namespace El_Garnan_Plugin_Loader
             }
         }
 
+        public void StartRendering()
+        {
+            if (_useStandaloneWindow && _renderer != null)
+            {
+                _renderer.Initialize();
+                _renderer.SetPlugins(_loadedPlugins.Values);
+            
+                Task.Run(() =>
+                {
+                    while (true)
+                    {
+                        _renderer.Render();
+                        Thread.Sleep(16); // ~60 FPS
+                    }
+                });
+            }
+        }
+
         /// <summary>
         /// Disposes the resources used by the <see cref="CoreFunctions"/> class.
         /// </summary>
@@ -399,6 +425,8 @@ namespace El_Garnan_Plugin_Loader
             _isDisposed = true;
         }
     }
+
+    
 
     /// <summary>
     /// Exception thrown when plugin validation fails.

@@ -85,7 +85,7 @@ namespace El_Garnan_Plugin_Loader.Base
         /// <param name="logger">The logger to be used by the plugin.</param>
         protected GamePluginBase(ILogger logger)
         {
-            Logger = logger;
+            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         /// <summary>
@@ -210,6 +210,9 @@ namespace El_Garnan_Plugin_Loader.Base
             }
         }
 
+        private bool _showNotification = true;
+
+
         /// <summary>
         /// Asynchronously initializes the plugin's internal components.
         /// </summary>
@@ -241,10 +244,36 @@ namespace El_Garnan_Plugin_Loader.Base
         /// Shows a notification using the plugin's notification system
         /// </summary>
         protected void ShowNotification(string title, string message, NotificationType type = NotificationType.Info)
+{
+    NotificationQueue.Enqueue(new PluginNotification(title, message, type));
+    
+    if (SupportsImGui)
+    {
+        ImGui.OpenPopup("##Notification");
+        ImGui.SetNextWindowPos(new Vector2(ImGui.GetIO().DisplaySize.X - 300, 10), ImGuiCond.Always);
+        ImGui.SetNextWindowSize(new Vector2(280, 0));
+        
+        if (ImGui.BeginPopupModal("##Notification", ref _showNotification, ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoResize))
         {
-            NotificationQueue.Enqueue(new PluginNotification(title, message, type));
-            Logger.Information($"[{type}] {title}: {message}");
+            var notification = NotificationQueue.Peek();
+            var color = notification.Type switch
+            {
+                NotificationType.Success => new Vector4(0, 1, 0, 1),
+                NotificationType.Warning => new Vector4(1, 1, 0, 1),
+                NotificationType.Error => new Vector4(1, 0, 0, 1),
+                _ => new Vector4(0.4f, 0.7f, 1, 1)
+            };
+
+            ImGui.PushStyleColor(ImGuiCol.Text, color);
+            ImGui.Text(notification.Title);
+            ImGui.PopStyleColor();
+            ImGui.Text(notification.Message);
+            ImGui.EndPopup();
         }
+    }
+    
+    Logger?.Information($"[{type}] {title}: {message}");
+}
 
         /// <summary>
         /// Renders the plugin's ImGui interface
@@ -261,33 +290,59 @@ namespace El_Garnan_Plugin_Loader.Base
         /// Renders default ImGui notifications if no custom implementation is provided
         /// </summary>
         protected virtual void RenderDefaultNotifications()
-    {
-        if (!SupportsImGui || NotificationQueue.Count == 0) return;
+{
+    if (!SupportsImGui || NotificationQueue.Count == 0) return;
 
-        ImGui.Begin($"{Name} Notifications");
-        
-        foreach (var notification in NotificationQueue.ToArray())
+    ImGui.Begin($"{Name} Notifications");
+    
+    foreach (var notification in NotificationQueue.ToArray())
+    {
+        var color = notification.Type switch
         {
+            NotificationType.Success => new Vector4(0, 1, 0, 1),
+            NotificationType.Warning => new Vector4(1, 1, 0, 1),
+            NotificationType.Error => new Vector4(1, 0, 0, 1),
+            _ => new Vector4(0.4f, 0.7f, 1, 1)
+        };
+
+        ImGui.PushStyleColor(ImGuiCol.Text, color);
+        ImGui.Text($"[{notification.Timestamp:HH:mm:ss}] {notification.Title}: {notification.Message}");
+        ImGui.PopStyleColor();
+    }
+
+    ImGui.End();
+}
+
+        void INotificationService.ShowNotification(string title, string message, NotificationType type)
+        {
+            NotificationQueue.Enqueue(new PluginNotification(title, message, type));
+    
+    if (SupportsImGui)
+    {
+        ImGui.OpenPopup("##Notification");
+        ImGui.SetNextWindowPos(new Vector2(ImGui.GetIO().DisplaySize.X - 300, 10), ImGuiCond.Always);
+        ImGui.SetNextWindowSize(new Vector2(280, 0));
+        
+        if (ImGui.BeginPopupModal("##Notification", ref _showNotification, ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoResize))
+        {
+            var notification = NotificationQueue.Peek();
             var color = notification.Type switch
             {
                 NotificationType.Success => new Vector4(0, 1, 0, 1),
-                NotificationType.Warning => new Vector4(1, 1, 0, 1), 
+                NotificationType.Warning => new Vector4(1, 1, 0, 1),
                 NotificationType.Error => new Vector4(1, 0, 0, 1),
                 _ => new Vector4(0.4f, 0.7f, 1, 1)
             };
 
             ImGui.PushStyleColor(ImGuiCol.Text, color);
-            ImGui.Text($"[{notification.Timestamp:HH:mm:ss}] {notification.Title}: {notification.Message}");
+            ImGui.Text(notification.Title);
             ImGui.PopStyleColor();
+            ImGui.Text(notification.Message);
+            ImGui.EndPopup();
         }
-
-        ImGui.End();
     }
-
-        void INotificationService.ShowNotification(string title, string message, NotificationType type)
-        {
-            NotificationQueue.Enqueue(new PluginNotification(title, message, type));
-            Logger.Information($"[{type}] {title}: {message}");
+    
+    Logger.Information($"[{type}] {title}: {message}");
         }
     }
 }

@@ -1098,9 +1098,9 @@ G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\mqh2pdv1b6-lfu7j35m59.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\fpgfvou72u-oyz0vx2fzb.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lmcyilvykc-6mg14d3o54.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\sw4mtv5kd6-nd81td30d1.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-g3goba5wfu.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-0jw2c84d6c.gz
-G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-hxxi5qib3o.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\1obbtagp6p-d3oq84sae3.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\lauxpm0ksv-7clm5pwbwb.gz
+G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\compressed\u19yvlzdbb-kcj3j3crlp.gz
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.development.json
 G:\code\WebLaunch\LaunchApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
