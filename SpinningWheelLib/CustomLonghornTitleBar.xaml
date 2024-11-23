@@ -135,7 +135,7 @@
                 IsEnabled="False" Height="54" VerticalAlignment="Top"/>  <!-- Adjusted margin -->
 
             <TextBlock Name="WindowTitle" 
-          Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=Title}"
+          Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=Title, FallbackValue='Window Title'}"
           FontSize="22" Margin="85,10,86,24" Foreground="#FF132550" VerticalAlignment="Center">
     <TextBlock.BitmapEffect>
         <OuterGlowBitmapEffect GlowColor="#FFFFFFFF" GlowSize="3" />

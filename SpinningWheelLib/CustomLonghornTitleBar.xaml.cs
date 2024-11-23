@@ -75,5 +75,23 @@ namespace SpinningWheelLib.Controls
         {
             forwardButton.IsEnabled = enable;
         }
+
+        public event RoutedEventHandler FavoriteClick
+{
+    add { favButton.Click += value; }
+    remove { favButton.Click -= value; }
+}
+
+public event RoutedEventHandler BackClick
+{
+    add { backButton.Click += value; }
+    remove { backButton.Click -= value; }
+}
+
+public event RoutedEventHandler ForwardClick
+{
+    add { forwardButton.Click += value; }
+    remove { forwardButton.Click -= value; }
+}
     }
 }
