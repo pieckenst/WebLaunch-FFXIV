@@ -98,7 +98,7 @@
         </Grid.RowDefinitions>
 
         <!-- Custom Title Bar -->
-        <controls:CustomLonghornTitleBar>
+        <controls:CustomLonghornTitleBar UseSlateTheme="True">
             <controls:CustomLonghornTitleBar.TitleBarContent>
                 <TextBlock Text="Additional Title Bar Content" Foreground="#666666"/>
             </controls:CustomLonghornTitleBar.TitleBarContent>
