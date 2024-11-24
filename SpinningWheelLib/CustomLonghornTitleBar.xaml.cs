@@ -396,12 +396,30 @@ namespace SpinningWheelLib.Controls
             try
             {
 
-                window.WindowStyle = WindowStyle.None;
+                window.Background = Brushes.Transparent;
+
                 var mainWindowPtr = new WindowInteropHelper(window).Handle;
                 if (mainWindowPtr != IntPtr.Zero)
                 {
-                    var margins = new MARGINS { Left = -1, Right = -1, Top = -1, Bottom = -1 };
+                    // Extend glass into entire client area
+                    var margins = new MARGINS
+                    {
+                        Left = -1,
+                        Right = -1,
+                        Top = -1,
+                        Bottom = -1
+                    };
                     DwmExtendFrameIntoClientArea(mainWindowPtr, ref margins);
+
+                    // Enable blur behind window
+                    var bb = new DWM_BLURBEHIND
+                    {
+                        dwFlags = DWM_BB_ENABLE,
+                        fEnable = true,
+                        hRgnBlur = IntPtr.Zero,
+                        fTransitionOnMaximized = true
+                    };
+                    DwmEnableBlurBehindWindow(mainWindowPtr, ref bb);
                 }
             }
             catch (Exception ex)
@@ -414,19 +432,38 @@ namespace SpinningWheelLib.Controls
         {
             try
             {
+                // Create a more pronounced glass effect
                 GlassOverlay.Effect = new BlurEffect
                 {
-                    Radius = 10,
+                    Radius = 15,
                     RenderingBias = RenderingBias.Quality
                 };
 
-                GlassOverlay.Background = new LinearGradientBrush(
-                    Color.FromArgb(128, 255, 255, 255),
-                    Color.FromArgb(64, 255, 255, 255),
-                    new Point(0, 0),
-                    new Point(0, 1));
+                // Longhorn-style glass gradient
+                var glassGradient = new LinearGradientBrush
+                {
+                    StartPoint = new Point(0, 0),
+                    EndPoint = new Point(0, 1),
+                    GradientStops = new GradientStopCollection
+            {
+                new GradientStop(Color.FromArgb(180, 255, 255, 255), 0),
+                new GradientStop(Color.FromArgb(140, 255, 255, 255), 0.5),
+                new GradientStop(Color.FromArgb(100, 255, 255, 255), 1)
+            }
+                };
 
-                glassArea.Background = new SolidColorBrush(Colors.Transparent);
+                GlassOverlay.Background = glassGradient;
+                glassArea.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
+
+                // Add inner glow effect
+                GlassOverlay.Effect = new DropShadowEffect
+                {
+                    Color = Colors.White,
+                    Direction = 270,
+                    BlurRadius = 15,
+                    ShadowDepth = 0,
+                    Opacity = 0.6
+                };
             }
             catch (Exception ex)
             {
