@@ -5,6 +5,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
 
 namespace SpinningWheelLib.Controls
 {
@@ -100,6 +102,48 @@ namespace SpinningWheelLib.Controls
             }
         }
 
+
+        private void AnimateMinimize()
+        {
+            var window = Window.GetWindow(this);
+            if (window != null)
+            {
+                var animation = new DoubleAnimation
+                {
+                    From = 1,
+                    To = 0,
+                    Duration = TimeSpan.FromMilliseconds(200)
+                };
+
+                window.BeginAnimation(UIElement.OpacityProperty, animation);
+            }
+        }
+
+        private void AnimateMaximize()
+        {
+            var window = Window.GetWindow(this);
+            if (window != null)
+            {
+                var scaleX = new ScaleTransform(1, 1);
+                var scaleY = new ScaleTransform(1, 1);
+                window.RenderTransform = new TransformGroup
+                {
+                    Children = { scaleX, scaleY }
+                };
+
+                var animation = new DoubleAnimation
+                {
+                    From = 1,
+                    To = 1.02,
+                    Duration = TimeSpan.FromMilliseconds(100),
+                    AutoReverse = true
+                };
+
+                scaleX.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
+                scaleY.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
+            }
+        }
+
         private void UpdateBackground()
         {
             if (UseSlateTheme)
@@ -123,13 +167,23 @@ namespace SpinningWheelLib.Controls
                         {
                             var margins = new MARGINS { Left = -1, Right = -1, Top = -1, Bottom = -1 };
                             DwmExtendFrameIntoClientArea(mainWindowPtr, ref margins);
+
+                            // Add blur effect for Aero
+                            GlassOverlay.Effect = new BlurEffect
+                            {
+                                Radius = 10,
+                                RenderingBias = RenderingBias.Quality
+                            };
+
+                            GlassOverlay.Background = new LinearGradientBrush(
+                                Color.FromArgb(128, 255, 255, 255),
+                                Color.FromArgb(64, 255, 255, 255),
+                                new Point(0, 0),
+                                new Point(0, 1));
                         }
                     }
                 }
-
-                glassArea.Background = Brushes.Transparent;
-                GlassOverlay.Background = (LinearGradientBrush)FindResource("AeroGlassEffect");
-                Background = Brushes.Transparent;
+                glassArea.Background = new SolidColorBrush(Colors.Transparent);
             }
             else
             {
@@ -179,6 +233,7 @@ namespace SpinningWheelLib.Controls
             InitializeComponent();
 
             MinButton.Click += (s, e) => {
+                AnimateMinimize();
                 var window = Window.GetWindow(this);
                 if (window != null) window.WindowState = WindowState.Minimized;
             };
@@ -187,6 +242,7 @@ namespace SpinningWheelLib.Controls
                 var window = Window.GetWindow(this);
                 if (window != null)
                 {
+                    AnimateMaximize();
                     if (isMaximized)
                     {
                         window.Width = originalWidth;
@@ -197,13 +253,11 @@ namespace SpinningWheelLib.Controls
                     }
                     else
                     {
-                        // Store original dimensions
                         originalWidth = window.Width;
                         originalHeight = window.Height;
                         originalLeft = window.Left;
                         originalTop = window.Top;
 
-                        // Set maximized state using work area
                         var workArea = SystemParameters.WorkArea;
                         window.Left = workArea.Left;
                         window.Top = workArea.Top;

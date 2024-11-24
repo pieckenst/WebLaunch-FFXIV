@@ -10,18 +10,40 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <LinearGradientBrush x:Key="TaskbarBackground" StartPoint="0,0" EndPoint="0,1" SpreadMethod="Reflect">
-                <GradientStop Color="#545454" Offset="0.0" />
-                <GradientStop Color="#767676" Offset="0.25" />
-                <GradientStop Color="#5C5C5C" Offset="0.50" />
-                <GradientStop Color="#4E4E4E" Offset="0.75" />
-                <GradientStop Color="#545454" Offset="1.0" />
+                <GradientStop Color="#2D2D2D" Offset="0.0" />
+                <GradientStop Color="#404040" Offset="0.25" />
+                <GradientStop Color="#353535" Offset="0.50" />
+                <GradientStop Color="#2A2A2A" Offset="0.75" />
+                <GradientStop Color="#2D2D2D" Offset="1.0" />
             </LinearGradientBrush>
 
             <LinearGradientBrush x:Key="AeroGlassEffect" StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#50FFFFFF" Offset="0"/>
-                <GradientStop Color="#30FFFFFF" Offset="0.5"/>
-                <GradientStop Color="#50FFFFFF" Offset="1"/>
+                <GradientStop Color="#80FFFFFF" Offset="0"/>
+                <GradientStop Color="#40FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#80FFFFFF" Offset="1"/>
             </LinearGradientBrush>
+
+            <SolidColorBrush x:Key="GlassReflection" Color="#90FFFFFF"/>
+
+            <LinearGradientBrush x:Key="AeroBackground" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#40FFFFFF" Offset="0"/>
+                <GradientStop Color="#20FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#40FFFFFF" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="LonghornActiveGlow" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#90D1EDFF" Offset="0"/>
+                <GradientStop Color="#7084CDFF" Offset="1"/>
+            </LinearGradientBrush>
+
+            <Style x:Key="GlassEffect" TargetType="{x:Type Grid}">
+                <Setter Property="Background" Value="{StaticResource AeroBackground}"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <BlurEffect Radius="15" RenderingBias="Quality"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
             <Style x:Key="backButton" TargetType="{x:Type Button}" BasedOn="{x:Null}">
                 <Setter Property="Template">
@@ -106,17 +128,21 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
-                            <Grid>
+                            <Border x:Name="border" Background="Transparent">
                                 <Image Source="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}"
-                                       Opacity="0.5" Stretch="Fill">
-                                    <UIElement.BitmapEffect>
-                                        <OuterGlowBitmapEffect GlowColor="#FFFFFFFF" GlowSize="3" />
-                                    </UIElement.BitmapEffect>
+                                       Opacity="0.8" Stretch="Fill">
+                                    <UIElement.Effect>
+                                        <DropShadowEffect Color="White" BlurRadius="3" ShadowDepth="0"/>
+                                    </UIElement.Effect>
                                 </Image>
-                            </Grid>
+                            </Border>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#20FFFFFF"/>
                                     <Setter Property="Opacity" Value="1"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#40000000"/>
                                 </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
@@ -124,20 +150,7 @@
                 </Setter>
             </Style>
 
-            <SolidColorBrush x:Key="GlassReflection" Color="#70FFFFFF"/>
-            <LinearGradientBrush x:Key="AeroBackground" StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#20FFFFFF" Offset="0"/>
-                <GradientStop Color="#10FFFFFF" Offset="0.5"/>
-                <GradientStop Color="#28FFFFFF" Offset="1"/>
-            </LinearGradientBrush>
-            <Style x:Key="GlassEffect" TargetType="{x:Type Grid}">
-                <Setter Property="Background" Value="{StaticResource AeroBackground}"/>
-                <Setter Property="Effect">
-                    <Setter.Value>
-                        <BlurEffect Radius="10" RenderingBias="Performance"/>
-                    </Setter.Value>
-                </Setter>
-            </Style>
+
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -149,82 +162,95 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- CustomTitleBar.xaml -->
         <Grid Name="glassArea" Margin="0,0,0,0" Height="74" MouseLeftButtonDown="OnMouseLeftButtonDown">
             <Grid.Resources>
                 <LinearGradientBrush x:Key="AeroGlassEffect" StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="#50FFFFFF" Offset="0"/>
-                    <GradientStop Color="#30FFFFFF" Offset="0.5"/>
-                    <GradientStop Color="#50FFFFFF" Offset="1"/>
+                    <GradientStop Color="#80FFFFFF" Offset="0"/>
+                    <GradientStop Color="#40FFFFFF" Offset="0.5"/>
+                    <GradientStop Color="#80FFFFFF" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Resources>
 
-            <Border x:Name="GlassOverlay" Background="{StaticResource AeroGlassEffect}">
+            <Border x:Name="GlassOverlay">
                 <Border.Style>
                     <Style TargetType="Border">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding UseAeroTheme, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="True">
                                 <Setter Property="Effect">
                                     <Setter.Value>
-                                        <BlurEffect Radius="10" RenderingBias="Performance"/>
+                                        <BlurEffect Radius="15" RenderingBias="Quality"/>
                                     </Setter.Value>
                                 </Setter>
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#90FFFFFF" Offset="0"/>
+                                            <GradientStop Color="#60FFFFFF" Offset="0.5"/>
+                                            <GradientStop Color="#90FFFFFF" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="BorderBrush" Value="#60FFFFFF"/>
+                                <Setter Property="BorderThickness" Value="1"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Border.Style>
             </Border>
 
-            <!-- Rest of your content in a separate grid to avoid blur -->
             <Grid>
                 <Image Name="nav" HorizontalAlignment="Left" Width="65"
-               Source="/SpinningWheelLib;component/navigation.png"
-               Stretch="Fill" VerticalAlignment="Top" Height="54"
-               Margin="8,10,0,0"/>
+                       Source="/SpinningWheelLib;component/navigation.png"
+                       Stretch="Fill" VerticalAlignment="Top" Height="54"
+                       Margin="8,10,0,0"/>
 
                 <Button Name="backButton" Style="{StaticResource backButton}"
-                HorizontalAlignment="Left" Width="38" Height="54"
-                Margin="8,10,0,0" VerticalAlignment="Top"/>
+                        HorizontalAlignment="Left" Width="38" Height="54"
+                        Margin="8,10,0,0" VerticalAlignment="Top"/>
 
                 <Button Name="forwardButton" Style="{StaticResource forwardButton}"
-                HorizontalAlignment="Left" Margin="46,10,0,0" Width="27"
-                IsEnabled="False" Height="54" VerticalAlignment="Top"/>
+                        HorizontalAlignment="Left" Margin="46,10,0,0" Width="27"
+                        IsEnabled="False" Height="54" VerticalAlignment="Top"/>
 
                 <TextBlock Name="WindowTitle"
-                  Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=Title, FallbackValue='Window Title'}"
-                  FontSize="22" Margin="85,10,86,24" Foreground="#FF132550" VerticalAlignment="Center">
+                          Text="{Binding RelativeSource={RelativeSource FindAncestor, 
+                          AncestorType={x:Type Window}}, Path=Title, 
+                          FallbackValue='Window Title'}"
+                          FontSize="22" Margin="85,10,86,24" 
+                          Foreground="#FF132550" VerticalAlignment="Center">
                     <TextBlock.Effect>
                         <DropShadowEffect Color="White" BlurRadius="3" ShadowDepth="0"/>
                     </TextBlock.Effect>
                 </TextBlock>
 
                 <ContentPresenter Content="{Binding TitleBarContent, ElementName=Root}"
-                        Margin="85,35,100,0" VerticalAlignment="Center"/>
+                                 Margin="85,35,100,0" VerticalAlignment="Center"/>
 
                 <Button Name="favButton" Style="{StaticResource favButton}"
-                HorizontalAlignment="Right" Margin="0,15,48,0"
-                Width="50" Height="44" Visibility="Collapsed" VerticalAlignment="Center"/>
+                        HorizontalAlignment="Right" Margin="0,15,48,0"
+                        Width="50" Height="44" Visibility="Collapsed" 
+                        VerticalAlignment="Center"/>
 
                 <StackPanel HorizontalAlignment="Right" Margin="0,10,8,24"
-                    Orientation="Horizontal" VerticalAlignment="Center">
+                           Orientation="Horizontal" VerticalAlignment="Center">
                     <Button Style="{StaticResource windowControlButton}"
-                    Name="MinButton" Tag="/SpinningWheelLib;component/img/MinNormal.png" Margin="0,0,4,0"/>
+                            Name="MinButton" Tag="/SpinningWheelLib;component/img/MinNormal.png" 
+                            Margin="0,0,4,0"/>
                     <Button Style="{StaticResource windowControlButton}"
-                    Name="MaxButton" Tag="/SpinningWheelLib;component/img/MaxNormal.png" Margin="0,0,4,0"/>
+                            Name="MaxButton" Tag="/SpinningWheelLib;component/img/MaxNormal.png" 
+                            Margin="0,0,4,0"/>
                     <Button Style="{StaticResource windowControlButton}"
-                    Name="CloseButton" Tag="/SpinningWheelLib;component/img/CloseNormal.png"/>
+                            Name="CloseButton" Tag="/SpinningWheelLib;component/img/CloseNormal.png"/>
                 </StackPanel>
 
                 <ContentPresenter Content="{Binding BreadcrumbContent, ElementName=Root}"
-                      Margin="85,35,100,0" VerticalAlignment="Center"/>
+                                Margin="85,35,100,0" VerticalAlignment="Center"/>
             </Grid>
         </Grid>
 
-
         <ContentPresenter Grid.Row="1" Content="{Binding MenuBarContent, ElementName=Root}"
-                  Margin="8,0,8,0"/>
+                         Margin="8,0,8,0"/>
         <ContentPresenter Grid.Row="2" Content="{Binding AdditionalContent, ElementName=Root}"
-                  Margin="8,0,8,0"/>
-
+                         Margin="8,0,8,0"/>
     </Grid>
 </UserControl>
