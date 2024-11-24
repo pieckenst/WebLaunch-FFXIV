@@ -6,8 +6,11 @@
         Title="Settings" Height="600" Width="800"
         MinWidth="400" MinHeight="300"
         WindowStyle="None"
-        AllowsTransparency="True"
-        Background="#ECE9D8">
+        AllowsTransparency="True">
+
+    <Window.Background>
+        <SolidColorBrush Color="#ECE9D8" Opacity="0.5"/>
+    </Window.Background>
 
     <Window.Resources>
         <ResourceDictionary>
@@ -93,82 +96,83 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Custom Title Bar -->
-        <controls:CustomLonghornTitleBar UseSlateTheme="True">
-            <controls:CustomLonghornTitleBar.TitleBarContent>
-                <TextBlock Text="Additional Title Bar Content" Foreground="#666666"/>
-            </controls:CustomLonghornTitleBar.TitleBarContent>
-            <controls:CustomLonghornTitleBar.MenuBarContent>
-                <Menu Background="Transparent">
-                    <MenuItem Header="File"/>
-                    <MenuItem Header="Edit"/>
-                    <MenuItem Header="Help"/>
-                </Menu>
-            </controls:CustomLonghornTitleBar.MenuBarContent>
+        <!-- Custom Title Bar with Aero theme enabled -->
+        <controls:CustomLonghornTitleBar UseSlateTheme="False" UseAeroTheme="True">
+            
         </controls:CustomLonghornTitleBar>
 
-        <!-- Header -->
-        <Border Grid.Row="1" Background="#FFFFFF" BorderBrush="#ACA899" BorderThickness="0,0,0,1">
-            <Grid Margin="16,8">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+        <!-- Content area with solid background -->
+        <Grid Grid.Row="1" Background="#ECE9D8">
+            <!-- Header -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <Button Content="Back" Width="75" Height="23" Style="{StaticResource XPButton}"/>
-                <TextBlock Text="Settings" Grid.Column="1" HorizontalAlignment="Center" 
-                         FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                <Button Content="Edit" Width="75" Height="23" Grid.Column="2" 
-                        Style="{StaticResource XPButton}"/>
-            </Grid>
-        </Border>
-
-        <!-- Content -->
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
-            <StackPanel>
-                <!-- Feature Cards Section -->
-                <TextBlock Text="FEATURES" Style="{StaticResource CategoryLabelStyle}"/>
-                <Border Style="{StaticResource FeatureCardStyle}">
-                    <Grid>
+                <!-- Header with solid background -->
+                <Border Background="#FFFFFF" BorderBrush="#ACA899" BorderThickness="0,0,0,1">
+                    <Grid Margin="16,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
-                        <Image Source="roundrect.png" Width="32" Height="32" 
-                               Margin="0,0,16,0"/>
-
-                        <StackPanel Grid.Column="1">
-                            <TextBlock Text="Feature Name" FontWeight="SemiBold" FontSize="14"/>
-                            <TextBlock Text="Feature description goes here" TextWrapping="Wrap" 
-                                     Foreground="#666666" Margin="0,4,0,0"/>
-                            <ToggleButton Style="{StaticResource FeatureToggleStyle}" 
-                                        Margin="0,8,0,0" HorizontalAlignment="Left"/>
-                        </StackPanel>
-
-                        <Button Grid.Column="2" Content="⋮" Width="24" Height="24" 
-                                VerticalAlignment="Top" Style="{StaticResource XPButton}"/>
+                        <Button Content="Back" Width="75" Height="23" Style="{StaticResource XPButton}"/>
+                        <TextBlock Text="Settings" Grid.Column="1" HorizontalAlignment="Center" 
+                                 FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                        <Button Content="Edit" Width="75" Height="23" Grid.Column="2" 
+                                Style="{StaticResource XPButton}"/>
                     </Grid>
                 </Border>
 
-                <!-- Settings Section -->
-                <TextBlock Text="SETTINGS" Style="{StaticResource CategoryLabelStyle}"/>
-                <Border Style="{StaticResource FeatureCardStyle}">
+                <!-- Content area -->
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                     <StackPanel>
-                        <ComboBox Margin="0,0,0,8"/>
-                        <CheckBox Content="Enable feature" Margin="0,0,0,8"/>
-                        <ListBox Height="100" Margin="0,0,0,8"/>
-                        <Button Content="Configure" Width="100" HorizontalAlignment="Left"
-                                Style="{StaticResource XPButton}"/>
+                        <!-- Feature Cards Section -->
+                        <TextBlock Text="FEATURES" Style="{StaticResource CategoryLabelStyle}"/>
+                        <Border Style="{StaticResource FeatureCardStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="/SpinningWheelLib;component/roundrect.png" Width="32" Height="32" 
+                                       Margin="0,0,16,0"/>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Feature Name" FontWeight="SemiBold" FontSize="14"/>
+                                    <TextBlock Text="Feature description goes here" TextWrapping="Wrap" 
+                                             Foreground="#666666" Margin="0,4,0,0"/>
+                                    <ToggleButton Style="{StaticResource FeatureToggleStyle}" 
+                                                Margin="0,8,0,0" HorizontalAlignment="Left"/>
+                                </StackPanel>
+
+                                <Button Grid.Column="2" Content="⋮" Width="24" Height="24" 
+                                        VerticalAlignment="Top" Style="{StaticResource XPButton}"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Settings Section -->
+                        <TextBlock Text="SETTINGS" Style="{StaticResource CategoryLabelStyle}"/>
+                        <Border Style="{StaticResource FeatureCardStyle}">
+                            <StackPanel>
+                                <ComboBox Margin="0,0,0,8"/>
+                                <CheckBox Content="Enable feature" Margin="0,0,0,8"/>
+                                <ListBox Height="100" Margin="0,0,0,8"/>
+                                <Button Content="Configure" Width="100" HorizontalAlignment="Left"
+                                        Style="{StaticResource XPButton}"/>
+                            </StackPanel>
+                        </Border>
                     </StackPanel>
-                </Border>
-            </StackPanel>
-        </ScrollViewer>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

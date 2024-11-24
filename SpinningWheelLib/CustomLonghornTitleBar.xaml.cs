@@ -1,6 +1,9 @@
-﻿using System.Windows;
+﻿using System.Runtime.InteropServices;
+using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 
 namespace SpinningWheelLib.Controls
@@ -47,17 +50,104 @@ namespace SpinningWheelLib.Controls
             }
         }
 
+        #region DWM Imports
+        [DllImport("dwmapi.dll", PreserveSig = false)]
+        private static extern bool DwmIsCompositionEnabled();
+
+        [DllImport("dwmapi.dll")]
+        private static extern int DwmExtendFrameIntoClientArea(IntPtr hwnd, ref MARGINS pMarInset);
+
+        private bool IsDwmCompositionEnabled()
+        {
+            try
+            {
+                return DwmIsCompositionEnabled();
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct MARGINS
+        {
+            public int Left;
+            public int Right;
+            public int Top;
+            public int Bottom;
+        }
+
+        private const int WM_DWMCOMPOSITIONCHANGED = 0x031E;
+        #endregion
+
+        public static readonly DependencyProperty UseAeroThemeProperty =
+            DependencyProperty.Register("UseAeroTheme", typeof(bool), typeof(CustomLonghornTitleBar),
+                new PropertyMetadata(false, OnUseAeroThemeChanged));
+
+        public bool UseAeroTheme
+        {
+            get { return (bool)GetValue(UseAeroThemeProperty); }
+            set { SetValue(UseAeroThemeProperty, value); }
+        }
+
+        private static void OnUseAeroThemeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var control = d as CustomLonghornTitleBar;
+            if (control != null)
+            {
+                control.UpdateBackground();
+            }
+        }
+
         private void UpdateBackground()
         {
             if (UseSlateTheme)
             {
                 glassArea.Background = (LinearGradientBrush)FindResource("TaskbarBackground");
+                GlassOverlay.Effect = null;
+                Background = Brushes.Transparent;
+            }
+            else if (UseAeroTheme)
+            {
+                Window parentWindow = Window.GetWindow(this);
+                if (parentWindow != null)
+                {
+                    parentWindow.AllowsTransparency = true;
+                    parentWindow.WindowStyle = WindowStyle.None;
+
+                    if (IsDwmCompositionEnabled())
+                    {
+                        var mainWindowPtr = new WindowInteropHelper(parentWindow).Handle;
+                        if (mainWindowPtr != IntPtr.Zero)
+                        {
+                            var margins = new MARGINS { Left = -1, Right = -1, Top = -1, Bottom = -1 };
+                            DwmExtendFrameIntoClientArea(mainWindowPtr, ref margins);
+                        }
+                    }
+                }
+
+                glassArea.Background = Brushes.Transparent;
+                GlassOverlay.Background = (LinearGradientBrush)FindResource("AeroGlassEffect");
+                Background = Brushes.Transparent;
             }
             else
             {
-                // Use Aero/Window background
                 glassArea.Background = Background;
+                GlassOverlay.Effect = null;
             }
+        }
+
+
+
+        private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            if (msg == WM_DWMCOMPOSITIONCHANGED)
+            {
+                UpdateBackground();
+                handled = true;
+            }
+            return IntPtr.Zero;
         }
 
         public object TitleBarContent
@@ -127,6 +217,19 @@ namespace SpinningWheelLib.Controls
             CloseButton.Click += (s, e) => {
                 var window = Window.GetWindow(this);
                 if (window != null) window.Close();
+            };
+
+            Loaded += (s, e) =>
+            {
+                var window = Window.GetWindow(this);
+                if (window != null)
+                {
+                    var source = HwndSource.FromHwnd(new WindowInteropHelper(window).Handle);
+                    if (source != null)
+                    {
+                        source.AddHook(WndProc);
+                    }
+                }
             };
         }
 

@@ -17,6 +17,12 @@
                 <GradientStop Color="#545454" Offset="1.0" />
             </LinearGradientBrush>
 
+            <LinearGradientBrush x:Key="AeroGlassEffect" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#50FFFFFF" Offset="0"/>
+                <GradientStop Color="#30FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#50FFFFFF" Offset="1"/>
+            </LinearGradientBrush>
+
             <Style x:Key="backButton" TargetType="{x:Type Button}" BasedOn="{x:Null}">
                 <Setter Property="Template">
                     <Setter.Value>
@@ -117,6 +123,21 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+
+            <SolidColorBrush x:Key="GlassReflection" Color="#70FFFFFF"/>
+            <LinearGradientBrush x:Key="AeroBackground" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#20FFFFFF" Offset="0"/>
+                <GradientStop Color="#10FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#28FFFFFF" Offset="1"/>
+            </LinearGradientBrush>
+            <Style x:Key="GlassEffect" TargetType="{x:Type Grid}">
+                <Setter Property="Background" Value="{StaticResource AeroBackground}"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <BlurEffect Radius="10" RenderingBias="Performance"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -128,64 +149,82 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!-- CustomTitleBar.xaml -->
         <Grid Name="glassArea" Margin="0,0,0,0" Height="74" MouseLeftButtonDown="OnMouseLeftButtonDown">
-            <Grid.Style>
-                <Style TargetType="Grid">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding UseSlateTheme, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="True">
-                            <Setter Property="Background" Value="{StaticResource TaskbarBackground}"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding UseSlateTheme, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="False">
-                            <Setter Property="Background" Value="{Binding Background, RelativeSource={RelativeSource AncestorType=Window}}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Grid.Style>
-            <Image Name="nav" HorizontalAlignment="Left" Width="65"
-                   Source="/SpinningWheelLib;component/navigation.png"
-                   Stretch="Fill" VerticalAlignment="Top" Height="54"
-                   Margin="8,10,0,0"/>
+            <Grid.Resources>
+                <LinearGradientBrush x:Key="AeroGlassEffect" StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#50FFFFFF" Offset="0"/>
+                    <GradientStop Color="#30FFFFFF" Offset="0.5"/>
+                    <GradientStop Color="#50FFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Resources>
 
-            <Button Name="backButton" Style="{StaticResource backButton}"
-                    HorizontalAlignment="Left" Width="38" Height="54"
-                    Margin="8,10,0,0" VerticalAlignment="Top"/>
+            <Border x:Name="GlassOverlay" Background="{StaticResource AeroGlassEffect}">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding UseAeroTheme, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="True">
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <BlurEffect Radius="10" RenderingBias="Performance"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
 
-            <Button Name="forwardButton" Style="{StaticResource forwardButton}"
-                    HorizontalAlignment="Left" Margin="46,10,0,0" Width="27"
-                    IsEnabled="False" Height="54" VerticalAlignment="Top"/>
+            <!-- Rest of your content in a separate grid to avoid blur -->
+            <Grid>
+                <Image Name="nav" HorizontalAlignment="Left" Width="65"
+               Source="/SpinningWheelLib;component/navigation.png"
+               Stretch="Fill" VerticalAlignment="Top" Height="54"
+               Margin="8,10,0,0"/>
 
-            <TextBlock Name="WindowTitle"
-                      Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=Title, FallbackValue='Window Title'}"
-                      FontSize="22" Margin="85,10,86,24" Foreground="#FF132550" VerticalAlignment="Center">
-                <TextBlock.BitmapEffect>
-                    <OuterGlowBitmapEffect GlowColor="#FFFFFFFF" GlowSize="3" />
-                </TextBlock.BitmapEffect>
-            </TextBlock>
+                <Button Name="backButton" Style="{StaticResource backButton}"
+                HorizontalAlignment="Left" Width="38" Height="54"
+                Margin="8,10,0,0" VerticalAlignment="Top"/>
 
-            <ContentPresenter Content="{Binding TitleBarContent, ElementName=Root}"
-                            Margin="85,35,100,0" VerticalAlignment="Center"/>
+                <Button Name="forwardButton" Style="{StaticResource forwardButton}"
+                HorizontalAlignment="Left" Margin="46,10,0,0" Width="27"
+                IsEnabled="False" Height="54" VerticalAlignment="Top"/>
 
-            <Button Name="favButton" Style="{StaticResource favButton}"
-                    HorizontalAlignment="Right" Margin="0,15,48,0"
-                    Width="50" Height="44" Visibility="Collapsed" VerticalAlignment="Center"/>
+                <TextBlock Name="WindowTitle"
+                  Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=Title, FallbackValue='Window Title'}"
+                  FontSize="22" Margin="85,10,86,24" Foreground="#FF132550" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="White" BlurRadius="3" ShadowDepth="0"/>
+                    </TextBlock.Effect>
+                </TextBlock>
 
-            <StackPanel HorizontalAlignment="Right" Margin="0,10,8,24"
-                        Orientation="Horizontal" VerticalAlignment="Center">
-                <Button Style="{StaticResource windowControlButton}"
-                        Name="MinButton" Tag="/SpinningWheelLib;component/img/MinNormal.png" Margin="0,0,4,0"/>
-                <Button Style="{StaticResource windowControlButton}"
-                        Name="MaxButton" Tag="/SpinningWheelLib;component/img/MaxNormal.png" Margin="0,0,4,0"/>
-                <Button Style="{StaticResource windowControlButton}"
-                        Name="CloseButton" Tag="/SpinningWheelLib;component/img/CloseNormal.png"/>
-            </StackPanel>
+                <ContentPresenter Content="{Binding TitleBarContent, ElementName=Root}"
+                        Margin="85,35,100,0" VerticalAlignment="Center"/>
 
-            <ContentPresenter Content="{Binding BreadcrumbContent, ElementName=Root}"
-                          Margin="85,35,100,0" VerticalAlignment="Center"/>
+                <Button Name="favButton" Style="{StaticResource favButton}"
+                HorizontalAlignment="Right" Margin="0,15,48,0"
+                Width="50" Height="44" Visibility="Collapsed" VerticalAlignment="Center"/>
+
+                <StackPanel HorizontalAlignment="Right" Margin="0,10,8,24"
+                    Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Style="{StaticResource windowControlButton}"
+                    Name="MinButton" Tag="/SpinningWheelLib;component/img/MinNormal.png" Margin="0,0,4,0"/>
+                    <Button Style="{StaticResource windowControlButton}"
+                    Name="MaxButton" Tag="/SpinningWheelLib;component/img/MaxNormal.png" Margin="0,0,4,0"/>
+                    <Button Style="{StaticResource windowControlButton}"
+                    Name="CloseButton" Tag="/SpinningWheelLib;component/img/CloseNormal.png"/>
+                </StackPanel>
+
+                <ContentPresenter Content="{Binding BreadcrumbContent, ElementName=Root}"
+                      Margin="85,35,100,0" VerticalAlignment="Center"/>
+            </Grid>
         </Grid>
 
+
         <ContentPresenter Grid.Row="1" Content="{Binding MenuBarContent, ElementName=Root}"
-                          Margin="8,0,8,0"/>
+                  Margin="8,0,8,0"/>
         <ContentPresenter Grid.Row="2" Content="{Binding AdditionalContent, ElementName=Root}"
-                          Margin="8,0,8,0"/>
+                  Margin="8,0,8,0"/>
+
     </Grid>
 </UserControl>
