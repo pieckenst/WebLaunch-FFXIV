@@ -1,11 +1,19 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace SpinningWheelLib.Controls
 {
     public partial class CustomLonghornTitleBar : UserControl
     {
+
+        private double originalWidth;
+        private double originalHeight;
+        private double originalLeft;
+        private double originalTop;
+        private bool isMaximized;
+
         public static readonly DependencyProperty TitleBarContentProperty =
             DependencyProperty.Register("TitleBarContent", typeof(object), typeof(CustomLonghornTitleBar), new PropertyMetadata(null));
 
@@ -89,9 +97,30 @@ namespace SpinningWheelLib.Controls
                 var window = Window.GetWindow(this);
                 if (window != null)
                 {
-                    window.WindowState = window.WindowState == WindowState.Maximized
-                        ? WindowState.Normal
-                        : WindowState.Maximized;
+                    if (isMaximized)
+                    {
+                        window.Width = originalWidth;
+                        window.Height = originalHeight;
+                        window.Left = originalLeft;
+                        window.Top = originalTop;
+                        isMaximized = false;
+                    }
+                    else
+                    {
+                        // Store original dimensions
+                        originalWidth = window.Width;
+                        originalHeight = window.Height;
+                        originalLeft = window.Left;
+                        originalTop = window.Top;
+
+                        // Set maximized state using work area
+                        var workArea = SystemParameters.WorkArea;
+                        window.Left = workArea.Left;
+                        window.Top = workArea.Top;
+                        window.Width = workArea.Width;
+                        window.Height = workArea.Height;
+                        isMaximized = true;
+                    }
                 }
             };
 
@@ -128,6 +157,15 @@ namespace SpinningWheelLib.Controls
         {
             add { forwardButton.Click += value; }
             remove { forwardButton.Click -= value; }
+        }
+
+        private void OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var window = Window.GetWindow(this);
+            if (window != null)
+            {
+                window.DragMove();
+            }
         }
     }
 }

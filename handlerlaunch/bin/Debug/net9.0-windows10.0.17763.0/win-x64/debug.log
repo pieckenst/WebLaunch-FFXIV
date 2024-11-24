@@ -236,3 +236,587 @@
 2024-11-24 15:18:27.300 - Password successfully decrypted
 2024-11-24 15:18:27.300 - Extracted credentials for launch - Game Path: G:\ffxiv
 2024-11-24 15:18:30.116 - Showing notification: Error - Failed to launch FFXIV
+2024-11-24 15:53:24.457 - Entering GetInstallPath method
+2024-11-24 15:53:24.469 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 15:53:24.469 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:53:24.469 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 15:53:24.472 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 15:53:30.653 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 15:53:30.661 - Application started
+2024-11-24 15:53:30.673 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 15:53:30.783 - Entering CopyFiles method
+2024-11-24 15:53:30.783 - Entering GetInstallPath method
+2024-11-24 15:53:30.784 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:53:30.786 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:53:30.787 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 15:53:30.788 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 15:53:30.789 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:53:30.790 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 15:53:30.791 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 15:53:30.792 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 15:53:30.793 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 15:53:30.796 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 15:53:30.797 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 15:53:30.798 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 15:53:30.798 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 15:53:30.799 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 15:53:30.800 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 15:53:30.801 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 15:53:30.801 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 15:53:30.802 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 15:53:30.803 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 15:53:30.803 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 15:53:30.804 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 15:53:30.805 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 15:53:30.806 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 15:53:30.807 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 15:53:30.807 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 15:53:30.807 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 15:53:30.808 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 15:53:30.808 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 15:53:30.821 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-24 15:53:30.822 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 15:53:30.822 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 15:53:30.823 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 15:53:30.823 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 15:53:30.824 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 15:53:30.824 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 15:53:30.825 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 15:53:30.826 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 15:53:30.826 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 15:53:30.827 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 15:53:30.827 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 15:53:30.828 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 15:53:30.828 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 15:53:30.828 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 15:53:30.829 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 15:53:30.829 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 15:53:30.829 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 15:53:30.830 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 15:53:30.831 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 15:53:30.831 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 15:53:30.832 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 15:53:30.832 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 15:53:30.833 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 15:53:30.833 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 15:53:30.833 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 15:53:30.834 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 15:53:30.834 - Entering RegisterProtocolHandler method
+2024-11-24 15:53:30.834 - Entering GetInstallPath method
+2024-11-24 15:53:30.835 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 15:53:30.838 - Initializing settings window
+2024-11-24 15:53:30.838 - Starting settings window thread
+2024-11-24 15:53:30.839 - Settings window initialized
+2024-11-24 15:53:31.111 - Hiding console window
+2024-11-24 15:53:31.112 - Showing settings window
+2024-11-24 15:54:28.740 - Entering GetInstallPath method
+2024-11-24 15:54:28.748 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 15:54:28.788 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:54:28.788 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 15:54:28.789 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 15:54:34.972 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 15:54:34.974 - Application started
+2024-11-24 15:54:34.979 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 15:54:35.104 - Entering CopyFiles method
+2024-11-24 15:54:35.104 - Entering GetInstallPath method
+2024-11-24 15:54:35.104 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:54:35.105 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:54:35.105 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 15:54:35.106 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 15:54:35.106 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:54:35.106 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 15:54:35.107 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 15:54:35.107 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 15:54:35.108 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 15:54:35.110 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 15:54:35.111 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 15:54:35.111 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 15:54:35.112 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 15:54:35.112 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 15:54:35.113 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 15:54:35.113 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 15:54:35.114 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 15:54:35.114 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 15:54:35.115 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 15:54:35.115 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 15:54:35.116 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 15:54:35.116 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 15:54:35.117 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 15:54:35.118 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 15:54:35.118 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 15:54:35.119 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 15:54:35.119 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 15:54:35.120 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 15:54:35.174 - Error copying file G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll: The process cannot access the file 'G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll' because it is being used by another process.
+2024-11-24 15:54:35.174 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 15:54:35.175 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 15:54:35.175 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 15:54:35.175 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 15:54:35.176 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 15:54:35.176 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 15:54:35.177 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 15:54:35.177 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 15:54:35.177 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 15:54:35.178 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 15:54:35.179 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 15:54:35.179 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 15:54:35.180 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 15:54:35.180 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 15:54:35.180 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 15:54:35.181 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 15:54:35.181 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 15:54:35.182 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 15:54:35.183 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 15:54:35.183 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 15:54:35.184 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 15:54:35.184 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 15:54:35.185 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 15:54:35.186 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 15:54:35.186 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 15:54:35.187 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 15:54:35.187 - Entering RegisterProtocolHandler method
+2024-11-24 15:54:35.187 - Entering GetInstallPath method
+2024-11-24 15:54:35.187 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 15:54:35.191 - Initializing settings window
+2024-11-24 15:54:35.191 - Starting settings window thread
+2024-11-24 15:54:35.191 - Settings window initialized
+2024-11-24 15:54:35.551 - Hiding console window
+2024-11-24 15:54:35.552 - Showing settings window
+2024-11-24 15:55:20.040 - Entering GetInstallPath method
+2024-11-24 15:55:20.082 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 15:55:20.083 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:55:20.083 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 15:55:20.086 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 15:55:26.264 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 15:55:26.265 - Application started
+2024-11-24 15:55:26.273 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 15:55:26.384 - Entering CopyFiles method
+2024-11-24 15:55:26.384 - Entering GetInstallPath method
+2024-11-24 15:55:26.385 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:55:26.386 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:55:26.386 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 15:55:26.387 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 15:55:26.387 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:55:26.387 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 15:55:26.388 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 15:55:26.388 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 15:55:26.388 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 15:55:26.391 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 15:55:26.391 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 15:55:26.391 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 15:55:26.392 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 15:55:26.392 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 15:55:26.393 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 15:55:26.393 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 15:55:26.394 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 15:55:26.394 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 15:55:26.395 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 15:55:26.395 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 15:55:26.396 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 15:55:26.396 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 15:55:26.396 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 15:55:26.397 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 15:55:26.397 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 15:55:26.397 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 15:55:26.398 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 15:55:26.398 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 15:55:26.411 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-24 15:55:26.412 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 15:55:26.412 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 15:55:26.413 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 15:55:26.413 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 15:55:26.414 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 15:55:26.414 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 15:55:26.415 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 15:55:26.415 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 15:55:26.416 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 15:55:26.416 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 15:55:26.416 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 15:55:26.417 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 15:55:26.417 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 15:55:26.417 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 15:55:26.418 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 15:55:26.418 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 15:55:26.418 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 15:55:26.419 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 15:55:26.420 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 15:55:26.420 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 15:55:26.421 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 15:55:26.421 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 15:55:26.421 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 15:55:26.422 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 15:55:26.422 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 15:55:26.422 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 15:55:26.423 - Entering RegisterProtocolHandler method
+2024-11-24 15:55:26.423 - Entering GetInstallPath method
+2024-11-24 15:55:26.423 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 15:55:26.426 - Initializing settings window
+2024-11-24 15:55:26.427 - Starting settings window thread
+2024-11-24 15:55:26.427 - Settings window initialized
+2024-11-24 15:55:26.702 - Hiding console window
+2024-11-24 15:55:26.703 - Showing settings window
+2024-11-24 15:57:38.661 - Entering GetInstallPath method
+2024-11-24 15:57:38.672 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 15:57:38.672 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:57:38.672 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 15:57:38.675 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 15:57:44.837 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 15:57:44.838 - Application started
+2024-11-24 15:57:44.843 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 15:57:44.957 - Entering CopyFiles method
+2024-11-24 15:57:44.958 - Entering GetInstallPath method
+2024-11-24 15:57:44.958 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:57:44.960 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:57:44.960 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 15:57:44.961 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 15:57:44.962 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:57:44.962 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 15:57:44.963 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 15:57:44.963 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 15:57:44.964 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 15:57:44.967 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 15:57:44.968 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 15:57:44.968 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 15:57:44.969 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 15:57:44.970 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 15:57:44.971 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 15:57:44.971 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 15:57:44.972 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 15:57:44.973 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 15:57:44.973 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 15:57:44.974 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 15:57:44.975 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 15:57:44.976 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 15:57:44.976 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 15:57:44.977 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 15:57:44.977 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 15:57:44.978 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 15:57:44.978 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 15:57:44.979 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 15:57:44.992 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-24 15:57:44.993 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 15:57:44.994 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 15:57:44.994 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 15:57:44.994 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 15:57:44.995 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 15:57:44.995 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 15:57:44.996 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 15:57:44.996 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 15:57:44.996 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 15:57:44.997 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 15:57:44.997 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 15:57:44.998 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 15:57:44.998 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 15:57:44.998 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 15:57:44.999 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 15:57:44.999 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 15:57:45.000 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 15:57:45.000 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 15:57:45.001 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 15:57:45.002 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 15:57:45.002 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 15:57:45.002 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 15:57:45.003 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 15:57:45.003 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 15:57:45.003 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 15:57:45.004 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 15:57:45.004 - Entering RegisterProtocolHandler method
+2024-11-24 15:57:45.004 - Entering GetInstallPath method
+2024-11-24 15:57:45.005 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 15:57:45.008 - Initializing settings window
+2024-11-24 15:57:45.009 - Starting settings window thread
+2024-11-24 15:57:45.009 - Settings window initialized
+2024-11-24 15:57:45.319 - Hiding console window
+2024-11-24 15:57:45.320 - Showing settings window
+2024-11-24 15:59:06.227 - Entering GetInstallPath method
+2024-11-24 15:59:06.236 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 15:59:06.237 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:59:06.237 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 15:59:06.237 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 15:59:12.444 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 15:59:12.448 - Application started
+2024-11-24 15:59:12.466 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 15:59:12.578 - Entering CopyFiles method
+2024-11-24 15:59:12.578 - Entering GetInstallPath method
+2024-11-24 15:59:12.578 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 15:59:12.579 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:59:12.579 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 15:59:12.580 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 15:59:12.580 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 15:59:12.580 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 15:59:12.581 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 15:59:12.581 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 15:59:12.582 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 15:59:12.583 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 15:59:12.584 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 15:59:12.584 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 15:59:12.584 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 15:59:12.585 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 15:59:12.585 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 15:59:12.586 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 15:59:12.586 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 15:59:12.586 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 15:59:12.587 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 15:59:12.587 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 15:59:12.588 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 15:59:12.588 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 15:59:12.589 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 15:59:12.589 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 15:59:12.590 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 15:59:12.590 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 15:59:12.591 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 15:59:12.591 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 15:59:12.605 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-24 15:59:12.606 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 15:59:12.606 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 15:59:12.607 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 15:59:12.607 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 15:59:12.608 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 15:59:12.608 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 15:59:12.609 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 15:59:12.609 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 15:59:12.610 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 15:59:12.610 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 15:59:12.611 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 15:59:12.611 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 15:59:12.612 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 15:59:12.612 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 15:59:12.612 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 15:59:12.613 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 15:59:12.613 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 15:59:12.614 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 15:59:12.615 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 15:59:12.615 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 15:59:12.616 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 15:59:12.616 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 15:59:12.617 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 15:59:12.617 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 15:59:12.618 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 15:59:12.618 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 15:59:12.618 - Entering RegisterProtocolHandler method
+2024-11-24 15:59:12.619 - Entering GetInstallPath method
+2024-11-24 15:59:12.619 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 15:59:12.657 - Initializing settings window
+2024-11-24 15:59:12.657 - Starting settings window thread
+2024-11-24 15:59:12.658 - Settings window initialized
+2024-11-24 15:59:12.923 - Hiding console window
+2024-11-24 15:59:12.924 - Showing settings window
+2024-11-24 16:01:58.651 - Entering GetInstallPath method
+2024-11-24 16:01:58.665 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 16:01:58.665 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 16:01:58.665 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 16:01:58.665 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 16:02:04.847 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 16:02:04.848 - Application started
+2024-11-24 16:02:04.851 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 16:02:04.965 - Entering CopyFiles method
+2024-11-24 16:02:04.965 - Entering GetInstallPath method
+2024-11-24 16:02:04.965 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 16:02:04.966 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 16:02:04.967 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 16:02:04.967 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 16:02:04.968 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 16:02:04.968 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 16:02:04.968 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 16:02:04.969 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 16:02:04.969 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 16:02:04.971 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 16:02:04.972 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 16:02:04.972 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 16:02:04.973 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 16:02:04.973 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 16:02:04.974 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 16:02:04.975 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 16:02:04.975 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 16:02:04.976 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 16:02:04.976 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 16:02:04.977 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 16:02:04.977 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 16:02:04.978 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 16:02:04.978 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 16:02:04.979 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 16:02:04.979 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 16:02:04.980 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 16:02:04.980 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 16:02:04.981 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 16:02:04.995 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-24 16:02:04.996 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 16:02:04.996 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 16:02:04.996 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 16:02:04.997 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 16:02:04.997 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 16:02:04.998 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 16:02:04.998 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 16:02:04.999 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 16:02:04.999 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 16:02:04.999 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 16:02:05.000 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 16:02:05.001 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 16:02:05.001 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 16:02:05.001 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 16:02:05.002 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 16:02:05.002 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 16:02:05.003 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 16:02:05.003 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 16:02:05.004 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 16:02:05.005 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 16:02:05.005 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 16:02:05.005 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 16:02:05.006 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 16:02:05.006 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 16:02:05.007 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 16:02:05.007 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 16:02:05.008 - Entering RegisterProtocolHandler method
+2024-11-24 16:02:05.008 - Entering GetInstallPath method
+2024-11-24 16:02:05.008 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 16:02:05.011 - Initializing settings window
+2024-11-24 16:02:05.011 - Starting settings window thread
+2024-11-24 16:02:05.012 - Settings window initialized
+2024-11-24 16:02:05.285 - Hiding console window
+2024-11-24 16:02:05.286 - Showing settings window
+2024-11-24 16:03:22.869 - Entering GetInstallPath method
+2024-11-24 16:03:22.879 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 16:03:22.882 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 16:03:22.882 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 16:03:22.882 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 16:03:29.084 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 16:03:29.087 - Application started
+2024-11-24 16:03:29.097 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 16:03:29.232 - Entering CopyFiles method
+2024-11-24 16:03:29.233 - Entering GetInstallPath method
+2024-11-24 16:03:29.233 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 16:03:29.234 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 16:03:29.235 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 16:03:29.236 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 16:03:29.236 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 16:03:29.237 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 16:03:29.237 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 16:03:29.238 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 16:03:29.239 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 16:03:29.242 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 16:03:29.242 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 16:03:29.243 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 16:03:29.244 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 16:03:29.245 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 16:03:29.246 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 16:03:29.246 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 16:03:29.247 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 16:03:29.248 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 16:03:29.248 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 16:03:29.249 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 16:03:29.250 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 16:03:29.251 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 16:03:29.252 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 16:03:29.253 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 16:03:29.253 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 16:03:29.254 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 16:03:29.254 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 16:03:29.255 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 16:03:29.267 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-24 16:03:29.268 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 16:03:29.268 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 16:03:29.268 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 16:03:29.269 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 16:03:29.269 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 16:03:29.270 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 16:03:29.270 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 16:03:29.271 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 16:03:29.271 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 16:03:29.271 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 16:03:29.272 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 16:03:29.272 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 16:03:29.273 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 16:03:29.273 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 16:03:29.273 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 16:03:29.273 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 16:03:29.274 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 16:03:29.275 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 16:03:29.276 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 16:03:29.276 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 16:03:29.276 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 16:03:29.277 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 16:03:29.277 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 16:03:29.277 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 16:03:29.278 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 16:03:29.278 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 16:03:29.279 - Entering RegisterProtocolHandler method
+2024-11-24 16:03:29.279 - Entering GetInstallPath method
+2024-11-24 16:03:29.279 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 16:03:29.282 - Initializing settings window
+2024-11-24 16:03:29.283 - Starting settings window thread
+2024-11-24 16:03:29.283 - Settings window initialized
+2024-11-24 16:03:29.554 - Hiding console window
+2024-11-24 16:03:29.555 - Showing settings window
+2024-11-24 16:10:41.124 - Entering GetInstallPath method
+2024-11-24 16:10:41.137 - Executable path: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll
+2024-11-24 16:10:41.137 - Current directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 16:10:41.141 - Parent directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0
+2024-11-24 16:10:41.141 - Using parent directory for install: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame
+2024-11-24 16:10:47.303 - Plugin loaded: FFXIV Game Launcher
+2024-11-24 16:10:47.305 - Application started
+2024-11-24 16:10:47.309 - Showing notification: Application Started - Initializing launcher...
+2024-11-24 16:10:47.421 - Entering CopyFiles method
+2024-11-24 16:10:47.421 - Entering GetInstallPath method
+2024-11-24 16:10:47.422 - Base directory: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64
+2024-11-24 16:10:47.422 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 16:10:47.423 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.exe to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe
+2024-11-24 16:10:47.423 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMConsole.runtimeconfig.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.runtimeconfig.json
+2024-11-24 16:10:47.424 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.dll
+2024-11-24 16:10:47.424 - Source file not found: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.pdb
+2024-11-24 16:10:47.424 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WMconsole.deps.json to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMconsole.deps.json
+2024-11-24 16:10:47.425 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.dll
+2024-11-24 16:10:47.425 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CoreLibLaunchSupport.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CoreLibLaunchSupport.pdb
+2024-11-24 16:10:47.427 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.dll
+2024-11-24 16:10:47.427 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SpinningWheelLib.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SpinningWheelLib.pdb
+2024-11-24 16:10:47.428 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WpfAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WpfAnimatedGif.dll
+2024-11-24 16:10:47.428 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\XamlAnimatedGif.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\XamlAnimatedGif.dll
+2024-11-24 16:10:47.428 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\DotNetZip.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\DotNetZip.dll
+2024-11-24 16:10:47.429 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Newtonsoft.Json.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Newtonsoft.Json.dll
+2024-11-24 16:10:47.429 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\log4net.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\log4net.dll
+2024-11-24 16:10:47.430 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Goblinfactory.Konsole.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Goblinfactory.Konsole.dll
+2024-11-24 16:10:47.430 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\CommandLine.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\CommandLine.dll
+2024-11-24 16:10:47.431 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Downloader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Downloader.dll
+2024-11-24 16:10:47.431 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Facepunch.Steamworks.Win64.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Facepunch.Steamworks.Win64.dll
+2024-11-24 16:10:47.432 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.dll
+2024-11-24 16:10:47.432 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\LibDalamud.pdb to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\LibDalamud.pdb
+2024-11-24 16:10:47.433 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Mono.Nat.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Mono.Nat.dll
+2024-11-24 16:10:47.433 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\MonoTorrent.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\MonoTorrent.dll
+2024-11-24 16:10:47.434 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ReusableTasks.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ReusableTasks.dll
+2024-11-24 16:10:47.434 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Serilog.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Serilog.dll
+2024-11-24 16:10:47.435 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharedMemory.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharedMemory.dll
+2024-11-24 16:10:47.435 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Toolkit.Uwp.Notifications.dll
+2024-11-24 16:10:47.450 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Windows.SDK.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Windows.SDK.NET.dll
+2024-11-24 16:10:47.450 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\WinRT.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WinRT.Runtime.dll
+2024-11-24 16:10:47.451 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.dll
+2024-11-24 16:10:47.451 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Elgar'nan.xml to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Elgar'nan.xml
+2024-11-24 16:10:47.451 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.GeneratedIcons.System.Drawing.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.GeneratedIcons.System.Drawing.dll
+2024-11-24 16:10:47.452 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.dll
+2024-11-24 16:10:47.452 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\H.NotifyIcon.Wpf.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\H.NotifyIcon.Wpf.dll
+2024-11-24 16:10:47.453 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\ImGui.NET.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\ImGui.NET.dll
+2024-11-24 16:10:47.453 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+2024-11-24 16:10:47.454 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.DependencyInjection.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.DependencyInjection.dll
+2024-11-24 16:10:47.454 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Microsoft.Extensions.Logging.Abstractions.dll
+2024-11-24 16:10:47.455 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.dll
+2024-11-24 16:10:47.455 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.MetalBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.MetalBindings.dll
+2024-11-24 16:10:47.455 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.OpenGLBindings.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.OpenGLBindings.dll
+2024-11-24 16:10:47.456 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.SDL2.dll
+2024-11-24 16:10:47.456 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Veldrid.StartupUtilities.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Veldrid.StartupUtilities.dll
+2024-11-24 16:10:47.456 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.dll
+2024-11-24 16:10:47.457 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SharpGen.Runtime.COM.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SharpGen.Runtime.COM.dll
+2024-11-24 16:10:47.458 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\SDL2.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\SDL2.dll
+2024-11-24 16:10:47.459 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\cimgui.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\cimgui.dll
+2024-11-24 16:10:47.460 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.D3DCompiler.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.D3DCompiler.dll
+2024-11-24 16:10:47.460 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Direct3D11.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Direct3D11.dll
+2024-11-24 16:10:47.461 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DirectX.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DirectX.dll
+2024-11-24 16:10:47.461 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.DXGI.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.DXGI.dll
+2024-11-24 16:10:47.462 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\Vortice.Mathematics.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\Vortice.Mathematics.dll
+2024-11-24 16:10:47.463 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\vk.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\vk.dll
+2024-11-24 16:10:47.463 - Copied file: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\win-x64\NativeLibraryLoader.dll to G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\NativeLibraryLoader.dll
+2024-11-24 16:10:47.464 - Entering RegisterProtocolHandler method
+2024-11-24 16:10:47.464 - Entering GetInstallPath method
+2024-11-24 16:10:47.464 - Registered protocol handler with command: G:\code\WebLaunch\handlerlaunch\bin\Debug\net9.0-windows10.0.17763.0\HandleGame\WMConsole.exe %1
+2024-11-24 16:10:47.469 - Initializing settings window
+2024-11-24 16:10:47.469 - Starting settings window thread
+2024-11-24 16:10:47.470 - Settings window initialized
+2024-11-24 16:10:47.761 - Hiding console window
+2024-11-24 16:10:47.762 - Showing settings window

@@ -2,7 +2,7 @@
   "profiles": {
     "handlerlaunch": {
       "commandName": "Project",
-      "commandLineArgs": "?ffxivhandle=yes?login=rsncra:?pass=U0JtQRtbR0oQBwZPSA==:?hash=0793c838d237058165cb6af12fc85d9f404683dd642f57c1822ceac3e70f120d:?otp=642661:?gamepath=G:\\ffxiv:?issteam=no"
+      "commandLineArgs": "?debugtest=yes-type=settingstest"
     }
   }
 }

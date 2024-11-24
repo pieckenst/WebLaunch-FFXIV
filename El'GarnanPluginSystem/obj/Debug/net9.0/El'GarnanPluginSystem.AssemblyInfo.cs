@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Dynamic plugin loading system for WebLaunch game launcher platform. Supports hot " +
     "reloading, dependency management, and isolated plugin execution.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4d099fb75a3d97aad1422590070a578983b25d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+addd61709dfb5a95e8e0935b9d0d64acdedf5efb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Elgar\'nan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Elgar\'nan is a dynamic plugin loading system for WebLaunch game launcher platform" +
     ". ")]

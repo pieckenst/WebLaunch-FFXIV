@@ -386,6 +386,41 @@ namespace WMConsole
             File.AppendAllText(LogFilePath, logMessage + Environment.NewLine);
         }
 
+
+        private static void LaunchSettingsWindow()
+        {
+            LogDebug("Initializing settings window");
+
+            Thread thread = new Thread(() =>
+            {
+                try
+                {
+                    var settingsWindow = new SpinningWheelLib.SettingsWindow();
+                    LogDebug("Hiding console window");
+                    var handle = GetConsoleWindow();
+                    ShowWindow(handle, SW_HIDE);
+
+                    LogDebug("Showing settings window");
+                    settingsWindow.Show();
+                    Dispatcher.Run();
+
+                    LogDebug("Showing console window");
+                    ShowWindow(handle, SW_SHOW);
+                }
+                catch (Exception ex)
+                {
+                    LogDebug($"Critical error in settings window thread: {ex.Message}");
+                    LogDebug($"Stack trace: {ex.StackTrace}");
+                }
+            });
+
+            thread.SetApartmentState(ApartmentState.STA);
+            LogDebug("Starting settings window thread");
+            thread.Start();
+
+            LogDebug("Settings window initialized");
+        }
+
         [STAThread]
         static async Task Main(string[] args)
         {
@@ -492,6 +527,9 @@ namespace WMConsole
                             {
                                 ShowProgressWindow(previousOutput, true, "Auto-closing Message", 400, 250, "Debug Test", "!",
                                     null, "This window will close automatically", null, null, null, true, 5);
+                            }
+                            else if (args[0].Contains("-type=settingstest")){
+                                LaunchSettingsWindow();
                             }
                             else
                             {
