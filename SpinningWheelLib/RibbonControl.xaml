@@ -120,10 +120,12 @@
                         <Button DockPanel.Dock="Left"
                                 Style="{StaticResource MenuButtonStyle}"/>
                         
-                        <ContentPresenter DockPanel.Dock="Left"
-                                        Content="{Binding QuickAccessToolbarContent,
-                                        RelativeSource={RelativeSource AncestorType=local:RibbonControl},
-                                        FallbackValue={StaticResource DefaultQuickAccessToolbar}}"/>
+                        <ContentPresenter DockPanel.Dock="Left">
+    <ContentPresenter.Content>
+        <ContentControl Template="{StaticResource DefaultQuickAccessToolbar}"/>
+    </ContentPresenter.Content>
+</ContentPresenter>
+
                         
                         <ToggleButton DockPanel.Dock="Right"
                                     Width="16" Height="16"
@@ -232,11 +234,12 @@
             DockPanel.Dock="Left"
             Style="{StaticResource MenuButtonStyle}"/>
     
-    <ContentPresenter DockPanel.Dock="Left"
-                         Content="{Binding QuickAccessToolbarContent,
-                         RelativeSource={RelativeSource AncestorType=local:RibbonControl},
-                         FallbackValue={StaticResource DefaultQuickAccessToolbar}}"/>
-    
+    <ContentPresenter DockPanel.Dock="Left">
+    <ContentPresenter.Content>
+        <ContentControl Template="{StaticResource DefaultQuickAccessToolbar}"/>
+    </ContentPresenter.Content>
+</ContentPresenter>
+
     <ToggleButton x:Name="CollapseButton"
                   Width="16" Height="16"
                   DockPanel.Dock="Right"
