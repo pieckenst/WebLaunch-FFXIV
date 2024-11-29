@@ -8,23 +8,70 @@
     
     <UserControl.Resources>
         <ResourceDictionary>
+            <Color x:Key="RibbonHighlightColor">#FF2D5899</Color>
+            <SolidColorBrush x:Key="RibbonHoverColor" Color="#15FFFFFF"/>
 
             <!-- Default QuickAccessToolbar Template -->
         <!-- Default QuickAccessToolbar Template -->
 <ControlTemplate x:Key="DefaultQuickAccessToolbar">
-    <StackPanel Orientation="Horizontal">
-        <Button Width="16" Height="16" 
+    <StackPanel Orientation="Horizontal" Height="30">
+        <Button Width="16" Height="16"
                 Margin="2,0"
+                Background="Transparent"
+                BorderThickness="0"
                 ToolTip="Quick Save">
-            <Image Source="/SpinningWheelLib;component/img/save.png"/>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="Transparent">
+                        <Image Source="/SpinningWheelLib;component/img/save.png"
+                               Opacity="0.8" Stretch="Uniform">
+                            <Image.Effect>
+                                <DropShadowEffect Color="White" BlurRadius="3" ShadowDepth="0"/>
+                            </Image.Effect>
+                        </Image>
+                        <Border.Effect>
+                            <DropShadowEffect Color="White" BlurRadius="3" ShadowDepth="0"/>
+                        </Border.Effect>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource RibbonHoverColor}"/>
+                            <Setter Property="Opacity" Value="1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Button Width="16" Height="16" 
+        <Button Width="16" Height="16"
                 Margin="2,0"
+                Background="Transparent"
+                BorderThickness="0"
                 ToolTip="Undo">
-            <Image Source="/SpinningWheelLib;component/img/undo.png"/>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="Transparent">
+                        <Image Source="/SpinningWheelLib;component/img/undo.png"
+                               Opacity="0.8" Stretch="Uniform">
+                            <Image.Effect>
+                                <DropShadowEffect Color="White" BlurRadius="3" ShadowDepth="0"/>
+                            </Image.Effect>
+                        </Image>
+                        <Border.Effect>
+                            <DropShadowEffect Color="White" BlurRadius="3" ShadowDepth="0"/>
+                        </Border.Effect>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource RibbonHoverColor}"/>
+                            <Setter Property="Opacity" Value="1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
     </StackPanel>
 </ControlTemplate>
+
 
 <Style x:Key="RibbonCollapseButton" TargetType="ToggleButton">
     <Setter Property="Template">
@@ -51,8 +98,7 @@
     </Setter>
 </Style>
             <!-- Base Colors and Brushes -->
-            <Color x:Key="RibbonHighlightColor">#FF2D5899</Color>
-            <SolidColorBrush x:Key="RibbonHoverColor" Color="#15FFFFFF"/>
+            
 
 
             <LinearGradientBrush x:Key="SelectedTabBrush" StartPoint="0,0" EndPoint="1,0">
