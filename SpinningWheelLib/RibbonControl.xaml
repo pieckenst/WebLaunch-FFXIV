@@ -8,6 +8,48 @@
     
     <UserControl.Resources>
         <ResourceDictionary>
+
+            <!-- Default QuickAccessToolbar Template -->
+        <!-- Default QuickAccessToolbar Template -->
+<ControlTemplate x:Key="DefaultQuickAccessToolbar">
+    <StackPanel Orientation="Horizontal">
+        <Button Width="16" Height="16" 
+                Margin="2,0"
+                ToolTip="Quick Save">
+            <Image Source="/SpinningWheelLib;component/img/save.png"/>
+        </Button>
+        <Button Width="16" Height="16" 
+                Margin="2,0"
+                ToolTip="Undo">
+            <Image Source="/SpinningWheelLib;component/img/undo.png"/>
+        </Button>
+    </StackPanel>
+</ControlTemplate>
+
+<Style x:Key="RibbonCollapseButton" TargetType="ToggleButton">
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="ToggleButton">
+                <Border x:Name="border" Background="Transparent">
+                    <Path x:Name="arrow" 
+                          Stroke="#FF2D5899"
+                          StrokeThickness="2"
+                          Data="M 0,0 L 8,8 L 16,0"
+                          Width="16" Height="8"
+                          Stretch="Uniform"/>
+                </Border>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsChecked" Value="True">
+                        <Setter TargetName="arrow" Property="Data" Value="M 0,8 L 8,0 L 16,8"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="border" Property="Background" Value="#20FFFFFF"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
             <!-- Base Colors and Brushes -->
             <Color x:Key="RibbonHighlightColor">#FF2D5899</Color>
             <SolidColorBrush x:Key="RibbonHoverColor" Color="#15FFFFFF"/>
@@ -51,58 +93,58 @@
             </Style>
 
             <Style TargetType="TabControl">
-                <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="ItemsPanel">
-                    <Setter.Value>
-                        <ItemsPanelTemplate>
-                            <TabPanel Width="Auto"
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="ItemsPanel">
+        <Setter.Value>
+            <ItemsPanelTemplate>
+                <TabPanel Width="Auto"
                          MinWidth="300"
                          HorizontalAlignment="Stretch"
                          IsItemsHost="True"
                          KeyboardNavigation.TabIndex="1"/>
-                        </ItemsPanelTemplate>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="TabControl">
-                            <Grid HorizontalAlignment="Stretch">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
+            </ItemsPanelTemplate>
+        </Setter.Value>
+    </Setter>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TabControl">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                                <Grid Grid.Row="0" Margin="0,5,0,0" HorizontalAlignment="Stretch">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Button Grid.Column="0"
+                    <DockPanel Grid.Row="0" LastChildFill="True" 
+                             MinHeight="30" MaxHeight="30">
+                        <Button DockPanel.Dock="Left"
                                 Style="{StaticResource MenuButtonStyle}"/>
-
-                                    <ContentPresenter Grid.Column="1"
+                        
+                        <ContentPresenter DockPanel.Dock="Left"
                                         Content="{Binding QuickAccessToolbarContent,
-                                        RelativeSource={RelativeSource AncestorType=local:RibbonControl}}"/>
+                                        RelativeSource={RelativeSource AncestorType=local:RibbonControl},
+                                        FallbackValue={StaticResource DefaultQuickAccessToolbar}}"/>
+                        
+                        <ToggleButton DockPanel.Dock="Right"
+                                    Width="16" Height="16"
+                                    Margin="0,5,5,0"
+                                    Style="{StaticResource RibbonCollapseButton}"/>
+                        
+                        <ScrollViewer HorizontalScrollBarVisibility="Hidden"
+                                    VerticalScrollBarVisibility="Disabled">
+                            <ItemsPresenter/>
+                        </ScrollViewer>
+                    </DockPanel>
 
-                                    <ScrollViewer Grid.Column="2"
-                                    HorizontalScrollBarVisibility="Hidden"
-                                    VerticalScrollBarVisibility="Disabled"
-                                    HorizontalAlignment="Stretch">
-                                        <ItemsPresenter HorizontalAlignment="Stretch"/>
-                                    </ScrollViewer>
-                                </Grid>
-
-                                <ContentPresenter Grid.Row="1"
+                    <ContentPresenter Grid.Row="1"
                                     x:Name="PART_SelectedContentHost"
                                     ContentSource="SelectedContent"/>
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
+                </Grid>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
 
 
 
@@ -160,51 +202,13 @@
                 </Setter>
             </Style>
 
-            <Style x:Key="RibbonCollapseButton" TargetType="ToggleButton">
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="ToggleButton">
-                <Border x:Name="border" Background="Transparent">
-                    <Path x:Name="arrow" 
-                          Stroke="#FF2D5899"
-                          StrokeThickness="2"
-                          Data="M 0,0 L 8,8 L 16,0"
-                          Width="16" Height="8"
-                          Stretch="Uniform"/>
-                </Border>
-                <ControlTemplate.Triggers>
-                    <Trigger Property="IsChecked" Value="True">
-                        <Setter TargetName="arrow" Property="Data" Value="M 0,8 L 8,0 L 16,8"/>
-                    </Trigger>
-                    <Trigger Property="IsMouseOver" Value="True">
-                        <Setter TargetName="border" Property="Background" Value="#20FFFFFF"/>
-                    </Trigger>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
+            
 
 
 
 
 
-<!-- Default QuickAccessToolbar Template -->
-        <!-- Default QuickAccessToolbar Template -->
-<ControlTemplate x:Key="DefaultQuickAccessToolbar">
-    <StackPanel Orientation="Horizontal">
-        <Button Width="16" Height="16" 
-                Margin="2,0"
-                ToolTip="Quick Save">
-            <Image Source="/SpinningWheelLib;component/img/save.png"/>
-        </Button>
-        <Button Width="16" Height="16" 
-                Margin="2,0"
-                ToolTip="Undo">
-            <Image Source="/SpinningWheelLib;component/img/undo.png"/>
-        </Button>
-    </StackPanel>
-</ControlTemplate>
+
 
 
 
