@@ -286,14 +286,15 @@
     </ContentPresenter.Content>
 </ContentPresenter>
 
-    <ToggleButton x:Name="CollapseButton"
-                  Width="16" Height="16"
-                  DockPanel.Dock="Right"
-                  Margin="0,5,5,0"
-                  Style="{StaticResource RibbonCollapseButton}"
-                  Click="OnCollapseButtonClick"
-                  IsChecked="{Binding IsFolded, 
-                  RelativeSource={RelativeSource AncestorType=local:RibbonControl}}"/>
+    <ToggleButton DockPanel.Dock="Right"
+              Width="16" Height="16"
+              Margin="0,5,5,0"
+              Style="{StaticResource RibbonCollapseButton}"
+              IsChecked="{Binding IsFolded, RelativeSource={RelativeSource AncestorType=local:RibbonControl}}"
+              Click="OnCollapseButtonClick"/>
+
+
+
 
     
 </DockPanel>

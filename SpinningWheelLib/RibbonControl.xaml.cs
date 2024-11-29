@@ -1,11 +1,35 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 
 namespace SpinningWheelLib.Controls
 {
+    public class RelayCommand : ICommand
+{
+    private readonly Action<object> _execute;
+    
+    public RelayCommand(Action<object> execute)
+    {
+        _execute = execute;
+    }
+
+    public event EventHandler CanExecuteChanged
+    {
+        add { CommandManager.RequerySuggested += value; }
+        remove { CommandManager.RequerySuggested -= value; }
+    }
+
+    public bool CanExecute(object parameter) => true;
+
+    public void Execute(object parameter)
+    {
+        _execute(parameter);
+    }
+}
+
     public partial class RibbonControl : UserControl
     {
         public static readonly DependencyProperty IsFoldedProperty =
@@ -46,67 +70,162 @@ namespace SpinningWheelLib.Controls
             set => SetValue(SelectedTabIndexProperty, value);
         }
 
+        public ICommand ToggleCollapseCommand { get; }
+
+
         public RibbonControl()
         {
-            InitializeComponent();
-            PART_TabControl.SelectionChanged += OnTabSelectionChanged;
+            try
+            {
+                Console.WriteLine("Initializing RibbonControl...");
+                InitializeComponent();
+                PART_TabControl.SelectionChanged += OnTabSelectionChanged;
+                
+                Console.WriteLine("RibbonControl initialized successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error initializing RibbonControl: {ex.Message}");
+            }
         }
 
         private static void OnIsFoldedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var ribbon = (RibbonControl)d;
-            ribbon.UpdateRibbonHeight();
+            try
+            {
+                Console.WriteLine("IsFolded property changed.");
+                var ribbon = (RibbonControl)d;
+                ribbon.UpdateRibbonHeight();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in OnIsFoldedChanged: {ex.Message}");
+            }
         }
 
         private static void OnSelectedTabIndexChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var ribbon = (RibbonControl)d;
-            ribbon.PART_TabControl.SelectedIndex = (int)e.NewValue;
+            try
+            {
+                Console.WriteLine("SelectedTabIndex property changed.");
+                var ribbon = (RibbonControl)d;
+                ribbon.PART_TabControl.SelectedIndex = (int)e.NewValue;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in OnSelectedTabIndexChanged: {ex.Message}");
+            }
         }
 
         private void OnTabSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (!IsFolded)
+            try
             {
-                UpdateRibbonHeight();
+                Console.WriteLine("Tab selection changed.");
+                if (!IsFolded)
+                {
+                    UpdateRibbonHeight();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in OnTabSelectionChanged: {ex.Message}");
             }
         }
 
         private void UpdateRibbonHeight()
         {
-            var parentTitleBar = this.GetParentOfType<CustomLonghornTitleBar>();
-            if (parentTitleBar != null)
+            try
             {
-                var targetHeight = IsFolded ? 110 : 180;
-                var animation = new DoubleAnimation
+                Console.WriteLine("Updating ribbon height...");
+                var parentTitleBar = this.GetParentOfType<CustomLonghornTitleBar>();
+                if (parentTitleBar != null)
                 {
-                    To = targetHeight,
-                    Duration = TimeSpan.FromMilliseconds(167),
-                    EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
-                };
+                    var targetHeight = IsFolded ? 74 : 180;
+                    Console.WriteLine($"Target height set to {targetHeight}.");
 
-                parentTitleBar.BeginAnimation(HeightProperty, animation);
+                    // Update parent window layout
+                    var window = Window.GetWindow(parentTitleBar);
+                    if (window != null)
+                    {
+                        window.InvalidateVisual();
+                        window.UpdateLayout();
+                    }
+
+                    // Animate height change
+                    var animation = new DoubleAnimation
+                    {
+                        To = targetHeight,
+                        Duration = TimeSpan.FromMilliseconds(167),
+                        EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
+                    };
+
+                    parentTitleBar.Height = targetHeight;
+                    parentTitleBar.BeginAnimation(HeightProperty, animation);
+                    parentTitleBar.UpdateLayout();
+                    Console.WriteLine("Ribbon height updated successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UpdateRibbonHeight: {ex.Message}");
             }
         }
 
         private void OnCollapseButtonClick(object sender, RoutedEventArgs e)
         {
-            IsFolded = !IsFolded;
+            try
+            {
+                Console.WriteLine("Collapse button clicked.");
+                IsFolded = !IsFolded;
+                Console.WriteLine($"IsFolded set to {IsFolded}.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in OnCollapseButtonClick: {ex.Message}");
+            }
         }
 
         public void AddTab(TabItem tab)
         {
-            PART_TabControl.Items.Add(tab);
+            try
+            {
+                Console.WriteLine("Adding tab...");
+                PART_TabControl.Items.Add(tab);
+                Console.WriteLine("Tab added successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in AddTab: {ex.Message}");
+            }
         }
 
         public void RemoveTab(TabItem tab)
         {
-            PART_TabControl.Items.Remove(tab);
+            try
+            {
+                Console.WriteLine("Removing tab...");
+                PART_TabControl.Items.Remove(tab);
+                Console.WriteLine("Tab removed successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in RemoveTab: {ex.Message}");
+            }
         }
 
         public void ClearTabs()
         {
-            PART_TabControl.Items.Clear();
+            try
+            {
+                Console.WriteLine("Clearing all tabs...");
+                PART_TabControl.Items.Clear();
+                Console.WriteLine("All tabs cleared successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in ClearTabs: {ex.Message}");
+            }
         }
     }
 
@@ -114,16 +233,24 @@ namespace SpinningWheelLib.Controls
     {
         public static T GetParentOfType<T>(this DependencyObject element) where T : DependencyObject
         {
-            if (element == null) return null;
-            
-            var parent = VisualTreeHelper.GetParent(element);
-            
-            while (parent != null && !(parent is T))
+            try
             {
-                parent = VisualTreeHelper.GetParent(parent);
+                if (element == null) return null;
+
+                var parent = VisualTreeHelper.GetParent(element);
+
+                while (parent != null && !(parent is T))
+                {
+                    parent = VisualTreeHelper.GetParent(parent);
+                }
+
+                return parent as T;
             }
-            
-            return parent as T;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetParentOfType: {ex.Message}");
+                return null;
+            }
         }
     }
 }
