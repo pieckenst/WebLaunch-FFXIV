@@ -180,7 +180,35 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <controls:CustomLonghornTitleBar UseSlateTheme="False" UseAeroTheme="True"/>
+        <controls:CustomLonghornTitleBar UseSlateTheme="False" UseAeroTheme="True">
+            <controls:CustomLonghornTitleBar.MenuBarContent>
+                <controls:RibbonControl>
+                    <controls:RibbonControl.Content>
+                        <TabControl>
+                            <TabItem Header="Home" Width="75">
+                                <StackPanel Orientation="Horizontal">
+                                    <RibbonGroup Header="Clipboard">
+                                        <Button Content="Paste"/>
+                                        <Button Content="Cut"/>
+                                        <Button Content="Copy"/>
+                                    </RibbonGroup>
+                                    <RibbonGroup Header="Tools">
+                                        <Button Content="Select"/>
+                                        <Button Content="Edit"/>
+                                    </RibbonGroup>
+                                </StackPanel>
+                            </TabItem>
+                            <TabItem Header="View" Width="70">
+                                <!-- View tab content -->
+                            </TabItem>
+                        </TabControl>
+                    </controls:RibbonControl.Content>
+                </controls:RibbonControl>
+            </controls:CustomLonghornTitleBar.MenuBarContent>
+        </controls:CustomLonghornTitleBar>
+
+
+
 
         <Border Grid.Row="1">
             <Border.Background>
@@ -195,22 +223,6 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
-                <Border Background="#FFFFFF" BorderBrush="#ACA899" BorderThickness="0,0,0,1">
-                    <Grid Margin="16,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Content="Back" Width="75" Height="23" Style="{StaticResource XPButton}"/>
-                        <TextBlock Text="Settings" Grid.Column="1" Style="{StaticResource HeaderStyle}"
-                             HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <Button Content="Edit" Width="75" Height="23" Grid.Column="2" 
-                            Style="{StaticResource XPButton}"/>
-                    </Grid>
-                </Border>
 
                 <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="16">

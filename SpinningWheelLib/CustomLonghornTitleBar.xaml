@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:SpinningWheelLib.Controls"
              x:Name="Root"
-             Height="74">
+             Height="110">
 
     <UserControl.Resources>
         <ResourceDictionary>
@@ -229,8 +229,27 @@
             </Grid>
         </Grid>
 
-        <ContentPresenter Grid.Row="1" Content="{Binding MenuBarContent, ElementName=Root}"
-                         Margin="8,0,8,0"/>
+        <!-- Menu Bar Grid -->
+        <Grid Grid.Row="1" Name="MenuBarContainer" Margin="0,0,0,-26" Grid.RowSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45*"/>
+                <ColumnDefinition Width="253*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding UseSlateTheme, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="True">
+                            <Setter Property="Background" Value="{StaticResource TaskbarBackground}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding UseSlateTheme, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="False">
+                            <Setter Property="Background" Value="{StaticResource AeroGlassEffect}"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            <ContentPresenter Content="{Binding MenuBarContent, ElementName=Root}" Grid.ColumnSpan="2"/>
+        </Grid>
+
         <ContentPresenter Grid.Row="2" Content="{Binding AdditionalContent, ElementName=Root}"
                          Margin="8,0,8,0"/>
     </Grid>

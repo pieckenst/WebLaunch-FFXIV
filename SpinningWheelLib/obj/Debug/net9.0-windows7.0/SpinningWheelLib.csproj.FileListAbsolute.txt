@@ -24,3 +24,5 @@ G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\refint\SpinningWheelLib.dll
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\SpinningWheelLib.pdb
 G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\ref\SpinningWheelLib.dll
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\RibbonControl.baml
+G:\code\WebLaunch\SpinningWheelLib\obj\Debug\net9.0-windows7.0\RibbonControl.g.cs
